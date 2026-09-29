@@ -1,0 +1,423 @@
+{
+ "title": "Murberry Ep 1 - The Push-Up",
+ "fps": 30,
+ "duration": 150,
+ "scenes": [
+  {
+   "id": "fold",
+   "start": 0,
+   "end": 8
+  },
+  {
+   "id": "floor",
+   "start": 8,
+   "end": 17
+  },
+  {
+   "id": "wall",
+   "start": 17,
+   "end": 35
+  },
+  {
+   "id": "machine",
+   "start": 35,
+   "end": 65
+  },
+  {
+   "id": "fibre",
+   "start": 65,
+   "end": 82
+  },
+  {
+   "id": "glucose",
+   "start": 82,
+   "end": 95
+  },
+  {
+   "id": "mind",
+   "start": 95,
+   "end": 115
+  },
+  {
+   "id": "plan",
+   "start": 115,
+   "end": 140
+  },
+  {
+   "id": "signoff",
+   "start": 140,
+   "end": 150
+  }
+ ],
+ "transitions": [
+  {
+   "from": "fold",
+   "to": "floor",
+   "kind": "peel",
+   "t0": 7.5,
+   "t1": 8.9,
+   "dir": [
+    -1,
+    1
+   ]
+  },
+  {
+   "from": "floor",
+   "to": "wall",
+   "kind": "peel",
+   "t0": 16.6,
+   "t1": 17.9,
+   "dir": [
+    1,
+    1
+   ]
+  },
+  {
+   "from": "wall",
+   "to": "machine",
+   "kind": "peel",
+   "t0": 34.7,
+   "t1": 36.0,
+   "dir": [
+    1,
+    -0.5
+   ],
+   "back": "sand"
+  },
+  {
+   "from": "fibre",
+   "to": "glucose",
+   "kind": "slide",
+   "t0": 81.5,
+   "t1": 82.7
+  },
+  {
+   "from": "glucose",
+   "to": "mind",
+   "kind": "laydown",
+   "t0": 94.3,
+   "t1": 95.9,
+   "dir": [
+    1,
+    1
+   ]
+  },
+  {
+   "from": "mind",
+   "to": "plan",
+   "kind": "peel",
+   "t0": 114.5,
+   "t1": 115.8,
+   "dir": [
+    0.35,
+    1
+   ]
+  },
+  {
+   "from": "plan",
+   "to": "signoff",
+   "kind": "peel",
+   "t0": 139.7,
+   "t1": 141.0,
+   "dir": [
+    -1,
+    0.45
+   ]
+  }
+ ],
+ "captions": [
+  {
+   "start": 2.0,
+   "end": 4.4,
+   "text": "Your body is a remarkable machine."
+  },
+  {
+   "start": 4.4,
+   "end": 6.9,
+   "text": "Almost no one has ever explained it to you."
+  },
+  {
+   "start": 6.9,
+   "end": 8.4,
+   "text": "Let's begin."
+  },
+  {
+   "start": 8.5,
+   "end": 12.8,
+   "text": "On the floor, a push-up asks your arms to press about two thirds of your weight."
+  },
+  {
+   "start": 12.8,
+   "end": 16.4,
+   "text": "For a heavy body, that is a heavy lift."
+  },
+  {
+   "start": 16.9,
+   "end": 19.4,
+   "text": "So we begin at the wall."
+  },
+  {
+   "start": 19.4,
+   "end": 22.0,
+   "text": "Stand an arm's length away."
+  },
+  {
+   "start": 22.0,
+   "end": 24.8,
+   "text": "Hands flat, just below your shoulders."
+  },
+  {
+   "start": 24.8,
+   "end": 27.6,
+   "text": "Keep one straight line from head to heel."
+  },
+  {
+   "start": 27.6,
+   "end": 34.9,
+   "text": "Breathe in as you lean toward the wall.\nBreathe out as you press away."
+  },
+  {
+   "start": 35.8,
+   "end": 38.0,
+   "text": "Watch what wakes up."
+  },
+  {
+   "start": 38.0,
+   "end": 41.0,
+   "text": "The pectoralis major, across your chest."
+  },
+  {
+   "start": 41.0,
+   "end": 44.2,
+   "text": "The front of the shoulder, the anterior deltoid."
+  },
+  {
+   "start": 44.2,
+   "end": 47.2,
+   "text": "The triceps, along the back of the arm."
+  },
+  {
+   "start": 47.2,
+   "end": 51.8,
+   "text": "And the serratus anterior, holding each shoulder blade flat against your ribs."
+  },
+  {
+   "start": 52.2,
+   "end": 55.6,
+   "text": "As you press, they take the load."
+  },
+  {
+   "start": 55.6,
+   "end": 58.4,
+   "text": "Your core holds the line,"
+  },
+  {
+   "start": 58.4,
+   "end": 63.4,
+   "text": "so the effort travels from your hands to your feet, as one."
+  },
+  {
+   "start": 65.9,
+   "end": 67.9,
+   "text": "Now closer."
+  },
+  {
+   "start": 67.9,
+   "end": 71.3,
+   "text": "Inside each fibre, two proteins, actin and myosin,"
+  },
+  {
+   "start": 71.3,
+   "end": 74.3,
+   "text": "grip and pull, again and again."
+  },
+  {
+   "start": 74.3,
+   "end": 77.5,
+   "text": "Every pull spends a molecule called ATP."
+  },
+  {
+   "start": 77.5,
+   "end": 80.9,
+   "text": "To make more, the muscle needs fuel."
+  },
+  {
+   "start": 82.6,
+   "end": 85.4,
+   "text": "And here is something quiet and important."
+  },
+  {
+   "start": 85.4,
+   "end": 89.0,
+   "text": "Working muscle can draw sugar out of your blood on its own,"
+  },
+  {
+   "start": 89.0,
+   "end": 91.2,
+   "text": "without waiting for insulin."
+  },
+  {
+   "start": 91.2,
+   "end": 94.6,
+   "text": "Every set clears a little sugar from your blood."
+  },
+  {
+   "start": 96.0,
+   "end": 98.6,
+   "text": "The hardest part is not the muscle."
+  },
+  {
+   "start": 98.6,
+   "end": 100.6,
+   "text": "It is tomorrow."
+  },
+  {
+   "start": 100.6,
+   "end": 105.2,
+   "text": "In one study, new daily habits took a median of sixty-six days to feel automatic."
+  },
+  {
+   "start": 105.2,
+   "end": 107.2,
+   "text": "Some took far longer."
+  },
+  {
+   "start": 107.2,
+   "end": 110.6,
+   "text": "But missing a single day changed almost nothing."
+  },
+  {
+   "start": 110.6,
+   "end": 114.2,
+   "text": "So if you miss one, simply come back."
+  },
+  {
+   "start": 115.8,
+   "end": 117.6,
+   "text": "Here is this week."
+  },
+  {
+   "start": 117.6,
+   "end": 120.6,
+   "text": "Two or three sets of five to ten wall push-ups."
+  },
+  {
+   "start": 120.6,
+   "end": 122.6,
+   "text": "Rest a minute between sets."
+  },
+  {
+   "start": 122.6,
+   "end": 125.2,
+   "text": "Three days, with a day off between."
+  },
+  {
+   "start": 125.2,
+   "end": 128.6,
+   "text": "When fifteen feel easy, move your hands down to a counter."
+  },
+  {
+   "start": 128.6,
+   "end": 132.0,
+   "text": "At your size, one set spends roughly five to ten calories."
+  },
+  {
+   "start": 132.0,
+   "end": 134.2,
+   "text": "That is small, and that is honest."
+  },
+  {
+   "start": 134.2,
+   "end": 136.2,
+   "text": "The push-up builds the machine."
+  },
+  {
+   "start": 136.2,
+   "end": 139.8,
+   "text": "What you eat and drink, especially sugar, decides the weight."
+  },
+  {
+   "start": 141.0,
+   "end": 143.2,
+   "text": "Your muscles are gold now."
+  },
+  {
+   "start": 143.2,
+   "end": 145.4,
+   "text": "Recovering. Rebuilding."
+  },
+  {
+   "start": 145.6,
+   "end": 149.2,
+   "text": "Small movements. Real changes. Until tomorrow.",
+   "style": "signoff"
+  }
+ ],
+ "sound": {
+  "folds": [
+   0.25,
+   7.5,
+   16.6,
+   34.7,
+   94.3,
+   114.5,
+   139.7,
+   144.3
+  ],
+  "softFolds": [
+   1.55
+  ],
+  "tears": [
+   65.0
+  ],
+  "slides": [
+   9.95,
+   56.35,
+   66.2,
+   68.4,
+   81.5,
+   115.6
+  ],
+  "hum": {
+   "rise": [
+    54.0,
+    55.6
+   ],
+   "fadeOut": [
+    95.0,
+    98.6
+   ]
+  },
+  "ticks": [
+   71.975,
+   73.475,
+   74.975,
+   76.475,
+   77.975,
+   79.475
+  ],
+  "breaths": [
+   {
+    "kind": "in",
+    "start": 27.4,
+    "end": 29.3
+   },
+   {
+    "kind": "out",
+    "start": 29.3,
+    "end": 31.2
+   },
+   {
+    "kind": "in",
+    "start": 31.2,
+    "end": 32.9
+   },
+   {
+    "kind": "out",
+    "start": 32.9,
+    "end": 34.6
+   }
+  ],
+  "padEnd": 149.7
+ }
+}
