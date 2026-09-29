@@ -14,6 +14,8 @@ export type PreciousStyle = {
   gloves?: boolean; // pink boxing gloves (the throw)
   shades?: boolean; // heart sunglasses (Ring Pop)
   glow?: number; // gold rays behind her, 0..1
+  winter?: boolean; // earmuffs and scarf (No. 2)
+  aged?: boolean; // grey curls (the far future)
 };
 
 type Params = {face: Face; style: PreciousStyle; holdL?: React.ReactNode; holdR?: React.ReactNode};
@@ -159,7 +161,7 @@ export const PRECIOUS_PARTS: Part<Params>[] = [
     parent: 'torso',
     at: [0, -292],
     z: 18,
-    draw: () => <Shape d={curls(0, -168, 168, 150, 16, 5)} fill={C.ink} shade={circle(-70, -250, 90)} shadeInk="ht-candy-2" line={5} />,
+    draw: ({style}) => <Shape d={curls(0, -168, 168, 150, 16, 5)} fill={style.aged ? '#C9CDD2' : C.ink} shade={circle(-70, -250, 90)} shadeInk={style.aged ? 'ht-smoke-1' : 'ht-candy-2'} line={5} />,
   },
   {
     id: 'head',
@@ -172,7 +174,7 @@ export const PRECIOUS_PARTS: Part<Params>[] = [
         <Shape d={NECKLINE} fill={SKIN} line={4} />
         <Line d="M-51,-4C-45,44 -20,64 0,64C20,64 45,44 51,-4" size={6} color={C.aqua} />
         <Shape d={FACE} fill={SKIN} shade={FACE_SH} shadeInk="ht-ink-2" />
-        <Shape d={curls(0, -226, 90, 44, 12, 9)} fill={C.ink} line={4} />
+        <Shape d={curls(0, -226, 90, 44, 12, 9)} fill={style.aged ? '#C9CDD2' : C.ink} line={4} />
         <Shape d={`${circle(-82, -118, 21)}${circle(-82, -118, 14)}`} evenodd fill={C.gold} line={3} sheen />
         <Shape d={`${circle(82, -118, 21)}${circle(82, -118, 14)}`} evenodd fill={C.gold} line={3} sheen />
         {drawFace({lashes: true, lip: LIP, blush: 0.35, ...face, eyes: style.shades ? 'shades' : face.eyes}, {eyeX: 30, eyeY: -146, browY: -178, noseY: -114, mouthY: -84, width: 160})}
@@ -181,6 +183,15 @@ export const PRECIOUS_PARTS: Part<Params>[] = [
             <path d="M-62,-160C-76,-176 -60,-196 -44,-180C-28,-196 -12,-176 -26,-160L-44,-140Z" fill={C.hotpink} />
             <path d="M26,-160C12,-176 28,-196 44,-180C60,-196 76,-176 62,-160L44,-140Z" fill={C.hotpink} />
           </Only>
+        )}
+        {style.winter && (
+          <>
+            <Line d="M-96,-150C-96,-290 96,-290 96,-150" size={10} color={C.ink} />
+            <Shape d={circle(-98, -142, 40)} fill={C.hotpink} shade={circle(-84, -130, 40)} shadeInk="ht-ink-2" line={5} />
+            <Shape d={circle(98, -142, 40)} fill={C.hotpink} shade={circle(112, -130, 40)} shadeInk="ht-ink-2" line={5} />
+            <Shape d="M-58,6C-28,28 28,28 58,6L62,36C28,62 -28,62 -62,36Z" fill={C.teal} line={5} />
+            <Shape d="M-40,34L-54,120L-26,116L-16,34Z" fill={C.teal} line={5} />
+          </>
         )}
         {style.crown && (
           <Shape d="M-70,-250L-60,-320L-30,-284L0,-334L30,-284L60,-320L70,-250Z" fill={C.gold} pattern="foil" sheen line={5} />

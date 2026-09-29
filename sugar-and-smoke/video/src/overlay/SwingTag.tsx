@@ -15,7 +15,7 @@ export const SwingTag: React.FC<{slot: Slot; frame: number}> = ({slot, frame}) =
   const out = clamp((frame - (slot.to - 3)) / 3);
   const ang = swing(f - 9, 11, 30, 20) - 4;
   const stock = TAG_STOCK[slot.state];
-  const label = slot.n === 0 ? 'No. 00' : `No. ${String(slot.n).padStart(2, '0')}`;
+  const label = slot.n === 0 ? 'No. 00' : slot.n < 0 ? 'Fin.' : `No. ${String(slot.n).padStart(2, '0')}`;
   const name = slot.tag;
   const nameSize = Math.min(40, 262 / (0.56 * name.length));
   const L = 140;

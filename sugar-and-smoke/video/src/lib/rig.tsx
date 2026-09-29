@@ -100,6 +100,44 @@ export function chainAngle<P>(parts: Part<P>[], pose: Pose, id: string): number 
   return a;
 }
 
+// Two-bone reach: the angles for `upper` and `lower` that put the end part's grip point on a
+// target in scene coordinates. `bend` picks which way the elbow folds. Ignores squash.
+export function reach<P>(
+  parts: Part<P>[],
+  pose: Pose,
+  place: Place,
+  upper: string,
+  lower: string,
+  end: string,
+  target: [number, number],
+  bend: 1 | -1 = 1,
+  grip: [number, number] = [0, 30]
+): Pose {
+  const s = place.scale ?? 1;
+  const byId = new Map(parts.map((p) => [p.id, p]));
+  const lo = byId.get(lower)!;
+  const en = byId.get(end)!;
+  const L1 = Math.hypot(lo.at[0], lo.at[1]) * s;
+  const L2 = Math.hypot(en.at[0] + grip[0], en.at[1] + grip[1]) * s;
+  const [ox, oy] = worldPoint(parts, pose, place, upper);
+  // direction to the target, back in the rig's own (unflipped, unrotated) frame
+  const wx = (target[0] - ox) * (place.flip ? -1 : 1);
+  const wy = target[1] - oy;
+  const r = (-(place.rotate ?? 0) * Math.PI) / 180;
+  const lx = wx * Math.cos(r) - wy * Math.sin(r);
+  const ly = wx * Math.sin(r) + wy * Math.cos(r);
+  const d = Math.min(L1 + L2 - 0.01, Math.max(Math.abs(L1 - L2) + 0.01, Math.hypot(lx, ly)));
+  const aim = Math.atan2(-lx, ly); // a bone at angle a points along (-sin a, cos a)
+  const a1 = Math.acos((L1 * L1 + d * d - L2 * L2) / (2 * L1 * d));
+  const a2 = Math.acos((L1 * L1 + L2 * L2 - d * d) / (2 * L1 * L2));
+  const deg = 180 / Math.PI;
+  const parent = byId.get(upper)!.parent;
+  return {
+    [upper]: (aim + bend * a1) * deg - (parent ? chainAngle(parts, pose, parent) : 0),
+    [lower]: -bend * (Math.PI - a2) * deg,
+  };
+}
+
 // Blend poses: a + (b - a) * t for every joint.
 export const mixPose = (a: Pose, b: Pose, t: number): Pose => {
   const out: Pose = {};

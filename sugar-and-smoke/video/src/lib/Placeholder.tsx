@@ -1,8 +1,8 @@
 import React from 'react';
 import {C, FONT} from '../brand/tokens';
 import {Stein, STEIN_POSES} from '../characters/Stein';
-import {Txt} from '../lib/print';
-import {SceneDef} from './types';
+import {Txt} from './print';
+import {SceneDef} from './scene';
 
 export const Placeholder: SceneDef = {
   ground: 'cotton',

@@ -1,16 +1,16 @@
 // Hook, precious half (part two): No. 32-39.
 import React from 'react';
 import {svgPathProperties} from 'svg-path-properties';
-import {C, FONT} from '../brand/tokens';
-import {Precious, PRECIOUS_PARTS, PRECIOUS_POSES} from '../characters/Precious';
-import {Ring} from '../characters/Ring';
-import {clamp, ease, keys, lerp, prog} from '../lib/ease';
-import {Flat, Line, Shape, Txt} from '../lib/print';
-import {rng} from '../lib/random';
-import {Pose, worldPoint} from '../lib/rig';
-import {circle, Clip, ellipse, FloatHearts, Floor, heart, Note, Pop, poly, rect, Sparkle, Stars, Wash} from '../props/common';
+import {C, FONT} from '../../../brand/tokens';
+import {Precious, PRECIOUS_PARTS, PRECIOUS_POSES} from '../../../characters/Precious';
+import {Ring} from '../../../characters/Ring';
+import {clamp, ease, keys, lerp, prog} from '../../../lib/ease';
+import {Flat, Line, Shape, Txt} from '../../../lib/print';
+import {rng} from '../../../lib/random';
+import {Pose, worldPoint} from '../../../lib/rig';
+import {circle, Clip, ellipse, FloatHearts, Floor, heart, Note, Pop, poly, rect, Sparkle, Stars, Wash} from '../../../props/common';
 import {S28, ThroneScene} from './hook1';
-import {SceneDef} from './types';
+import {SceneDef} from '../../../lib/scene';
 
 const blink = (f: number, every = 97, off = 0) => ((f + off) % every < 4 ? 1 : 0);
 

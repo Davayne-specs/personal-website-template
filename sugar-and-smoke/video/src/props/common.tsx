@@ -7,13 +7,13 @@ import {rng} from '../lib/random';
 import {circle, ellipse, heart, poly, rect, smooth, star4} from '../lib/shapes';
 
 // Clip children to a path on every plate.
-export const Clip: React.FC<{d: string; children: React.ReactNode}> = ({d, children}) => {
+export const Clip: React.FC<{d: string; evenodd?: boolean; children: React.ReactNode}> = ({d, evenodd, children}) => {
   const id = useId().replace(/[^a-zA-Z0-9_-]/g, '');
   const pr = usePrint();
   return (
     <>
       <clipPath id={`k${id}${pr.plate}`}>
-        <path d={d} />
+        <path d={d} clipRule={evenodd ? 'evenodd' : undefined} />
       </clipPath>
       <g clipPath={`url(#k${id}${pr.plate})`}>{children}</g>
     </>
@@ -238,8 +238,8 @@ export const Arrow: React.FC<{d: string; size?: number; color?: string; head?: [
   </>
 );
 
-export const Wash: React.FC<{kind: 'pink' | 'aqua' | 'gold'; x: number; y: number; s: number; o?: number; v?: 1 | 2; r?: number}> = ({kind, x, y, s, o = 0.8, v = 1, r = 0}) => (
-  <Tex src={`wash-${kind}-${kind === 'gold' ? 1 : v}.png`} x={x - s / 2} y={y - s / 2} w={s} h={s} opacity={o} rotate={r} />
+export const Wash: React.FC<{kind: 'pink' | 'aqua' | 'gold' | 'ice' | 'slate' | 'amber'; x: number; y: number; s: number; o?: number; v?: 1 | 2; r?: number}> = ({kind, x, y, s, o = 0.8, v = 1, r = 0}) => (
+  <Tex src={`wash-${kind}-${kind === 'pink' || kind === 'aqua' ? v : 1}.png`} x={x - s / 2} y={y - s / 2} w={s} h={s} opacity={o} rotate={r} />
 );
 
 export const SmokePuff: React.FC<{x: number; y: number; s: number; o?: number; v?: 1 | 2 | 3 | 4; r?: number; flip?: boolean}> = ({
@@ -267,5 +267,38 @@ export const MotionLines: React.FC<{x: number; y: number; n?: number; len?: numb
     ))}
   </>
 );
+
+// A burst of paper confetti under gravity; t = frames since the burst.
+const CONFETTI_COLORS = [C.gold, C.hotpink, C.pressure, C.aqua, C.candy, C.white, C.teal];
+
+export const Confetti: React.FC<{t: number; x: number; y: number; n?: number; seed?: number; spread?: number; floor?: number}> = ({
+  t,
+  x,
+  y,
+  n = 26,
+  seed = 7,
+  spread = 1,
+  floor = 1800,
+}) => {
+  const r = rng(seed);
+  const bits = Array.from({length: n}, (_, i) => {
+    const a = r() * Math.PI * 2;
+    const v = (8 + r() * 18) * spread;
+    const vx = Math.cos(a) * v;
+    const vy = Math.sin(a) * v - 10 * spread;
+    const px = x + vx * t;
+    const py = Math.min(floor, y + vy * t + 0.55 * t * t);
+    const rot = (r() * 360 + t * (r() * 20 - 10)) % 360;
+    const w = 14 + r() * 18;
+    const h = 8 + r() * 10;
+    const col = CONFETTI_COLORS[i % CONFETTI_COLORS.length];
+    return (
+      <g key={i} transform={`translate(${px.toFixed(1)},${py.toFixed(1)}) rotate(${rot.toFixed(1)})`}>
+        <Shape d={`M${-w / 2},${-h / 2}L${w / 2},${-h / 2}L${w / 2},${h / 2}L${-w / 2},${h / 2}Z`} fill={col} line={2.5} />
+      </g>
+    );
+  });
+  return <>{bits}</>;
+};
 
 export {circle, ellipse, heart, poly, rect, smooth, star4, Only};

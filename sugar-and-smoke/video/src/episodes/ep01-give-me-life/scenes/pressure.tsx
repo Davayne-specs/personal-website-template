@@ -1,14 +1,14 @@
 // Hook, pressure half: No. 40-56. Red, squash and swell, the Gauge climbs, PRESSURE stamps.
 import React from 'react';
-import {C, FONT} from '../brand/tokens';
-import {Biscuit} from '../characters/Biscuit';
-import {Precious, PRECIOUS_PARTS, PRECIOUS_POSES} from '../characters/Precious';
-import {Ring} from '../characters/Ring';
-import {Smoke, Stein, STEIN_PARTS, STEIN_POSES} from '../characters/Stein';
-import {clamp, ease, keys, lerp, prog} from '../lib/ease';
-import {Flat, Line, Shape, Txt} from '../lib/print';
-import {rng} from '../lib/random';
-import {addPose, chainAngle, Pose, walkCycle, worldPoint} from '../lib/rig';
+import {C, FONT} from '../../../brand/tokens';
+import {Biscuit} from '../../../characters/Biscuit';
+import {Precious, PRECIOUS_PARTS, PRECIOUS_POSES} from '../../../characters/Precious';
+import {Ring} from '../../../characters/Ring';
+import {Smoke, Stein, STEIN_PARTS, STEIN_POSES} from '../../../characters/Stein';
+import {clamp, ease, keys, lerp, prog} from '../../../lib/ease';
+import {Flat, Line, Shape, Txt} from '../../../lib/print';
+import {rng} from '../../../lib/random';
+import {addPose, chainAngle, Pose, walkCycle, worldPoint} from '../../../lib/rig';
 import {
   Bubble,
   circle,
@@ -28,8 +28,8 @@ import {
   Sparkle,
   Stars,
   Wash,
-} from '../props/common';
-import {SceneDef} from './types';
+} from '../../../props/common';
+import {SceneDef} from '../../../lib/scene';
 
 const blink = (f: number, every = 97, off = 0) => ((f + off) % every < 4 ? 1 : 0);
 const hitIn = (p: {w: (i: number) => number; slot: {line?: {words: {w: string}[]}}}) => {

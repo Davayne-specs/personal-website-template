@@ -1,7 +1,7 @@
 // PrintFrame: prints its children as three riso plates (sticker shadow, ghost, key)
 // on a paper stock, through a camera.
 import React from 'react';
-import {C, Ground, STICKER} from '../brand/tokens';
+import {C, Ground, isDark, STICKER} from '../brand/tokens';
 import {PrintCtx, PrintDefs} from './print';
 
 export type Camera = {x?: number; y?: number; zoom?: number; rotate?: number};
@@ -26,7 +26,7 @@ export const PrintFrame: React.FC<{
   under?: React.ReactNode; // printed behind everything, outside the camera (e.g. full-bleed washes)
 }> = ({frame, ground, reg = [2, -1.5], boilStep = 3, sheen = -1, camera = {}, width = 1080, height = 1920, children, under}) => {
   const boil = Math.floor(frame / boilStep) % 3;
-  const line = ground === 'night' ? C.cotton : C.ink;
+  const line = isDark(ground) ? C.cotton : C.ink;
   const base = {boil, line, frame};
   return (
     <svg viewBox={`0 0 ${width} ${height}`} width={width} height={height} style={{position: 'absolute', left: 0, top: 0}}>
@@ -36,7 +36,7 @@ export const PrintFrame: React.FC<{
         <PrintCtx.Provider value={{...base, plate: 'key'}}>{under}</PrintCtx.Provider>
       ) : null}
       <g transform={camTransform(camera, width, height)}>
-        <g transform={`translate(${reg[0] + STICKER.dx},${reg[1] + STICKER.dy})`} opacity={ground === 'night' ? 0.32 : STICKER.opacity}>
+        <g transform={`translate(${reg[0] + STICKER.dx},${reg[1] + STICKER.dy})`} opacity={isDark(ground) ? 0.32 : STICKER.opacity}>
           <PrintCtx.Provider value={{...base, plate: 'shadow'}}>{children}</PrintCtx.Provider>
         </g>
         <g transform={`translate(${reg[0]},${reg[1]})`}>

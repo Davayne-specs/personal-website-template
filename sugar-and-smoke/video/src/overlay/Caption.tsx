@@ -3,6 +3,7 @@ import React from 'react';
 import {C, FONT, FPS} from '../brand/tokens';
 import {clamp, ease} from '../lib/ease';
 import {hash, rng} from '../lib/random';
+import {useEpisode} from '../lib/episode';
 import {Slot} from '../lib/timeline';
 
 const torn = (seed: number) => {
@@ -18,6 +19,7 @@ const torn = (seed: number) => {
 };
 
 export const Caption: React.FC<{slot: Slot; frame: number}> = ({slot, frame}) => {
+  const {ep, tl} = useEpisode();
   if (!slot.line) return null;
   const words = slot.line.words;
   const tIn = clamp((frame - slot.from) / 7);
@@ -40,7 +42,7 @@ export const Caption: React.FC<{slot: Slot; frame: number}> = ({slot, frame}) =>
       <div
         style={{
           position: 'relative',
-          background: C.candy,
+          background: ep.theme.strip,
           clipPath: torn(seed),
           padding: long ? '24px 36px 28px' : '26px 44px 30px',
           maxWidth: 900,
@@ -61,7 +63,8 @@ export const Caption: React.FC<{slot: Slot; frame: number}> = ({slot, frame}) =>
           {words.map((w, k) => {
             const wf = Math.round(w.t * FPS);
             const on = clamp((frame - wf + 2) / 3);
-            const hot = /^precious/i.test(w.w) ? C.gold : /^pressur/i.test(w.w) ? C.pressure : null;
+            const st = tl.STAMPS.find((k) => k.re.test(w.w));
+            const hot = st ? (st.ink === 'foil' ? C.gold : st.ink) : null;
             return (
               <span
                 key={k}

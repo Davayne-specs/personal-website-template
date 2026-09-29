@@ -2,13 +2,15 @@ import React from 'react';
 import {AbsoluteFill} from 'remotion';
 import {FPS, REGISTRATION} from './brand/tokens';
 import {clamp, ease} from './lib/ease';
+import {useEpisode} from './lib/episode';
 import {PrintFrame} from './lib/frame';
-import {beatIndex, beatPulse, HITS, mouthAt, Slot} from './lib/timeline';
-import {SCENES} from './scenes';
-import {SceneProps} from './scenes/types';
+import {Placeholder} from './lib/Placeholder';
+import {SceneProps} from './lib/scene';
+import {Slot, Timeline} from './lib/timeline';
 
-const sheenAt = (frame: number, slot: Slot) => {
-  const hit = HITS.find((h) => h.kind === 'precious' && frame >= h.frame - 3 && frame <= h.frame + 14);
+const sheenAt = (tl: Timeline, frame: number, slot: Slot) => {
+  const shiny = new Set(tl.STAMPS.filter((s) => s.sheen).map((s) => s.kind));
+  const hit = tl.HITS.find((h) => shiny.has(h.kind) && frame >= h.frame - 3 && frame <= h.frame + 14);
   if (hit) return ((frame - (hit.frame - 3)) / 17) * 1.4 - 0.2;
   const f = frame - slot.from;
   if ((slot.state === 'Precious' || slot.state === 'Release') && f >= 0 && f <= 18) return (f / 18) * 1.4 - 0.2;
@@ -18,7 +20,8 @@ const sheenAt = (frame: number, slot: Slot) => {
 };
 
 export const SceneView: React.FC<{slot: Slot; frame: number; clip?: number}> = ({slot, frame, clip}) => {
-  const def = SCENES[slot.n];
+  const {ep, tl} = useEpisode();
+  const def = ep.scenes[slot.n] ?? Placeholder;
   const f = frame - slot.from;
   const words = slot.line?.words ?? [];
   const p: SceneProps = {
@@ -27,9 +30,9 @@ export const SceneView: React.FC<{slot: Slot; frame: number; clip?: number}> = (
     abs: frame,
     slot,
     w: (i: number) => (words.length ? Math.round(words[Math.max(0, Math.min(words.length - 1, i))].t * FPS) - slot.from : 0),
-    beat: beatPulse(frame),
-    beatN: beatIndex(frame),
-    mouth: mouthAt(frame),
+    beat: tl.beatPulse(frame),
+    beatN: tl.beatIndex(frame),
+    mouth: tl.mouthAt(frame),
   };
   const base = REGISTRATION[slot.state];
   const drift = slot.state === 'Memory' ? [Math.sin(f / 19) * 3, Math.cos(f / 23) * 2.5] : [0, 0];
@@ -41,7 +44,7 @@ export const SceneView: React.FC<{slot: Slot; frame: number; clip?: number}> = (
   const camera = {...cam, zoom: (cam.zoom ?? 1) * (1 + push + 0.035 * snap)};
   return (
     <AbsoluteFill style={clip !== undefined ? {clipPath: `inset(0 0 ${Math.max(0, 1920 - clip)}px 0)`} : undefined}>
-      <PrintFrame frame={frame} ground={def.ground} reg={reg} boilStep={hook ? 2 : 3} sheen={sheenAt(frame, slot)} camera={camera} under={def.under?.(p)}>
+      <PrintFrame frame={frame} ground={def.ground} reg={reg} boilStep={hook ? 2 : 3} sheen={sheenAt(tl, frame, slot)} camera={camera} under={def.under?.(p)}>
         {def.render(p)}
       </PrintFrame>
     </AbsoluteFill>

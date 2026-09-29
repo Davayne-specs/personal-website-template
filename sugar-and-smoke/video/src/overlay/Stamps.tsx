@@ -1,10 +1,10 @@
-// Rubber stamps that land on the exact word: PRECIOUS in gold foil, PRESSURE in red.
+// Rubber stamps that land on the exact word; each episode names its own (No. 1: PRECIOUS, PRESSURE; No. 2: FUTURE, COLD, NIGHT).
 import React from 'react';
 import {staticFile} from 'remotion';
-import {C, FONT} from '../brand/tokens';
+import {FONT} from '../brand/tokens';
 import {clamp, ease} from '../lib/ease';
 import {hash} from '../lib/random';
-import {HITS, SLOTS, slotIndexAt} from '../lib/timeline';
+import {StampKind, useTimeline} from '../lib/timeline';
 
 export const stampPlacement = (n: number) => {
   const h = hash(`stamp${n}`);
@@ -15,7 +15,7 @@ export const stampPlacement = (n: number) => {
   };
 };
 
-const Stamp: React.FC<{kind: 'precious' | 'pressure'; x: number; y: number; rot: number; t: number; fade: number; id: string}> = ({
+const Stamp: React.FC<{kind: StampKind; x: number; y: number; rot: number; t: number; fade: number; id: string}> = ({
   kind,
   x,
   y,
@@ -28,10 +28,10 @@ const Stamp: React.FC<{kind: 'precious' | 'pressure'; x: number; y: number; rot:
   const down = clamp((t + 4) / 4);
   const scale = t < 0 ? 1.5 - 0.5 * ease.inQuad(down) : 1 + 0.035 * Math.exp(-t / 2) * Math.cos(t * 1.8);
   const alpha = (t < 0 ? 0.25 + 0.75 * down : 1) * (1 - fade);
-  const word = kind === 'precious' ? 'PRECIOUS' : 'PRESSURE';
-  const ink = kind === 'precious' ? 'url(#stampfoil)' : C.pressure;
-  const ghost = kind === 'precious' ? C.goldLo : C.hotpink;
-  const w = 640;
+  const word = kind.word;
+  const ink = kind.ink === 'foil' ? 'url(#stampfoil)' : kind.ink;
+  const ghost = kind.ghost;
+  const w = Math.max(420, word.length * 75 + 40);
   const h = 200;
   return (
     <g transform={`translate(${x},${y}) rotate(${rot}) scale(${scale})`} opacity={alpha}>
@@ -56,10 +56,9 @@ const Stamp: React.FC<{kind: 'precious' | 'pressure'; x: number; y: number; rot:
   );
 };
 
-const HIT_END = HITS.map((h) => SLOTS[slotIndexAt(h.frame)].to);
-
 export const Stamps: React.FC<{frame: number}> = ({frame}) => {
-  const hits = HITS.map((h, i) => ({...h, end: HIT_END[i]})).filter((h) => h.frame - 4 <= frame && frame < h.end + 7);
+  const tl = useTimeline();
+  const hits = tl.HITS.map((h, i) => ({...h, end: tl.HIT_END[i]})).filter((h) => h.frame - 4 <= frame && frame < h.end + 7);
   if (!hits.length) return null;
   return (
     <svg viewBox="0 0 1080 1920" width={1080} height={1920} style={{position: 'absolute', left: 0, top: 0}}>
@@ -71,7 +70,8 @@ export const Stamps: React.FC<{frame: number}> = ({frame}) => {
       {hits.map((h) => {
         const p = stampPlacement(h.n);
         const fade = clamp((frame - h.end) / 6);
-        return <Stamp key={h.frame} id={`s${h.frame}`} kind={h.kind} x={p.x} y={p.y} rot={p.rot} t={frame - h.frame} fade={fade} />;
+        const kind = tl.STAMPS.find((k) => k.kind === h.kind)!;
+        return <Stamp key={h.frame} id={`s${h.frame}`} kind={kind} x={p.x} y={p.y} rot={p.rot} t={frame - h.frame} fade={fade} />;
       })}
     </svg>
   );

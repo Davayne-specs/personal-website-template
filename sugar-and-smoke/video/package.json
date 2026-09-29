@@ -2,10 +2,11 @@
   "name": "sugar-and-smoke-video",
   "private": true,
   "version": "1.0.0",
-  "description": "Sugar & Smoke Ep 1 - give me life (mbastein): animated lyric film in Remotion",
+  "description": "Sugar & Smoke: mbastein's animated lyric films in Remotion (No. 1 \"give me life\", No. 2 \"With You\")",
   "scripts": {
     "studio": "remotion studio src/index.ts",
-    "render": "remotion render src/index.ts GiveMeLife out/give-me-life-9x16.mp4",
+    "render:ep1": "remotion render src/index.ts GiveMeLife out/give-me-life-9x16.mp4 --codec=h264 --crf=18",
+    "render:ep2": "remotion render src/index.ts WithYou out/with-you-9x16.mp4 --codec=h264 --crf=18",
     "still": "remotion still src/index.ts"
   },
   "dependencies": {

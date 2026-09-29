@@ -12,7 +12,7 @@ export type Face = {
   browTilt?: number; // + = worried (inner ends up), - = cross (inner ends down)
   look?: [number, number]; // pupil offset, -1..1
   turn?: number; // head turn -1..1: features slide sideways
-  eyes?: 'dot' | 'wide' | 'closed' | 'happy' | 'heart' | 'shades' | 'wink';
+  eyes?: 'dot' | 'wide' | 'closed' | 'happy' | 'heart' | 'shades' | 'wink' | 'x';
   blush?: number; // 0..1
   lashes?: boolean;
   lip?: string; // lip colour (Precious)
@@ -53,6 +53,10 @@ export const drawFace = (fc: Face, g: Geo) => {
     }
     if (eyes === 'closed' || blink > 0.85) {
       parts.push(<Line key={k} d={`M${ex - 12},${ey}C${ex - 5},${ey + 7} ${ex + 5},${ey + 7} ${ex + 12},${ey}`} size={5.5} />);
+      return;
+    }
+    if (eyes === 'x') {
+      parts.push(<Line key={k} d={`M${ex - 11},${ey - 11}L${ex + 11},${ey + 11}M${ex + 11},${ey - 11}L${ex - 11},${ey + 11}`} size={5.5} />);
       return;
     }
     if (eyes === 'heart') {

@@ -1,15 +1,15 @@
 // Hook, precious half (part one): No. 23-31. Gold foil, cuts on the downbeat, PRECIOUS stamps.
 import React from 'react';
-import {C, FONT} from '../brand/tokens';
-import {Precious, PRECIOUS_PARTS, PRECIOUS_POSES} from '../characters/Precious';
-import {Ring} from '../characters/Ring';
-import {Stein, STEIN_PARTS, STEIN_POSES} from '../characters/Stein';
-import {clamp, ease, keys, lerp, prog} from '../lib/ease';
-import {Flat, Line, Shape, Txt} from '../lib/print';
-import {rng} from '../lib/random';
-import {addPose, chainAngle, Pose, poseAt, walkCycle, worldPoint} from '../lib/rig';
-import {Bubble, circle, ellipse, Floor, heart, Note, Pop, rect, smooth, SmokePuff, Sparkle, Wash} from '../props/common';
-import {SceneDef} from './types';
+import {C, FONT} from '../../../brand/tokens';
+import {Precious, PRECIOUS_PARTS, PRECIOUS_POSES} from '../../../characters/Precious';
+import {Ring} from '../../../characters/Ring';
+import {Stein, STEIN_PARTS, STEIN_POSES} from '../../../characters/Stein';
+import {clamp, ease, keys, lerp, prog} from '../../../lib/ease';
+import {Flat, Line, Shape, Txt} from '../../../lib/print';
+import {rng} from '../../../lib/random';
+import {addPose, chainAngle, Pose, poseAt, walkCycle, worldPoint} from '../../../lib/rig';
+import {Bubble, circle, ellipse, Floor, heart, Note, Pop, rect, smooth, SmokePuff, Sparkle, Wash} from '../../../props/common';
+import {SceneDef} from '../../../lib/scene';
 
 const blink = (f: number, every = 97, off = 0) => ((f + off) % every < 4 ? 1 : 0);
 

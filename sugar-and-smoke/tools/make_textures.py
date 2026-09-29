@@ -154,6 +154,10 @@ if __name__ == "__main__":
     wash("wash-aqua-1.png", "#8ED3C9", 201)
     wash("wash-aqua-2.png", "#9FDCD3", 202)
     wash("wash-gold-1.png", "#E9C77A", 301, strength=0.9)
+    # No. 2 accents
+    wash("wash-ice-1.png", "#A9CFE4", 501)
+    wash("wash-slate-1.png", "#8D96A8", 502, strength=0.75)
+    wash("wash-amber-1.png", "#EDB96A", 503, strength=0.85)
     for i in range(1, 5):
         smoke(f"smoke-{i}.png", 400 + i)
     foil()

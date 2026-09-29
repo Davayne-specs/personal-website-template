@@ -4,7 +4,7 @@ import React from 'react';
 import {C} from '../brand/tokens';
 import {Flat, Line, Only, Shape} from '../lib/print';
 import {Part, Place, Pose, renderRig} from '../lib/rig';
-import {capsule, circle, ellipse, mirror, rect} from '../lib/shapes';
+import {capsule, circle, ellipse, heart, mirror, rect} from '../lib/shapes';
 import {drawFace, Face} from './face';
 
 const TEAL_D = '#155F5C';
@@ -16,6 +16,9 @@ export type SteinStyle = {
   bandage?: boolean;
   crown?: boolean;
   chain?: boolean;
+  winter?: boolean; // beanie and scarf (No. 2)
+  pyjamas?: boolean;
+  aged?: boolean; // grey hair (the far future)
 };
 
 type Params = {face: Face; style: SteinStyle; holdL?: React.ReactNode; holdR?: React.ReactNode; opacity: number};
@@ -38,6 +41,8 @@ const SOLE = 'M-72,34L30,34L28,48C0,54 -50,54 -70,48Z';
 
 const fillOf = (s: SteinStyle, c: string) => (s.ghost ? undefined : c);
 const pat = (s: SteinStyle) => (s.ghost ? 'smokefill' : undefined);
+const top = (s: SteinStyle) => (s.pyjamas ? C.blush : C.teal);
+const bottoms = (s: SteinStyle) => (s.pyjamas ? C.blush : JOG);
 
 const cut = (s: SteinStyle, d: string, fill: string, extra: Partial<React.ComponentProps<typeof Shape>> = {}) => (
   <Shape
@@ -60,7 +65,7 @@ const leg = (side: 'L' | 'R'): Part<Params>[] => {
       z: 3,
       draw: ({style}) => (
         <>
-          {cut(style, capsule(190, 86, 74), JOG, {shade: side === 'R' ? 'M10,-40L60,-40L60,200L10,200Z' : undefined, shadeInk: 'ht-ink-1'})}
+          {cut(style, capsule(190, 86, 74), bottoms(style), {shade: side === 'R' ? 'M10,-40L60,-40L60,200L10,200Z' : undefined, shadeInk: 'ht-ink-1'})}
           {!style.ghost && <Line d={`M${sx * 8},40C${sx * 12},90 ${sx * 8},140 ${sx * 2},176`} size={3} opacity={0.6} />}
         </>
       ),
@@ -72,7 +77,7 @@ const leg = (side: 'L' | 'R'): Part<Params>[] => {
       z: 2,
       draw: ({style}) => (
         <>
-          {cut(style, capsule(172, 74, 62), JOG)}
+          {cut(style, capsule(172, 74, 62), bottoms(style))}
           {!style.ghost && <Shape d={rect(-33, 150, 66, 24, 9)} fill="#2A2338" line={3.5} />}
         </>
       ),
@@ -109,7 +114,7 @@ const arm = (side: 'L' | 'R'): Part<Params>[] => {
       parent: 'torso',
       at: [sx * 106, -264],
       z: 10,
-      draw: ({style}) => cut(style, capsule(152, 68, 60), C.teal, {shade: side === 'R' ? 'M8,-40L50,-40L50,190L8,190Z' : undefined, shadeInk: 'ht-ink-1'}),
+      draw: ({style}) => cut(style, capsule(152, 68, 60), top(style), {shade: side === 'R' ? 'M8,-40L50,-40L50,190L8,190Z' : undefined, shadeInk: 'ht-ink-1'}),
     },
     {
       id: `farm${side}`,
@@ -118,8 +123,8 @@ const arm = (side: 'L' | 'R'): Part<Params>[] => {
       z: 11,
       draw: ({style}) => (
         <>
-          {cut(style, capsule(138, 60, 54), C.teal)}
-          {!style.ghost && <Shape d={rect(-29, 110, 58, 26, 10)} fill={TEAL_D} line={3.5} />}
+          {cut(style, capsule(138, 60, 54), top(style))}
+          {!style.ghost && <Shape d={rect(-29, 110, 58, 26, 10)} fill={style.pyjamas ? C.hotpink : TEAL_D} line={3.5} />}
         </>
       ),
     },
@@ -143,7 +148,7 @@ export const STEIN_PARTS: Part<Params>[] = [
     id: 'pelvis',
     at: [0, 0],
     z: 5,
-    draw: ({style}) => cut(style, PELVIS, JOG),
+    draw: ({style}) => cut(style, PELVIS, bottoms(style)),
   },
   ...leg('L'),
   ...leg('R'),
@@ -159,6 +164,15 @@ export const STEIN_PARTS: Part<Params>[] = [
           {/* palm-print collar: the only solid thing about him */}
           <Shape d="M-70,-300C-60,-250 -30,-236 0,-236C30,-236 60,-250 70,-300L40,-304C30,-270 -30,-270 -40,-304Z" fill={C.aqua} line={3.5} />
           <Line d="M-50,-290L-40,-270M-30,-296L-20,-262M20,-262L30,-296M40,-270L50,-290" size={4} color={C.teal} />
+        </>
+      ) : style.pyjamas ? (
+        <>
+          {/* heart-print pyjama top */}
+          <Shape d={HOODIE} fill={C.blush} shade={HOODIE_SH} shadeInk="ht-pink-2" />
+          {[[-60, -200], [20, -150], [-30, -80], [60, -230], [50, -40], [-70, -10]].map(([x, y], i) => (
+            <Flat key={i} d={heart(x, y, 16)} fill={C.hotpink} />
+          ))}
+          <Line d="M-40,-300L0,-250L40,-300M0,-250L0,30" size={4} />
         </>
       ) : (
         <>
@@ -179,7 +193,7 @@ export const STEIN_PARTS: Part<Params>[] = [
     parent: 'torso',
     at: [0, -300],
     z: 7,
-    draw: ({style}) => (style.hood ? null : cut(style, HOOD, TEAL_D)),
+    draw: ({style}) => (style.hood || style.pyjamas ? null : cut(style, HOOD, TEAL_D)),
   },
   {
     id: 'head',
@@ -202,8 +216,8 @@ export const STEIN_PARTS: Part<Params>[] = [
           <Shape d={EAR_L} fill={C.steinSkin} />
           <Shape d={mirror(EAR_L)} fill={C.steinSkin} />
           <Shape d={HEAD} fill={C.steinSkin} shade={HEAD_SH} shadeInk="ht-ink-2" />
-          <Flat d={STUBBLE} fill="url(#ht-ink-1)" />
-          <Shape d={HAIR} fill={C.ink} line={4} />
+          <Flat d={STUBBLE} fill={style.aged ? 'url(#ht-cotton-2)' : 'url(#ht-ink-1)'} />
+          <Shape d={HAIR} fill={style.aged ? '#C9CDD2' : C.ink} line={4} />
           {drawFace({...face, blush: face.blush}, {eyeX: 33, eyeY: -150, browY: -182, noseY: -116, mouthY: -86, width: 170})}
           {style.chain !== false && (
             <>
@@ -215,6 +229,17 @@ export const STEIN_PARTS: Part<Params>[] = [
           {style.hood && <Shape d={HOOD_UP} fill={C.teal} evenodd={false} line={6} />}
           {style.crown && (
             <Shape d="M-74,-250L-66,-330L-34,-290L0,-344L34,-290L66,-330L74,-250Z" fill={C.gold} pattern="foil" sheen line={5} />
+          )}
+          {style.winter && (
+            <>
+              <Shape d="M-92,-176C-96,-250 -56,-292 0,-292C56,-292 96,-250 92,-176Z" fill={C.hotpink} shade="M30,-300L100,-300L100,-170L30,-170Z" shadeInk="ht-ink-2" line={6} />
+              <Shape d="M-96,-196L96,-196L98,-160L-98,-160Z" fill={C.candy} line={5} />
+              <Line d="M-60,-196L-58,-162M-20,-196L-20,-160M20,-196L20,-160M60,-196L58,-162" size={3} opacity={0.6} />
+              <Shape d={circle(0, -300, 26)} fill={C.white} line={5} />
+              <Shape d="M-62,4C-30,26 30,26 62,4L66,34C30,60 -30,60 -66,34Z" fill={C.candy} line={5} />
+              <Shape d="M30,34L46,120L74,112L58,30Z" fill={C.candy} line={5} />
+              <Line d="M38,60L62,56M44,86L66,82" size={4} color={C.hotpink} />
+            </>
           )}
           {style.bandage && (
             <>

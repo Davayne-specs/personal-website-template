@@ -1,15 +1,14 @@
 // Outro: No. 57-59. Release: pale gold, perfect register, the Ring is given.
 import React from 'react';
-import {C, FONT} from '../brand/tokens';
-import {Precious, PRECIOUS_POSES} from '../characters/Precious';
-import {Ring} from '../characters/Ring';
-import {Stein, STEIN_PARTS, STEIN_POSES} from '../characters/Stein';
-import {clamp, ease, lerp, prog} from '../lib/ease';
-import {Flat, Shape, Txt} from '../lib/print';
-import {chainAngle, Pose} from '../lib/rig';
-import {Confetti} from '../overlay/GaugeOverlay';
-import {circle, ellipse, FloatHearts, heart, poly, rect, SmokePuff, Sparkle, Wash} from '../props/common';
-import {SceneDef} from './types';
+import {C, FONT} from '../../../brand/tokens';
+import {Precious, PRECIOUS_POSES} from '../../../characters/Precious';
+import {Ring} from '../../../characters/Ring';
+import {Stein, STEIN_PARTS, STEIN_POSES} from '../../../characters/Stein';
+import {clamp, ease, lerp, prog} from '../../../lib/ease';
+import {Flat, Shape, Txt} from '../../../lib/print';
+import {chainAngle, Pose} from '../../../lib/rig';
+import {circle, Confetti, ellipse, FloatHearts, heart, poly, rect, SmokePuff, Sparkle, Wash} from '../../../props/common';
+import {SceneDef} from '../../../lib/scene';
 
 // ---------------------------------------------------------------- No. 57
 export const S57: SceneDef = {

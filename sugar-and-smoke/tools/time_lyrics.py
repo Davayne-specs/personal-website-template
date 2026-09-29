@@ -1,17 +1,19 @@
 """Time every lyric line (and word) of a song from its audio.
 
-    python3 tools/time_lyrics.py path/to/song.mp3
+    python3 tools/time_lyrics.py episodes/ep02-with-you path/to/song.mp3
 
 Steps
   1. decode the song (ffmpeg) and isolate the vocal with UVR MDX-Net (sherpa-onnx)
   2. transcribe the vocal with word timestamps (NVIDIA Parakeet TDT 0.6B via sherpa-onnx)
-  3. align the recognised words to data/lyrics.json with dynamic programming
-  4. write data/timing.json (per line + per word) and data/audio-features.json
-     (per-frame vocal level for lip-sync, low-band onsets, beat times)
+  3. align the recognised words to <episode>/lyrics.json with dynamic programming
+  4. write <episode>/timing.json (per line + per word) and <episode>/audio-features.json
+     (per-frame vocal level for lip-sync, low-band onsets, beat times), and the raw
+     recognised words to tools/.work/<episode>/heard.txt for checking by ear
 
 Needs: pip install sherpa-onnx librosa soundfile numpy imageio-ffmpeg
 Models are downloaded once into tools/.work/models from the sherpa-onnx GitHub releases.
-Lines the recogniser cannot hear (sung melismas, ad-libs) are set in MANUAL below.
+Lines the recogniser cannot hear (sung melismas, ad-libs) are set by hand in
+<episode>/manual.json: {"<line index>": {"span": [start, end], "words": [t0, t1, ...]}}.
 """
 import json
 import re
@@ -28,7 +30,7 @@ import sherpa_onnx
 import soundfile as sf
 
 ROOT = Path(__file__).resolve().parent.parent
-DATA = ROOT / "data"
+DATA = ROOT / "episodes" / "ep01-give-me-life"  # replaced by the episode given on the command line
 WORK = Path(__file__).resolve().parent / ".work"
 MODELS = WORK / "models"
 FPS = 30
@@ -36,15 +38,7 @@ REL = "https://github.com/k2-fsa/sherpa-onnx/releases/download"
 UVR = MODELS / "UVR-MDX-NET-Voc_FT.onnx"
 PARAKEET = MODELS / "sherpa-onnx-nemo-parakeet-tdt-0.6b-v2-int8"
 
-# Episode 1: the sung intro and the pre-hook "Ayy" are set by hand (seconds).
-# Line index -> (start, end), and optional word times.
-MANUAL = {
-    0: {"span": (0.25, 9.3), "words": [0.25, 0.65, 1.05, 1.37, 4.5]},
-    1: {"span": (9.4, 14.0), "words": [10.88, 11.12, 11.28, 11.6, 12.3]},
-    2: {"span": (15.1, 18.4), "words": [15.2, 15.39, 15.71, 15.95, 16.43]},
-    21: {"span": (79.2, 80.5)},
-}
-FIRST_WORD = {14: 58.5}
+MANUAL: dict = {}  # loaded from <episode>/manual.json
 
 
 def fetch():
@@ -188,12 +182,35 @@ def align(words, lyrics):
     return lines, words
 
 
+def fill_gaps(lines):
+    """Lines nothing was matched to (and no manual span) share the gap between their neighbours."""
+    for i, ln in enumerate(lines):
+        if "span" in MANUAL.get(i, {}):
+            ln["start"], ln["end"] = MANUAL[i]["span"]
+    i = 0
+    while i < len(lines):
+        if "start" in lines[i]:
+            i += 1
+            continue
+        j = i
+        while j < len(lines) and "start" not in lines[j]:
+            j += 1
+        a = lines[i - 1]["end"] + 0.1 if i > 0 else 0.0
+        b = lines[j]["start"] - 0.1 if j < len(lines) else a + 2.5 * (j - i)
+        n = [max(1, len(lines[k]["text"].split())) for k in range(i, j)]
+        t = a
+        for k, c in zip(range(i, j), n):
+            span = (b - a) * c / sum(n)
+            lines[k]["start"], lines[k]["end"] = round(t, 2), round(t + span * 0.9, 2)
+            t += span
+        i = j
+
+
 def word_times(lines, words):
+    fill_gaps(lines)
     out = []
     for i, ln in enumerate(lines):
         man = MANUAL.get(i, {})
-        if "span" in man:
-            ln["start"], ln["end"] = man["span"]
         a, b = ln["start"], ln["end"]
         lw = ln["text"].split()
         cand = [w for w in words if a - 0.3 <= w["t"] <= b + 0.1]
@@ -219,9 +236,9 @@ def word_times(lines, words):
         for k in range(1, len(times)):
             times[k] = max(times[k], times[k - 1] + 0.05)
         if "words" in man:
-            times = man["words"]
-        if i in FIRST_WORD:
-            times[0] = FIRST_WORD[i]
+            times = list(man["words"])
+        if "first" in man:
+            times[0] = man["first"]
         out.append({"i": i, "section": ln["section"], "text": ln["text"], "start": round(a, 2), "end": round(b, 2),
                     "words": [{"w": w, "t": round(t, 2)} for w, t in zip(lw, times)]})
     for i in range(len(out) - 1):
@@ -250,12 +267,18 @@ def features(wav, vocal):
 
 
 if __name__ == "__main__":
-    song = Path(sys.argv[1])
+    DATA = Path(sys.argv[1]).resolve()
+    song = Path(sys.argv[2])
+    WORK = Path(__file__).resolve().parent / ".work" / DATA.name
     WORK.mkdir(parents=True, exist_ok=True)
+    man = DATA / "manual.json"
+    MANUAL = {int(k): v for k, v in json.load(open(man)).items()} if man.exists() else {}
     fetch()
     wav = decode(song)
     vocal = separate(wav)
     words = transcribe(vocal)
+    with open(WORK / "heard.txt", "w") as fh:
+        fh.write(" ".join(f"{w['w']}@{w['t']:.2f}" for w in words))
     lines, words = align(words, json.load(open(DATA / "lyrics.json")))
     timing = word_times(lines, words)
     json.dump(timing, open(DATA / "timing.json", "w"), indent=1)

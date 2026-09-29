@@ -2,6 +2,24 @@ export const clamp = (x: number, a = 0, b = 1) => Math.min(b, Math.max(a, x));
 export const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
 export const inv = (a: number, b: number, x: number) => (b === a ? 0 : (x - a) / (b - a));
 
+// Blend two #RRGGBB colours.
+export const mixColor = (a: string, b: string, t: number) => {
+  const ca = [1, 3, 5].map((i) => parseInt(a.slice(i, i + 2), 16));
+  const cb = [1, 3, 5].map((i) => parseInt(b.slice(i, i + 2), 16));
+  return `#${ca.map((v, i) => Math.round(lerp(v, cb[i], clamp(t))).toString(16).padStart(2, '0')).join('')}`;
+};
+
+// A colour ramp: [[frame, '#RRGGBB'], ...] blended linearly between keys.
+export const colorKeys = (f: number, ks: [number, string][]) => {
+  if (f <= ks[0][0]) return ks[0][1];
+  for (let i = 0; i < ks.length - 1; i++) {
+    const [f0, c0] = ks[i];
+    const [f1, c1] = ks[i + 1];
+    if (f <= f1) return mixColor(c0, c1, (f - f0) / Math.max(1, f1 - f0));
+  }
+  return ks[ks.length - 1][1];
+};
+
 export const ease = {
   linear: (t: number) => t,
   inQuad: (t: number) => t * t,

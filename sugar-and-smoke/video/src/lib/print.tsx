@@ -23,7 +23,7 @@ export const usePrint = () => useContext(PrintCtx);
 
 const cleanId = (s: string) => s.replace(/[^a-zA-Z0-9_-]/g, '');
 
-export type HT = `ht-${'ink' | 'pink' | 'teal' | 'gold' | 'red' | 'cotton' | 'candy' | 'aqua' | 'smoke'}-${1 | 2 | 3 | 4}`;
+export type HT = `ht-${'ink' | 'pink' | 'teal' | 'gold' | 'red' | 'cotton' | 'candy' | 'aqua' | 'smoke' | 'ice' | 'amber' | 'slate'}-${1 | 2 | 3 | 4}`;
 
 const PATTERN_GHOST: Record<string, string> = {foil: C.gold, smokefill: C.smoke};
 
@@ -233,6 +233,9 @@ const HT_COLORS: Record<string, string> = {
   candy: C.candy,
   aqua: C.aqua,
   smoke: C.ash,
+  ice: C.iceInk,
+  amber: '#C98F35',
+  slate: C.slate,
 };
 const HT_R = [0, 1.7, 2.5, 3.3, 4.3];
 
@@ -273,6 +276,16 @@ export const PrintDefs: React.FC<{sheen?: number}> = ({sheen = -1}) => {
       <radialGradient id="glow-cotton">
         <stop offset="0" stopColor={C.cotton} stopOpacity={0.85} />
         <stop offset="1" stopColor={C.cotton} stopOpacity={0} />
+      </radialGradient>
+      <radialGradient id="glow-amber">
+        <stop offset="0" stopColor={C.amber} stopOpacity={0.85} />
+        <stop offset="0.5" stopColor={C.amber} stopOpacity={0.3} />
+        <stop offset="1" stopColor={C.amber} stopOpacity={0} />
+      </radialGradient>
+      <radialGradient id="glow-ice">
+        <stop offset="0" stopColor={C.white} stopOpacity={0.9} />
+        <stop offset="0.5" stopColor={C.ice} stopOpacity={0.4} />
+        <stop offset="1" stopColor={C.ice} stopOpacity={0} />
       </radialGradient>
       <radialGradient id="glow-red">
         <stop offset="0" stopColor={C.pressure} stopOpacity={0.6} />

@@ -11,7 +11,7 @@ mkdirSync(outDir, {recursive: true});
 const shell = '/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell';
 const serveUrl = process.env.BUNDLE ?? (await bundle({entryPoint: path.resolve('src/index.ts')}));
 const browser = await openBrowser('chrome', {browserExecutable: existsSync(shell) ? shell : undefined});
-const comp = await selectComposition({serveUrl, id: 'GiveMeLife', inputProps: {audio: false}, puppeteerInstance: browser});
+const comp = await selectComposition({serveUrl, id: process.env.COMP ?? 'GiveMeLife', inputProps: {audio: false}, puppeteerInstance: browser});
 const slots = JSON.parse(process.env.SLOTS ?? '[]');
 const frames = args.map((a) => {
   if (!a.startsWith('slot:')) return Number(a);

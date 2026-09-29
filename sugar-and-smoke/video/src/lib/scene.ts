@@ -1,7 +1,7 @@
 import React from 'react';
 import {Ground} from '../brand/tokens';
-import {Camera} from '../lib/frame';
-import {Slot} from '../lib/timeline';
+import {Camera} from './frame';
+import {Slot} from './timeline';
 
 export type SceneProps = {
   f: number; // frame since the scene began

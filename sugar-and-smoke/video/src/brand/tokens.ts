@@ -28,9 +28,17 @@ export const C = {
   preciousSkin: '#8E5C3F',
   jogger: '#2F2740',
   white: '#FFFCF6',
+  // No. 2 accents, from the "With You" cover
+  frost: '#E8EEF2',
+  dusk: '#222A38',
+  ice: '#A9CFE4',
+  iceInk: '#4E8FB9',
+  slate: '#5A5E6D',
+  amber: '#E8B566',
 } as const;
 
-export type Ground = 'cotton' | 'blush' | 'mint' | 'night';
+export type Ground = 'cotton' | 'blush' | 'mint' | 'night' | 'frost' | 'dusk';
+export const isDark = (g: string) => g === 'night' || g === 'dusk';
 export type StateName = 'Memory' | 'Absence' | 'Precious' | 'Pressure' | 'Release' | 'Present';
 
 // Sticker shadow: ink at 18%, 8px right, 10px down, no blur.
