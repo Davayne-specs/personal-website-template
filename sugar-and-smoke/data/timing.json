@@ -1,0 +1,2121 @@
+[
+ {
+  "i": 0,
+  "section": "Verse 1",
+  "text": "Just see you smile, smile",
+  "start": 0.25,
+  "end": 9.3,
+  "words": [
+   {
+    "w": "Just",
+    "t": 0.25
+   },
+   {
+    "w": "see",
+    "t": 0.65
+   },
+   {
+    "w": "you",
+    "t": 1.05
+   },
+   {
+    "w": "smile,",
+    "t": 1.37
+   },
+   {
+    "w": "smile",
+    "t": 4.5
+   }
+  ]
+ },
+ {
+  "i": 1,
+  "section": "Verse 1",
+  "text": "Cause all I really know",
+  "start": 9.4,
+  "end": 14.0,
+  "words": [
+   {
+    "w": "Cause",
+    "t": 10.88
+   },
+   {
+    "w": "all",
+    "t": 11.12
+   },
+   {
+    "w": "I",
+    "t": 11.28
+   },
+   {
+    "w": "really",
+    "t": 11.6
+   },
+   {
+    "w": "know",
+    "t": 12.3
+   }
+  ]
+ },
+ {
+  "i": 2,
+  "section": "Verse 1",
+  "text": "And now we're going up",
+  "start": 15.1,
+  "end": 18.4,
+  "words": [
+   {
+    "w": "And",
+    "t": 15.2
+   },
+   {
+    "w": "now",
+    "t": 15.39
+   },
+   {
+    "w": "we're",
+    "t": 15.71
+   },
+   {
+    "w": "going",
+    "t": 15.95
+   },
+   {
+    "w": "up",
+    "t": 16.43
+   }
+  ]
+ },
+ {
+  "i": 3,
+  "section": "Verse 1",
+  "text": "I don't think about it so much anymore anymore",
+  "start": 22.35,
+  "end": 26.95,
+  "words": [
+   {
+    "w": "I",
+    "t": 22.35
+   },
+   {
+    "w": "don't",
+    "t": 22.51
+   },
+   {
+    "w": "think",
+    "t": 23.07
+   },
+   {
+    "w": "about",
+    "t": 23.39
+   },
+   {
+    "w": "it",
+    "t": 23.71
+   },
+   {
+    "w": "so",
+    "t": 24.03
+   },
+   {
+    "w": "much",
+    "t": 24.35
+   },
+   {
+    "w": "anymore",
+    "t": 24.91
+   },
+   {
+    "w": "anymore",
+    "t": 26.35
+   }
+  ]
+ },
+ {
+  "i": 4,
+  "section": "Verse 1",
+  "text": "Call your phone and it's never answered anymore anymore",
+  "start": 27.87,
+  "end": 32.71,
+  "words": [
+   {
+    "w": "Call",
+    "t": 27.87
+   },
+   {
+    "w": "your",
+    "t": 28.19
+   },
+   {
+    "w": "phone",
+    "t": 28.43
+   },
+   {
+    "w": "and",
+    "t": 28.75
+   },
+   {
+    "w": "it's",
+    "t": 28.91
+   },
+   {
+    "w": "never",
+    "t": 29.47
+   },
+   {
+    "w": "answered",
+    "t": 29.71
+   },
+   {
+    "w": "anymore",
+    "t": 30.75
+   },
+   {
+    "w": "anymore",
+    "t": 32.11
+   }
+  ]
+ },
+ {
+  "i": 5,
+  "section": "Verse 1",
+  "text": "You moved, don't you",
+  "start": 33.71,
+  "end": 35.27,
+  "words": [
+   {
+    "w": "You",
+    "t": 33.71
+   },
+   {
+    "w": "moved,",
+    "t": 33.87
+   },
+   {
+    "w": "don't",
+    "t": 34.35
+   },
+   {
+    "w": "you",
+    "t": 34.67
+   }
+  ]
+ },
+ {
+  "i": 6,
+  "section": "Verse 1",
+  "text": "Ayy, you went around and did the groove, did you?",
+  "start": 35.35,
+  "end": 37.65,
+  "words": [
+   {
+    "w": "Ayy,",
+    "t": 35.35
+   },
+   {
+    "w": "you",
+    "t": 35.63
+   },
+   {
+    "w": "went",
+    "t": 35.79
+   },
+   {
+    "w": "around",
+    "t": 36.11
+   },
+   {
+    "w": "and",
+    "t": 36.35
+   },
+   {
+    "w": "did",
+    "t": 36.51
+   },
+   {
+    "w": "the",
+    "t": 36.67
+   },
+   {
+    "w": "groove,",
+    "t": 36.92
+   },
+   {
+    "w": "did",
+    "t": 37.17
+   },
+   {
+    "w": "you?",
+    "t": 37.42
+   }
+  ]
+ },
+ {
+  "i": 7,
+  "section": "Verse 1",
+  "text": "Ayy, you went to SoCal, yeah, I knew about you",
+  "start": 37.67,
+  "end": 40.55,
+  "words": [
+   {
+    "w": "Ayy,",
+    "t": 37.67
+   },
+   {
+    "w": "you",
+    "t": 38.15
+   },
+   {
+    "w": "went",
+    "t": 38.31
+   },
+   {
+    "w": "to",
+    "t": 38.55
+   },
+   {
+    "w": "SoCal,",
+    "t": 38.63
+   },
+   {
+    "w": "yeah,",
+    "t": 39.03
+   },
+   {
+    "w": "I",
+    "t": 39.43
+   },
+   {
+    "w": "knew",
+    "t": 39.51
+   },
+   {
+    "w": "about",
+    "t": 39.75
+   },
+   {
+    "w": "you",
+    "t": 39.99
+   }
+  ]
+ },
+ {
+  "i": 8,
+  "section": "Verse 1",
+  "text": "Ayy, you probably had a man, I knew about it",
+  "start": 40.55,
+  "end": 43.43,
+  "words": [
+   {
+    "w": "Ayy,",
+    "t": 40.55
+   },
+   {
+    "w": "you",
+    "t": 41.11
+   },
+   {
+    "w": "probably",
+    "t": 41.27
+   },
+   {
+    "w": "had",
+    "t": 41.59
+   },
+   {
+    "w": "a",
+    "t": 41.75
+   },
+   {
+    "w": "man,",
+    "t": 41.99
+   },
+   {
+    "w": "I",
+    "t": 42.31
+   },
+   {
+    "w": "knew",
+    "t": 42.39
+   },
+   {
+    "w": "about",
+    "t": 42.63
+   },
+   {
+    "w": "it",
+    "t": 42.87
+   }
+  ]
+ },
+ {
+  "i": 9,
+  "section": "Verse 1",
+  "text": "Yeah, you can't trip me, girl, I'm so different",
+  "start": 43.71,
+  "end": 46.27,
+  "words": [
+   {
+    "w": "Yeah,",
+    "t": 43.71
+   },
+   {
+    "w": "you",
+    "t": 43.99
+   },
+   {
+    "w": "can't",
+    "t": 44.15
+   },
+   {
+    "w": "trip",
+    "t": 44.39
+   },
+   {
+    "w": "me,",
+    "t": 44.71
+   },
+   {
+    "w": "girl,",
+    "t": 44.87
+   },
+   {
+    "w": "I'm",
+    "t": 45.19
+   },
+   {
+    "w": "so",
+    "t": 45.43
+   },
+   {
+    "w": "different",
+    "t": 45.67
+   }
+  ]
+ },
+ {
+  "i": 10,
+  "section": "Verse 1",
+  "text": "Ayy, I want to run around, go pissin'",
+  "start": 46.39,
+  "end": 49.07,
+  "words": [
+   {
+    "w": "Ayy,",
+    "t": 46.39
+   },
+   {
+    "w": "I",
+    "t": 46.95
+   },
+   {
+    "w": "want",
+    "t": 47.11
+   },
+   {
+    "w": "to",
+    "t": 47.31
+   },
+   {
+    "w": "run",
+    "t": 47.51
+   },
+   {
+    "w": "around,",
+    "t": 47.75
+   },
+   {
+    "w": "go",
+    "t": 48.15
+   },
+   {
+    "w": "pissin'",
+    "t": 48.47
+   }
+  ]
+ },
+ {
+  "i": 11,
+  "section": "Verse 1",
+  "text": "Ayy, it goes up or down, no pistons",
+  "start": 49.27,
+  "end": 52.03,
+  "words": [
+   {
+    "w": "Ayy,",
+    "t": 49.27
+   },
+   {
+    "w": "it",
+    "t": 49.75
+   },
+   {
+    "w": "goes",
+    "t": 49.91
+   },
+   {
+    "w": "up",
+    "t": 50.31
+   },
+   {
+    "w": "or",
+    "t": 50.55
+   },
+   {
+    "w": "down,",
+    "t": 50.71
+   },
+   {
+    "w": "no",
+    "t": 51.03
+   },
+   {
+    "w": "pistons",
+    "t": 51.43
+   }
+  ]
+ },
+ {
+  "i": 12,
+  "section": "Verse 1",
+  "text": "Ayy, I think about it and I know, get it",
+  "start": 52.23,
+  "end": 55.11,
+  "words": [
+   {
+    "w": "Ayy,",
+    "t": 52.23
+   },
+   {
+    "w": "I",
+    "t": 52.71
+   },
+   {
+    "w": "think",
+    "t": 52.87
+   },
+   {
+    "w": "about",
+    "t": 53.11
+   },
+   {
+    "w": "it",
+    "t": 53.43
+   },
+   {
+    "w": "and",
+    "t": 53.67
+   },
+   {
+    "w": "I",
+    "t": 53.83
+   },
+   {
+    "w": "know,",
+    "t": 53.99
+   },
+   {
+    "w": "get",
+    "t": 54.39
+   },
+   {
+    "w": "it",
+    "t": 54.55
+   }
+  ]
+ },
+ {
+  "i": 13,
+  "section": "Verse 1",
+  "text": "Yeah, you got a man, did you, little shawty?",
+  "start": 55.11,
+  "end": 58.07,
+  "words": [
+   {
+    "w": "Yeah,",
+    "t": 55.11
+   },
+   {
+    "w": "you",
+    "t": 55.91
+   },
+   {
+    "w": "got",
+    "t": 56.07
+   },
+   {
+    "w": "a",
+    "t": 56.31
+   },
+   {
+    "w": "man,",
+    "t": 56.63
+   },
+   {
+    "w": "did",
+    "t": 56.87
+   },
+   {
+    "w": "you,",
+    "t": 57.03
+   },
+   {
+    "w": "little",
+    "t": 57.27
+   },
+   {
+    "w": "shawty?",
+    "t": 57.52
+   }
+  ]
+ },
+ {
+  "i": 14,
+  "section": "Verse 1",
+  "text": "I pick it up in the moment when you combine it",
+  "start": 58.43,
+  "end": 60.75,
+  "words": [
+   {
+    "w": "I",
+    "t": 58.5
+   },
+   {
+    "w": "pick",
+    "t": 59.08
+   },
+   {
+    "w": "it",
+    "t": 59.14
+   },
+   {
+    "w": "up",
+    "t": 59.19
+   },
+   {
+    "w": "in",
+    "t": 59.35
+   },
+   {
+    "w": "the",
+    "t": 59.51
+   },
+   {
+    "w": "moment",
+    "t": 59.59
+   },
+   {
+    "w": "when",
+    "t": 59.99
+   },
+   {
+    "w": "you",
+    "t": 60.15
+   },
+   {
+    "w": "combine",
+    "t": 60.31
+   },
+   {
+    "w": "it",
+    "t": 60.56
+   }
+  ]
+ },
+ {
+  "i": 15,
+  "section": "Verse 1",
+  "text": "I wanna tell you 'bout the times I had a girl",
+  "start": 61.55,
+  "end": 64.43,
+  "words": [
+   {
+    "w": "I",
+    "t": 61.55
+   },
+   {
+    "w": "wanna",
+    "t": 61.83
+   },
+   {
+    "w": "tell",
+    "t": 62.31
+   },
+   {
+    "w": "you",
+    "t": 62.47
+   },
+   {
+    "w": "'bout",
+    "t": 62.67
+   },
+   {
+    "w": "the",
+    "t": 62.87
+   },
+   {
+    "w": "times",
+    "t": 63.03
+   },
+   {
+    "w": "I",
+    "t": 63.35
+   },
+   {
+    "w": "had",
+    "t": 63.51
+   },
+   {
+    "w": "a",
+    "t": 63.67
+   },
+   {
+    "w": "girl",
+    "t": 63.83
+   }
+  ]
+ },
+ {
+  "i": 16,
+  "section": "Verse 1",
+  "text": "When you run around city with your own world",
+  "start": 64.47,
+  "end": 67.31,
+  "words": [
+   {
+    "w": "When",
+    "t": 64.47
+   },
+   {
+    "w": "you",
+    "t": 64.71
+   },
+   {
+    "w": "run",
+    "t": 64.87
+   },
+   {
+    "w": "around",
+    "t": 65.19
+   },
+   {
+    "w": "city",
+    "t": 65.67
+   },
+   {
+    "w": "with",
+    "t": 66.07
+   },
+   {
+    "w": "your",
+    "t": 66.23
+   },
+   {
+    "w": "own",
+    "t": 66.47
+   },
+   {
+    "w": "world",
+    "t": 66.71
+   }
+  ]
+ },
+ {
+  "i": 17,
+  "section": "Verse 1",
+  "text": "And I feel like, you feel me",
+  "start": 67.51,
+  "end": 70.35,
+  "words": [
+   {
+    "w": "And",
+    "t": 67.51
+   },
+   {
+    "w": "I",
+    "t": 67.67
+   },
+   {
+    "w": "feel",
+    "t": 67.83
+   },
+   {
+    "w": "like,",
+    "t": 68.15
+   },
+   {
+    "w": "you",
+    "t": 69.19
+   },
+   {
+    "w": "feel",
+    "t": 69.35
+   },
+   {
+    "w": "me",
+    "t": 69.75
+   }
+  ]
+ },
+ {
+  "i": 18,
+  "section": "Verse 1",
+  "text": "You feel me, you wanted it",
+  "start": 70.55,
+  "end": 73.31,
+  "words": [
+   {
+    "w": "You",
+    "t": 70.55
+   },
+   {
+    "w": "feel",
+    "t": 70.71
+   },
+   {
+    "w": "me,",
+    "t": 71.19
+   },
+   {
+    "w": "you",
+    "t": 71.99
+   },
+   {
+    "w": "wanted",
+    "t": 72.23
+   },
+   {
+    "w": "it",
+    "t": 72.71
+   }
+  ]
+ },
+ {
+  "i": 19,
+  "section": "Verse 1",
+  "text": "Crawled around me, talked 'bout it",
+  "start": 73.59,
+  "end": 76.27,
+  "words": [
+   {
+    "w": "Crawled",
+    "t": 73.59
+   },
+   {
+    "w": "around",
+    "t": 74.23
+   },
+   {
+    "w": "me,",
+    "t": 74.55
+   },
+   {
+    "w": "talked",
+    "t": 75.11
+   },
+   {
+    "w": "'bout",
+    "t": 75.39
+   },
+   {
+    "w": "it",
+    "t": 75.67
+   }
+  ]
+ },
+ {
+  "i": 20,
+  "section": "Verse 1",
+  "text": "He said you called me, I never got it",
+  "start": 76.27,
+  "end": 79.07,
+  "words": [
+   {
+    "w": "He",
+    "t": 76.27
+   },
+   {
+    "w": "said",
+    "t": 76.55
+   },
+   {
+    "w": "you",
+    "t": 76.87
+   },
+   {
+    "w": "called",
+    "t": 77.11
+   },
+   {
+    "w": "me,",
+    "t": 77.51
+   },
+   {
+    "w": "I",
+    "t": 77.91
+   },
+   {
+    "w": "never",
+    "t": 78.07
+   },
+   {
+    "w": "got",
+    "t": 78.23
+   },
+   {
+    "w": "it",
+    "t": 78.47
+   }
+  ]
+ },
+ {
+  "i": 21,
+  "section": "Verse 1",
+  "text": "Ayy",
+  "start": 79.2,
+  "end": 80.5,
+  "words": [
+   {
+    "w": "Ayy",
+    "t": 79.2
+   }
+  ]
+ },
+ {
+  "i": 22,
+  "section": "Chorus",
+  "text": "What you are is something I can't give",
+  "start": 81.05,
+  "end": 85.57,
+  "words": [
+   {
+    "w": "What",
+    "t": 81.05
+   },
+   {
+    "w": "you",
+    "t": 81.53
+   },
+   {
+    "w": "are",
+    "t": 82.09
+   },
+   {
+    "w": "is",
+    "t": 82.73
+   },
+   {
+    "w": "something",
+    "t": 83.21
+   },
+   {
+    "w": "I",
+    "t": 83.85
+   },
+   {
+    "w": "can't",
+    "t": 84.17
+   },
+   {
+    "w": "give",
+    "t": 84.97
+   }
+  ]
+ },
+ {
+  "i": 23,
+  "section": "Chorus",
+  "text": "F*cking your friends got me existing",
+  "start": 86.09,
+  "end": 89.97,
+  "words": [
+   {
+    "w": "F*cking",
+    "t": 86.09
+   },
+   {
+    "w": "your",
+    "t": 86.81
+   },
+   {
+    "w": "friends",
+    "t": 87.05
+   },
+   {
+    "w": "got",
+    "t": 88.09
+   },
+   {
+    "w": "me",
+    "t": 88.81
+   },
+   {
+    "w": "existing",
+    "t": 89.37
+   }
+  ]
+ },
+ {
+  "i": 24,
+  "section": "Chorus",
+  "text": "But I wanna talk to you in the gold mine",
+  "start": 91.45,
+  "end": 97.07,
+  "words": [
+   {
+    "w": "But",
+    "t": 91.45
+   },
+   {
+    "w": "I",
+    "t": 91.93
+   },
+   {
+    "w": "wanna",
+    "t": 92.17
+   },
+   {
+    "w": "talk",
+    "t": 93.13
+   },
+   {
+    "w": "to",
+    "t": 93.61
+   },
+   {
+    "w": "you",
+    "t": 94.95
+   },
+   {
+    "w": "in",
+    "t": 95.27
+   },
+   {
+    "w": "the",
+    "t": 95.59
+   },
+   {
+    "w": "gold",
+    "t": 95.91
+   },
+   {
+    "w": "mine",
+    "t": 96.47
+   }
+  ]
+ },
+ {
+  "i": 25,
+  "section": "Chorus",
+  "text": "I can't compare",
+  "start": 97.75,
+  "end": 99.15,
+  "words": [
+   {
+    "w": "I",
+    "t": 97.75
+   },
+   {
+    "w": "can't",
+    "t": 97.91
+   },
+   {
+    "w": "compare",
+    "t": 98.55
+   }
+  ]
+ },
+ {
+  "i": 26,
+  "section": "Chorus",
+  "text": "You are my precious",
+  "start": 100.71,
+  "end": 102.19,
+  "words": [
+   {
+    "w": "You",
+    "t": 100.71
+   },
+   {
+    "w": "are",
+    "t": 100.95
+   },
+   {
+    "w": "my",
+    "t": 101.35
+   },
+   {
+    "w": "precious",
+    "t": 101.59
+   }
+  ]
+ },
+ {
+  "i": 27,
+  "section": "Chorus",
+  "text": "Lord of the rings, precious",
+  "start": 103.11,
+  "end": 105.31,
+  "words": [
+   {
+    "w": "Lord",
+    "t": 103.11
+   },
+   {
+    "w": "of",
+    "t": 103.51
+   },
+   {
+    "w": "the",
+    "t": 103.75
+   },
+   {
+    "w": "rings,",
+    "t": 103.99
+   },
+   {
+    "w": "precious",
+    "t": 104.71
+   }
+  ]
+ },
+ {
+  "i": 28,
+  "section": "Chorus",
+  "text": "Get me like a precious",
+  "start": 106.15,
+  "end": 108.11,
+  "words": [
+   {
+    "w": "Get",
+    "t": 106.15
+   },
+   {
+    "w": "me",
+    "t": 106.47
+   },
+   {
+    "w": "like",
+    "t": 106.95
+   },
+   {
+    "w": "a",
+    "t": 107.23
+   },
+   {
+    "w": "precious",
+    "t": 107.51
+   }
+  ]
+ },
+ {
+  "i": 29,
+  "section": "Chorus",
+  "text": "Fat as f*ck, girl, you so precious",
+  "start": 108.95,
+  "end": 111.23,
+  "words": [
+   {
+    "w": "Fat",
+    "t": 108.95
+   },
+   {
+    "w": "as",
+    "t": 109.27
+   },
+   {
+    "w": "f*ck,",
+    "t": 109.43
+   },
+   {
+    "w": "girl,",
+    "t": 109.72
+   },
+   {
+    "w": "you",
+    "t": 110.02
+   },
+   {
+    "w": "so",
+    "t": 110.31
+   },
+   {
+    "w": "precious",
+    "t": 110.63
+   }
+  ]
+ },
+ {
+  "i": 30,
+  "section": "Chorus",
+  "text": "Give it up, yeah, you precious",
+  "start": 111.91,
+  "end": 113.95,
+  "words": [
+   {
+    "w": "Give",
+    "t": 111.91
+   },
+   {
+    "w": "it",
+    "t": 112.15
+   },
+   {
+    "w": "up,",
+    "t": 112.31
+   },
+   {
+    "w": "yeah,",
+    "t": 112.71
+   },
+   {
+    "w": "you",
+    "t": 113.03
+   },
+   {
+    "w": "precious",
+    "t": 113.35
+   }
+  ]
+ },
+ {
+  "i": 31,
+  "section": "Chorus",
+  "text": "Gold ring, oh, you precious",
+  "start": 114.71,
+  "end": 116.75,
+  "words": [
+   {
+    "w": "Gold",
+    "t": 114.71
+   },
+   {
+    "w": "ring,",
+    "t": 115.11
+   },
+   {
+    "w": "oh,",
+    "t": 115.51
+   },
+   {
+    "w": "you",
+    "t": 115.75
+   },
+   {
+    "w": "precious",
+    "t": 116.15
+   }
+  ]
+ },
+ {
+  "i": 32,
+  "section": "Chorus",
+  "text": "Life's breath, girl, you precious",
+  "start": 117.59,
+  "end": 119.71,
+  "words": [
+   {
+    "w": "Life's",
+    "t": 117.59
+   },
+   {
+    "w": "breath,",
+    "t": 117.99
+   },
+   {
+    "w": "girl,",
+    "t": 118.47
+   },
+   {
+    "w": "you",
+    "t": 118.79
+   },
+   {
+    "w": "precious",
+    "t": 119.11
+   }
+  ]
+ },
+ {
+  "i": 33,
+  "section": "Chorus",
+  "text": "No heart, girl, you precious",
+  "start": 120.47,
+  "end": 122.59,
+  "words": [
+   {
+    "w": "No",
+    "t": 120.47
+   },
+   {
+    "w": "heart,",
+    "t": 120.87
+   },
+   {
+    "w": "girl,",
+    "t": 121.27
+   },
+   {
+    "w": "you",
+    "t": 121.67
+   },
+   {
+    "w": "precious",
+    "t": 121.99
+   }
+  ]
+ },
+ {
+  "i": 34,
+  "section": "Chorus",
+  "text": "Gold diamond, girl, you precious",
+  "start": 123.35,
+  "end": 125.55,
+  "words": [
+   {
+    "w": "Gold",
+    "t": 123.35
+   },
+   {
+    "w": "diamond,",
+    "t": 123.75
+   },
+   {
+    "w": "girl,",
+    "t": 124.23
+   },
+   {
+    "w": "you",
+    "t": 124.63
+   },
+   {
+    "w": "precious",
+    "t": 124.95
+   }
+  ]
+ },
+ {
+  "i": 35,
+  "section": "Chorus",
+  "text": "So cute, damn, you precious",
+  "start": 126.31,
+  "end": 128.43,
+  "words": [
+   {
+    "w": "So",
+    "t": 126.31
+   },
+   {
+    "w": "cute,",
+    "t": 126.55
+   },
+   {
+    "w": "damn,",
+    "t": 127.11
+   },
+   {
+    "w": "you",
+    "t": 127.51
+   },
+   {
+    "w": "precious",
+    "t": 127.83
+   }
+  ]
+ },
+ {
+  "i": 36,
+  "section": "Chorus",
+  "text": "Fat as f*ck, girl, you precious",
+  "start": 129.11,
+  "end": 131.31,
+  "words": [
+   {
+    "w": "Fat",
+    "t": 129.11
+   },
+   {
+    "w": "as",
+    "t": 129.43
+   },
+   {
+    "w": "f*ck,",
+    "t": 129.67
+   },
+   {
+    "w": "girl,",
+    "t": 129.99
+   },
+   {
+    "w": "you",
+    "t": 130.39
+   },
+   {
+    "w": "precious",
+    "t": 130.71
+   }
+  ]
+ },
+ {
+  "i": 37,
+  "section": "Chorus",
+  "text": "No ring, girl, you precious",
+  "start": 132.15,
+  "end": 134.19,
+  "words": [
+   {
+    "w": "No",
+    "t": 132.15
+   },
+   {
+    "w": "ring,",
+    "t": 132.47
+   },
+   {
+    "w": "girl,",
+    "t": 132.95
+   },
+   {
+    "w": "you",
+    "t": 133.27
+   },
+   {
+    "w": "precious",
+    "t": 133.59
+   }
+  ]
+ },
+ {
+  "i": 38,
+  "section": "Chorus",
+  "text": "Lord of the rings, girl, you precious",
+  "start": 134.71,
+  "end": 137.15,
+  "words": [
+   {
+    "w": "Lord",
+    "t": 134.71
+   },
+   {
+    "w": "of",
+    "t": 135.03
+   },
+   {
+    "w": "the",
+    "t": 135.27
+   },
+   {
+    "w": "rings,",
+    "t": 135.43
+   },
+   {
+    "w": "girl,",
+    "t": 135.83
+   },
+   {
+    "w": "you",
+    "t": 136.23
+   },
+   {
+    "w": "precious",
+    "t": 136.55
+   }
+  ]
+ },
+ {
+  "i": 39,
+  "section": "Chorus",
+  "text": "Somebody going to press you",
+  "start": 138.05,
+  "end": 140.81,
+  "words": [
+   {
+    "w": "Somebody",
+    "t": 138.05
+   },
+   {
+    "w": "going",
+    "t": 138.5
+   },
+   {
+    "w": "to",
+    "t": 138.96
+   },
+   {
+    "w": "press",
+    "t": 139.41
+   },
+   {
+    "w": "you",
+    "t": 140.21
+   }
+  ]
+ },
+ {
+  "i": 40,
+  "section": "Chorus",
+  "text": "I told them just press up",
+  "start": 141.01,
+  "end": 143.77,
+  "words": [
+   {
+    "w": "I",
+    "t": 141.01
+   },
+   {
+    "w": "told",
+    "t": 141.17
+   },
+   {
+    "w": "them",
+    "t": 141.57
+   },
+   {
+    "w": "just",
+    "t": 141.97
+   },
+   {
+    "w": "press",
+    "t": 142.37
+   },
+   {
+    "w": "up",
+    "t": 143.17
+   }
+  ]
+ },
+ {
+  "i": 41,
+  "section": "Chorus",
+  "text": "On me if they want to pressure",
+  "start": 143.81,
+  "end": 145.85,
+  "words": [
+   {
+    "w": "On",
+    "t": 143.81
+   },
+   {
+    "w": "me",
+    "t": 144.21
+   },
+   {
+    "w": "if",
+    "t": 144.45
+   },
+   {
+    "w": "they",
+    "t": 144.69
+   },
+   {
+    "w": "want",
+    "t": 144.85
+   },
+   {
+    "w": "to",
+    "t": 145.05
+   },
+   {
+    "w": "pressure",
+    "t": 145.25
+   }
+  ]
+ },
+ {
+  "i": 42,
+  "section": "Chorus",
+  "text": "'Cause I'll be on a f*cking stretcher",
+  "start": 146.45,
+  "end": 148.73,
+  "words": [
+   {
+    "w": "'Cause",
+    "t": 146.45
+   },
+   {
+    "w": "I'll",
+    "t": 146.77
+   },
+   {
+    "w": "be",
+    "t": 147.09
+   },
+   {
+    "w": "on",
+    "t": 147.33
+   },
+   {
+    "w": "a",
+    "t": 147.57
+   },
+   {
+    "w": "f*cking",
+    "t": 147.65
+   },
+   {
+    "w": "stretcher",
+    "t": 148.13
+   }
+  ]
+ },
+ {
+  "i": 43,
+  "section": "Chorus",
+  "text": "With you in the nighttime",
+  "start": 149.65,
+  "end": 151.21,
+  "words": [
+   {
+    "w": "With",
+    "t": 149.65
+   },
+   {
+    "w": "you",
+    "t": 149.89
+   },
+   {
+    "w": "in",
+    "t": 150.21
+   },
+   {
+    "w": "the",
+    "t": 150.45
+   },
+   {
+    "w": "nighttime",
+    "t": 150.61
+   }
+  ]
+ },
+ {
+  "i": 44,
+  "section": "Chorus",
+  "text": "'Cause I know what you wanted is pressure",
+  "start": 151.73,
+  "end": 154.57,
+  "words": [
+   {
+    "w": "'Cause",
+    "t": 151.73
+   },
+   {
+    "w": "I",
+    "t": 152.05
+   },
+   {
+    "w": "know",
+    "t": 152.21
+   },
+   {
+    "w": "what",
+    "t": 152.45
+   },
+   {
+    "w": "you",
+    "t": 152.69
+   },
+   {
+    "w": "wanted",
+    "t": 152.93
+   },
+   {
+    "w": "is",
+    "t": 153.65
+   },
+   {
+    "w": "pressure",
+    "t": 153.97
+   }
+  ]
+ },
+ {
+  "i": 45,
+  "section": "Chorus",
+  "text": "Put my hand on your stomach, pressure",
+  "start": 155.09,
+  "end": 157.53,
+  "words": [
+   {
+    "w": "Put",
+    "t": 155.09
+   },
+   {
+    "w": "my",
+    "t": 155.33
+   },
+   {
+    "w": "hand",
+    "t": 155.49
+   },
+   {
+    "w": "on",
+    "t": 155.81
+   },
+   {
+    "w": "your",
+    "t": 155.97
+   },
+   {
+    "w": "stomach,",
+    "t": 156.13
+   },
+   {
+    "w": "pressure",
+    "t": 156.93
+   }
+  ]
+ },
+ {
+  "i": 46,
+  "section": "Chorus",
+  "text": "Make it feel like you love it, pressure",
+  "start": 157.97,
+  "end": 160.51,
+  "words": [
+   {
+    "w": "Make",
+    "t": 157.97
+   },
+   {
+    "w": "it",
+    "t": 158.21
+   },
+   {
+    "w": "feel",
+    "t": 158.37
+   },
+   {
+    "w": "like",
+    "t": 158.61
+   },
+   {
+    "w": "you",
+    "t": 158.85
+   },
+   {
+    "w": "love",
+    "t": 159.01
+   },
+   {
+    "w": "it,",
+    "t": 159.33
+   },
+   {
+    "w": "pressure",
+    "t": 159.91
+   }
+  ]
+ },
+ {
+  "i": 47,
+  "section": "Chorus",
+  "text": "Think you wanna come touch it, pressure",
+  "start": 160.87,
+  "end": 163.39,
+  "words": [
+   {
+    "w": "Think",
+    "t": 160.87
+   },
+   {
+    "w": "you",
+    "t": 161.11
+   },
+   {
+    "w": "wanna",
+    "t": 161.27
+   },
+   {
+    "w": "come",
+    "t": 161.59
+   },
+   {
+    "w": "touch",
+    "t": 161.91
+   },
+   {
+    "w": "it,",
+    "t": 162.39
+   },
+   {
+    "w": "pressure",
+    "t": 162.79
+   }
+  ]
+ },
+ {
+  "i": 48,
+  "section": "Chorus",
+  "text": "Baddie, even want to suck it, pressure",
+  "start": 163.75,
+  "end": 166.27,
+  "words": [
+   {
+    "w": "Baddie,",
+    "t": 163.75
+   },
+   {
+    "w": "even",
+    "t": 164.23
+   },
+   {
+    "w": "want",
+    "t": 164.47
+   },
+   {
+    "w": "to",
+    "t": 164.67
+   },
+   {
+    "w": "suck",
+    "t": 164.87
+   },
+   {
+    "w": "it,",
+    "t": 165.27
+   },
+   {
+    "w": "pressure",
+    "t": 165.67
+   }
+  ]
+ },
+ {
+  "i": 49,
+  "section": "Chorus",
+  "text": "Think you wanna even rub it, pressure",
+  "start": 166.71,
+  "end": 169.15,
+  "words": [
+   {
+    "w": "Think",
+    "t": 166.71
+   },
+   {
+    "w": "you",
+    "t": 166.95
+   },
+   {
+    "w": "wanna",
+    "t": 167.11
+   },
+   {
+    "w": "even",
+    "t": 167.43
+   },
+   {
+    "w": "rub",
+    "t": 167.75
+   },
+   {
+    "w": "it,",
+    "t": 168.23
+   },
+   {
+    "w": "pressure",
+    "t": 168.55
+   }
+  ]
+ },
+ {
+  "i": 50,
+  "section": "Chorus",
+  "text": "We be making f*cking money, pressure",
+  "start": 169.59,
+  "end": 172.13,
+  "words": [
+   {
+    "w": "We",
+    "t": 169.59
+   },
+   {
+    "w": "be",
+    "t": 169.75
+   },
+   {
+    "w": "making",
+    "t": 169.91
+   },
+   {
+    "w": "f*cking",
+    "t": 170.31
+   },
+   {
+    "w": "money,",
+    "t": 170.71
+   },
+   {
+    "w": "pressure",
+    "t": 171.53
+   }
+  ]
+ },
+ {
+  "i": 51,
+  "section": "Chorus",
+  "text": "Put a ring in the hut and pressure",
+  "start": 172.49,
+  "end": 175.01,
+  "words": [
+   {
+    "w": "Put",
+    "t": 172.49
+   },
+   {
+    "w": "a",
+    "t": 172.73
+   },
+   {
+    "w": "ring",
+    "t": 172.89
+   },
+   {
+    "w": "in",
+    "t": 173.29
+   },
+   {
+    "w": "the",
+    "t": 173.37
+   },
+   {
+    "w": "hut",
+    "t": 173.53
+   },
+   {
+    "w": "and",
+    "t": 173.97
+   },
+   {
+    "w": "pressure",
+    "t": 174.41
+   }
+  ]
+ },
+ {
+  "i": 52,
+  "section": "Chorus",
+  "text": "Tryna get a killer money, pressure",
+  "start": 175.37,
+  "end": 177.89,
+  "words": [
+   {
+    "w": "Tryna",
+    "t": 175.37
+   },
+   {
+    "w": "get",
+    "t": 175.77
+   },
+   {
+    "w": "a",
+    "t": 175.93
+   },
+   {
+    "w": "killer",
+    "t": 176.09
+   },
+   {
+    "w": "money,",
+    "t": 176.57
+   },
+   {
+    "w": "pressure",
+    "t": 177.29
+   }
+  ]
+ },
+ {
+  "i": 53,
+  "section": "Chorus",
+  "text": "Love it when you run around and pressure",
+  "start": 178.33,
+  "end": 180.77,
+  "words": [
+   {
+    "w": "Love",
+    "t": 178.33
+   },
+   {
+    "w": "it",
+    "t": 178.57
+   },
+   {
+    "w": "when",
+    "t": 178.73
+   },
+   {
+    "w": "you",
+    "t": 178.89
+   },
+   {
+    "w": "run",
+    "t": 179.05
+   },
+   {
+    "w": "around",
+    "t": 179.37
+   },
+   {
+    "w": "and",
+    "t": 179.77
+   },
+   {
+    "w": "pressure",
+    "t": 180.17
+   }
+  ]
+ },
+ {
+  "i": 54,
+  "section": "Chorus",
+  "text": "Say you want a man around and pressure",
+  "start": 181.21,
+  "end": 183.73,
+  "words": [
+   {
+    "w": "Say",
+    "t": 181.21
+   },
+   {
+    "w": "you",
+    "t": 181.45
+   },
+   {
+    "w": "want",
+    "t": 181.61
+   },
+   {
+    "w": "a",
+    "t": 182.25
+   },
+   {
+    "w": "man",
+    "t": 182.47
+   },
+   {
+    "w": "around",
+    "t": 182.69
+   },
+   {
+    "w": "and",
+    "t": 182.91
+   },
+   {
+    "w": "pressure",
+    "t": 183.13
+   }
+  ]
+ },
+ {
+  "i": 55,
+  "section": "Chorus",
+  "text": "Hit a n*gga like a Ronda Rousey, pressure",
+  "start": 184.17,
+  "end": 188.05,
+  "words": [
+   {
+    "w": "Hit",
+    "t": 184.17
+   },
+   {
+    "w": "a",
+    "t": 184.41
+   },
+   {
+    "w": "n*gga",
+    "t": 184.65
+   },
+   {
+    "w": "like",
+    "t": 184.89
+   },
+   {
+    "w": "a",
+    "t": 185.05
+   },
+   {
+    "w": "Ronda",
+    "t": 185.21
+   },
+   {
+    "w": "Rousey,",
+    "t": 186.33
+   },
+   {
+    "w": "pressure",
+    "t": 187.45
+   }
+  ]
+ },
+ {
+  "i": 56,
+  "section": "Outro",
+  "text": "You know",
+  "start": 188.89,
+  "end": 189.65,
+  "words": [
+   {
+    "w": "You",
+    "t": 188.89
+   },
+   {
+    "w": "know",
+    "t": 189.05
+   }
+  ]
+ },
+ {
+  "i": 57,
+  "section": "Outro",
+  "text": "And I'm a give it",
+  "start": 190.89,
+  "end": 192.77,
+  "words": [
+   {
+    "w": "And",
+    "t": 190.89
+   },
+   {
+    "w": "I'm",
+    "t": 191.13
+   },
+   {
+    "w": "a",
+    "t": 191.45
+   },
+   {
+    "w": "give",
+    "t": 191.77
+   },
+   {
+    "w": "it",
+    "t": 192.17
+   }
+  ]
+ },
+ {
+  "i": 58,
+  "section": "Outro",
+  "text": "I'm a give it",
+  "start": 194.31,
+  "end": 195.93,
+  "words": [
+   {
+    "w": "I'm",
+    "t": 194.31
+   },
+   {
+    "w": "a",
+    "t": 194.63
+   },
+   {
+    "w": "give",
+    "t": 194.95
+   },
+   {
+    "w": "it",
+    "t": 195.43
+   }
+  ]
+ }
+]

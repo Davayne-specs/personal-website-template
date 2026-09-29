@@ -1,0 +1,422 @@
+[
+ {
+  "n": 1,
+  "tag": "Her smile",
+  "state": "Memory",
+  "move": "Print roll",
+  "scene": "Her portrait prints onto blush paper as a polaroid, pink layer first, then teal, then ink; on the second \"smile\" a gold glint lands on it."
+ },
+ {
+  "n": 2,
+  "tag": "All I know",
+  "state": "Memory",
+  "move": "Smoke wipe",
+  "scene": "Stein sits on the edge of his bed at night holding the polaroid; a doodled heart floats up out of it."
+ },
+ {
+  "n": 3,
+  "tag": "Going up",
+  "state": "Memory",
+  "move": "Smoke wipe",
+  "scene": "A stack of paper grows under Stein's feet and lifts him past a ruler drawn up the wall; the camera rises with him."
+ },
+ {
+  "n": 0,
+  "tag": "give me life",
+  "state": "Precious",
+  "move": "Print roll",
+  "scene": "Instrumental break: \"mbastein\" prints in gold foil with a pink off-register shadow; \"give me life\" types in below; the Ring rolls across."
+ },
+ {
+  "n": 4,
+  "tag": "Not thinking about it",
+  "state": "Memory",
+  "move": "Smoke wipe",
+  "scene": "Stein drops the polaroid into a drawer and shuts it; on the second \"anymore\" the drawer creeps back open."
+ },
+ {
+  "n": 5,
+  "tag": "Unanswered",
+  "state": "Absence",
+  "move": "Smoke wipe",
+  "scene": "Close on a phone calling \"Precious\": ring arcs go out in ink and turn to grey smoke; the screen reads \"no answer\", then \"call failed\"."
+ },
+ {
+  "n": 6,
+  "tag": "Moved",
+  "state": "Absence",
+  "move": "Smoke wipe",
+  "scene": "Moving boxes slide out of her empty room, leaving a pale rectangle on the wall where her picture hung."
+ },
+ {
+  "n": 7,
+  "tag": "The groove",
+  "state": "Memory",
+  "move": "Smoke wipe",
+  "scene": "Precious dances under a paper disco ball; pink and mint light spots swirl and a record spins."
+ },
+ {
+  "n": 8,
+  "tag": "SoCal",
+  "state": "Absence",
+  "move": "Smoke wipe",
+  "scene": "A folded map of California opens; a dotted line runs south to a gold pin; pop-up palm trees spring up by a mint ocean."
+ },
+ {
+  "n": 9,
+  "tag": "A man (probably)",
+  "state": "Absence",
+  "move": "Smoke wipe",
+  "scene": "Inside a phone Stein is holding: Precious under a palm at sunset beside Smoke, the other man, drifting in sunglasses."
+ },
+ {
+  "n": 10,
+  "tag": "Untrippable",
+  "state": "Present",
+  "move": "Registration snap",
+  "scene": "A banana peel slides under Stein's sneaker and he steps over it without looking; behind him a row of plain grey guys, he is the only one in colour."
+ },
+ {
+  "n": 11,
+  "tag": "Running around",
+  "state": "Present",
+  "move": "Smoke wipe",
+  "scene": "Stein jogs with Biscuit; Biscuit stops at a hydrant and lifts a leg (a tiny dotted arc); Stein laughs."
+ },
+ {
+  "n": 12,
+  "tag": "No pistons",
+  "state": "Present",
+  "move": "Smoke wipe",
+  "scene": "A teal lowrider hops on the beat; its hood pops open on an empty engine bay with a doodled note: no pistons."
+ },
+ {
+  "n": 13,
+  "tag": "Got it",
+  "state": "Present",
+  "move": "Smoke wipe",
+  "scene": "Stein in profile; a cut-away of his head shows gears turning until a gold bulb switches on."
+ },
+ {
+  "n": 14,
+  "tag": "The man (confirmed)",
+  "state": "Absence",
+  "move": "Smoke wipe",
+  "scene": "Precious walks arm in arm with Smoke; Stein peeks round a corner with one eyebrow up under a doodled question mark."
+ },
+ {
+  "n": 15,
+  "tag": "Combined",
+  "state": "Absence",
+  "move": "Smoke wipe",
+  "scene": "Two puzzle pieces, Precious and Smoke, click together; a third piece, Stein, drops out and his hand picks it up."
+ },
+ {
+  "n": 16,
+  "tag": "The times",
+  "state": "Memory",
+  "move": "Smoke wipe",
+  "scene": "A photo album opens and off-register snapshots flip past: ice cream, a rooftop, a car at night."
+ },
+ {
+  "n": 17,
+  "tag": "Her own world",
+  "state": "Memory",
+  "move": "Smoke wipe",
+  "scene": "Precious runs across pop-up rooftops carrying a small glowing globe of her own."
+ },
+ {
+  "n": 18,
+  "tag": "Feel me",
+  "state": "Memory",
+  "move": "Smoke wipe",
+  "scene": "Stein and Precious stand on opposite sides of a folded page; a pink thread links their hearts and pulses."
+ },
+ {
+  "n": 19,
+  "tag": "Wanted it",
+  "state": "Precious",
+  "move": "Smoke wipe",
+  "scene": "The thread tightens; Precious reaches toward the Ring floating between them and her fingertip almost touches it."
+ },
+ {
+  "n": 20,
+  "tag": "Talk",
+  "state": "Absence",
+  "move": "Smoke wipe",
+  "scene": "Speech bubbles on little legs crawl around Stein in circles, scribbled full of bla bla."
+ },
+ {
+  "n": 21,
+  "tag": "Never got it",
+  "state": "Absence",
+  "move": "Smoke wipe",
+  "scene": "Smoke's speech bubble shows a ringing phone; Stein's phone reads 0 missed calls; a paper-plane message loops past him and dissolves."
+ },
+ {
+  "n": 22,
+  "tag": "Ayy",
+  "state": "Precious",
+  "move": "Registration snap",
+  "scene": "Every layer snaps into register and a gold seam tears the page open top to bottom."
+ },
+ {
+  "n": 23,
+  "tag": "What you are",
+  "state": "Precious",
+  "move": "Registration snap",
+  "scene": "Precious glows in gold rays; Stein holds out empty hands with only paper scraps in them."
+ },
+ {
+  "n": 24,
+  "tag": "The friends",
+  "state": "Present",
+  "move": "Stamp cut",
+  "scene": "A paper-doll chain of her friends unfolds across the frame; one doll inks itself into Stein and the others turn to look."
+ },
+ {
+  "n": 25,
+  "tag": "The gold mine",
+  "state": "Precious",
+  "move": "Registration snap",
+  "scene": "Stein and Precious ride a mine cart through gold-veined rock by lantern light, talking in gold-nugget speech bubbles."
+ },
+ {
+  "n": 26,
+  "tag": "No comparison",
+  "state": "Precious",
+  "move": "Registration snap",
+  "scene": "A balance scale: Precious in gold on one pan outweighs a heap of cars, chains and cash on the other."
+ },
+ {
+  "n": 27,
+  "tag": "The precious",
+  "state": "Precious",
+  "move": "Stamp cut",
+  "scene": "The cover comes alive: the gold Ring turns on pink and mint washes with grey smoke; PRECIOUS stamp."
+ },
+ {
+  "n": 28,
+  "tag": "Lord of rings",
+  "state": "Precious",
+  "move": "Stamp cut",
+  "scene": "Stein sits on a paper throne in a crown while gold rings orbit him like planets; PRECIOUS stamp."
+ },
+ {
+  "n": 29,
+  "tag": "Hooked",
+  "state": "Precious",
+  "move": "Stamp cut",
+  "scene": "Stein hunches over the Ring clutched to his chest, eyes wide, pulled along by it; PRECIOUS stamp."
+ },
+ {
+  "n": 30,
+  "tag": "Gold standard",
+  "state": "Precious",
+  "move": "Stamp cut",
+  "scene": "Precious struts in slow motion, full figure, gold rays behind her; pink paper flowers pop open as she passes; PRECIOUS stamp."
+ },
+ {
+  "n": 31,
+  "tag": "Applause",
+  "state": "Precious",
+  "move": "Stamp cut",
+  "scene": "Paper hands clap in from every edge around Precious in a spotlight; PRECIOUS stamp."
+ },
+ {
+  "n": 32,
+  "tag": "Gold ring",
+  "state": "Precious",
+  "move": "Stamp cut",
+  "scene": "The Ring spins on its edge like a coin on paper, wobbles and settles; PRECIOUS stamp."
+ },
+ {
+  "n": 33,
+  "tag": "Life's breath",
+  "state": "Precious",
+  "move": "Stamp cut",
+  "scene": "Precious blows on a dandelion and its seeds become gold sparks; PRECIOUS stamp."
+ },
+ {
+  "n": 34,
+  "tag": "No heart",
+  "state": "Precious",
+  "move": "Stamp cut",
+  "scene": "Scissors cut a heart out of the page along a dotted line; the Ring drops into the hole and fills it with gold; PRECIOUS stamp."
+ },
+ {
+  "n": 35,
+  "tag": "Gold diamond",
+  "state": "Precious",
+  "move": "Stamp cut",
+  "scene": "A sheet folds itself into an origami diamond that turns to gold; PRECIOUS stamp."
+ },
+ {
+  "n": 36,
+  "tag": "Cute",
+  "state": "Precious",
+  "move": "Stamp cut",
+  "scene": "Precious winks; pink blush circles print on her cheeks and tiny hearts pop; PRECIOUS stamp."
+ },
+ {
+  "n": 37,
+  "tag": "Royalty",
+  "state": "Precious",
+  "move": "Stamp cut",
+  "scene": "Precious dances on the beat and a gold crown drops onto her curls; PRECIOUS stamp."
+ },
+ {
+  "n": 38,
+  "tag": "No ring (yet)",
+  "state": "Precious",
+  "move": "Stamp cut",
+  "scene": "A ring box snaps open, empty; a doodled \"(yet)\" appears beside it; PRECIOUS stamp."
+ },
+ {
+  "n": 39,
+  "tag": "Lady of rings",
+  "state": "Precious",
+  "move": "Stamp cut",
+  "scene": "Now Precious sits on the throne with the rings orbiting her while Stein kneels; PRECIOUS stamp."
+ },
+ {
+  "n": 40,
+  "tag": "Pressed",
+  "state": "Pressure",
+  "move": "Registration snap",
+  "scene": "A giant pointing hand presses down toward a small Precious; the Gauge drops into the corner and its needle starts to climb."
+ },
+ {
+  "n": 41,
+  "tag": "Press up",
+  "state": "Pressure",
+  "move": "Registration snap",
+  "scene": "Stein steps in front of her and pushes back against the giant hand."
+ },
+ {
+  "n": 42,
+  "tag": "On me",
+  "state": "Pressure",
+  "move": "Stamp cut",
+  "scene": "Stein holds a hydraulic press up over his head as it squashes down; PRESSURE stamp."
+ },
+ {
+  "n": 43,
+  "tag": "Stretcher",
+  "state": "Pressure",
+  "move": "Registration snap",
+  "scene": "Stein rolls past on a stretcher, bandaged and grinning with a thumbs-up, Biscuit riding on his chest."
+ },
+ {
+  "n": 44,
+  "tag": "Nighttime",
+  "state": "Present",
+  "move": "Smoke wipe",
+  "scene": "Night paper: the stretcher rolls under a moon and streetlights with Precious walking beside it."
+ },
+ {
+  "n": 45,
+  "tag": "What you wanted",
+  "state": "Pressure",
+  "move": "Stamp cut",
+  "scene": "A lump of coal goes under the press, the press comes down and Precious smiles; PRESSURE stamp."
+ },
+ {
+  "n": 46,
+  "tag": "Slow dance",
+  "state": "Pressure",
+  "move": "Stamp cut",
+  "scene": "A slow dance in a pink spotlight, his hand at her waist; PRESSURE stamp."
+ },
+ {
+  "n": 47,
+  "tag": "Love it",
+  "state": "Pressure",
+  "move": "Stamp cut",
+  "scene": "A heart-shaped bellows pumps a paper heart until it swells tight; PRESSURE stamp."
+ },
+ {
+  "n": 48,
+  "tag": "Do not touch",
+  "state": "Pressure",
+  "move": "Stamp cut",
+  "scene": "The Ring sits on a velvet stand behind a rope and a do-not-touch card; Precious's fingertip reaches in and sparks; PRESSURE stamp."
+ },
+ {
+  "n": 49,
+  "tag": "Ring Pop",
+  "state": "Pressure",
+  "move": "Stamp cut",
+  "scene": "Precious in heart sunglasses with a Ring Pop candy; PRESSURE stamp."
+ },
+ {
+  "n": 50,
+  "tag": "The lamp",
+  "state": "Pressure",
+  "move": "Stamp cut",
+  "scene": "Precious rubs a gold lamp; grey smoke pours out and curls into a heart; PRESSURE stamp."
+ },
+ {
+  "n": 51,
+  "tag": "Money (printed)",
+  "state": "Pressure",
+  "move": "Stamp cut",
+  "scene": "A riso press prints paper money that flies out and stacks up; PRESSURE stamp."
+ },
+ {
+  "n": 52,
+  "tag": "Ring in the hut",
+  "state": "Pressure",
+  "move": "Stamp cut",
+  "scene": "Stein carries the Ring into a little paper hut and its window glows gold; PRESSURE stamp."
+ },
+ {
+  "n": 53,
+  "tag": "Killer money",
+  "state": "Pressure",
+  "move": "Stamp cut",
+  "scene": "Stein at a desk as money stacks grow and the clock hands spin; the Gauge nears the top; PRESSURE stamp."
+ },
+ {
+  "n": 54,
+  "tag": "Run around",
+  "state": "Pressure",
+  "move": "Stamp cut",
+  "scene": "Precious runs circles around Stein and he spins to keep up; PRESSURE stamp."
+ },
+ {
+  "n": 55,
+  "tag": "A man around",
+  "state": "Pressure",
+  "move": "Stamp cut",
+  "scene": "Her speech bubble says \"a man around\"; Smoke drifts into the doorway and dissolves; Stein steps in, solid; PRESSURE stamp."
+ },
+ {
+  "n": 56,
+  "tag": "The throw",
+  "state": "Pressure",
+  "move": "Stamp cut",
+  "scene": "In a paper octagon Precious, in pink gloves, hip-throws Stein; he flies in slow motion and the Gauge bursts into confetti; PRESSURE stamp."
+ },
+ {
+  "n": 57,
+  "tag": "You know",
+  "state": "Release",
+  "move": "Smoke wipe",
+  "scene": "Confetti settles; Stein lies on the mat grinning and Precious offers her hand."
+ },
+ {
+  "n": 58,
+  "tag": "The offer",
+  "state": "Release",
+  "move": "Registration snap",
+  "scene": "Stein on one knee opens the ring box; the Ring is inside."
+ },
+ {
+  "n": 59,
+  "tag": "Given",
+  "state": "Release",
+  "move": "Print roll",
+  "scene": "The Ring passes into Precious's hand, the smoke clears, and the page folds shut on the gold mbastein end card."
+ }
+]

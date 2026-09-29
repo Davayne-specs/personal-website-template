@@ -1,0 +1,30 @@
+{
+  "name": "sugar-and-smoke-video",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Sugar & Smoke Ep 1 - give me life (mbastein): animated lyric film in Remotion",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts GiveMeLife out/give-me-life-9x16.mp4",
+    "still": "remotion still src/index.ts"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.529",
+    "@remotion/fonts": "^4.0.529",
+    "@remotion/renderer": "^4.0.529",
+    "perfect-freehand": "^1.2.3",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "remotion": "^4.0.529",
+    "svg-path-properties": "^2.1.0"
+  },
+  "devDependencies": {
+    "@fontsource/anton": "^5.3.0",
+    "@fontsource/bricolage-grotesque": "^5.3.0",
+    "@fontsource/caveat": "^5.3.0",
+    "@fontsource/space-mono": "^5.3.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "typescript": "^7.0.2"
+  }
+}
