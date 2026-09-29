@@ -49,7 +49,7 @@ export const CastSheet: React.FC = () => {
         <Biscuit place={{x: 1600, y: 1030, scale: 0.9}} />
         <Ring x={1700} y={420} r={120} spin={30} glint={0.9} glow={0.5} />
         <Gauge x={2120} y={620} r={170} value={0.72} />
-        <Pip place={{x: 2150, y: 1080, scale: 0.55}} pose={{flipperR: -40, head: -6}} face={{eyes: 'happy'}} />
+        <Pip place={{x: 2150, y: 1050, scale: 0.5}} pose={{flipperR: -40, head: -6}} face={{eyes: 'happy'}} />
         <Tex src="smoke-1.png" x={1020} y={120} w={420} h={320} opacity={0.8} />
         <Label x={330} y={1200} name="Stein" role="the narrator" />
         <Label x={780} y={1200} name="Precious" role="the you" />
