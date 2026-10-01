@@ -10,6 +10,23 @@ Two cuts share one shot language:
 | **story** | 73.5 s | drop-out → verse → chorus → bridge → build → climax | the main post: over 60 s (Creator Rewards eligible), tells the whole arc |
 | **short** | 30.7 s | drop-out → 2 bars of goals → build → climax | reach: 14 bars, loops cleanly |
 
+## Next song
+
+The workflow is a Claude skill: `.claude/skills/scenepack-edit/SKILL.md` (send Claude the song and
+a low-quality copy of the scene pack; it plans, splices the song and previews; you render the 4K
+version here). The generic tools it drives:
+
+```bash
+python tools/beatgrid.py song/<slug>_full.wav --out analysis/<slug>_beatmap.json   # beat map
+python tools/scenes.py split sources/<slug>.mp4 --catalog research/<slug>_scenes.json --sheets out/<slug>_sheets
+python tools/plan_edit.py plans/<slug>.json --audio                                # EDLs + soundtracks
+python tools/qa.py sync edl/<slug>_short.json                                      # beats vs cuts
+python tools/scenes.py verify sources/<slug>.mp4 --catalog research/<slug>_scenes.json   # 4K copy matches?
+python render.py edl/<slug>_short.json --contact-sheet                             # final render
+```
+
+`plans/yamaldemo.json` is a worked example on the Yamal pack.
+
 ## Scene-pack edit (current)
 
 The footage plan below was dropped: the clips could not be downloaded. Instead,
@@ -122,6 +139,12 @@ splices may clip).
 | `tools/make_audio.py` | builds each cut's soundtrack from bar-aligned song pieces |
 | `tools/fetch_clips.py` | downloads the footage in `research/youtube_links.json` |
 | `render.py` | EDL → 1080x1920 MP4 (see `EDL_SCHEMA.md`) |
-| `tools/scenepack_edl.py` | casts the scene pack into the song's cut grid |
+| `tools/scenepack_edl.py` | casts the scene pack into the story/short cut grid (this song) |
+| `tools/beatgrid.py` | song -> beat map (tempo, bar lines, sections) |
+| `tools/scenes.py` | scene pack -> shots, contact sheets, position strips; verifies a 4K copy |
+| `tools/plan_edit.py` | plan file -> spliced soundtrack + EDL for any song |
+| `tools/qa.py` | sync per section, tempo drift, crop check sheet |
+| `tools/editlib.py` | helpers shared by the tools above |
+| `plans/` | edit plans, one per song |
 | `research/scenepack.json` | the scene pack's shots: times, mood, crop position |
 | `song/`, `clips/`, `sources/`, `out/` | local media, never committed |

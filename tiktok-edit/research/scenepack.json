@@ -1,5 +1,12 @@
 {
  "source": "sources/scenepack.mp4",
+ "fps": 30.0,
+ "size": [
+  640,
+  360
+ ],
+ "duration": 164.49,
+ "slowmo_source": true,
  "note": "Shots of the uploaded Lamine Yamal scene pack (640x360, 30 fps, 164.5 s), split at detected cuts. S00 (channel title card) is left out. kind = mood used for casting; crop shots use focus_x, or focus_track [[source s, x], ...] when he moves (0..1, Yamal's horizontal position, read off frames), wide action uses blurfill.",
  "scenes": {
   "S01": {

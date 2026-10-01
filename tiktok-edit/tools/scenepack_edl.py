@@ -12,9 +12,8 @@ storyline text. Edit CAST below to change who goes where.
 """
 import json
 import os
-import subprocess
 
-import numpy as np
+from editlib import focus_at, motion_curve, pick_in, source_span
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FPS = 30
@@ -49,16 +48,8 @@ CAST = {
         "end": ["S44"],
     },
 }
-ACTIVE = {"action", "celebration"}       # in-point follows the motion peak; others sit mid-shot
 
 
-def motion_curve(path):
-    """Mean absolute frame-to-frame change (64x36 grey), lightly smoothed."""
-    raw = subprocess.run(["ffmpeg", "-v", "error", "-i", path, "-vf", "scale=64:36,format=gray",
-                          "-f", "rawvideo", "-"], capture_output=True, check=True).stdout
-    fr = np.frombuffer(raw, np.uint8).reshape(-1, 36 * 64).astype(np.float32)
-    d = np.r_[0.0, np.abs(np.diff(fr, axis=0)).mean(1)]
-    return np.convolve(d, np.ones(5) / 5, mode="same")
 
 
 def pace(section, dur, ramp):
@@ -72,10 +63,6 @@ def pace(section, dur, ramp):
     return 1.0, None
 
 
-def source_span(dur, speed, ramp):
-    if ramp:
-        return dur * ramp["at"] * ramp["from"] + dur * (1 - ramp["at"]) * ramp["to"]
-    return dur * speed
 
 
 def grade_for(section, kind, k, n):
@@ -92,31 +79,8 @@ def grade_for(section, kind, k, n):
     return None                           # meta default (teal_orange)
 
 
-def pick_in(sc, span, motion, used):
-    """Earliest source time for a window of `span` s inside the scene."""
-    a, b = int(sc["start"] * FPS) + 2, int(sc["end"] * FPS) - 2
-    w = int(round(span * FPS))
-    starts = np.arange(a, max(a, b - w) + 1)
-    if sc["kind"] in ACTIVE:
-        score = np.array([motion[s:s + w].mean() for s in starts])
-        score = score / (score.max() or 1)
-    else:
-        mid = (a + b) / 2
-        score = 1 - np.abs(starts + w / 2 - mid) / max(b - a, 1)
-    for ua, ub in used:                   # reuse a scene => prefer an unused stretch of it
-        overlap = np.clip(np.minimum(starts + w, ub) - np.maximum(starts, ua), 0, None) / max(w, 1)
-        score = score - 1.5 * overlap
-    s = int(starts[int(np.argmax(score))])
-    used.append((s, s + w))
-    return s / FPS
 
 
-def focus_at(sc, t):
-    """Yamal's horizontal position at source time t (steady value or interpolated track)."""
-    if "focus_track" in sc:
-        ts, xs = zip(*sc["focus_track"])
-        return round(float(np.interp(t, ts, xs)), 3)
-    return sc.get("focus_x", 0.5)
 
 
 def build(name, cast, catalog, motion):

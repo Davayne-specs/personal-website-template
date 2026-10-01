@@ -1,0 +1,167 @@
+{
+ "song": "song/edit_story.wav",
+ "duration": 73.537,
+ "bpm": 112.011,
+ "beat": 0.53566,
+ "bar": 2.14265,
+ "first_beat": 0.023,
+ "first_downbeat": 0.023,
+ "downbeat_phase_scores": [
+  0.1156,
+  0.0637,
+  0.0658,
+  0.0998
+ ],
+ "bars": 34,
+ "bar_db": [
+  -18.3,
+  -18.7,
+  -13.2,
+  -13.5,
+  -13.1,
+  -13.4,
+  -13.3,
+  -18.2,
+  -13.2,
+  -13.7,
+  -13.0,
+  -14.0,
+  -13.8,
+  -14.5,
+  -13.4,
+  -17.9,
+  -12.9,
+  -13.2,
+  -12.9,
+  -13.9,
+  -13.2,
+  -13.6,
+  -13.5,
+  -16.9,
+  -17.8,
+  -17.2,
+  -11.8,
+  -11.1,
+  -12.0,
+  -12.1,
+  -11.5,
+  -11.2,
+  -12.5,
+  -21.1
+ ],
+ "phrases": [
+  {
+   "bar": 0,
+   "bars": 4,
+   "db": -15.9,
+   "level": "low"
+  },
+  {
+   "bar": 4,
+   "bars": 4,
+   "db": -14.5,
+   "level": "mid"
+  },
+  {
+   "bar": 8,
+   "bars": 4,
+   "db": -13.5,
+   "level": "high"
+  },
+  {
+   "bar": 12,
+   "bars": 4,
+   "db": -14.9,
+   "level": "low"
+  },
+  {
+   "bar": 16,
+   "bars": 4,
+   "db": -13.2,
+   "level": "high"
+  },
+  {
+   "bar": 20,
+   "bars": 4,
+   "db": -14.3,
+   "level": "mid"
+  },
+  {
+   "bar": 24,
+   "bars": 4,
+   "db": -14.5,
+   "level": "mid"
+  },
+  {
+   "bar": 28,
+   "bars": 4,
+   "db": -11.7,
+   "level": "high"
+  },
+  {
+   "bar": 32,
+   "bars": 2,
+   "db": -16.8,
+   "level": "low"
+  }
+ ],
+ "sections": [
+  {
+   "bar": 0,
+   "bars": 4,
+   "level": "low",
+   "start": 0.023,
+   "end": 8.594
+  },
+  {
+   "bar": 4,
+   "bars": 4,
+   "level": "mid",
+   "start": 8.594,
+   "end": 17.164
+  },
+  {
+   "bar": 8,
+   "bars": 4,
+   "level": "high",
+   "start": 17.164,
+   "end": 25.735
+  },
+  {
+   "bar": 12,
+   "bars": 4,
+   "level": "low",
+   "start": 25.735,
+   "end": 34.305
+  },
+  {
+   "bar": 16,
+   "bars": 4,
+   "level": "high",
+   "start": 34.305,
+   "end": 42.876
+  },
+  {
+   "bar": 20,
+   "bars": 8,
+   "level": "mid",
+   "start": 42.876,
+   "end": 60.017
+  },
+  {
+   "bar": 28,
+   "bars": 4,
+   "level": "high",
+   "start": 60.017,
+   "end": 68.588
+  },
+  {
+   "bar": 32,
+   "bars": 2,
+   "level": "low",
+   "start": 68.588,
+   "end": 72.873
+  }
+ ],
+ "note": "Constant tempo. Bar k starts at first_downbeat + k*bar. Sections are a loudness-based proposal (low/mid/high per 4-bar phrase); rename them (intro, verse, chorus, drop...) when planning."
+}

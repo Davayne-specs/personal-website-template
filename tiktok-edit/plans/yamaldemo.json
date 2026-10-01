@@ -1,0 +1,189 @@
+{
+ "slug": "yamaldemo",
+ "title": "Lamine Yamal — I Feel It Coming (plan demo)",
+ "song": "song/edit_story.wav",
+ "beatmap": "analysis/yamaldemo_beatmap.json",
+ "catalog": "research/scenepack.json",
+ "grade": "teal_orange",
+ "cuts": {
+  "short": {
+   "segments": [
+    {
+     "name": "intro",
+     "from_bar": 0,
+     "bars": 2,
+     "pace": "calm",
+     "cast": [
+      "S01",
+      "S13"
+     ],
+     "text": [
+      {
+       "beat": 4,
+       "content": "so damn close",
+       "style": "lyric"
+      }
+     ]
+    },
+    {
+     "name": "verse",
+     "from_bar": 2,
+     "bars": 2,
+     "pace": "verse"
+    },
+    {
+     "name": "build",
+     "from_bar": 24,
+     "bars": 2,
+     "pace": "build",
+     "cast": [
+      "S40",
+      "S31",
+      "S14"
+     ],
+     "nudge": -0.06
+    },
+    {
+     "name": "climax",
+     "from_bar": 26,
+     "bars": 7,
+     "pace": "drop",
+     "cast": [
+      "S21",
+      "S16",
+      "S09"
+     ],
+     "nudge": -0.06
+    },
+    {
+     "name": "end",
+     "from_bar": 33,
+     "bars": 1,
+     "pace": "end",
+     "cast": [
+      "S44"
+     ],
+     "nudge": -0.06
+    }
+   ],
+   "end_title": "LAMINE YAMAL"
+  },
+  "main": {
+   "segments": [
+    {
+     "name": "intro",
+     "from_bar": 0,
+     "bars": 2,
+     "pace": "calm",
+     "cast": [
+      "S01",
+      "S13"
+     ]
+    },
+    {
+     "name": "verse",
+     "from_bar": 2,
+     "bars": 6,
+     "pace": "verse"
+    },
+    {
+     "name": "chorus",
+     "from_bar": 8,
+     "bars": 7,
+     "pace": "drop",
+     "cast": [
+      "S16"
+     ],
+     "text": [
+      {
+       "beat": 0,
+       "content": "RAIN ON ME",
+       "style": "lyric"
+      }
+     ]
+    },
+    {
+     "name": "dropout",
+     "from_bar": 15,
+     "bars": 1,
+     "pace": "breakdown",
+     "cast": [
+      "S38"
+     ]
+    },
+    {
+     "name": "bridge",
+     "from_bar": 16,
+     "bars": 7,
+     "pace": "bridge",
+     "cast": [
+      "S43",
+      "S30",
+      "S24",
+      "S35",
+      "S09",
+      "S34",
+      "S41"
+     ]
+    },
+    {
+     "name": "lift",
+     "from_bar": 23,
+     "bars": 1,
+     "pace": "calm",
+     "cast": [
+      "S42"
+     ]
+    },
+    {
+     "name": "build",
+     "from_bar": 24,
+     "bars": 2,
+     "pace": "build"
+    },
+    {
+     "name": "climax",
+     "from_bar": 26,
+     "bars": 7,
+     "pace": "drop",
+     "cast": [
+      "S21",
+      "S46"
+     ]
+    },
+    {
+     "name": "end",
+     "from_bar": 33,
+     "bars": 1,
+     "pace": "end",
+     "cast": [
+      "S44"
+     ]
+    }
+   ],
+   "captions": [
+    {
+     "bar": 16.5,
+     "beats": 2,
+     "content": "settle down, babe"
+    },
+    {
+     "bar": 17.2,
+     "beats": 4,
+     "content": "settle down, my child"
+    },
+    {
+     "bar": 18.3,
+     "beats": 3.5,
+     "content": "you worry too much"
+    },
+    {
+     "bar": 19.2,
+     "beats": 3,
+     "content": "you try to fight the whole crowd"
+    }
+   ],
+   "end_title": "LAMINE YAMAL"
+  }
+ }
+}
