@@ -145,15 +145,18 @@ a framing this preview doesn't use.
 ## Render it yourself
 
 ```bash
-cp "Success Farm - Spot Valley Road 50.mp3" song/spot_valley_road.mp3
-python tools/make_audio.py edl/spot_valley.json   # or use the song/edit_spot_valley.wav you were sent
+pip install numpy pillow soundfile
+python tools/extract_preview_clips.py /path/to/videoplayback-2.mp4   # rebuilds clips/v2/P01–P18
+cp /path/to/edit_spot_valley.wav song/                               # the soundtrack you were sent
 python render.py edl/spot_valley.json --check
-python render.py edl/spot_valley.json             # full quality
+python render.py edl/spot_valley.json                                # → out/spot_valley.mp4
 ```
 
-The soundtrack splices need the vocal/instrumental stems
-(`python tools/analyze_song.py song/spot_valley_road.mp3 analysis/raw_spot_valley_road.json --models <models>`);
-without them, use the `edit_spot_valley.wav` file you were sent.
+Media isn't stored in git, so the first two steps put the clips and the soundtrack in place.
+(`tools/make_audio.py` can rebuild the soundtrack, but its splices need the song's
+vocal/instrumental stems: `python tools/analyze_song.py song/spot_valley_road.mp3
+analysis/raw_spot_valley_road.json --models <models>`.) A full render takes several minutes;
+`--preview` makes a quick 540x960 draft.
 
 To change the edit, edit `tools/cuts_spot_valley.py` and run
 `python tools/build_edl.py cuts_spot_valley`. Every shot is listed in
