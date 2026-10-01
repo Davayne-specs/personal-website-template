@@ -5,6 +5,7 @@ render.py: turn an Edit Decision List (EDL) JSON into a vertical TikTok video.
     python render.py edl/<name>.json [--out out/<name>.mp4] [--preview] [--only s03,s07]
                      [--placeholders-only] [--check] [--jobs 4] [--contact-sheet]
                      [--force] [--font path.ttf] [--squeeze 0.8] [--no-cache] [--verbose]
+                     [--max-rate 12]
 
 Pipeline
   1. load the EDL (JSON; // and /* */ comments and trailing commas are tolerated)
@@ -1328,6 +1329,7 @@ class Settings:
     preset: str
     crf: int
     abitrate: str
+    max_rate: float                # video bitrate cap in Mbps (0 = uncapped crf)
     interp: str
     scale_flags: str
     safe_top: float
@@ -1344,7 +1346,8 @@ class Settings:
     def key(self) -> dict:
         return {"W": self.W, "H": self.H, "fps": self.fps, "preview": self.preview,
                 "ph": self.placeholders_only, "force": self.force, "preset": self.preset,
-                "crf": self.crf, "safe": [self.safe_top, self.safe_bottom, self.safe_right],
+                "crf": self.crf, "max_rate": self.max_rate,
+                "safe": [self.safe_top, self.safe_bottom, self.safe_right],
                 "fonts": [(f_, os.path.getmtime(f_)) for f_ in
                           (self.fonts.heavy, self.fonts.body, self.fonts.regular)],
                 "squeeze": self.fonts.squeeze, "accent": self.accent}
@@ -1359,6 +1362,7 @@ def make_settings(edl: EDL, args, fonts: Fonts) -> Settings:
                     placeholders_only=args.placeholders_only, force=args.force,
                     preset="ultrafast" if args.preview else "slow",
                     crf=23 if args.preview else 17, abitrate="192k" if args.preview else "320k",
+                    max_rate=0.0 if args.preview else max(0.0, args.max_rate),
                     interp="linear" if args.preview else "cubic",
                     scale_flags="bilinear" if args.preview else "lanczos",
                     safe_top=edl.safe["top"] * ky, safe_bottom=edl.safe["bottom"] * ky,
@@ -3031,7 +3035,8 @@ def build_shot(job: Job, S: Settings, edl: EDL, tmp: Path):
 
 
 def venc_args(S: Settings):
-    return ["-c:v", "libx264", "-preset", S.preset, "-crf", str(S.crf), "-pix_fmt", "yuv420p",
+    cap = ["-maxrate", f"{S.max_rate:g}M", "-bufsize", f"{2 * S.max_rate:g}M"] if S.max_rate else []
+    return ["-c:v", "libx264", "-preset", S.preset, "-crf", str(S.crf), *cap, "-pix_fmt", "yuv420p",
             "-profile:v", "high", "-colorspace", "bt709", "-color_primaries", "bt709",
             "-color_trc", "bt709", "-color_range", "tv"]
 
@@ -3322,6 +3327,9 @@ def main(argv=None) -> int:
     ap.add_argument("--font", help="heavy title font (.ttf/.otf); default: best font in fonts/, else system")
     ap.add_argument("--squeeze", type=float, help="horizontal squeeze for the heavy font (0.5-1.0)")
     ap.add_argument("--no-cache", action="store_true", help="re-render every segment")
+    ap.add_argument("--max-rate", type=float, default=12.0,
+                    help="full renders: cap the video bitrate in Mbps so the file fits TikTok's in-app "
+                         "upload (default 12; 0 = no cap)")
     ap.add_argument("--verbose", "-v", action="store_true", help="print ffmpeg commands")
     args = ap.parse_args(argv)
 
@@ -3401,7 +3409,8 @@ def main(argv=None) -> int:
     total_frames = sum(j.shot.N for j in jobs)
     print(f"\nRendering \"{edl.title}\" → {rel(out)}")
     print(f"  {len(jobs)} shot(s), {total_frames} frames ({total_frames / S.fps:.2f}s) at "
-          f"{S.W}x{S.H} @ {num(S.fps)} fps, preset {S.preset} crf {S.crf}, {args.jobs} job(s)")
+          f"{S.W}x{S.H} @ {num(S.fps)} fps, preset {S.preset} crf {S.crf}"
+          f"{f', max {S.max_rate:g} Mbps' if S.max_rate else ''}, {args.jobs} job(s)")
     print(f"  fonts: {fonts.describe()}")
     t_start = time.time()
     prune_cache(cache)
