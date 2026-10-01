@@ -102,11 +102,11 @@
     "hint": "Ballon d'Or 2025 Dembélé wins Yamal reaction",
     "color": "#3a3a48"
    },
+   "grade": "bw",
    "zoom": {
     "from": 1.02,
     "to": 1.12
-   },
-   "grade": "bw"
+   }
   },
   {
    "id": "s03",
@@ -127,11 +127,11 @@
     "hint": "LAMINE YAMAL gana el TROFEO KOPA 2025: DISCURSO COMPLETO",
     "color": "#b8860b"
    },
+   "grade": "gold",
    "zoom": {
     "from": 1.02,
     "to": 1.12
    },
-   "grade": "gold",
    "text": {
     "content": "so damn close",
     "style": "lyric",
@@ -568,11 +568,11 @@
     "hint": "Fox Sports: Rodri, Yamal and Spain celebrate World Cup final win",
     "color": "#b8860b"
    },
+   "grade": "gold",
    "zoom": {
     "from": 1.0,
     "to": 1.14
    },
-   "grade": "gold",
    "text": {
     "content": "RAIN ON ME",
     "style": "lyric",
@@ -1115,11 +1115,11 @@
     "hint": "HIGHLIGHTS (Atletico-Barcelona QF2, uploader unknown)",
     "color": "#3a3a48"
    },
+   "grade": "bw",
    "zoom": {
     "from": 1.02,
     "to": 1.12
-   },
-   "grade": "bw"
+   }
   },
   {
    "id": "s48",
@@ -1142,11 +1142,11 @@
     "hint": "World Soccer Talk: Video - Lamine Yamal forced off due to injury right after scoring penal",
     "color": "#3a3a48"
    },
+   "grade": "bw",
    "zoom": {
     "from": 1.02,
     "to": 1.12
-   },
-   "grade": "bw"
+   }
   },
   {
    "id": "s49",
@@ -1171,11 +1171,11 @@
     "hint": "Snopes: Photo shows Messi bathing baby Yamal (2007) - verified",
     "color": "#b8860b"
    },
+   "grade": "warm",
    "zoom": {
     "from": 1.0,
     "to": 1.18
-   },
-   "grade": "warm"
+   }
   },
   {
    "id": "s50",
@@ -1198,11 +1198,11 @@
     "hint": "Yahoo Sports: Yamal's World Cup celebration with little brother Keyne",
     "color": "#c60b1e"
    },
+   "grade": "warm",
    "zoom": {
     "from": 1.02,
     "to": 1.12
-   },
-   "grade": "warm"
+   }
   },
   {
    "id": "s51",
@@ -1379,11 +1379,11 @@
     "hint": "Yahoo Sports: The moment Messi passed the football baton to Yamal",
     "color": "#b8860b"
    },
+   "grade": "warm",
    "zoom": {
     "from": 1.02,
     "to": 1.12
-   },
-   "grade": "warm"
+   }
   },
   {
    "id": "s59",
@@ -1406,11 +1406,11 @@
     "hint": "Fox Sports: Rodri, Yamal and Spain celebrate World Cup final win",
     "color": "#b8860b"
    },
+   "grade": "gold",
    "zoom": {
     "from": 1.0,
     "to": 1.2
-   },
-   "grade": "gold"
+   }
   },
   {
    "id": "s60",
@@ -2194,11 +2194,11 @@
     "hint": "Ballon d'Or 2025 ceremony trophy close-up",
     "color": "#b8860b"
    },
+   "grade": "gold",
    "zoom": {
     "from": 1.22,
     "to": 1.0
    },
-   "grade": "gold",
    "text": {
     "content": "26.10\nLONDON",
     "style": "title",

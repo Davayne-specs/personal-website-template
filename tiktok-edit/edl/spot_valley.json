@@ -1,0 +1,4357 @@
+{
+ "meta": {
+  "title": "Lamine Yamal — Spot Valley Road 50",
+  "song": "song/edit_spot_valley.wav",
+  "song_start": 0.0,
+  "song_end": 120.5341,
+  "fade_out": 0.0,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "default_grade": "none",
+  "safe_zone": {
+   "top": 130,
+   "bottom": 484,
+   "left": 60,
+   "right": 140
+  },
+  "audio_plan": {
+   "source": "song/spot_valley_road.mp3",
+   "stems": {
+    "vocals": "song/stems/spot_valley_road/vocals.wav",
+    "instrumental": "song/stems/spot_valley_road/instrumental.wav"
+   },
+   "segments": [
+    {
+     "label": "cold open 'Yo— let's go'",
+     "from": 5.4444,
+     "to": 8.476
+    },
+    {
+     "label": "verse 'What do you know / calling my name' → 'secret / pain'",
+     "from": 18.5814,
+     "to": 34.7501,
+     "vocals_to": 34.83
+    },
+    {
+     "label": "'figured it out' → breakdown → 'demons already' → 'Don't you run from me'",
+     "from": 46.8765,
+     "to": 77.1927,
+     "vocals_to": 77.7
+    },
+    {
+     "label": "'I wanna call police' → build → bridge → drop → 'just not there'",
+     "from": 89.3192,
+     "to": 135.8041,
+     "mute_vocals": [
+      [
+       89.2692,
+       90.2
+      ]
+     ]
+    },
+    {
+     "label": "'Cold sweat ×3' → 'I feel amazing' → calm → finale",
+     "from": 141.8673,
+     "to": 166.4,
+     "mute_vocals": [
+      [
+       141.8173,
+       142.3
+      ]
+     ]
+    }
+   ],
+   "gain_db": 1.5
+  },
+  "rec_date": "OCT 26 2026"
+ },
+ "shots": [
+  {
+   "id": "s01",
+   "start": 0.0,
+   "end": 1.0105,
+   "section": "intro",
+   "moment": "P14",
+   "clip": "clips/v2/P14.mp4",
+   "in": 1.0,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "xerox",
+    "grain"
+   ],
+   "placeholder": {
+    "title": "LAMINE YAMAL 19",
+    "sub": "tilt up from the ball to the name, full name at 0.9 s",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "freeze": {
+    "at": 0.0
+   },
+   "zoom": {
+    "from": 1.12,
+    "to": 1.18
+   }
+  },
+  {
+   "id": "s02",
+   "start": 1.0105,
+   "end": 3.0316,
+   "section": "intro",
+   "moment": "P14",
+   "clip": "clips/v2/P14.mp4",
+   "in": 0.237,
+   "speed": 0.6,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "vhs",
+    "rec",
+    "flash_in"
+   ],
+   "placeholder": {
+    "title": "LAMINE YAMAL 19",
+    "sub": "tilt up from the ball to the name, full name at 0.9 s",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "zoom": {
+    "from": 1.25,
+    "to": 1.0,
+    "ease": "in_out"
+   }
+  },
+  {
+   "id": "s03",
+   "start": 3.0316,
+   "end": 4.0422,
+   "section": "verse 1a",
+   "moment": "P01",
+   "clip": "clips/v2/P01.mp4",
+   "in": 0.0,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "vhs",
+    "rec",
+    "zoom_blur",
+    "flash_in"
+   ],
+   "placeholder": {
+    "title": "TUNNEL WALK",
+    "sub": "Spain training top, walking to the pitch",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.03,
+    "decay": 6,
+    "phase": 0.0
+   },
+   "zoom": {
+    "from": 1.0,
+    "to": 1.12
+   },
+   "text": {
+    "content": "WHAT DO YOU KNOW",
+    "style": "ransom",
+    "pos": "upper",
+    "in": 0.619
+   }
+  },
+  {
+   "id": "s04",
+   "start": 4.0422,
+   "end": 5.0527,
+   "section": "verse 1a",
+   "moment": "P03",
+   "clip": "clips/v2/P03.mp4",
+   "in": 0.2,
+   "speed": 1.0,
+   "focus_x": 0.42,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "vhs",
+    "rec"
+   ],
+   "placeholder": {
+    "title": "WALKOUT WITH THE MASCOT",
+    "sub": "Croatia mascot at his side",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.03,
+    "decay": 6,
+    "phase": 0.0
+   }
+  },
+  {
+   "id": "s05",
+   "start": 5.0527,
+   "end": 6.0632,
+   "section": "verse 1a",
+   "moment": "P04",
+   "clip": "clips/v2/P04.mp4",
+   "in": 0.1,
+   "speed": 0.8,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "vhs",
+    "rec"
+   ],
+   "placeholder": {
+    "title": "ANTHEM",
+    "sub": "eyes forward, Spain jacket",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.03,
+    "decay": 6,
+    "phase": 0.0
+   }
+  },
+  {
+   "id": "s06",
+   "start": 6.0632,
+   "end": 7.0738,
+   "section": "verse 1a",
+   "moment": "P13",
+   "clip": "clips/v2/P13.mp4",
+   "in": 0.2,
+   "speed": 1.0,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "vhs",
+    "rec"
+   ],
+   "placeholder": {
+    "title": "GLANCE",
+    "sub": "looking off to the side",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.03,
+    "decay": 6,
+    "phase": 0.0
+   }
+  },
+  {
+   "id": "s07",
+   "start": 7.0738,
+   "end": 8.0843,
+   "section": "verse 1a",
+   "moment": "P05",
+   "clip": "clips/v2/P05.mp4",
+   "in": 0.1,
+   "speed": 1.0,
+   "focus_x": 0.55,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "vhs",
+    "rec",
+    "flash_in"
+   ],
+   "placeholder": {
+    "title": "THE CLAP",
+    "sub": "hands above his head to the crowd, back to camera",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.055,
+    "decay": 7,
+    "phase": 0.0
+   },
+   "text": {
+    "content": "CALLING MY NAME",
+    "style": "ransom",
+    "pos": "upper",
+    "in": 0.0
+   }
+  },
+  {
+   "id": "s08",
+   "start": 8.0843,
+   "end": 8.5896,
+   "section": "verse 1a",
+   "moment": "P05",
+   "clip": "clips/v2/P05.mp4",
+   "in": 0.7,
+   "speed": 1.0,
+   "focus_x": 0.55,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "vhs",
+    "rec"
+   ],
+   "placeholder": {
+    "title": "THE CLAP",
+    "sub": "hands above his head to the crowd, back to camera",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.055,
+    "decay": 7,
+    "phase": 0.0
+   }
+  },
+  {
+   "id": "s09",
+   "start": 8.5896,
+   "end": 9.0949,
+   "section": "verse 1a",
+   "moment": "P17",
+   "clip": "clips/v2/P17.mp4",
+   "in": 0.3,
+   "speed": 1.0,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "vhs",
+    "rec",
+    "whip_in"
+   ],
+   "placeholder": {
+    "title": "LOOKING BACK",
+    "sub": "walking in the blue kit, turns his head",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   }
+  },
+  {
+   "id": "s10",
+   "start": 9.0949,
+   "end": 9.6001,
+   "section": "verse 1b",
+   "moment": "P06",
+   "clip": "clips/v2/P06.mp4",
+   "in": 0.0,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "zoom_blur",
+    "flash_in",
+    "shake",
+    "step"
+   ],
+   "placeholder": {
+    "title": "THE RUN",
+    "sub": "wide shot, dribbling upfield",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.055,
+    "decay": 7,
+    "phase": 0.0
+   },
+   "zoom": {
+    "from": 1.18,
+    "to": 1.0,
+    "ease": "snap"
+   }
+  },
+  {
+   "id": "s11",
+   "start": 9.6001,
+   "end": 10.1054,
+   "section": "verse 1b",
+   "moment": "P06",
+   "clip": "clips/v2/P06.mp4",
+   "in": 0.6,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "step"
+   ],
+   "placeholder": {
+    "title": "THE RUN",
+    "sub": "wide shot, dribbling upfield",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.055,
+    "decay": 7,
+    "phase": 0.0
+   }
+  },
+  {
+   "id": "s12",
+   "start": 10.1054,
+   "end": 10.6107,
+   "section": "verse 1b",
+   "moment": "P09",
+   "clip": "clips/v2/P09.mp4",
+   "in": 0.0,
+   "speed": 1.0,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "step",
+    "whip_in"
+   ],
+   "placeholder": {
+    "title": "THROUGH THE CROATIA DEFENCE",
+    "sub": "dribble past two",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.055,
+    "decay": 7,
+    "phase": 0.0
+   }
+  },
+  {
+   "id": "s13",
+   "start": 10.6107,
+   "end": 11.1159,
+   "section": "verse 1b",
+   "moment": "P09",
+   "clip": "clips/v2/P09.mp4",
+   "in": 0.8,
+   "speed": 1.0,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "step"
+   ],
+   "placeholder": {
+    "title": "THROUGH THE CROATIA DEFENCE",
+    "sub": "dribble past two",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.055,
+    "decay": 7,
+    "phase": -0.0
+   }
+  },
+  {
+   "id": "s14",
+   "start": 11.1159,
+   "end": 12.1265,
+   "section": "verse 1b",
+   "moment": "P02",
+   "clip": "clips/v2/P02.mp4",
+   "in": 0.4,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "xerox",
+    "invert_flash"
+   ],
+   "placeholder": {
+    "title": "THE SMILE",
+    "sub": "close-up, Spain kit",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "freeze": {
+    "at": 0.0
+   },
+   "zoom": {
+    "from": 1.0,
+    "to": 1.12
+   },
+   "text": {
+    "content": "YOU MUST GOT A SECRET",
+    "style": "ransom",
+    "pos": "center",
+    "in": 0.484
+   }
+  },
+  {
+   "id": "s15",
+   "start": 12.1265,
+   "end": 12.6318,
+   "section": "verse 1b",
+   "moment": "P13",
+   "clip": "clips/v2/P13.mp4",
+   "in": 0.4,
+   "speed": 0.7,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "echo"
+   ],
+   "placeholder": {
+    "title": "GLANCE",
+    "sub": "looking off to the side",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   }
+  },
+  {
+   "id": "s16",
+   "start": 12.6318,
+   "end": 13.137,
+   "section": "verse 1b",
+   "moment": "P11",
+   "clip": "clips/v2/P11.mp4",
+   "in": 0.0,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "glitch"
+   ],
+   "placeholder": {
+    "title": "HANDS",
+    "sub": "blurred hands reaching, chaos",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   }
+  },
+  {
+   "id": "s17",
+   "start": 13.137,
+   "end": 14.1476,
+   "section": "verse 1b",
+   "moment": "P10",
+   "clip": "clips/v2/P10.mp4",
+   "in": 0.2,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "step",
+    "shake"
+   ],
+   "placeholder": {
+    "title": "RUN AND FINISH",
+    "sub": "dribble, strike 1.35 s, goal 1.9 s",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.055,
+    "decay": 7,
+    "phase": 0.0
+   }
+  },
+  {
+   "id": "s18",
+   "start": 14.1476,
+   "end": 14.6528,
+   "section": "verse 1b",
+   "moment": "P10",
+   "clip": "clips/v2/P10.mp4",
+   "in": 1.611,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "invert_flash"
+   ],
+   "placeholder": {
+    "title": "RUN AND FINISH",
+    "sub": "dribble, strike 1.35 s, goal 1.9 s",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.055,
+    "decay": 7,
+    "phase": 0.0
+   }
+  },
+  {
+   "id": "s19",
+   "start": 14.6528,
+   "end": 15.1581,
+   "section": "verse 1b",
+   "moment": "P08",
+   "clip": "clips/v2/P08.mp4",
+   "in": 0.3,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "whip_in"
+   ],
+   "placeholder": {
+    "title": "BACK TO THE CROWD",
+    "sub": "celebration, arm up, LAMINE YAMAL 19",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.055,
+    "decay": 7,
+    "phase": 0.0
+   }
+  },
+  {
+   "id": "s20",
+   "start": 15.1581,
+   "end": 16.1686,
+   "section": "verse 1b",
+   "moment": "P04",
+   "clip": "clips/v2/P04.mp4",
+   "in": 0.3,
+   "speed": 1.0,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "xerox",
+    "letterbox"
+   ],
+   "placeholder": {
+    "title": "ANTHEM",
+    "sub": "eyes forward, Spain jacket",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "freeze": {
+    "at": 0.0
+   },
+   "zoom": {
+    "from": 1.0,
+    "to": 1.2
+   },
+   "text": {
+    "content": "PAIN",
+    "style": "stamp",
+    "pos": "upper",
+    "in": 0.692
+   }
+  },
+  {
+   "id": "s21",
+   "start": 16.1686,
+   "end": 17.1792,
+   "section": "verse 1b",
+   "moment": "P04",
+   "clip": "clips/v2/P04.mp4",
+   "in": 0.3,
+   "speed": 0.5,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "echo",
+    "letterbox"
+   ],
+   "placeholder": {
+    "title": "ANTHEM",
+    "sub": "eyes forward, Spain jacket",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "grade": "cold"
+  },
+  {
+   "id": "s22",
+   "start": 17.1792,
+   "end": 17.6845,
+   "section": "verse 1b",
+   "moment": "P11",
+   "clip": "clips/v2/P11.mp4",
+   "in": 0.4,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "glitch",
+    "rgb_split"
+   ],
+   "placeholder": {
+    "title": "HANDS",
+    "sub": "blurred hands reaching, chaos",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   }
+  },
+  {
+   "id": "s23",
+   "start": 17.6845,
+   "end": 18.1897,
+   "section": "verse 1b",
+   "moment": "P15",
+   "clip": "clips/v2/P15.mp4",
+   "in": 0.0,
+   "speed": 1.0,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "whip_in"
+   ],
+   "placeholder": {
+    "title": "THE COACH",
+    "sub": "handshake on the touchline",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   }
+  },
+  {
+   "id": "s24",
+   "start": 18.1897,
+   "end": 18.695,
+   "section": "verse 1b",
+   "moment": "P05",
+   "clip": "clips/v2/P05.mp4",
+   "in": 0.2,
+   "speed": 1.0,
+   "focus_x": 0.55,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "strobe"
+   ],
+   "placeholder": {
+    "title": "THE CLAP",
+    "sub": "hands above his head to the crowd, back to camera",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.055,
+    "decay": 7,
+    "phase": 0.0
+   }
+  },
+  {
+   "id": "s25",
+   "start": 18.695,
+   "end": 19.2003,
+   "section": "verse 1b",
+   "moment": "P05",
+   "clip": "clips/v2/P05.mp4",
+   "in": 0.8,
+   "speed": 1.0,
+   "focus_x": 0.55,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "flash_red",
+    "shake_hard"
+   ],
+   "placeholder": {
+    "title": "THE CLAP",
+    "sub": "hands above his head to the crowd, back to camera",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   }
+  },
+  {
+   "id": "s26",
+   "start": 19.2003,
+   "end": 20.2109,
+   "section": "verse 1b",
+   "moment": "P07",
+   "clip": "clips/v2/P07.mp4",
+   "in": 0.1,
+   "speed": 1.0,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "zoom_blur",
+    "flash_in",
+    "shake"
+   ],
+   "placeholder": {
+    "title": "PENALTY GOAL",
+    "sub": "strike 0.25 s, ball in the net 1.75 s",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "ramp": {
+    "from": 1.0,
+    "to": 0.4,
+    "at": 0.25
+   },
+   "zoom": {
+    "from": 1.18,
+    "to": 1.0,
+    "ease": "snap"
+   }
+  },
+  {
+   "id": "s27",
+   "start": 20.2109,
+   "end": 21.2214,
+   "section": "verse 1b",
+   "moment": "P07",
+   "clip": "clips/v2/P07.mp4",
+   "in": 1.474,
+   "speed": 1.0,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "invert_flash"
+   ],
+   "placeholder": {
+    "title": "PENALTY GOAL",
+    "sub": "strike 0.25 s, ball in the net 1.75 s",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "stutter": {
+    "len": 0.134,
+    "repeats": 3
+   },
+   "text": {
+    "content": "FIGURED IT OUT",
+    "style": "glitchtext",
+    "pos": "center",
+    "in": 0.0
+   }
+  },
+  {
+   "id": "s28",
+   "start": 21.2214,
+   "end": 22.232,
+   "section": "verse 1b",
+   "moment": "P08",
+   "clip": "clips/v2/P08.mp4",
+   "in": 0.2,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "flash_in"
+   ],
+   "placeholder": {
+    "title": "BACK TO THE CROWD",
+    "sub": "celebration, arm up, LAMINE YAMAL 19",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "layout": "triptych"
+  },
+  {
+   "id": "s29",
+   "start": 22.232,
+   "end": 22.7372,
+   "section": "verse 1b",
+   "moment": "P12",
+   "clip": "clips/v2/P12.mp4",
+   "in": 0.0,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "whip_in"
+   ],
+   "placeholder": {
+    "title": "PEDRI HUG",
+    "sub": "embrace after a goal",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.055,
+    "decay": 7,
+    "phase": 0.0
+   }
+  },
+  {
+   "id": "s30",
+   "start": 22.7372,
+   "end": 23.2425,
+   "section": "verse 1b",
+   "moment": "P16",
+   "clip": "clips/v2/P16.mp4",
+   "in": 0.3,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [],
+   "placeholder": {
+    "title": "BENCH LAUGH",
+    "sub": "laughing on the bench",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.055,
+    "decay": 7,
+    "phase": -0.0
+   }
+  },
+  {
+   "id": "s31",
+   "start": 23.2425,
+   "end": 24.253,
+   "section": "verse 1b",
+   "moment": "P10",
+   "clip": "clips/v2/P10.mp4",
+   "in": 0.3,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "step",
+    "zoom_blur"
+   ],
+   "placeholder": {
+    "title": "RUN AND FINISH",
+    "sub": "dribble, strike 1.35 s, goal 1.9 s",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.055,
+    "decay": 7,
+    "phase": 0.0
+   }
+  },
+  {
+   "id": "s32",
+   "start": 24.253,
+   "end": 24.7583,
+   "section": "verse 1b",
+   "moment": "P10",
+   "clip": "clips/v2/P10.mp4",
+   "in": 1.611,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "invert_flash",
+    "shake"
+   ],
+   "placeholder": {
+    "title": "RUN AND FINISH",
+    "sub": "dribble, strike 1.35 s, goal 1.9 s",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   }
+  },
+  {
+   "id": "s33",
+   "start": 24.7583,
+   "end": 25.2636,
+   "section": "verse 1b",
+   "moment": "P05",
+   "clip": "clips/v2/P05.mp4",
+   "in": 0.2,
+   "speed": 1.0,
+   "focus_x": 0.55,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [],
+   "placeholder": {
+    "title": "THE CLAP",
+    "sub": "hands above his head to the crowd, back to camera",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.055,
+    "decay": 7,
+    "phase": 0.0
+   }
+  },
+  {
+   "id": "s34",
+   "start": 25.2636,
+   "end": 25.7689,
+   "section": "verse 1b",
+   "moment": "P13",
+   "clip": "clips/v2/P13.mp4",
+   "in": 0.3,
+   "speed": 1.0,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [],
+   "placeholder": {
+    "title": "GLANCE",
+    "sub": "looking off to the side",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.055,
+    "decay": 7,
+    "phase": 0.0
+   }
+  },
+  {
+   "id": "s35",
+   "start": 25.7689,
+   "end": 26.2741,
+   "section": "verse 1b",
+   "moment": "P16",
+   "clip": "clips/v2/P16.mp4",
+   "in": 0.4,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [],
+   "placeholder": {
+    "title": "BENCH LAUGH",
+    "sub": "laughing on the bench",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.055,
+    "decay": 7,
+    "phase": 0.0
+   }
+  },
+  {
+   "id": "s36",
+   "start": 26.2741,
+   "end": 27.2847,
+   "section": "verse 1b",
+   "moment": "P02",
+   "clip": "clips/v2/P02.mp4",
+   "in": 0.6,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "posterize",
+    "flash_in"
+   ],
+   "placeholder": {
+    "title": "THE SMILE",
+    "sub": "close-up, Spain kit",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "freeze": {
+    "at": 0.0
+   },
+   "zoom": {
+    "from": 1.0,
+    "to": 1.12
+   }
+  },
+  {
+   "id": "s37",
+   "start": 27.2847,
+   "end": 28.2952,
+   "section": "verse 1b",
+   "moment": "P09",
+   "clip": "clips/v2/P09.mp4",
+   "in": 0.2,
+   "speed": 1.0,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "step"
+   ],
+   "placeholder": {
+    "title": "THROUGH THE CROATIA DEFENCE",
+    "sub": "dribble past two",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.055,
+    "decay": 7,
+    "phase": 0.0
+   }
+  },
+  {
+   "id": "s38",
+   "start": 28.2952,
+   "end": 28.8005,
+   "section": "verse 1b",
+   "moment": "P09",
+   "clip": "clips/v2/P09.mp4",
+   "in": 1.0,
+   "speed": 1.0,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "step"
+   ],
+   "placeholder": {
+    "title": "THROUGH THE CROATIA DEFENCE",
+    "sub": "dribble past two",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.055,
+    "decay": 7,
+    "phase": 0.0
+   }
+  },
+  {
+   "id": "s39",
+   "start": 28.8005,
+   "end": 29.3057,
+   "section": "verse 1b",
+   "moment": "P17",
+   "clip": "clips/v2/P17.mp4",
+   "in": 0.1,
+   "speed": 1.0,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "whip_in"
+   ],
+   "placeholder": {
+    "title": "LOOKING BACK",
+    "sub": "walking in the blue kit, turns his head",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   }
+  },
+  {
+   "id": "s40",
+   "start": 29.3057,
+   "end": 31.3268,
+   "section": "breakdown",
+   "moment": "P17",
+   "clip": "clips/v2/P17.mp4",
+   "in": 0.0,
+   "speed": 0.5,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "letterbox",
+    "echo"
+   ],
+   "placeholder": {
+    "title": "LOOKING BACK",
+    "sub": "walking in the blue kit, turns his head",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "grade": "bw",
+   "zoom": {
+    "from": 1.0,
+    "to": 1.12
+   },
+   "text": {
+    "content": "don't run, child",
+    "style": "typewriter",
+    "pos": "lower",
+    "in": 0.0
+   }
+  },
+  {
+   "id": "s41",
+   "start": 31.3268,
+   "end": 33.3479,
+   "section": "breakdown",
+   "moment": "P01",
+   "clip": "clips/v2/P01.mp4",
+   "in": 1.171,
+   "speed": 0.6,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "reverse",
+    "letterbox",
+    "vhs"
+   ],
+   "placeholder": {
+    "title": "TUNNEL WALK",
+    "sub": "Spain training top, walking to the pitch",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "grade": "bw",
+   "text": {
+    "content": "come for you, beater",
+    "style": "typewriter",
+    "pos": "lower",
+    "in": 0.027
+   }
+  },
+  {
+   "id": "s42",
+   "start": 33.3479,
+   "end": 34.3584,
+   "section": "breakdown",
+   "moment": "P05",
+   "clip": "clips/v2/P05.mp4",
+   "in": 0.0,
+   "speed": 1.0,
+   "focus_x": 0.55,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "strobe"
+   ],
+   "placeholder": {
+    "title": "THE CLAP",
+    "sub": "hands above his head to the crowd, back to camera",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "stutter": {
+    "len": 0.1,
+    "repeats": 4
+   }
+  },
+  {
+   "id": "s43",
+   "start": 34.3584,
+   "end": 35.369,
+   "section": "breakdown",
+   "moment": "P05",
+   "clip": "clips/v2/P05.mp4",
+   "in": 0.3,
+   "speed": 1.0,
+   "focus_x": 0.55,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [],
+   "placeholder": {
+    "title": "THE CLAP",
+    "sub": "hands above his head to the crowd, back to camera",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "layout": "triptych",
+   "panels": [
+    {
+     "delay": 0.0
+    },
+    {
+     "delay": 0.12
+    },
+    {
+     "delay": 0.24
+    }
+   ]
+  },
+  {
+   "id": "s44",
+   "start": 35.369,
+   "end": 36.3795,
+   "section": "breakdown",
+   "moment": "P04",
+   "clip": "clips/v2/P04.mp4",
+   "in": 0.0,
+   "speed": 1.0,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "strobe",
+    "glitch"
+   ],
+   "placeholder": {
+    "title": "ANTHEM",
+    "sub": "eyes forward, Spain jacket",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "grade": "bw",
+   "zoom": {
+    "from": 1.0,
+    "to": 1.2
+   },
+   "text": {
+    "content": "YOU'VE SEEN THE DEMONS ALREADY",
+    "style": "ransom",
+    "pos": "center",
+    "in": 0.0
+   }
+  },
+  {
+   "id": "s45",
+   "start": 36.3795,
+   "end": 37.3901,
+   "section": "breakdown",
+   "moment": "P11",
+   "clip": "clips/v2/P11.mp4",
+   "in": 0.0,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "glitch",
+    "invert"
+   ],
+   "placeholder": {
+    "title": "HANDS",
+    "sub": "blurred hands reaching, chaos",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "glitch": {
+    "whole": true,
+    "amount": 0.6
+   }
+  },
+  {
+   "id": "s46",
+   "start": 37.3901,
+   "end": 38.4006,
+   "section": "chorus",
+   "moment": "P06",
+   "clip": "clips/v2/P06.mp4",
+   "in": 0.0,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "vhs",
+    "rec"
+   ],
+   "placeholder": {
+    "title": "THE RUN",
+    "sub": "wide shot, dribbling upfield",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.055,
+    "decay": 7,
+    "phase": 0.0
+   }
+  },
+  {
+   "id": "s47",
+   "start": 38.4006,
+   "end": 38.9059,
+   "section": "chorus",
+   "moment": "P09",
+   "clip": "clips/v2/P09.mp4",
+   "in": 0.4,
+   "speed": 1.0,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "step"
+   ],
+   "placeholder": {
+    "title": "THROUGH THE CROATIA DEFENCE",
+    "sub": "dribble past two",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.055,
+    "decay": 7,
+    "phase": 0.0
+   }
+  },
+  {
+   "id": "s48",
+   "start": 38.9059,
+   "end": 39.4111,
+   "section": "chorus",
+   "moment": "P11",
+   "clip": "clips/v2/P11.mp4",
+   "in": 0.0,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "glitch"
+   ],
+   "placeholder": {
+    "title": "HANDS",
+    "sub": "blurred hands reaching, chaos",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   }
+  },
+  {
+   "id": "s49",
+   "start": 39.4111,
+   "end": 41.4322,
+   "section": "chorus",
+   "moment": "P04",
+   "clip": "clips/v2/P04.mp4",
+   "in": 0.0,
+   "speed": 0.783,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "xerox"
+   ],
+   "placeholder": {
+    "title": "ANTHEM",
+    "sub": "eyes forward, Spain jacket",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "layout": "grid4",
+   "panels": [
+    {
+     "clip": "clips/v2/P04.mp4",
+     "in": 0.001,
+     "speed": 0.783,
+     "focus_x": 0.45
+    },
+    {
+     "clip": "clips/v2/P13.mp4",
+     "in": 0.0,
+     "speed": 0.767,
+     "focus_x": 0.45
+    },
+    {
+     "clip": "clips/v2/P17.mp4",
+     "in": 0.0,
+     "speed": 0.585,
+     "focus_x": 0.45
+    },
+    {
+     "clip": "clips/v2/P02.mp4",
+     "in": 0.001,
+     "speed": 0.783,
+     "focus_x": 0.5
+    }
+   ],
+   "text": {
+    "content": "DEMONS",
+    "style": "ransom",
+    "pos": "center",
+    "in": 0.513
+   }
+  },
+  {
+   "id": "s50",
+   "start": 41.4322,
+   "end": 42.4428,
+   "section": "chorus",
+   "moment": "P10",
+   "clip": "clips/v2/P10.mp4",
+   "in": 0.3,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "step"
+   ],
+   "placeholder": {
+    "title": "RUN AND FINISH",
+    "sub": "dribble, strike 1.35 s, goal 1.9 s",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.055,
+    "decay": 7,
+    "phase": 0.0
+   }
+  },
+  {
+   "id": "s51",
+   "start": 42.4428,
+   "end": 42.948,
+   "section": "chorus",
+   "moment": "P10",
+   "clip": "clips/v2/P10.mp4",
+   "in": 1.611,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "invert_flash",
+    "shake"
+   ],
+   "placeholder": {
+    "title": "RUN AND FINISH",
+    "sub": "dribble, strike 1.35 s, goal 1.9 s",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   }
+  },
+  {
+   "id": "s52",
+   "start": 42.948,
+   "end": 43.4533,
+   "section": "chorus",
+   "moment": "P07",
+   "clip": "clips/v2/P07.mp4",
+   "in": 0.1,
+   "speed": 1.0,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "zoom_blur"
+   ],
+   "placeholder": {
+    "title": "PENALTY GOAL",
+    "sub": "strike 0.25 s, ball in the net 1.75 s",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   }
+  },
+  {
+   "id": "s53",
+   "start": 43.4533,
+   "end": 44.4638,
+   "section": "chorus",
+   "moment": "P04",
+   "clip": "clips/v2/P04.mp4",
+   "in": 0.5,
+   "speed": 1.0,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "strobe"
+   ],
+   "placeholder": {
+    "title": "ANTHEM",
+    "sub": "eyes forward, Spain jacket",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "grade": "bw",
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.055,
+    "decay": 7,
+    "phase": 0.0
+   },
+   "text": {
+    "content": "ALREADY",
+    "style": "ransom",
+    "pos": "center",
+    "in": 1.471
+   }
+  },
+  {
+   "id": "s54",
+   "start": 44.4638,
+   "end": 45.4744,
+   "section": "chorus",
+   "moment": "P11",
+   "clip": "clips/v2/P11.mp4",
+   "in": 0.473,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "glitch"
+   ],
+   "placeholder": {
+    "title": "HANDS",
+    "sub": "blurred hands reaching, chaos",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "glitch": {
+    "whole": true,
+    "amount": 0.4
+   }
+  },
+  {
+   "id": "s55",
+   "start": 45.4744,
+   "end": 46.4849,
+   "section": "chorus",
+   "moment": "P03",
+   "clip": "clips/v2/P03.mp4",
+   "in": 0.2,
+   "speed": 0.6,
+   "focus_x": 0.42,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "echo"
+   ],
+   "placeholder": {
+    "title": "WALKOUT WITH THE MASCOT",
+    "sub": "Croatia mascot at his side",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "grade": "cold"
+  },
+  {
+   "id": "s56",
+   "start": 46.4849,
+   "end": 47.4955,
+   "section": "chorus",
+   "moment": "P01",
+   "clip": "clips/v2/P01.mp4",
+   "in": 0.6,
+   "speed": 0.6,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "echo"
+   ],
+   "placeholder": {
+    "title": "TUNNEL WALK",
+    "sub": "Spain training top, walking to the pitch",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "grade": "cold"
+  },
+  {
+   "id": "s57",
+   "start": 47.4955,
+   "end": 49.5165,
+   "section": "chorus",
+   "moment": "P17",
+   "clip": "clips/v2/P17.mp4",
+   "in": 0.0,
+   "speed": 0.586,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "reverse",
+    "whip_in"
+   ],
+   "placeholder": {
+    "title": "LOOKING BACK",
+    "sub": "walking in the blue kit, turns his head",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "zoom": {
+    "from": 1.0,
+    "to": 1.12
+   },
+   "text": {
+    "content": "don't you run from me",
+    "style": "typewriter",
+    "pos": "lower",
+    "in": 0.0
+   }
+  },
+  {
+   "id": "s58",
+   "start": 49.5165,
+   "end": 51.5376,
+   "section": "chorus",
+   "moment": "P18",
+   "clip": "clips/v2/P18.mp4",
+   "in": 0.0,
+   "speed": 0.684,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "vhs",
+    "rec"
+   ],
+   "placeholder": {
+    "title": "INTERVIEW",
+    "sub": "smiling into the TVE microphone",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.03,
+    "decay": 6,
+    "phase": 0.0
+   },
+   "text": {
+    "content": "i wanna call police",
+    "style": "typewriter",
+    "pos": "lower",
+    "in": 0.921
+   }
+  },
+  {
+   "id": "s59",
+   "start": 51.5376,
+   "end": 52.5481,
+   "section": "chorus",
+   "moment": "P15",
+   "clip": "clips/v2/P15.mp4",
+   "in": 0.0,
+   "speed": 0.907,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "vhs",
+    "rec",
+    "whip_in"
+   ],
+   "placeholder": {
+    "title": "THE COACH",
+    "sub": "handshake on the touchline",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.03,
+    "decay": 6,
+    "phase": 0.0
+   }
+  },
+  {
+   "id": "s60",
+   "start": 52.5481,
+   "end": 53.5587,
+   "section": "chorus",
+   "moment": "P12",
+   "clip": "clips/v2/P12.mp4",
+   "in": 0.0,
+   "speed": 0.841,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "vhs",
+    "rec"
+   ],
+   "placeholder": {
+    "title": "PEDRI HUG",
+    "sub": "embrace after a goal",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.03,
+    "decay": 6,
+    "phase": 0.0
+   }
+  },
+  {
+   "id": "s61",
+   "start": 53.5587,
+   "end": 55.5798,
+   "section": "chorus",
+   "moment": "P18",
+   "clip": "clips/v2/P18.mp4",
+   "in": 0.6,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "xerox",
+    "rec"
+   ],
+   "placeholder": {
+    "title": "INTERVIEW",
+    "sub": "smiling into the TVE microphone",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "freeze": {
+    "at": 0.0
+   },
+   "zoom": {
+    "from": 1.0,
+    "to": 1.12
+   },
+   "text": {
+    "content": "i wanna call someone who knows me",
+    "style": "typewriter",
+    "pos": "lower",
+    "in": 1.099
+   }
+  },
+  {
+   "id": "s62",
+   "start": 55.5798,
+   "end": 56.5903,
+   "section": "chorus",
+   "moment": "P16",
+   "clip": "clips/v2/P16.mp4",
+   "in": 0.0,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "vhs",
+    "rec",
+    "light_leak"
+   ],
+   "placeholder": {
+    "title": "BENCH LAUGH",
+    "sub": "laughing on the bench",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.03,
+    "decay": 6,
+    "phase": 0.0
+   }
+  },
+  {
+   "id": "s63",
+   "start": 56.5903,
+   "end": 57.6008,
+   "section": "chorus",
+   "moment": "P12",
+   "clip": "clips/v2/P12.mp4",
+   "in": 0.0,
+   "speed": 0.841,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "vhs",
+    "rec",
+    "light_leak"
+   ],
+   "placeholder": {
+    "title": "PEDRI HUG",
+    "sub": "embrace after a goal",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.03,
+    "decay": 6,
+    "phase": 0.0
+   }
+  },
+  {
+   "id": "s64",
+   "start": 57.6008,
+   "end": 58.6114,
+   "section": "build",
+   "moment": "P04",
+   "clip": "clips/v2/P04.mp4",
+   "in": 0.1,
+   "speed": 1.0,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "zoom_blur",
+    "shake"
+   ],
+   "placeholder": {
+    "title": "ANTHEM",
+    "sub": "eyes forward, Spain jacket",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "grade": "cold",
+   "zoom": {
+    "from": 1.18,
+    "to": 1.0,
+    "ease": "snap"
+   }
+  },
+  {
+   "id": "s65",
+   "start": 58.6114,
+   "end": 59.6219,
+   "section": "build",
+   "moment": "P04",
+   "clip": "clips/v2/P04.mp4",
+   "in": 0.6,
+   "speed": 1.0,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "invert",
+    "xerox"
+   ],
+   "placeholder": {
+    "title": "ANTHEM",
+    "sub": "eyes forward, Spain jacket",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "freeze": {
+    "at": 0.0
+   },
+   "text": {
+    "content": "SCREAMING",
+    "style": "stamp",
+    "pos": "upper",
+    "in": 0.986
+   }
+  },
+  {
+   "id": "s66",
+   "start": 59.6219,
+   "end": 60.1272,
+   "section": "build",
+   "moment": "P09",
+   "clip": "clips/v2/P09.mp4",
+   "in": 0.0,
+   "speed": 1.0,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "step"
+   ],
+   "placeholder": {
+    "title": "THROUGH THE CROATIA DEFENCE",
+    "sub": "dribble past two",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.055,
+    "decay": 7,
+    "phase": 0.0
+   }
+  },
+  {
+   "id": "s67",
+   "start": 60.1272,
+   "end": 60.6325,
+   "section": "build",
+   "moment": "P06",
+   "clip": "clips/v2/P06.mp4",
+   "in": 0.3,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "step"
+   ],
+   "placeholder": {
+    "title": "THE RUN",
+    "sub": "wide shot, dribbling upfield",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.055,
+    "decay": 7,
+    "phase": 0.0
+   }
+  },
+  {
+   "id": "s68",
+   "start": 60.6325,
+   "end": 61.1377,
+   "section": "build",
+   "moment": "P09",
+   "clip": "clips/v2/P09.mp4",
+   "in": 0.7,
+   "speed": 1.0,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "step"
+   ],
+   "placeholder": {
+    "title": "THROUGH THE CROATIA DEFENCE",
+    "sub": "dribble past two",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.055,
+    "decay": 7,
+    "phase": -0.0
+   }
+  },
+  {
+   "id": "s69",
+   "start": 61.1377,
+   "end": 61.643,
+   "section": "build",
+   "moment": "P06",
+   "clip": "clips/v2/P06.mp4",
+   "in": 1.0,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "step"
+   ],
+   "placeholder": {
+    "title": "THE RUN",
+    "sub": "wide shot, dribbling upfield",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.055,
+    "decay": 7,
+    "phase": 0.0
+   }
+  },
+  {
+   "id": "s70",
+   "start": 61.643,
+   "end": 62.1483,
+   "section": "build",
+   "moment": "P09",
+   "clip": "clips/v2/P09.mp4",
+   "in": 1.2,
+   "speed": 1.0,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "strobe"
+   ],
+   "placeholder": {
+    "title": "THROUGH THE CROATIA DEFENCE",
+    "sub": "dribble past two",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.055,
+    "decay": 7,
+    "phase": 0.0
+   },
+   "text": {
+    "content": "FIGHTING EVERYONE",
+    "style": "glitchtext",
+    "pos": "center",
+    "in": 0.054
+   }
+  },
+  {
+   "id": "s71",
+   "start": 62.1483,
+   "end": 62.6535,
+   "section": "build",
+   "moment": "P10",
+   "clip": "clips/v2/P10.mp4",
+   "in": 0.4,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [],
+   "placeholder": {
+    "title": "RUN AND FINISH",
+    "sub": "dribble, strike 1.35 s, goal 1.9 s",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.055,
+    "decay": 7,
+    "phase": 0.0
+   }
+  },
+  {
+   "id": "s72",
+   "start": 62.6535,
+   "end": 63.1588,
+   "section": "build",
+   "moment": "P11",
+   "clip": "clips/v2/P11.mp4",
+   "in": 0.0,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "glitch"
+   ],
+   "placeholder": {
+    "title": "HANDS",
+    "sub": "blurred hands reaching, chaos",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   }
+  },
+  {
+   "id": "s73",
+   "start": 63.1588,
+   "end": 63.6641,
+   "section": "build",
+   "moment": "P07",
+   "clip": "clips/v2/P07.mp4",
+   "in": 0.15,
+   "speed": 1.0,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "shake"
+   ],
+   "placeholder": {
+    "title": "PENALTY GOAL",
+    "sub": "strike 0.25 s, ball in the net 1.75 s",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   }
+  },
+  {
+   "id": "s74",
+   "start": 63.6641,
+   "end": 64.1694,
+   "section": "build",
+   "moment": "P05",
+   "clip": "clips/v2/P05.mp4",
+   "in": 0.2,
+   "speed": 1.0,
+   "focus_x": 0.55,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "shake_hard",
+    "flash_in"
+   ],
+   "placeholder": {
+    "title": "THE CLAP",
+    "sub": "hands above his head to the crowd, back to camera",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.055,
+    "decay": 7,
+    "phase": 0.0
+   }
+  },
+  {
+   "id": "s75",
+   "start": 64.1694,
+   "end": 64.6746,
+   "section": "build",
+   "moment": "P08",
+   "clip": "clips/v2/P08.mp4",
+   "in": 0.3,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [],
+   "placeholder": {
+    "title": "BACK TO THE CROWD",
+    "sub": "celebration, arm up, LAMINE YAMAL 19",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.055,
+    "decay": 7,
+    "phase": 0.0
+   }
+  },
+  {
+   "id": "s76",
+   "start": 64.6746,
+   "end": 65.1799,
+   "section": "build",
+   "moment": "P10",
+   "clip": "clips/v2/P10.mp4",
+   "in": 1.2,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [],
+   "placeholder": {
+    "title": "RUN AND FINISH",
+    "sub": "dribble, strike 1.35 s, goal 1.9 s",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.055,
+    "decay": 7,
+    "phase": 0.0
+   }
+  },
+  {
+   "id": "s77",
+   "start": 65.1799,
+   "end": 65.6852,
+   "section": "build",
+   "moment": "P06",
+   "clip": "clips/v2/P06.mp4",
+   "in": 0.8,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [],
+   "placeholder": {
+    "title": "THE RUN",
+    "sub": "wide shot, dribbling upfield",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.055,
+    "decay": 7,
+    "phase": 0.0
+   }
+  },
+  {
+   "id": "s78",
+   "start": 65.6852,
+   "end": 65.9378,
+   "section": "build",
+   "moment": "P09",
+   "clip": "clips/v2/P09.mp4",
+   "in": 0.5,
+   "speed": 1.0,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "strobe"
+   ],
+   "placeholder": {
+    "title": "THROUGH THE CROATIA DEFENCE",
+    "sub": "dribble past two",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   }
+  },
+  {
+   "id": "s79",
+   "start": 65.9378,
+   "end": 66.1904,
+   "section": "build",
+   "moment": "P11",
+   "clip": "clips/v2/P11.mp4",
+   "in": 0.2,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "glitch"
+   ],
+   "placeholder": {
+    "title": "HANDS",
+    "sub": "blurred hands reaching, chaos",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   }
+  },
+  {
+   "id": "s80",
+   "start": 66.1904,
+   "end": 66.4431,
+   "section": "build",
+   "moment": "P07",
+   "clip": "clips/v2/P07.mp4",
+   "in": 0.2,
+   "speed": 1.0,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "invert_flash"
+   ],
+   "placeholder": {
+    "title": "PENALTY GOAL",
+    "sub": "strike 0.25 s, ball in the net 1.75 s",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   }
+  },
+  {
+   "id": "s81",
+   "start": 66.4431,
+   "end": 66.6957,
+   "section": "build",
+   "moment": "P06",
+   "clip": "clips/v2/P06.mp4",
+   "in": 1.2,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "strobe"
+   ],
+   "placeholder": {
+    "title": "THE RUN",
+    "sub": "wide shot, dribbling upfield",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   }
+  },
+  {
+   "id": "s82",
+   "start": 66.6957,
+   "end": 66.9483,
+   "section": "build",
+   "moment": "P10",
+   "clip": "clips/v2/P10.mp4",
+   "in": 1.3,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "glitch"
+   ],
+   "placeholder": {
+    "title": "RUN AND FINISH",
+    "sub": "dribble, strike 1.35 s, goal 1.9 s",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   }
+  },
+  {
+   "id": "s83",
+   "start": 66.9483,
+   "end": 67.201,
+   "section": "build",
+   "moment": "P05",
+   "clip": "clips/v2/P05.mp4",
+   "in": 0.5,
+   "speed": 1.0,
+   "focus_x": 0.55,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "invert_flash"
+   ],
+   "placeholder": {
+    "title": "THE CLAP",
+    "sub": "hands above his head to the crowd, back to camera",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   }
+  },
+  {
+   "id": "s84",
+   "start": 67.201,
+   "end": 67.4536,
+   "section": "build",
+   "moment": "P09",
+   "clip": "clips/v2/P09.mp4",
+   "in": 1.4,
+   "speed": 1.0,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "strobe"
+   ],
+   "placeholder": {
+    "title": "THROUGH THE CROATIA DEFENCE",
+    "sub": "dribble past two",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   }
+  },
+  {
+   "id": "s85",
+   "start": 67.4536,
+   "end": 67.7062,
+   "section": "build",
+   "moment": "P11",
+   "clip": "clips/v2/P11.mp4",
+   "in": 0.8,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "glitch",
+    "flash_black"
+   ],
+   "placeholder": {
+    "title": "HANDS",
+    "sub": "blurred hands reaching, chaos",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   }
+  },
+  {
+   "id": "s86",
+   "start": 67.7062,
+   "end": 69.7273,
+   "section": "build",
+   "moment": "P01",
+   "clip": "clips/v2/P01.mp4",
+   "in": 0.0,
+   "speed": 0.45,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "echo",
+    "letterbox",
+    "grain"
+   ],
+   "placeholder": {
+    "title": "TUNNEL WALK",
+    "sub": "Spain training top, walking to the pitch",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "grade": "bw",
+   "zoom": {
+    "from": 1.0,
+    "to": 1.12
+   },
+   "text": {
+    "content": "no one is there",
+    "style": "typewriter",
+    "pos": "lower",
+    "in": 0.0
+   }
+  },
+  {
+   "id": "s87",
+   "start": 69.7273,
+   "end": 71.7484,
+   "section": "bridge",
+   "moment": "P13",
+   "clip": "clips/v2/P13.mp4",
+   "in": 0.0,
+   "speed": 0.45,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "echo",
+    "light_leak",
+    "grain"
+   ],
+   "placeholder": {
+    "title": "GLANCE",
+    "sub": "looking off to the side",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "grade": "cold",
+   "zoom": {
+    "from": 1.0,
+    "to": 1.12
+   }
+  },
+  {
+   "id": "s88",
+   "start": 71.7484,
+   "end": 73.7695,
+   "section": "bridge",
+   "moment": "P04",
+   "clip": "clips/v2/P04.mp4",
+   "in": 0.0,
+   "speed": 0.45,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "echo",
+    "light_leak"
+   ],
+   "placeholder": {
+    "title": "ANTHEM",
+    "sub": "eyes forward, Spain jacket",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "grade": "cold",
+   "zoom": {
+    "from": 1.0,
+    "to": 1.12
+   },
+   "text": {
+    "content": "don't understand for me",
+    "style": "typewriter",
+    "pos": "lower",
+    "in": 0.0
+   }
+  },
+  {
+   "id": "s89",
+   "start": 73.7695,
+   "end": 75.7906,
+   "section": "bridge",
+   "moment": "P17",
+   "clip": "clips/v2/P17.mp4",
+   "in": 0.0,
+   "speed": 0.45,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "echo",
+    "grain"
+   ],
+   "placeholder": {
+    "title": "LOOKING BACK",
+    "sub": "walking in the blue kit, turns his head",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "grade": "cold",
+   "zoom": {
+    "from": 1.0,
+    "to": 1.12
+   },
+   "text": {
+    "content": "i gotta fight",
+    "style": "typewriter",
+    "pos": "lower",
+    "in": 1.548
+   }
+  },
+  {
+   "id": "s90",
+   "start": 75.7906,
+   "end": 77.8116,
+   "section": "bridge",
+   "moment": "P14",
+   "clip": "clips/v2/P14.mp4",
+   "in": 0.0,
+   "speed": 0.45,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "echo",
+    "light_leak"
+   ],
+   "placeholder": {
+    "title": "LAMINE YAMAL 19",
+    "sub": "tilt up from the ball to the name, full name at 0.9 s",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "zoom": {
+    "from": 1.0,
+    "to": 1.12
+   }
+  },
+  {
+   "id": "s91",
+   "start": 77.8116,
+   "end": 79.8327,
+   "section": "bridge",
+   "moment": "P03",
+   "clip": "clips/v2/P03.mp4",
+   "in": 0.3,
+   "speed": 0.45,
+   "focus_x": 0.42,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "echo",
+    "grain"
+   ],
+   "placeholder": {
+    "title": "WALKOUT WITH THE MASCOT",
+    "sub": "Croatia mascot at his side",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "grade": "cold",
+   "zoom": {
+    "from": 1.0,
+    "to": 1.12
+   }
+  },
+  {
+   "id": "s92",
+   "start": 79.8327,
+   "end": 81.3485,
+   "section": "bridge",
+   "moment": "P04",
+   "clip": "clips/v2/P04.mp4",
+   "in": 0.5,
+   "speed": 1.0,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "xerox",
+    "letterbox"
+   ],
+   "placeholder": {
+    "title": "ANTHEM",
+    "sub": "eyes forward, Spain jacket",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "freeze": {
+    "at": 0.0
+   },
+   "zoom": {
+    "from": 1.0,
+    "to": 1.35
+   },
+   "text": {
+    "content": "i gotta fight",
+    "style": "typewriter",
+    "pos": "lower",
+    "in": 0.005
+   }
+  },
+  {
+   "id": "s93",
+   "start": 81.3485,
+   "end": 81.8538,
+   "section": "bridge",
+   "moment": "P04",
+   "clip": "clips/v2/P04.mp4",
+   "in": 0.5,
+   "speed": 1.0,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "invert",
+    "glitch"
+   ],
+   "placeholder": {
+    "title": "ANTHEM",
+    "sub": "eyes forward, Spain jacket",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "freeze": {
+    "at": 0.0
+   },
+   "glitch": {
+    "whole": true,
+    "amount": 0.8
+   },
+   "zoom": {
+    "from": 1.35,
+    "to": 1.5
+   },
+   "text": {
+    "content": "FOR ME!",
+    "style": "glitchtext",
+    "pos": "center",
+    "in": 0.0
+   }
+  },
+  {
+   "id": "s94",
+   "start": 81.8538,
+   "end": 82.8643,
+   "section": "drop",
+   "moment": "P07",
+   "clip": "clips/v2/P07.mp4",
+   "in": 0.1,
+   "speed": 1.0,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "zoom_blur",
+    "flash_red",
+    "shake_hard"
+   ],
+   "placeholder": {
+    "title": "PENALTY GOAL",
+    "sub": "strike 0.25 s, ball in the net 1.75 s",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "ramp": {
+    "from": 1.0,
+    "to": 0.35,
+    "at": 0.2
+   },
+   "zoom": {
+    "from": 1.18,
+    "to": 1.0,
+    "ease": "snap"
+   }
+  },
+  {
+   "id": "s95",
+   "start": 82.8643,
+   "end": 83.3696,
+   "section": "drop",
+   "moment": "P07",
+   "clip": "clips/v2/P07.mp4",
+   "in": 1.6,
+   "speed": 1.0,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "invert_flash"
+   ],
+   "placeholder": {
+    "title": "PENALTY GOAL",
+    "sub": "strike 0.25 s, ball in the net 1.75 s",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "stutter": {
+    "len": 0.1,
+    "repeats": 3
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.055,
+    "decay": 7,
+    "phase": 0.0
+   }
+  },
+  {
+   "id": "s96",
+   "start": 83.3696,
+   "end": 83.8749,
+   "section": "drop",
+   "moment": "P08",
+   "clip": "clips/v2/P08.mp4",
+   "in": 0.3,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "whip_in"
+   ],
+   "placeholder": {
+    "title": "BACK TO THE CROWD",
+    "sub": "celebration, arm up, LAMINE YAMAL 19",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.055,
+    "decay": 7,
+    "phase": 0.0
+   }
+  },
+  {
+   "id": "s97",
+   "start": 83.8749,
+   "end": 84.8854,
+   "section": "drop",
+   "moment": "P10",
+   "clip": "clips/v2/P10.mp4",
+   "in": 1.106,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "glitch",
+    "flash_in"
+   ],
+   "placeholder": {
+    "title": "RUN AND FINISH",
+    "sub": "dribble, strike 1.35 s, goal 1.9 s",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "layout": "triptych",
+   "panels": [
+    {
+     "clip": "clips/v2/P10.mp4",
+     "in": 1.106,
+     "speed": 1.0,
+     "focus_x": 0.5
+    },
+    {
+     "clip": "clips/v2/P07.mp4",
+     "in": 1.206,
+     "speed": 1.0,
+     "focus_x": 0.45
+    },
+    {
+     "clip": "clips/v2/P08.mp4",
+     "in": 0.4,
+     "speed": 1.0,
+     "focus_x": 0.5
+    }
+   ],
+   "text": {
+    "content": "IT'S JUST NOT FAIR",
+    "style": "ransom",
+    "pos": "center",
+    "in": 0.152
+   }
+  },
+  {
+   "id": "s98",
+   "start": 84.8854,
+   "end": 85.3907,
+   "section": "drop",
+   "moment": "P05",
+   "clip": "clips/v2/P05.mp4",
+   "in": 0.2,
+   "speed": 1.0,
+   "focus_x": 0.55,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "shake"
+   ],
+   "placeholder": {
+    "title": "THE CLAP",
+    "sub": "hands above his head to the crowd, back to camera",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.055,
+    "decay": 7,
+    "phase": -0.0
+   }
+  },
+  {
+   "id": "s99",
+   "start": 85.3907,
+   "end": 85.896,
+   "section": "drop",
+   "moment": "P09",
+   "clip": "clips/v2/P09.mp4",
+   "in": 0.6,
+   "speed": 1.0,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "step"
+   ],
+   "placeholder": {
+    "title": "THROUGH THE CROATIA DEFENCE",
+    "sub": "dribble past two",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.055,
+    "decay": 7,
+    "phase": -0.0
+   }
+  },
+  {
+   "id": "s100",
+   "start": 85.896,
+   "end": 86.4012,
+   "section": "drop",
+   "moment": "P10",
+   "clip": "clips/v2/P10.mp4",
+   "in": 0.3,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "step",
+    "zoom_blur"
+   ],
+   "placeholder": {
+    "title": "RUN AND FINISH",
+    "sub": "dribble, strike 1.35 s, goal 1.9 s",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.055,
+    "decay": 7,
+    "phase": 0.0
+   }
+  },
+  {
+   "id": "s101",
+   "start": 86.4012,
+   "end": 86.9065,
+   "section": "drop",
+   "moment": "P10",
+   "clip": "clips/v2/P10.mp4",
+   "in": 1.2,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "step"
+   ],
+   "placeholder": {
+    "title": "RUN AND FINISH",
+    "sub": "dribble, strike 1.35 s, goal 1.9 s",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.055,
+    "decay": 7,
+    "phase": 0.0
+   }
+  },
+  {
+   "id": "s102",
+   "start": 86.9065,
+   "end": 87.4118,
+   "section": "drop",
+   "moment": "P10",
+   "clip": "clips/v2/P10.mp4",
+   "in": 1.611,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "invert_flash",
+    "shake"
+   ],
+   "placeholder": {
+    "title": "RUN AND FINISH",
+    "sub": "dribble, strike 1.35 s, goal 1.9 s",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   }
+  },
+  {
+   "id": "s103",
+   "start": 87.4118,
+   "end": 87.917,
+   "section": "drop",
+   "moment": "P16",
+   "clip": "clips/v2/P16.mp4",
+   "in": 0.4,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [],
+   "placeholder": {
+    "title": "BENCH LAUGH",
+    "sub": "laughing on the bench",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.055,
+    "decay": 7,
+    "phase": 0.0
+   }
+  },
+  {
+   "id": "s104",
+   "start": 87.917,
+   "end": 88.9276,
+   "section": "drop",
+   "moment": "P04",
+   "clip": "clips/v2/P04.mp4",
+   "in": 0.2,
+   "speed": 1.0,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "posterize",
+    "flash_red",
+    "shake"
+   ],
+   "placeholder": {
+    "title": "ANTHEM",
+    "sub": "eyes forward, Spain jacket",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "zoom": {
+    "from": 1.18,
+    "to": 1.0,
+    "ease": "snap"
+   },
+   "text": {
+    "content": "IT HURTS",
+    "style": "glitchtext",
+    "pos": "center",
+    "in": 0.01
+   }
+  },
+  {
+   "id": "s105",
+   "start": 88.9276,
+   "end": 89.4329,
+   "section": "drop",
+   "moment": "P11",
+   "clip": "clips/v2/P11.mp4",
+   "in": 0.5,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "glitch"
+   ],
+   "placeholder": {
+    "title": "HANDS",
+    "sub": "blurred hands reaching, chaos",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   }
+  },
+  {
+   "id": "s106",
+   "start": 89.4329,
+   "end": 89.9381,
+   "section": "drop",
+   "moment": "P12",
+   "clip": "clips/v2/P12.mp4",
+   "in": 0.0,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "whip_in"
+   ],
+   "placeholder": {
+    "title": "PEDRI HUG",
+    "sub": "embrace after a goal",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.055,
+    "decay": 7,
+    "phase": 0.0
+   }
+  },
+  {
+   "id": "s107",
+   "start": 89.9381,
+   "end": 90.4434,
+   "section": "drop",
+   "moment": "P06",
+   "clip": "clips/v2/P06.mp4",
+   "in": 0.4,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "step"
+   ],
+   "placeholder": {
+    "title": "THE RUN",
+    "sub": "wide shot, dribbling upfield",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.055,
+    "decay": 7,
+    "phase": 0.0
+   }
+  },
+  {
+   "id": "s108",
+   "start": 90.4434,
+   "end": 90.9487,
+   "section": "drop",
+   "moment": "P09",
+   "clip": "clips/v2/P09.mp4",
+   "in": 0.9,
+   "speed": 1.0,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "step"
+   ],
+   "placeholder": {
+    "title": "THROUGH THE CROATIA DEFENCE",
+    "sub": "dribble past two",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.055,
+    "decay": 7,
+    "phase": 0.0
+   }
+  },
+  {
+   "id": "s109",
+   "start": 90.9487,
+   "end": 91.4539,
+   "section": "drop",
+   "moment": "P06",
+   "clip": "clips/v2/P06.mp4",
+   "in": 1.3,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "step"
+   ],
+   "placeholder": {
+    "title": "THE RUN",
+    "sub": "wide shot, dribbling upfield",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.055,
+    "decay": 7,
+    "phase": 0.0
+   }
+  },
+  {
+   "id": "s110",
+   "start": 91.4539,
+   "end": 91.9592,
+   "section": "drop",
+   "moment": "P05",
+   "clip": "clips/v2/P05.mp4",
+   "in": 0.5,
+   "speed": 1.0,
+   "focus_x": 0.55,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "strobe",
+    "shake_hard"
+   ],
+   "placeholder": {
+    "title": "THE CLAP",
+    "sub": "hands above his head to the crowd, back to camera",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   }
+  },
+  {
+   "id": "s111",
+   "start": 91.9592,
+   "end": 92.9697,
+   "section": "drop",
+   "moment": "P08",
+   "clip": "clips/v2/P08.mp4",
+   "in": 0.2,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "flash_in"
+   ],
+   "placeholder": {
+    "title": "BACK TO THE CROWD",
+    "sub": "celebration, arm up, LAMINE YAMAL 19",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "layout": "triptych"
+  },
+  {
+   "id": "s112",
+   "start": 92.9697,
+   "end": 93.475,
+   "section": "drop",
+   "moment": "P02",
+   "clip": "clips/v2/P02.mp4",
+   "in": 0.3,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "xerox"
+   ],
+   "placeholder": {
+    "title": "THE SMILE",
+    "sub": "close-up, Spain kit",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "freeze": {
+    "at": 0.0
+   },
+   "text": {
+    "content": "NOT THERE",
+    "style": "ransom",
+    "pos": "center",
+    "in": 0.428
+   }
+  },
+  {
+   "id": "s113",
+   "start": 93.475,
+   "end": 93.9803,
+   "section": "drop",
+   "moment": "P14",
+   "clip": "clips/v2/P14.mp4",
+   "in": 0.9,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [],
+   "placeholder": {
+    "title": "LAMINE YAMAL 19",
+    "sub": "tilt up from the ball to the name, full name at 0.9 s",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.055,
+    "decay": 7,
+    "phase": 0.0
+   }
+  },
+  {
+   "id": "s114",
+   "start": 93.9803,
+   "end": 94.9908,
+   "section": "drop",
+   "moment": "P01",
+   "clip": "clips/v2/P01.mp4",
+   "in": 0.4,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "vhs",
+    "rec"
+   ],
+   "placeholder": {
+    "title": "TUNNEL WALK",
+    "sub": "Spain training top, walking to the pitch",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.055,
+    "decay": 7,
+    "phase": 0.0
+   }
+  },
+  {
+   "id": "s115",
+   "start": 94.9908,
+   "end": 95.4961,
+   "section": "drop",
+   "moment": "P17",
+   "clip": "clips/v2/P17.mp4",
+   "in": 0.3,
+   "speed": 1.0,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "vhs",
+    "rec"
+   ],
+   "placeholder": {
+    "title": "LOOKING BACK",
+    "sub": "walking in the blue kit, turns his head",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   }
+  },
+  {
+   "id": "s116",
+   "start": 95.4961,
+   "end": 96.0014,
+   "section": "drop",
+   "moment": "P15",
+   "clip": "clips/v2/P15.mp4",
+   "in": 0.2,
+   "speed": 1.0,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "vhs",
+    "rec",
+    "whip_out"
+   ],
+   "placeholder": {
+    "title": "THE COACH",
+    "sub": "handshake on the touchline",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   }
+  },
+  {
+   "id": "s117",
+   "start": 96.0014,
+   "end": 96.9041,
+   "section": "outro",
+   "moment": "P01",
+   "clip": "clips/v2/P01.mp4",
+   "in": 0.8,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "vhs"
+   ],
+   "placeholder": {
+    "title": "TUNNEL WALK",
+    "sub": "Spain training top, walking to the pitch",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "grade": "cold",
+   "zoom": {
+    "from": 1.0,
+    "to": 1.12
+   }
+  },
+  {
+   "id": "s118",
+   "start": 96.9041,
+   "end": 97.9141,
+   "section": "outro",
+   "moment": "P04",
+   "clip": "clips/v2/P04.mp4",
+   "in": 0.4,
+   "speed": 1.0,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "xerox",
+    "flash_in"
+   ],
+   "placeholder": {
+    "title": "ANTHEM",
+    "sub": "eyes forward, Spain jacket",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "freeze": {
+    "at": 0.0
+   },
+   "zoom": {
+    "from": 1.18,
+    "to": 1.0,
+    "ease": "snap"
+   },
+   "text": {
+    "content": "COLD SWEAT",
+    "style": "ransom",
+    "pos": "center"
+   }
+  },
+  {
+   "id": "s119",
+   "start": 97.9141,
+   "end": 98.5541,
+   "section": "outro",
+   "moment": "P13",
+   "clip": "clips/v2/P13.mp4",
+   "in": 0.5,
+   "speed": 1.0,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "xerox",
+    "flash_in"
+   ],
+   "placeholder": {
+    "title": "GLANCE",
+    "sub": "looking off to the side",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "freeze": {
+    "at": 0.0
+   },
+   "zoom": {
+    "from": 1.18,
+    "to": 1.0,
+    "ease": "snap"
+   },
+   "text": {
+    "content": "COLD SWEAT",
+    "style": "ransom",
+    "pos": "center"
+   }
+  },
+  {
+   "id": "s120",
+   "start": 98.5541,
+   "end": 99.0441,
+   "section": "outro",
+   "moment": "P02",
+   "clip": "clips/v2/P02.mp4",
+   "in": 0.7,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "xerox",
+    "invert_flash"
+   ],
+   "placeholder": {
+    "title": "THE SMILE",
+    "sub": "close-up, Spain kit",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "freeze": {
+    "at": 0.0
+   },
+   "zoom": {
+    "from": 1.18,
+    "to": 1.0,
+    "ease": "snap"
+   },
+   "text": {
+    "content": "COLD—",
+    "style": "ransom",
+    "pos": "center"
+   }
+  },
+  {
+   "id": "s121",
+   "start": 99.0441,
+   "end": 100.0436,
+   "section": "outro",
+   "moment": "P05",
+   "clip": "clips/v2/P05.mp4",
+   "in": 0.3,
+   "speed": 1.0,
+   "focus_x": 0.55,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "shake_hard",
+    "flash_in"
+   ],
+   "placeholder": {
+    "title": "THE CLAP",
+    "sub": "hands above his head to the crowd, back to camera",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "grade": "cold",
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.055,
+    "decay": 7,
+    "phase": 0.4942
+   },
+   "text": {
+    "content": "SWEAT CALLING",
+    "style": "glitchtext",
+    "pos": "center"
+   }
+  },
+  {
+   "id": "s122",
+   "start": 100.0436,
+   "end": 101.0541,
+   "section": "outro",
+   "moment": "P18",
+   "clip": "clips/v2/P18.mp4",
+   "in": 0.4,
+   "speed": 0.7,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "vhs",
+    "rec"
+   ],
+   "placeholder": {
+    "title": "INTERVIEW",
+    "sub": "smiling into the TVE microphone",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   }
+  },
+  {
+   "id": "s123",
+   "start": 101.0541,
+   "end": 102.0646,
+   "section": "outro",
+   "moment": "P17",
+   "clip": "clips/v2/P17.mp4",
+   "in": 0.2,
+   "speed": 0.6,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "echo"
+   ],
+   "placeholder": {
+    "title": "LOOKING BACK",
+    "sub": "walking in the blue kit, turns his head",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "grade": "cold",
+   "text": {
+    "content": "nobody is calling",
+    "style": "typewriter",
+    "pos": "lower",
+    "in": 0.0
+   }
+  },
+  {
+   "id": "s124",
+   "start": 102.0646,
+   "end": 103.0752,
+   "section": "outro",
+   "moment": "P09",
+   "clip": "clips/v2/P09.mp4",
+   "in": 0.0,
+   "speed": 1.3,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "step"
+   ],
+   "placeholder": {
+    "title": "THROUGH THE CROATIA DEFENCE",
+    "sub": "dribble past two",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.25263,
+    "amount": 0.04,
+    "decay": 9,
+    "phase": 0.0
+   },
+   "text": {
+    "content": "NO TIME WASTING",
+    "style": "stamp",
+    "pos": "upper",
+    "in": 0.879
+   }
+  },
+  {
+   "id": "s125",
+   "start": 103.0752,
+   "end": 103.5804,
+   "section": "outro",
+   "moment": "P06",
+   "clip": "clips/v2/P06.mp4",
+   "in": 0.4,
+   "speed": 1.4,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "step"
+   ],
+   "placeholder": {
+    "title": "THE RUN",
+    "sub": "wide shot, dribbling upfield",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.25263,
+    "amount": 0.04,
+    "decay": 9,
+    "phase": 0.0
+   }
+  },
+  {
+   "id": "s126",
+   "start": 103.5804,
+   "end": 104.0857,
+   "section": "outro",
+   "moment": "P10",
+   "clip": "clips/v2/P10.mp4",
+   "in": 0.8,
+   "speed": 1.3,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "step"
+   ],
+   "placeholder": {
+    "title": "RUN AND FINISH",
+    "sub": "dribble, strike 1.35 s, goal 1.9 s",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.25263,
+    "amount": 0.04,
+    "decay": 9,
+    "phase": 0.0
+   }
+  },
+  {
+   "id": "s127",
+   "start": 104.0857,
+   "end": 105.0963,
+   "section": "outro",
+   "moment": "P02",
+   "clip": "clips/v2/P02.mp4",
+   "in": 0.0,
+   "speed": 0.5,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "light_leak",
+    "glow"
+   ],
+   "placeholder": {
+    "title": "THE SMILE",
+    "sub": "close-up, Spain kit",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "grade": "warm",
+   "zoom": {
+    "from": 1.0,
+    "to": 1.12
+   }
+  },
+  {
+   "id": "s128",
+   "start": 105.0963,
+   "end": 106.1068,
+   "section": "outro",
+   "moment": "P02",
+   "clip": "clips/v2/P02.mp4",
+   "in": 0.6,
+   "speed": 0.5,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "light_leak",
+    "glow"
+   ],
+   "placeholder": {
+    "title": "THE SMILE",
+    "sub": "close-up, Spain kit",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "grade": "warm",
+   "zoom": {
+    "from": 1.0,
+    "to": 1.12
+   },
+   "text": {
+    "content": "i feel amazing",
+    "style": "typewriter",
+    "pos": "lower",
+    "in": 0.0
+   }
+  },
+  {
+   "id": "s129",
+   "start": 106.1068,
+   "end": 107.1173,
+   "section": "outro",
+   "moment": "P16",
+   "clip": "clips/v2/P16.mp4",
+   "in": 0.0,
+   "speed": 0.6,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "light_leak",
+    "glow"
+   ],
+   "placeholder": {
+    "title": "BENCH LAUGH",
+    "sub": "laughing on the bench",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "grade": "warm"
+  },
+  {
+   "id": "s130",
+   "start": 107.1173,
+   "end": 108.1279,
+   "section": "outro",
+   "moment": "P18",
+   "clip": "clips/v2/P18.mp4",
+   "in": 0.0,
+   "speed": 0.6,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "light_leak",
+    "glow"
+   ],
+   "placeholder": {
+    "title": "INTERVIEW",
+    "sub": "smiling into the TVE microphone",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "grade": "warm"
+  },
+  {
+   "id": "s131",
+   "start": 108.1279,
+   "end": 110.149,
+   "section": "calm",
+   "moment": "P13",
+   "clip": "clips/v2/P13.mp4",
+   "in": 0.0,
+   "speed": 0.4,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "echo",
+    "light_leak"
+   ],
+   "placeholder": {
+    "title": "GLANCE",
+    "sub": "looking off to the side",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "grade": "warm",
+   "zoom": {
+    "from": 1.0,
+    "to": 1.12
+   }
+  },
+  {
+   "id": "s132",
+   "start": 110.149,
+   "end": 111.1595,
+   "section": "calm",
+   "moment": "P10",
+   "clip": "clips/v2/P10.mp4",
+   "in": 1.106,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "reverse",
+    "vhs",
+    "rec"
+   ],
+   "placeholder": {
+    "title": "RUN AND FINISH",
+    "sub": "dribble, strike 1.35 s, goal 1.9 s",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   }
+  },
+  {
+   "id": "s133",
+   "start": 111.1595,
+   "end": 112.17,
+   "section": "calm",
+   "moment": "P07",
+   "clip": "clips/v2/P07.mp4",
+   "in": 1.206,
+   "speed": 1.0,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "reverse",
+    "vhs",
+    "rec"
+   ],
+   "placeholder": {
+    "title": "PENALTY GOAL",
+    "sub": "strike 0.25 s, ball in the net 1.75 s",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   }
+  },
+  {
+   "id": "s134",
+   "start": 112.17,
+   "end": 112.6753,
+   "section": "finale",
+   "moment": "P07",
+   "clip": "clips/v2/P07.mp4",
+   "in": 0.1,
+   "speed": 1.0,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "zoom_blur",
+    "flash_red",
+    "shake_hard"
+   ],
+   "placeholder": {
+    "title": "PENALTY GOAL",
+    "sub": "strike 0.25 s, ball in the net 1.75 s",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "zoom": {
+    "from": 1.18,
+    "to": 1.0,
+    "ease": "snap"
+   }
+  },
+  {
+   "id": "s135",
+   "start": 112.6753,
+   "end": 113.1806,
+   "section": "finale",
+   "moment": "P07",
+   "clip": "clips/v2/P07.mp4",
+   "in": 1.6,
+   "speed": 1.0,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "invert_flash"
+   ],
+   "placeholder": {
+    "title": "PENALTY GOAL",
+    "sub": "strike 0.25 s, ball in the net 1.75 s",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "stutter": {
+    "len": 0.1,
+    "repeats": 3
+   }
+  },
+  {
+   "id": "s136",
+   "start": 113.1806,
+   "end": 113.6858,
+   "section": "finale",
+   "moment": "P10",
+   "clip": "clips/v2/P10.mp4",
+   "in": 1.2,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "shake"
+   ],
+   "placeholder": {
+    "title": "RUN AND FINISH",
+    "sub": "dribble, strike 1.35 s, goal 1.9 s",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.055,
+    "decay": 7,
+    "phase": 0.0
+   }
+  },
+  {
+   "id": "s137",
+   "start": 113.6858,
+   "end": 114.1911,
+   "section": "finale",
+   "moment": "P10",
+   "clip": "clips/v2/P10.mp4",
+   "in": 1.611,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "invert_flash"
+   ],
+   "placeholder": {
+    "title": "RUN AND FINISH",
+    "sub": "dribble, strike 1.35 s, goal 1.9 s",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   }
+  },
+  {
+   "id": "s138",
+   "start": 114.1911,
+   "end": 115.2017,
+   "section": "finale",
+   "moment": "P05",
+   "clip": "clips/v2/P05.mp4",
+   "in": 0.0,
+   "speed": 1.0,
+   "focus_x": 0.55,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "flash_in"
+   ],
+   "placeholder": {
+    "title": "THE CLAP",
+    "sub": "hands above his head to the crowd, back to camera",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "layout": "triptych",
+   "panels": [
+    {
+     "clip": "clips/v2/P05.mp4",
+     "in": 0.2,
+     "speed": 1.0,
+     "focus_x": 0.55
+    },
+    {
+     "clip": "clips/v2/P08.mp4",
+     "in": 0.3,
+     "speed": 1.0,
+     "focus_x": 0.5
+    },
+    {
+     "clip": "clips/v2/P12.mp4",
+     "in": 0.0,
+     "speed": 0.841,
+     "focus_x": 0.5
+    }
+   ]
+  },
+  {
+   "id": "s139",
+   "start": 115.2017,
+   "end": 115.4543,
+   "section": "finale",
+   "moment": "P09",
+   "clip": "clips/v2/P09.mp4",
+   "in": 0.5,
+   "speed": 1.0,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "step"
+   ],
+   "placeholder": {
+    "title": "THROUGH THE CROATIA DEFENCE",
+    "sub": "dribble past two",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   }
+  },
+  {
+   "id": "s140",
+   "start": 115.4543,
+   "end": 115.7069,
+   "section": "finale",
+   "moment": "P06",
+   "clip": "clips/v2/P06.mp4",
+   "in": 0.9,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "step"
+   ],
+   "placeholder": {
+    "title": "THE RUN",
+    "sub": "wide shot, dribbling upfield",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   }
+  },
+  {
+   "id": "s141",
+   "start": 115.7069,
+   "end": 115.9596,
+   "section": "finale",
+   "moment": "P11",
+   "clip": "clips/v2/P11.mp4",
+   "in": 0.3,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "glitch"
+   ],
+   "placeholder": {
+    "title": "HANDS",
+    "sub": "blurred hands reaching, chaos",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   }
+  },
+  {
+   "id": "s142",
+   "start": 115.9596,
+   "end": 116.2122,
+   "section": "finale",
+   "moment": "P16",
+   "clip": "clips/v2/P16.mp4",
+   "in": 0.5,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "invert_flash"
+   ],
+   "placeholder": {
+    "title": "BENCH LAUGH",
+    "sub": "laughing on the bench",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   }
+  },
+  {
+   "id": "s143",
+   "start": 116.2122,
+   "end": 117.2227,
+   "section": "finale",
+   "moment": "P02",
+   "clip": "clips/v2/P02.mp4",
+   "in": 0.0,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "strobe"
+   ],
+   "placeholder": {
+    "title": "THE SMILE",
+    "sub": "close-up, Spain kit",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "layout": "grid4",
+   "panels": [
+    {
+     "clip": "clips/v2/P02.mp4",
+     "in": 0.3,
+     "speed": 1.0,
+     "focus_x": 0.5
+    },
+    {
+     "clip": "clips/v2/P13.mp4",
+     "in": 0.3,
+     "speed": 1.0,
+     "focus_x": 0.45
+    },
+    {
+     "clip": "clips/v2/P18.mp4",
+     "in": 0.3,
+     "speed": 1.0,
+     "focus_x": 0.5
+    },
+    {
+     "clip": "clips/v2/P04.mp4",
+     "in": 0.3,
+     "speed": 1.0,
+     "focus_x": 0.45
+    }
+   ]
+  },
+  {
+   "id": "s144",
+   "start": 117.2227,
+   "end": 117.728,
+   "section": "finale",
+   "moment": "P05",
+   "clip": "clips/v2/P05.mp4",
+   "in": 0.6,
+   "speed": 1.0,
+   "focus_x": 0.55,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "shake_hard",
+    "flash_red"
+   ],
+   "placeholder": {
+    "title": "THE CLAP",
+    "sub": "hands above his head to the crowd, back to camera",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.055,
+    "decay": 7,
+    "phase": 0.0
+   }
+  },
+  {
+   "id": "s145",
+   "start": 117.728,
+   "end": 118.2333,
+   "section": "finale",
+   "moment": "P08",
+   "clip": "clips/v2/P08.mp4",
+   "in": 0.6,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "whip_in"
+   ],
+   "placeholder": {
+    "title": "BACK TO THE CROWD",
+    "sub": "celebration, arm up, LAMINE YAMAL 19",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "pulse": {
+    "every": 0.50527,
+    "amount": 0.055,
+    "decay": 7,
+    "phase": 0.0
+   }
+  },
+  {
+   "id": "s146",
+   "start": 118.2333,
+   "end": 118.4859,
+   "section": "finale",
+   "moment": "P10",
+   "clip": "clips/v2/P10.mp4",
+   "in": 1.3,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "flash_in"
+   ],
+   "placeholder": {
+    "title": "RUN AND FINISH",
+    "sub": "dribble, strike 1.35 s, goal 1.9 s",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   }
+  },
+  {
+   "id": "s147",
+   "start": 118.4859,
+   "end": 118.7386,
+   "section": "finale",
+   "moment": "P07",
+   "clip": "clips/v2/P07.mp4",
+   "in": 1.6,
+   "speed": 1.0,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "invert_flash"
+   ],
+   "placeholder": {
+    "title": "PENALTY GOAL",
+    "sub": "strike 0.25 s, ball in the net 1.75 s",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   }
+  },
+  {
+   "id": "s148",
+   "start": 118.7386,
+   "end": 118.9912,
+   "section": "finale",
+   "moment": "P09",
+   "clip": "clips/v2/P09.mp4",
+   "in": 1.2,
+   "speed": 1.0,
+   "focus_x": 0.45,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "glitch"
+   ],
+   "placeholder": {
+    "title": "THROUGH THE CROATIA DEFENCE",
+    "sub": "dribble past two",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   }
+  },
+  {
+   "id": "s149",
+   "start": 118.9912,
+   "end": 119.2438,
+   "section": "finale",
+   "moment": "P06",
+   "clip": "clips/v2/P06.mp4",
+   "in": 1.4,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "flash_in"
+   ],
+   "placeholder": {
+    "title": "THE RUN",
+    "sub": "wide shot, dribbling upfield",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   }
+  },
+  {
+   "id": "s150",
+   "start": 119.2438,
+   "end": 120.5341,
+   "section": "finale",
+   "moment": "P14",
+   "clip": "clips/v2/P14.mp4",
+   "in": 1.0,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "xerox",
+    "grain",
+    "flash_in"
+   ],
+   "placeholder": {
+    "title": "LAMINE YAMAL 19",
+    "sub": "tilt up from the ball to the name, full name at 0.9 s",
+    "hint": "Lamine Yamal scenepack 4K 2026",
+    "color": "#3a2a4a"
+   },
+   "freeze": {
+    "at": 0.0
+   },
+   "zoom": {
+    "from": 1.25,
+    "to": 1.12,
+    "ease": "snap"
+   },
+   "text": {
+    "content": "LAMINE YAMAL",
+    "style": "ransom",
+    "pos": "center"
+   }
+  }
+ ],
+ "overlays": [
+  {
+   "start": 0.0,
+   "end": 3.0316,
+   "content": "THEY KEEP CALLING HIS NAME",
+   "style": "ransom",
+   "pos": "center"
+  },
+  {
+   "start": 108.0341,
+   "end": 110.149,
+   "content": "like it's an amazing calm out",
+   "style": "typewriter",
+   "pos": "lower"
+  },
+  {
+   "start": 119.2438,
+   "end": 120.5341,
+   "content": "BALLON D'OR · 26.10.26",
+   "style": "kicker",
+   "pos": "lower"
+  }
+ ]
+}

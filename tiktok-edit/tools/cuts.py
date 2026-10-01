@@ -13,6 +13,38 @@ Row: R(at, moment, **options)
 Lyric times come from analysis/beatmap.json (song seconds, written "@84.08").
 """
 
+from grid import Grid
+
+PROJECT = {
+    "title": "Lamine Yamal — I Feel It Coming",
+    "beatmap": "analysis/beatmap.json",
+    "moments": "research/moments.json",
+    "source": "song/song.mp3",
+    "stems": {"vocals": "song/stems/vocals.wav", "instrumental": "song/stems/instrumental.wav"},
+    "gain_db": 1.0,                      # ~-14 LUFS for TikTok
+    "clips_dir": "clips",
+    "default_grade": "teal_orange",
+    "docs": {"clips": "CLIPS.md", "shotlist": "SHOTLIST.md"},
+}
+G = Grid(PROJECT["beatmap"])
+B = G.B
+
+PLANS = {
+    "story": [
+        {"label": "drop-out 'so damn close' → verse → chorus → 'still defeated'",
+         "from": B(6), "to": B(22), "vocals_to": 47.86},
+        {"label": "bridge 'Settle down, my child' → 'they can catch them'",
+         "from": B(38), "to": B(46), "mute_vocals": [[81.3, 82.45]], "vocals_to": 98.80},
+        {"label": "build 'Hey, I feel it coming' → climax → end",
+         "from": B(60), "to": G.duration},
+    ],
+    "short": [
+        {"label": "drop-out 'so damn close' → 'right through my nose'",
+         "from": B(6), "to": B(10), "mute_vocals": [[21.25, 21.70]]},
+        {"label": "build → climax → end", "from": B(60), "to": G.duration},
+    ],
+}
+
 OFFSETS = {"hit": 0.0, "build": -1.2, "net": 0.5, "cele": 1.8}
 
 

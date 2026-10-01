@@ -1,0 +1,453 @@
+{
+ "song": "Success Farm (Mbastein) \u2014 Spot Valley Road 50",
+ "duration": 166.4,
+ "bpm": 118.748,
+ "beat": 0.50527,
+ "bar": 2.02108,
+ "first_downbeat": 0.3917,
+ "note": "Constant tempo. Bar k starts at first_downbeat + k*bar. Lyric times are song seconds from the isolated vocal stem (\u00b10.1 s); 'No one is there' and the 35\u201345 s lines are approximate.",
+ "sections": [
+  {
+   "name": "intro",
+   "bars": [
+    0,
+    3
+   ],
+   "start": 0.392,
+   "end": 8.476,
+   "note": "quiet, spoken 'Yo\u2014 let's go'"
+  },
+  {
+   "name": "verse 1a",
+   "bars": [
+    4,
+    11
+   ],
+   "start": 8.476,
+   "end": 24.645,
+   "note": "beat enters; 'What do you know / you calling my name'"
+  },
+  {
+   "name": "verse 1b",
+   "bars": [
+    12,
+    27
+   ],
+   "start": 24.645,
+   "end": 56.982,
+   "note": "energy jump; 'You must got a secret / you must know my pain / you figured it out'"
+  },
+  {
+   "name": "breakdown",
+   "bars": [
+    28,
+    31
+   ],
+   "start": 56.982,
+   "end": 65.066,
+   "note": "instrumental thins: 'Don't run, child' / 'It's all repeater'"
+  },
+  {
+   "name": "chorus",
+   "bars": [
+    32,
+    47
+   ],
+   "start": 65.066,
+   "end": 97.404,
+   "note": "'You've seen the demons already' / 'I wanna call police'"
+  },
+  {
+   "name": "build",
+   "bars": [
+    48,
+    53
+   ],
+   "start": 97.404,
+   "end": 109.53,
+   "note": "'Wake up in the nighttime screaming / I'm fighting everyone' \u2014 crescendo"
+  },
+  {
+   "name": "bridge",
+   "bars": [
+    54,
+    59
+   ],
+   "start": 109.53,
+   "end": 121.656,
+   "note": "half-time near-whisper: 'No one is there / I gotta fight for me'; silence in bar 59"
+  },
+  {
+   "name": "drop",
+   "bars": [
+    60,
+    66
+   ],
+   "start": 121.656,
+   "end": 135.804,
+   "note": "the hit at 121.7 s: 'it's just not fair / it hurts ever so bad' \u2014 loudest vocal section"
+  },
+  {
+   "name": "outro",
+   "bars": [
+    67,
+    75
+   ],
+   "start": 135.804,
+   "end": 153.994,
+   "note": "'Cold sweat calling / nobody's calling / no time wasting / I feel amazing'"
+  },
+  {
+   "name": "calm",
+   "bars": [
+    76,
+    77
+   ],
+   "start": 153.994,
+   "end": 158.036,
+   "note": "instrumental drops out: 'calm out (ha\u2014)', 'Yo, that's crazy'"
+  },
+  {
+   "name": "finale",
+   "bars": [
+    78,
+    82
+   ],
+   "start": 158.036,
+   "end": 166.4,
+   "note": "instrumental blast to the end"
+  }
+ ],
+ "lyrics": [
+  {
+   "start": 5.76,
+   "end": 6.22,
+   "text": "Yo\u2014"
+  },
+  {
+   "start": 6.52,
+   "end": 7.92,
+   "text": "let's go"
+  },
+  {
+   "start": 11.37,
+   "end": 13.18,
+   "text": "What do you know"
+  },
+  {
+   "start": 15.13,
+   "end": 16.9,
+   "text": "You calling my name"
+  },
+  {
+   "start": 19.2,
+   "end": 20.71,
+   "text": "What do you know (uh)"
+  },
+  {
+   "start": 22.58,
+   "end": 25.01,
+   "text": "I hear you calling my name"
+  },
+  {
+   "start": 27.15,
+   "end": 29.34,
+   "text": "You must got a secret"
+  },
+  {
+   "start": 30.78,
+   "end": 32.66,
+   "text": "You must know my pain"
+  },
+  {
+   "start": 34.12,
+   "end": 34.78,
+   "text": "Yeah"
+  },
+  {
+   "start": 35.23,
+   "end": 37.8,
+   "text": "You must got a secret"
+  },
+  {
+   "start": 38.6,
+   "end": 41.5,
+   "text": "Hey, you must know my pain"
+  },
+  {
+   "start": 42.3,
+   "end": 45.46,
+   "text": "Oh, you got my secret"
+  },
+  {
+   "start": 47.15,
+   "end": 49.61,
+   "text": "Oh, you figured it out"
+  },
+  {
+   "start": 50.36,
+   "end": 53.45,
+   "text": "Yeah, thank god you figured it out"
+  },
+  {
+   "start": 53.79,
+   "end": 55.21,
+   "text": "Oh"
+  },
+  {
+   "start": 56.53,
+   "end": 58.78,
+   "text": "Don't run, child"
+  },
+  {
+   "start": 59.03,
+   "end": 60.56,
+   "text": "Come for you, beater"
+  },
+  {
+   "start": 61.1,
+   "end": 62.54,
+   "text": "It's all repeater\u2026"
+  },
+  {
+   "start": 63.0,
+   "end": 65.2,
+   "text": "You've seen the demons already"
+  },
+  {
+   "start": 67.07,
+   "end": 69.24,
+   "text": "You've seen the demons already"
+  },
+  {
+   "start": 71.1,
+   "end": 74.55,
+   "text": "You've seen the demons\u2014 already"
+  },
+  {
+   "start": 75.04,
+   "end": 77.65,
+   "text": "Don't you run from me"
+  },
+  {
+   "start": 79.26,
+   "end": 82.29,
+   "text": "You've seen these things in dreams"
+  },
+  {
+   "start": 83.14,
+   "end": 86.6,
+   "text": "And not everybody come true"
+  },
+  {
+   "start": 87.36,
+   "end": 90.16,
+   "text": "All there for you"
+  },
+  {
+   "start": 90.24,
+   "end": 93.85,
+   "text": "I wanna call police"
+  },
+  {
+   "start": 94.46,
+   "end": 97.89,
+   "text": "I wanna call someone who knows me"
+  },
+  {
+   "start": 98.39,
+   "end": 101.4,
+   "text": "Wake up in the nighttime screaming"
+  },
+  {
+   "start": 101.5,
+   "end": 104.0,
+   "text": "I'm fighting everyone in these\u2014"
+  },
+  {
+   "start": 104.16,
+   "end": 108.97,
+   "text": "No one is there"
+  },
+  {
+   "start": 111.51,
+   "end": 114.84,
+   "text": "Don't understand for me"
+  },
+  {
+   "start": 115.12,
+   "end": 117.13,
+   "text": "I gotta fight"
+  },
+  {
+   "start": 119.64,
+   "end": 122.12,
+   "text": "I gotta fight for me"
+  },
+  {
+   "start": 123.83,
+   "end": 126.55,
+   "text": "And it's just not fair"
+  },
+  {
+   "start": 127.73,
+   "end": 130.23,
+   "text": "It hurts ever so bad"
+  },
+  {
+   "start": 131.27,
+   "end": 131.96,
+   "text": "(scream)"
+  },
+  {
+   "start": 132.29,
+   "end": 135.04,
+   "text": "And it's just not there"
+  },
+  {
+   "start": 136.72,
+   "end": 138.25,
+   "text": "Cold sweat calling"
+  },
+  {
+   "start": 138.79,
+   "end": 140.23,
+   "text": "Nobody's calling"
+  },
+  {
+   "start": 140.77,
+   "end": 142.08,
+   "text": "No time wasting"
+  },
+  {
+   "start": 142.77,
+   "end": 143.64,
+   "text": "Cold sweat,"
+  },
+  {
+   "start": 143.78,
+   "end": 144.32,
+   "text": "cold sweat,"
+  },
+  {
+   "start": 144.42,
+   "end": 144.88,
+   "text": "cold\u2014"
+  },
+  {
+   "start": 144.91,
+   "end": 146.28,
+   "text": "sweat calling"
+  },
+  {
+   "start": 146.83,
+   "end": 148.32,
+   "text": "Nobody is calling"
+  },
+  {
+   "start": 148.81,
+   "end": 150.38,
+   "text": "No time wasting"
+  },
+  {
+   "start": 150.89,
+   "end": 152.4,
+   "text": "I feel amazing"
+  },
+  {
+   "start": 153.9,
+   "end": 155.71,
+   "text": "Like it's an amazing calm out"
+  },
+  {
+   "start": 157.14,
+   "end": 157.7,
+   "text": "Yo, that's crazy\u2026"
+  }
+ ],
+ "downbeats": [
+  0.392,
+  2.413,
+  4.434,
+  6.455,
+  8.476,
+  10.497,
+  12.518,
+  14.539,
+  16.56,
+  18.581,
+  20.602,
+  22.624,
+  24.645,
+  26.666,
+  28.687,
+  30.708,
+  32.729,
+  34.75,
+  36.771,
+  38.792,
+  40.813,
+  42.834,
+  44.855,
+  46.877,
+  48.898,
+  50.919,
+  52.94,
+  54.961,
+  56.982,
+  59.003,
+  61.024,
+  63.045,
+  65.066,
+  67.087,
+  69.108,
+  71.129,
+  73.151,
+  75.172,
+  77.193,
+  79.214,
+  81.235,
+  83.256,
+  85.277,
+  87.298,
+  89.319,
+  91.34,
+  93.361,
+  95.382,
+  97.404,
+  99.425,
+  101.446,
+  103.467,
+  105.488,
+  107.509,
+  109.53,
+  111.551,
+  113.572,
+  115.593,
+  117.614,
+  119.635,
+  121.656,
+  123.678,
+  125.699,
+  127.72,
+  129.741,
+  131.762,
+  133.783,
+  135.804,
+  137.825,
+  139.846,
+  141.867,
+  143.888,
+  145.909,
+  147.931,
+  149.952,
+  151.973,
+  153.994,
+  156.015,
+  158.036,
+  160.057,
+  162.078,
+  164.099,
+  166.12
+ ]
+}

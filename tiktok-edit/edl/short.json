@@ -95,11 +95,11 @@
     "hint": "Ballon d'Or 2025 Dembélé wins Yamal reaction",
     "color": "#3a3a48"
    },
+   "grade": "bw",
    "zoom": {
     "from": 1.02,
     "to": 1.12
-   },
-   "grade": "bw"
+   }
   },
   {
    "id": "s03",
@@ -120,11 +120,11 @@
     "hint": "LAMINE YAMAL gana el TROFEO KOPA 2025: DISCURSO COMPLETO",
     "color": "#b8860b"
    },
+   "grade": "gold",
    "zoom": {
     "from": 1.02,
     "to": 1.12
    },
-   "grade": "gold",
    "text": {
     "content": "so damn close",
     "style": "lyric",
@@ -1072,11 +1072,11 @@
     "hint": "Ballon d'Or 2025 ceremony trophy close-up",
     "color": "#b8860b"
    },
+   "grade": "gold",
    "zoom": {
     "from": 1.22,
     "to": 1.0
    },
-   "grade": "gold",
    "text": {
     "content": "26.10\nLONDON",
     "style": "title",
