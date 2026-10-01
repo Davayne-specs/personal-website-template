@@ -20,8 +20,18 @@ The format is specified in EDL_SCHEMA.md. Small optional extensions (all ignored
 schema's required fields):
   meta.font / meta.font_body   heavy title font / body font (path relative to the project)
   meta.accent, text.accent     "#RRGGBB" accent: kicker pill colour and stat-number colour
-  zoom.ease                    "in_out" (default) | "linear" | "in" | "out"
+  zoom.ease                    "in_out" (default) | "linear" | "in" | "out" | "snap"
   text may also be a list of text objects (several captions in one shot)
+
+Punk / emo / experimental pack (all optional, see EDL_SCHEMA.md):
+  fx      vhs rec xerox posterize invert invert_flash strobe stutter reverse echo glitch step
+          light_leak letterbox whip_in whip_out shake_hard flash_red flash_black freeze zoom_blur
+  keys    pulse (beat zoom bounce), layout/panels (split2 | triptych | grid4), strobe/stutter/
+          glitch/step/freeze/posterize settings, meta.rec_date
+  styles  ransom typewriter glitchtext stamp
+Time effects (freeze/reverse/stutter/step) remap frames with shuffleframes, so segment frame
+counts stay exact; procedural looks (glitch, VHS tracking, light leaks) are deterministic maps
+generated per shot (seeded from the shot id) and fed to ffmpeg as rawvideo, so caching holds.
 
 Fonts: --font, then meta.font, then the best .ttf/.otf in fonts/, then system fonts
 (DejaVu Sans Bold, horizontally squeezed to read as a heavy condensed face).
@@ -52,30 +62,55 @@ except ImportError as _e:  # pragma: no cover
     sys.exit(f"render.py needs numpy and Pillow ({_e}). Install with: pip install numpy pillow")
 
 ROOT = Path(__file__).resolve().parent
-ENGINE_VERSION = "1.0"
+ENGINE_VERSION = "1.1"
 SOURCE_HASH = hashlib.sha1(Path(__file__).read_bytes()).hexdigest()[:12]
 REF_W, REF_H = 1080, 1920          # all pixel constants below are defined at this size
 
 FX_NAMES = ["flash_in", "flash_out", "shake", "bw", "rgb_split", "glow", "vignette",
-            "grain", "fade_in", "fade_out", "dip_white"]
+            "grain", "fade_in", "fade_out", "dip_white",
+            # punk / emo / experimental pack
+            "vhs", "rec", "xerox", "posterize", "invert", "invert_flash", "strobe", "stutter",
+            "reverse", "echo", "glitch", "step", "light_leak", "letterbox", "whip_in", "whip_out",
+            "shake_hard", "flash_red", "flash_black", "freeze", "zoom_blur"]
+TIME_FX = ["freeze", "reverse", "stutter", "step"]        # frame remaps, applied in this order
+SHOT_ONLY_FX = {"rec"}                                    # not allowed inside a layout panel
+GEOM_FX = {"shake", "shake_hard"}                         # camera moves (inside the view / panel)
+FX_CFG = {   # shot (or panel) keys that configure an fx; giving the key also switches the fx on
+    "strobe": {"every": 2, "mode": "invert"},
+    "stutter": {"len": 0.134, "repeats": 3},
+    "glitch": {"whole": False, "amount": 0.7},
+    "step": {"fps": 12},
+    "freeze": {"at": 0.0},
+    "posterize": {"levels": 4},
+}
+STROBE_MODES = ["invert", "black", "white"]
 GRADE_NAMES = ["teal_orange", "warm", "cold", "bw", "blaugrana", "gold", "none"]
-STYLES = ["lyric", "stat", "title", "kicker", "quote", "whisper"]
+STYLES = ["lyric", "stat", "title", "kicker", "quote", "whisper",
+          "ransom", "typewriter", "glitchtext", "stamp"]
+ANIMATED_STYLES = {"typewriter", "glitchtext"}            # rendered as one PNG per frame
 POSITIONS = ["upper", "center", "lower"]
 FITS = ["crop", "blurfill"]
-EASES = ["in_out", "linear", "in", "out"]
+EASES = ["in_out", "linear", "in", "out", "snap"]
+LAYOUTS = {"split2": 2, "triptych": 3, "grid4": 4}
+PULSE_KEYS = {"every", "amount", "phase", "decay", "anchor"}
+DEFAULT_REC_DATE = "OCT 26 2026"
 
 SHOT_KEYS = {"id", "start", "end", "section", "moment", "clip", "in", "speed", "ramp",
-             "focus_x", "focus_y", "fit", "zoom", "fx", "grade", "text", "placeholder"}
+             "focus_x", "focus_y", "fit", "zoom", "fx", "grade", "text", "placeholder",
+             "pulse", "layout", "layout_bg", "layout_gap", "panels"} | set(FX_CFG)
+PANEL_KEYS = {"clip", "in", "speed", "delay", "grade", "fx", "focus_x", "focus_y", "fit", "zoom",
+              "pulse"} | set(FX_CFG)
 NOTE_KEYS = {"note", "notes", "comment", "comments", "lyric", "lyrics", "beat", "beats",
              "why", "desc", "description", "source", "url"}
 META_KEYS = {"title", "song", "song_start", "song_end", "fade_out", "fps", "width", "height",
              "default_grade", "safe_zone", "font", "font_body", "accent", "bpm", "notes", "note",
-             "artist", "version", "author", "audio_plan"}
-TEXT_KEYS = {"content", "style", "pos", "in", "out", "accent"}
-OVERLAY_KEYS = {"start", "end", "content", "style", "pos", "accent"}
+             "artist", "version", "author", "audio_plan", "rec_date"}
+TEXT_KEYS = {"content", "style", "pos", "in", "out", "accent", "cps"}
+OVERLAY_KEYS = {"start", "end", "content", "style", "pos", "accent", "cps"}
 
 DEFAULT_SAFE = {"top": 160, "bottom": 420, "right": 140}
 DEFAULT_ACCENT = (165, 0, 68)        # Barça garnet
+INK_RED = (209, 16, 26)              # punk red: flash_red, ransom boxes, stamp ink
 GOLD_STOPS = [(0.0, (255, 236, 160)), (0.45, (248, 196, 46)), (1.0, (196, 128, 8))]
 
 SYSTEM_HEAVY = ["/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
@@ -87,6 +122,22 @@ SYSTEM_BODY = ["/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf",
 SYSTEM_REGULAR = ["/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf",
                   "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
                   "/usr/share/fonts/truetype/freefont/FreeSans.ttf"]
+_SF = "/usr/share/fonts/truetype/"
+SYSTEM_TYPEWRITER = [_SF + "freefont/FreeMonoBold.ttf", _SF + "liberation/LiberationMono-Bold.ttf",
+                     _SF + "dejavu/DejaVuSansMono-Bold.ttf"]
+SYSTEM_OSD = [_SF + "dejavu/DejaVuSansMono-Bold.ttf", _SF + "liberation/LiberationMono-Bold.ttf",
+              _SF + "freefont/FreeMonoBold.ttf"]
+# ransom-note letters: (path, weight) — serif/sans/mono, bold/regular, the odd italic
+RANSOM_FONTS = [(_SF + "dejavu/DejaVuSans-Bold.ttf", 3), (_SF + "dejavu/DejaVuSerif-Bold.ttf", 3),
+                (_SF + "liberation/LiberationSerif-Bold.ttf", 3), (_SF + "freefont/FreeSerifBold.ttf", 2),
+                (_SF + "liberation/LiberationSans-Bold.ttf", 2), (_SF + "freefont/FreeSansBold.ttf", 2),
+                (_SF + "dejavu/DejaVuSansMono-Bold.ttf", 2), (_SF + "freefont/FreeMonoBold.ttf", 2),
+                (_SF + "liberation/LiberationMono-Bold.ttf", 1), (_SF + "dejavu/DejaVuSerif.ttf", 1),
+                (_SF + "liberation/LiberationSerif-Regular.ttf", 1), (_SF + "freefont/FreeSerif.ttf", 1),
+                (_SF + "liberation/LiberationSans-Regular.ttf", 1),
+                (_SF + "freefont/FreeSerifBoldItalic.ttf", 1),
+                (_SF + "liberation/LiberationSerif-BoldItalic.ttf", 1),
+                ("/usr/share/fonts/opentype/tlwg/Loma-Bold.otf", 1)]
 
 
 class EDLError(Exception):
@@ -140,6 +191,30 @@ def tc(t: float) -> str:
 
 def is_num(v) -> bool:
     return isinstance(v, (int, float)) and not isinstance(v, bool) and math.isfinite(v)
+
+
+def is_int(v) -> bool:
+    return is_num(v) and float(v).is_integer()
+
+
+def odd(v: float, lo: int = 3, hi: int = 23) -> int:
+    """odd integer kernel size in [lo, hi]"""
+    i = int(round(v))
+    i += 1 - i % 2
+    return int(clamp(i, lo, hi))
+
+
+def seed_of(*parts) -> int:
+    """deterministic 32-bit seed from strings (shot id, content, ...)"""
+    return int(hashlib.md5("|".join(str(p) for p in parts).encode()).hexdigest()[:8], 16)
+
+
+def sat_matrix(s: float) -> str:
+    """colorchannelmixer that scales saturation by s (Rec.601 luma), usable on gbrp"""
+    L = (0.299, 0.587, 0.114)
+    m = [[L[j] * (1 - s) + (s if i == j else 0) for j in range(3)] for i in range(3)]
+    names = ["rr", "rg", "rb", "gr", "gg", "gb", "br", "bg", "bb"]
+    return "colorchannelmixer=" + ":".join(f"{n}={m[i // 3][i % 3]:.4f}" for i, n in enumerate(names))
 
 
 def rel(p: Path) -> str:
@@ -346,6 +421,38 @@ class TextItem:
     fade_out: bool
     accent: tuple | None
     src: str
+    cps: float | None = None       # typewriter: characters per second (None = spread over the text)
+    ta: int | None = None          # the whole text's first/end frame relative to this shot's frame 0
+    tb: int | None = None          # (an overlay may start in an earlier shot): drives animated styles
+
+
+@dataclass
+class View:
+    """One moving picture: the whole frame of a plain shot, or one panel of a layout."""
+    where: str
+    clip_rel: str | None = None
+    clip: Path | None = None
+    clip_exists: bool = False
+    clip_info: dict | None = None
+    inp: float = 0.0
+    speed: float = 1.0
+    ramp: dict | None = None
+    delay: float = 0.0             # panel lag behind the shot timeline (s)
+    focus_x: float = 0.5
+    focus_y: float = 0.5
+    fit: str = "crop"
+    z0: float = 1.0
+    z1: float = 1.0
+    ease: str = "in_out"
+    pulse: dict | None = None
+    fx: list = field(default_factory=list)
+    cfg: dict = field(default_factory=dict)
+    grade: str = "none"
+    seed: int = 0
+
+    @property
+    def usable(self) -> bool:
+        return self.clip is not None and self.clip_exists
 
 
 @dataclass
@@ -376,10 +483,30 @@ class Shot:
     text_raw: list = field(default_factory=list)
     placeholder: dict = field(default_factory=dict)
     texts: list = field(default_factory=list)
+    pulse: dict | None = None
+    cfg: dict = field(default_factory=dict)       # fx settings (strobe, stutter, glitch, ...)
+    layout: str | None = None
+    layout_bg: tuple = (0, 0, 0)
+    layout_gap: float = 14.0
+    panels: list = field(default_factory=list)    # View per panel when layout is set
 
     @property
     def N(self) -> int:
         return self.f1 - self.f0
+
+    def views(self) -> list:
+        return self.panels if self.layout else [shot_view(self)]
+
+    def all_missing(self) -> bool:
+        return not any(v.usable for v in self.views())
+
+
+def shot_view(s: Shot) -> View:
+    """the single full-frame view of a plain (non-layout) shot"""
+    return View(where=s.id, clip_rel=s.clip_rel, clip=s.clip, clip_exists=s.clip_exists,
+                clip_info=s.clip_info, inp=s.inp, speed=s.speed, ramp=s.ramp, focus_x=s.focus_x,
+                focus_y=s.focus_y, fit=s.fit, z0=s.z0, z1=s.z1, ease=s.ease, pulse=s.pulse,
+                fx=list(s.fx), cfg=dict(s.cfg), grade=s.grade, seed=seed_of(s.id))
 
 
 @dataclass
@@ -424,7 +551,282 @@ def source_span(shot: Shot, fps: float) -> float:
     return D * shot.speed
 
 
+def src_time(v, tau: float, D: float) -> float:
+    """source seconds consumed after `tau` output seconds of a view/shot lasting D seconds"""
+    if v.ramp:
+        rf, rt, a = v.ramp["from"], v.ramp["to"], v.ramp["at"]
+        d1 = a * D
+        return tau * rf if tau <= d1 else d1 * rf + (tau - d1) * rt
+    return tau * v.speed
+
+
+def out_time(v, s: float, D: float) -> float:
+    """inverse of src_time: output seconds at which source second `s` (after the in-point) shows"""
+    if v.ramp:
+        rf, rt, a = v.ramp["from"], v.ramp["to"], v.ramp["at"]
+        d1 = a * D
+        return s / rf if s <= d1 * rf else d1 + (s - d1 * rf) / rt
+    return s / v.speed
+
+
+def time_map(v, N: int, fps: float):
+    """frame remap of the time fx -> (seq, M): output frame j shows frame seq[j] of the view's
+    speed-applied timeline; M frames of that timeline are decoded (>= N). seq is None when the
+    view plays straight through."""
+    fx, cfg = set(v.fx), v.cfg
+    if not fx.intersection(TIME_FX):
+        return None, N
+    D = N / fps
+    seq = list(range(N))
+    if "freeze" in fx:
+        at = (cfg.get("freeze") or FX_CFG["freeze"])["at"]
+        seq = [max(0, int(math.floor(out_time(v, at, D) * fps + 1e-6)))] * N
+    if "reverse" in fx:
+        seq = seq[::-1]
+    if "stutter" in fx:
+        c = cfg.get("stutter") or FX_CFG["stutter"]
+        L = max(1, fr(c["len"], fps))
+        seq = (seq[:L] * int(c["repeats"]) + seq[L:])[:N]
+    if "step" in fx:
+        sf = float((cfg.get("step") or FX_CFG["step"])["fps"])
+        if sf < fps:
+            seq = [seq[min(N - 1, int(math.floor(math.floor(j * sf / fps + 1e-9) * fps / sf + 1e-6)))]
+                   for j in range(N)]
+    if seq == list(range(N)):
+        return None, N
+    return seq, max(N, max(seq) + 1)
+
+
 # --------------------------------------------------------------------------- load + validate
+
+def parse_zoom(zm, where, E, W):
+    """zoom {from, to, ease} -> (z0, z1, ease) or None"""
+    if zm is None:
+        return None
+    if is_num(zm):
+        zm = {"from": zm, "to": zm}
+    if not isinstance(zm, dict):
+        E(where, "zoom must be an object {from, to}")
+        return None
+    z0_, z1_, ease_ = 1.0, 1.0, "in_out"
+    z0, z1 = zm.get("from", 1.0), zm.get("to", zm.get("from", 1.0))
+    if not (is_num(z0) and is_num(z1) and z0 > 0 and z1 > 0):
+        E(where, "zoom.from/to must be numbers > 0")
+    else:
+        if z0 < 1 or z1 < 1:
+            W(where, f"zoom below 1.0 is not possible without showing borders; "
+                     f"clamped to 1.0 (from {z0}, to {z1})")
+        if max(z0, z1) > 4:
+            W(where, f"zoom {max(z0, z1)} is extreme (soft image)")
+        z0_, z1_ = max(1.0, float(z0)), max(1.0, float(z1))
+    ease = zm.get("ease", "in_out")
+    if ease not in EASES:
+        E(where, f"unknown zoom.ease '{ease}' (valid: {', '.join(EASES)})")
+    else:
+        ease_ = ease
+    return z0_, z1_, ease_
+
+
+def parse_fx(fx, where, E) -> list:
+    fx = fx or []
+    if isinstance(fx, str):
+        fx = [fx]
+    if not isinstance(fx, list):
+        E(where, "fx must be a list of names")
+        fx = []
+    for f_ in fx:
+        if f_ not in FX_NAMES:
+            E(where, f"unknown fx '{f_}' (valid: {', '.join(FX_NAMES)})")
+    return [f_ for f_ in dict.fromkeys(fx) if f_ in FX_NAMES]
+
+
+def parse_pulse(p, where, E, W, fps):
+    """pulse {every, amount, phase, decay, anchor} -> normalised dict or None"""
+    if p is None or p is False:
+        return None
+    if not isinstance(p, dict):
+        E(where, "pulse must be an object {every, amount, phase, decay}")
+        return None
+    for k_ in p:
+        if k_ not in PULSE_KEYS and not k_.startswith("_"):
+            W(where, f"unknown pulse key '{k_}' (valid: {', '.join(sorted(PULSE_KEYS))})")
+    out = {"every": None, "amount": 0.06, "phase": 0.0, "decay": 7.0, "anchor": "shot"}
+    out.update({k_: v_ for k_, v_ in p.items() if k_ in PULSE_KEYS})
+    ok = True
+    if not (is_num(out["every"]) and out["every"] > 0):
+        E(where, f"pulse.every (seconds between beats, e.g. 60/bpm) must be a number > 0 "
+                 f"(got {out['every']!r})")
+        ok = False
+    elif out["every"] < 2.0 / fps:
+        W(where, f"pulse.every {out['every']}s is shorter than two frames (it will flicker)")
+    if not (is_num(out["amount"]) and 0 < out["amount"] <= 0.5):
+        E(where, f"pulse.amount must be in (0, 0.5] — 0.06 = +6 % scale (got {out['amount']!r})")
+        ok = False
+    if not is_num(out["phase"]):
+        E(where, f"pulse.phase must be a number of seconds (got {out['phase']!r})")
+        ok = False
+    if not (is_num(out["decay"]) and out["decay"] > 0):
+        E(where, f"pulse.decay must be > 0 (got {out['decay']!r}; 7 = back to rest in ~0.4 s)")
+        ok = False
+    if out["anchor"] not in ("shot", "edit"):
+        E(where, f"pulse.anchor must be 'shot' or 'edit' (got {out['anchor']!r})")
+        ok = False
+    if not ok:
+        return None
+    return {k_: (float(v_) if is_num(v_) else v_) for k_, v_ in out.items()}
+
+
+def parse_cfg(src: dict, fx: list, where, E, W, fps) -> dict:
+    """settings of strobe/stutter/glitch/step/freeze/posterize (merged with defaults).
+    A settings key without the fx name in `fx` switches the fx on (fx is appended in place)."""
+    cfg = {}
+    for name, dflt in FX_CFG.items():
+        val = src.get(name)
+        if val is None or val is False:
+            if name in fx:
+                cfg[name] = dict(dflt)
+            continue
+        if val is True:
+            val = {}
+        if not isinstance(val, dict):
+            E(where, f"'{name}' must be an object like {json.dumps(dflt)}")
+            continue
+        for k_ in val:
+            if k_ not in dflt and not k_.startswith("_"):
+                W(where, f"unknown {name} key '{k_}' (valid: {', '.join(dflt)})")
+        c = dict(dflt)
+        c.update({k_: v_ for k_, v_ in val.items() if k_ in dflt})
+        bad = []
+        if name == "strobe":
+            if not (is_int(c["every"]) and c["every"] >= 1):
+                bad.append(f"strobe.every must be a whole number of frames >= 1 (got {c['every']!r})")
+            if c["mode"] not in STROBE_MODES:
+                bad.append(f"strobe.mode must be one of {', '.join(STROBE_MODES)} (got {c['mode']!r})")
+        elif name == "stutter":
+            if not (is_num(c["len"]) and c["len"] > 0):
+                bad.append(f"stutter.len must be seconds > 0 (got {c['len']!r})")
+            elif fr(c["len"], fps) < 1:
+                bad.append(f"stutter.len {c['len']}s is shorter than one frame at {num(fps)} fps")
+            if not (is_int(c["repeats"]) and 2 <= c["repeats"] <= 64):
+                bad.append(f"stutter.repeats must be a whole number 2..64 (got {c['repeats']!r})")
+        elif name == "glitch":
+            if not isinstance(c["whole"], bool):
+                bad.append(f"glitch.whole must be true or false (got {c['whole']!r})")
+            if not (is_num(c["amount"]) and 0 <= c["amount"] <= 1):
+                bad.append(f"glitch.amount must be between 0 and 1 (got {c['amount']!r})")
+        elif name == "step":
+            if not (is_num(c["fps"]) and c["fps"] > 0):
+                bad.append(f"step.fps must be > 0 (got {c['fps']!r})")
+            elif c["fps"] >= fps:
+                W(where, f"step.fps {c['fps']} >= meta.fps {num(fps)}: no visible judder")
+        elif name == "freeze":
+            if not (is_num(c["at"]) and c["at"] >= 0):
+                bad.append(f"freeze.at must be seconds >= 0 into the source span (got {c['at']!r})")
+        elif name == "posterize":
+            if not (is_int(c["levels"]) and 2 <= c["levels"] <= 8):
+                bad.append(f"posterize.levels must be a whole number 2..8 (got {c['levels']!r})")
+        for b in bad:
+            E(where, b)
+        if not bad:
+            cfg[name] = {k_: (int(v_) if k_ in ("every", "repeats", "levels") else v_) for k_, v_ in c.items()}
+            if name not in fx:
+                fx.append(name)
+    return cfg
+
+
+def parse_layout(s: dict, sh, edl_path: Path, where, E, W, fps):
+    """layout / layout_bg / layout_gap / panels -> sh.panels (one View per panel)"""
+    lay = s.get("layout")
+    if lay not in LAYOUTS:
+        E(where, f"unknown layout '{lay}' (valid: {', '.join(LAYOUTS)})")
+        return
+    n = LAYOUTS[lay]
+    sh.layout = lay
+    if s.get("layout_bg") is not None:
+        c = hex_rgb(s.get("layout_bg"))
+        if c is None:
+            E(where, f"layout_bg '{s.get('layout_bg')}' must be '#RRGGBB'")
+        else:
+            sh.layout_bg = c
+    if s.get("layout_gap") is not None:
+        g = s["layout_gap"]
+        if not is_num(g) or not 0 <= g <= 200:
+            E(where, f"layout_gap must be px at 1080 wide, 0..200 (got {g!r})")
+        else:
+            sh.layout_gap = float(g)
+    raw = s.get("panels")
+    if raw is None:                    # the classic delayed stack: same clip, 0.1 s apart
+        raw = [{"delay": round(0.1 * j, 3)} for j in range(n)]
+    elif not isinstance(raw, list) or len(raw) != n:
+        got = len(raw) if isinstance(raw, list) else type(raw).__name__
+        E(where, f"layout '{lay}' needs exactly {n} panels (got {got})")
+        return
+    shot_time_fx = [f_ for f_ in sh.fx if f_ in TIME_FX]
+    for j, p in enumerate(raw):
+        pw = f"{sh.id}/p{j + 1}"
+        v = View(where=pw, clip_rel=sh.clip_rel, clip=sh.clip, clip_exists=sh.clip_exists,
+                 inp=sh.inp, speed=sh.speed, ramp=sh.ramp, focus_x=sh.focus_x, focus_y=sh.focus_y,
+                 fit=sh.fit, z0=sh.z0, z1=sh.z1, ease=sh.ease, pulse=sh.pulse,
+                 seed=seed_of(sh.id, "panel", j))
+        if not isinstance(p, dict):
+            E(pw, "panel must be an object {clip, in, speed, delay, grade, fx, focus_x, ...}")
+            p = {}
+        for k_ in p:
+            if k_ not in PANEL_KEYS and k_ not in NOTE_KEYS and not k_.startswith("_"):
+                W(pw, f"unknown panel key '{k_}' (typo? ignored)")
+        clip = p.get("clip")
+        if clip not in (None, ""):
+            if not isinstance(clip, str):
+                E(pw, "clip must be a string path")
+            else:
+                v.clip_rel, v.clip = clip, resolve_path(clip, edl_path)
+                v.clip_exists = v.clip.is_file()
+        if p.get("in") is not None:
+            if not is_num(p["in"]) or p["in"] < 0:
+                E(pw, f"in must be a number >= 0 (got {p['in']!r})")
+            else:
+                v.inp = float(p["in"])
+        if p.get("speed") is not None:
+            if not is_num(p["speed"]) or p["speed"] <= 0:
+                E(pw, f"speed must be > 0 (got {p['speed']!r})")
+            else:
+                v.speed, v.ramp = float(p["speed"]), None
+        if p.get("delay") is not None:
+            if not is_num(p["delay"]) or not 0 <= p["delay"] <= 10:
+                E(pw, f"delay must be seconds between 0 and 10 (got {p['delay']!r})")
+            else:
+                v.delay = float(p["delay"])
+        for key in ("focus_x", "focus_y"):
+            if p.get(key) is not None:
+                if not is_num(p[key]) or not 0 <= p[key] <= 1:
+                    E(pw, f"{key} must be between 0 and 1 (got {p[key]!r})")
+                else:
+                    setattr(v, key, float(p[key]))
+        if p.get("fit") is not None:
+            if p["fit"] not in FITS:
+                E(pw, f"unknown fit '{p['fit']}' (valid: crop, blurfill)")
+            else:
+                v.fit = p["fit"]
+        zr = parse_zoom(p.get("zoom"), pw, E, W)
+        if zr:
+            v.z0, v.z1, v.ease = zr
+        if "pulse" in p:
+            v.pulse = parse_pulse(p["pulse"], pw, E, W, fps)
+        g = p.get("grade") or "none"
+        if g not in GRADE_NAMES:
+            E(pw, f"unknown grade '{g}' (valid: {', '.join(GRADE_NAMES)})")
+            g = "none"
+        v.grade = g
+        fx = parse_fx(p.get("fx"), pw, E)
+        for f_ in [f_ for f_ in fx if f_ in SHOT_ONLY_FX]:
+            E(pw, f"fx '{f_}' is shot-level only (it overlays the whole frame); put it in the shot's fx")
+            fx.remove(f_)
+        fx += [f_ for f_ in shot_time_fx if f_ not in fx]       # time fx of the shot drive every panel
+        cfg = {k_: v_ for k_, v_ in sh.cfg.items()}
+        cfg.update(parse_cfg(p, fx, pw, E, W, fps))
+        v.fx, v.cfg = fx, cfg
+        sh.panels.append(v)
+
 
 def load_edl(edl_path: Path, issues: list) -> EDL:
     data = load_jsonc(edl_path)
@@ -574,43 +976,26 @@ def load_edl(edl_path: Path, issues: list) -> EDL:
             E(where, f"unknown fit '{fit}' (valid: crop, blurfill)")
             fit = "crop"
         sh.fit = fit
-        zm = s.get("zoom")
-        if zm is not None:
-            if is_num(zm):
-                zm = {"from": zm, "to": zm}
-            if not isinstance(zm, dict):
-                E(where, "zoom must be an object {from, to}")
-            else:
-                z0, z1 = zm.get("from", 1.0), zm.get("to", zm.get("from", 1.0))
-                if not (is_num(z0) and is_num(z1) and z0 > 0 and z1 > 0):
-                    E(where, "zoom.from/to must be numbers > 0")
-                else:
-                    if z0 < 1 or z1 < 1:
-                        W(where, f"zoom below 1.0 is not possible without showing borders; "
-                                 f"clamped to 1.0 (from {z0}, to {z1})")
-                    if max(z0, z1) > 4:
-                        W(where, f"zoom {max(z0, z1)} is extreme (soft image)")
-                    sh.z0, sh.z1 = max(1.0, float(z0)), max(1.0, float(z1))
-                ease = zm.get("ease", "in_out")
-                if ease not in EASES:
-                    E(where, f"unknown zoom.ease '{ease}' (valid: {', '.join(EASES)})")
-                else:
-                    sh.ease = ease
-        fx = s.get("fx") or []
-        if isinstance(fx, str):
-            fx = [fx]
-        if not isinstance(fx, list):
-            E(where, "fx must be a list of names")
-            fx = []
-        for f_ in fx:
-            if f_ not in FX_NAMES:
-                E(where, f"unknown fx '{f_}' (valid: {', '.join(FX_NAMES)})")
-        sh.fx = [f_ for f_ in dict.fromkeys(fx) if f_ in FX_NAMES]
+        zr = parse_zoom(s.get("zoom"), where, E, W)
+        if zr:
+            sh.z0, sh.z1, sh.ease = zr
+        sh.fx = parse_fx(s.get("fx"), where, E)
         g = s.get("grade") or dg
         if g not in GRADE_NAMES:
             E(where, f"unknown grade '{g}' (valid: {', '.join(GRADE_NAMES)})")
             g = dg
         sh.grade = g
+        sh.pulse = parse_pulse(s.get("pulse"), where, E, W, fps)
+        sh.cfg = parse_cfg(s, sh.fx, where, E, W, fps)
+        dur = max(sh.N, 1) / fps
+        if sh.cfg.get("stutter") and sh.cfg["stutter"]["len"] >= dur - 0.5 / fps:
+            E(where, f"stutter.len {sh.cfg['stutter']['len']}s must be shorter than the shot ({dur:.3f}s)")
+        if s.get("layout") is not None:
+            parse_layout(s, sh, edl_path, where, E, W, fps)
+        else:
+            for k_ in ("panels", "layout_bg", "layout_gap"):
+                if s.get(k_) is not None:
+                    W(where, f"'{k_}' given without 'layout' (ignored)")
         txt = s.get("text")
         if txt is not None:
             items = txt if isinstance(txt, list) else [txt]
@@ -667,6 +1052,13 @@ def validate_text(where, t: dict, dur: float, issues: list, kind="text", fps: fl
         ok = False
     if t.get("accent") is not None and hex_rgb(t.get("accent")) is None:
         issues.append(Issue("WARN", where, f"{kind} accent '{t.get('accent')}' is not #RRGGBB"))
+    if t.get("cps") is not None:
+        if not is_num(t["cps"]) or not 0 < t["cps"] <= 200:
+            issues.append(Issue("ERROR", where, f"{kind}.cps must be characters per second in (0, 200] "
+                                                f"(got {t['cps']!r})"))
+            ok = False
+        elif st != "typewriter":
+            issues.append(Issue("WARN", where, f"{kind}.cps only affects style 'typewriter' (ignored)"))
     if kind == "text":
         a = t.get("in", 0.0) or 0.0
         b = t.get("out")
@@ -747,33 +1139,42 @@ def validate(edl: EDL, issues: list, placeholders_only: bool = False, probe_clip
                 if validate_text(s.id, t_, max(dur, 1e-6), issues, fps=fps):
                     good.append(t_)
             s.text_raw = good
-        if s.clip_rel is None:
-            continue
-        if not s.clip_exists:
-            continue                      # reported as a missing clip (placeholder), not an error
-        if not probe_clips:
-            continue
-        try:
-            info = probe_media(s.clip)
-        except EDLError as e:
-            E(s.id, str(e), "clip_bad")
-            continue
-        if info["video"] is None:
-            E(s.id, f"clip has no video stream: {s.clip_rel}", "clip_bad")
-            continue
-        s.clip_info = info["video"]
-        cd = float("inf") if is_image(s.clip) else (info["video"]["duration"] or info["duration"])
-        span = source_span(s, fps)
-        tol = 1.0 / max(info["video"]["fps"] or fps, 1.0)
-        if s.inp >= cd:
-            E(s.id, f"in-point {s.inp:.3f}s is past the end of {s.clip_rel} ({cd:.3f}s)", "clip_short")
-        elif s.inp + span > cd + tol:
-            E(s.id, f"in {s.inp:.3f}s + source span {span:.3f}s = {s.inp + span:.3f}s is past the end of "
-                    f"{s.clip_rel} ({cd:.3f}s) by {s.inp + span - cd:.3f}s "
-                    f"(--force holds the last frame)", "clip_short")
-        v = info["video"]
-        if v["w"] < 16 or v["h"] < 16:
-            E(s.id, f"clip resolution {v['w']}x{v['h']} is too small", "clip_bad")
+        for vw in (s.panels if s.layout else [s]):
+            wid = vw.where if s.layout else s.id
+            if s.layout and "stutter" in vw.fx and vw.cfg.get("stutter") and \
+                    vw.cfg["stutter"]["len"] >= dur - 0.5 / fps:
+                E(wid, f"stutter.len {vw.cfg['stutter']['len']}s must be shorter than the shot ({dur:.3f}s)")
+            if vw.clip_rel is None or not vw.clip_exists:
+                continue                  # reported as a missing clip (placeholder), not an error
+            if not probe_clips:
+                continue
+            try:
+                info = probe_media(vw.clip)
+            except EDLError as e:
+                E(wid, str(e), "clip_bad")
+                continue
+            if info["video"] is None:
+                E(wid, f"clip has no video stream: {vw.clip_rel}", "clip_bad")
+                continue
+            vw.clip_info = info["video"]
+            cd = float("inf") if is_image(vw.clip) else (info["video"]["duration"] or info["duration"])
+            seq, _ = time_map(vw, s.N, fps)
+            used = s.N if seq is None else max(seq) + 1          # frames of the view really shown
+            span = src_time(vw, used / fps, dur)
+            tol = 1.0 / max(info["video"]["fps"] or fps, 1.0)
+            delay = getattr(vw, "delay", 0.0)
+            lag = delay * (vw.ramp["from"] if vw.ramp else vw.speed)
+            end = vw.inp - lag + span
+            what = f"in {vw.inp:.3f}s" + (f" - delay {lag:.3f}s" if lag else "")
+            if vw.inp >= cd:
+                E(wid, f"in-point {vw.inp:.3f}s is past the end of {vw.clip_rel} ({cd:.3f}s)", "clip_short")
+            elif end > cd + tol:
+                E(wid, f"{what} + source span {span:.3f}s = {end:.3f}s is past the end of "
+                       f"{vw.clip_rel} ({cd:.3f}s) by {end - cd:.3f}s "
+                       f"(--force holds the last frame)", "clip_short")
+            v = info["video"]
+            if v["w"] < 16 or v["h"] < 16:
+                E(wid, f"clip resolution {v['w']}x{v['h']} is too small", "clip_bad")
 
     # overlays inside the edit
     for j, o in enumerate(edl.overlays):
@@ -819,7 +1220,8 @@ def attach_texts(edl: EDL):
                 continue
             s.texts.append(TextItem(content=t_["content"], style=t_.get("style", "lyric"),
                                     pos=t_.get("pos", "center"), a=a, b=b, fade_in=a > 0,
-                                    fade_out=b < N, accent=hex_rgb(t_.get("accent")), src="text"))
+                                    fade_out=b < N, accent=hex_rgb(t_.get("accent")), src="text",
+                                    cps=t_.get("cps"), ta=a, tb=b))
         for j, o in enumerate(edl.overlays):
             if o.get("style", "kicker") not in STYLES or o.get("pos", "upper") not in POSITIONS:
                 continue
@@ -832,7 +1234,8 @@ def attach_texts(edl: EDL):
             s.texts.append(TextItem(content=o["content"], style=o.get("style", "kicker"),
                                     pos=o.get("pos", "upper"), a=a, b=b,
                                     fade_in=o0 > s.f0, fade_out=o1 < s.f1,
-                                    accent=hex_rgb(o.get("accent")), src=f"overlay[{j}]"))
+                                    accent=hex_rgb(o.get("accent")), src=f"overlay[{j}]",
+                                    cps=o.get("cps"), ta=o0 - s.f0, tb=o1 - s.f0))
 
 
 # --------------------------------------------------------------------------- render settings + fonts
@@ -1192,6 +1595,12 @@ def render_caption(item: TextItem, S: Settings):
         m, _ = fit_block(lines, F.regular, 66 * k, maxw, maxh, tracking_em=0.05, lh=1.25)
         fill = solid(m, (255, 255, 255))
         img, pad = with_shadow(fill, k, soft=(12, 4, 0.7), tight=(2, 1.5, 0.45))
+    elif st == "ransom":    # punk ransom note: every letter cut from a different page
+        block = ransom_block(content, S, maxw, maxh)
+        img, pad = with_shadow(block, k, soft=(11, 7, 0.62), tight=(2.5, 3, 0.5))
+    elif st == "stamp":     # rubber stamp: distressed red ink in a rough frame, rotated
+        block = stamp_block(content, S, item.accent or INK_RED, maxw, maxh)
+        img, pad = with_shadow(block, k, soft=(8, 3, 0.35), tight=(0, 0, 0))
     else:  # quote
         txt = content
         if txt[:1] not in "\"“'«":
@@ -1201,6 +1610,278 @@ def render_caption(item: TextItem, S: Settings):
         fill = solid(m, (255, 255, 255))
         img, pad = with_shadow(fill, k, soft=(9, 4, 0.6), tight=(2, 1.5, 0.5))
     return img, img.width - 2 * pad, img.height - 2 * pad, pad
+
+
+# ---- punk text styles -------------------------------------------------------------------
+
+import random as _random   # noqa: E402  (per-letter choices; seeded, so deterministic)
+
+RANSOM_PAPERS = [("white", (247, 245, 238), 0.27), ("news", (239, 230, 207), 0.25),
+                 ("black", (22, 21, 20), 0.2), ("red", INK_RED, 0.16), ("none", None, 0.12)]
+
+
+def _wchoice(rng, items, weights):
+    return rng.choices(items, weights=weights, k=1)[0]
+
+
+def ransom_tile(ch: str, size: float, rng, fonts, k: float) -> Image.Image:
+    """one cut-out letter: random face/size/paper/ink, irregular paper edge, rotated +-7 deg"""
+    path = _wchoice(rng, [f_[0] for f_ in fonts], [f_[1] for f_ in fonts])
+    s = size * rng.uniform(0.85, 1.2)
+    paper_name, paper, _ = _wchoice(rng, RANSOM_PAPERS, [p_[2] for p_ in RANSOM_PAPERS])
+    r_ink, r_rot, r_px, r_py = rng.random(), rng.uniform(-7, 7), rng.uniform(0.1, 0.2), rng.uniform(0.07, 0.15)
+    jit = [rng.uniform(0, 0.07) for _ in range(8)]
+    tex_seed = rng.randrange(1 << 30)
+    if paper_name == "white":
+        ink = (16, 16, 16) if r_ink < 0.74 else INK_RED
+    elif paper_name == "news":
+        ink = (20, 18, 16) if r_ink < 0.85 else INK_RED
+    elif paper_name == "black":
+        ink = (250, 248, 240)
+    elif paper_name == "red":
+        ink = (255, 255, 255) if r_ink < 0.6 else (14, 14, 14)
+    else:
+        ink = (255, 255, 255)
+    fnt = font(path, s)
+    x0, y0, x1, y1 = fnt.getbbox(ch, anchor="ls")
+    gw, gh = max(x1 - x0, int(0.18 * s)), max(y1 - y0, int(0.18 * s))
+    px, py = int(round(r_px * s)), int(round(r_py * s))
+    tw, th = gw + 2 * px, gh + 2 * py
+    img = Image.new("RGBA", (tw, th), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+    if paper is not None:
+        J = [j_ * s for j_ in jit]
+        poly = [(J[0], J[1]), (tw - 1 - J[2], J[3]), (tw - 1 - J[4], th - 1 - J[5]), (J[6], th - 1 - J[7])]
+        pm = Image.new("L", (tw, th), 0)
+        ImageDraw.Draw(pm).polygon(poly, fill=255)
+        grain = np.random.default_rng(tex_seed).normal(0, 7 if paper_name != "black" else 4, (th, tw, 1))
+        base = np.array(paper, np.float32)[None, None, :] + grain
+        if paper_name == "news":           # faint printed lines of the page it was cut from
+            base -= (((np.arange(th) // max(2, int(3 * k))) % 4 == 0) * 10.0)[:, None, None]
+        tile = Image.fromarray(np.clip(base, 0, 255).astype(np.uint8), "RGB").convert("RGBA")
+        tile.putalpha(pm)
+        img.alpha_composite(tile)
+        d.text((px - x0, py - y0), ch, font=fnt, fill=ink + (255,), anchor="ls")
+    else:       # letter cut straight out of a poster: white with a dark edge so it reads on footage
+        d.text((px - x0, py - y0), ch, font=fnt, fill=ink + (255,), anchor="ls",
+               stroke_width=max(1, int(round(0.045 * s))), stroke_fill=(10, 10, 10, 255))
+    return img.rotate(r_rot, resample=Image.BICUBIC, expand=True)
+
+
+def ransom_block(content: str, S: Settings, maxw: float, maxh: float) -> Image.Image:
+    """case kept as written; words never split; letters seeded from the content"""
+    k = S.k
+    fonts = [(p_, w_) for p_, w_ in RANSOM_FONTS if Path(p_).is_file()] or [(S.fonts.heavy, 1)]
+    seed = seed_of("ransom", content)
+    lines = wrap_text(content, 11)
+    size = 100 * k
+    block = None
+    for _ in range(8):
+        rows, idx = [], 0
+        for li, ln in enumerate(lines):
+            tiles = []
+            for ch in ln:
+                rng = _random.Random(seed * 1000003 + idx)
+                idx += 1
+                if ch.isspace():
+                    tiles.append(None)
+                    continue
+                tiles.append((ransom_tile(ch, size, rng, fonts, k),
+                              rng.uniform(-0.07, 0.03) * size, rng.uniform(-0.07, 0.07) * size))
+            if not tiles:
+                rows.append(Image.new("RGBA", (1, int(size * 0.6)), (0, 0, 0, 0)))
+                continue
+            gap = 0.32 * size
+            wsum, hmax = 0.0, 1
+            for t_ in tiles:
+                if t_ is None:
+                    wsum += gap
+                else:
+                    wsum += t_[0].width + t_[1]
+                    hmax = max(hmax, t_[0].height)
+            jy = int(0.08 * size) + 2
+            row = Image.new("RGBA", (int(math.ceil(wsum)) + 4, hmax + 2 * jy), (0, 0, 0, 0))
+            x = 2.0
+            for t_ in tiles:
+                if t_ is None:
+                    x += gap
+                    continue
+                im, dx, dy = t_
+                row.alpha_composite(im, (int(round(x)), int(round((row.height - im.height) / 2 + dy))))
+                x += im.width + dx
+            bb = row.getbbox()
+            rows.append(row.crop(bb) if bb else row)
+        block = stack(rows, [int(0.02 * size)] * (len(rows) - 1))
+        if block.width <= maxw and block.height <= maxh:
+            break
+        size *= min(maxw / block.width, maxh / block.height) * 0.98
+    return block
+
+
+def stamp_block(content: str, S: Settings, ink, maxw: float, maxh: float) -> Image.Image:
+    """heavy caps in a rough double frame, ink eroded by noise, rotated -6 deg"""
+    k, F = S.k, S.fonts
+    lines = wrap_text(content.upper(), 12)
+    m, size = fit_block(lines, F.heavy, 118 * k, maxw * 0.78, maxh * 0.55, squeeze=F.squeeze, lh=0.96,
+                        tracking_em=0.035)
+    pad, bw = int(0.3 * size), max(3, int(round(0.085 * size)))
+    marg = int(0.08 * size) + 2
+    Wb, Hb = m.width + 2 * (pad + bw) + 2 * marg, m.height + 2 * (pad + bw) + 2 * marg
+    rng = np.random.default_rng(seed_of("stamp", content))
+    mask = Image.new("L", (Wb, Hb), 0)
+    d = ImageDraw.Draw(mask)
+
+    def rough_rect(x0, y0, x1, y1, width):
+        j = lambda: float(rng.uniform(-0.25, 0.25) * width)        # noqa: E731
+        pts = [(x0 + j(), y0 + j()), (x1 + j(), y0 + j()), (x1 + j(), y1 + j()), (x0 + j(), y1 + j())]
+        d.line(pts + [pts[0]], fill=255, width=width, joint="curve")
+
+    rough_rect(marg + bw / 2, marg + bw / 2, Wb - marg - bw / 2, Hb - marg - bw / 2, bw)
+    inner = int(round(bw * 1.9))
+    rough_rect(marg + inner + bw / 2, marg + inner + bw / 2, Wb - marg - inner - bw / 2,
+               Hb - marg - inner - bw / 2, max(1, int(round(bw * 0.38))))
+    tx, ty = marg + bw + pad, marg + bw + pad
+    region = mask.crop((tx, ty, tx + m.width, ty + m.height))
+    mask.paste(ImageChops.lighter(region, m), (tx, ty))
+    a = np.asarray(mask.filter(ImageFilter.GaussianBlur(max(0.8, 1.6 * k))), np.float32) / 255.0
+    h_, w_ = a.shape
+    edge = rng.random((h_, w_)).astype(np.float32)
+    edge = np.asarray(Image.fromarray((edge * 255).astype(np.uint8)).filter(
+        ImageFilter.GaussianBlur(max(0.6, 1.1 * k))), np.float32) / 255.0
+    a = np.clip((a - 0.5 + 0.9 * (edge - 0.5)) * 7 + 0.5, 0, 1)            # ragged, inky edges
+    lo = rng.random((max(2, h_ // 22), max(2, w_ // 22))).astype(np.float32)
+    lo = np.asarray(Image.fromarray((lo * 255).astype(np.uint8)).resize((w_, h_), Image.BICUBIC),
+                    np.float32) / 255.0
+    cover = np.clip(0.45 + 0.95 * lo, 0.3, 1.0)                             # uneven ink load
+    holes = (rng.random((h_, w_)) > 0.94).astype(np.float32)
+    holes = np.asarray(Image.fromarray((holes * 255).astype(np.uint8)).filter(
+        ImageFilter.GaussianBlur(max(0.6, 1.2 * k))), np.float32) / 255.0
+    a = a * cover * np.clip(1 - 2.2 * holes, 0, 1) * 0.94
+    img = Image.new("RGBA", (w_, h_), tuple(ink) + (255,))
+    img.putalpha(Image.fromarray((a * 255).astype(np.uint8), "L"))
+    img = img.rotate(6, resample=Image.BICUBIC, expand=True)    # PIL: positive = counter-clockwise
+    bb = img.getbbox()
+    return img.crop(bb) if bb else img
+
+
+def typewriter_frames(item: TextItem, S: Settings, fps: float):
+    """-> ({local frame: RGBA}, ink w, ink h, pad). Monospace, as written, typed out with a
+    blinking underscore cursor; the reveal spans the first 80 % of the text's time (or runs at
+    item.cps), so the finished line holds for a beat."""
+    k = S.k
+    path = _first_existing(SYSTEM_TYPEWRITER) or S.fonts.regular
+    lines = wrap_text(item.content.strip(), 22)
+    maxw, maxh = S.maxw, (S.H - S.safe_top - S.safe_bottom) * 0.85
+    size = 60 * k
+    for _ in range(8):
+        fnt = font(path, size)
+        adv = fnt.getlength("M")
+        lh = size * 1.3
+        bw = adv * (max(len(ln) for ln in lines) + 1)
+        bh = lh * (len(lines) - 1) + size * 1.15
+        if bw <= maxw and bh <= maxh:
+            break
+        size *= min(maxw / bw, maxh / bh) * 0.98
+    asc = fnt.getmetrics()[0]
+    rng = _random.Random(seed_of("typewriter", item.content))
+    chars = []             # (char, x, baseline y, dy jitter, alpha)
+    for li, ln in enumerate(lines):
+        for ci, ch in enumerate(ln):
+            chars.append((ch, ci * adv, asc + li * lh, rng.uniform(-1.3, 1.3) * k, int(rng.uniform(205, 255))))
+    total = len(chars)
+    cw, ch_ = int(math.ceil(bw)) + 2, int(math.ceil(bh)) + 2
+    ta = item.ta if item.ta is not None else item.a
+    tb = item.tb if item.tb is not None else item.b
+    span = max(1, int(round(0.8 * (tb - ta))))
+    blink = max(2, int(round(0.27 * fps)))
+    cache, frames = {}, {}
+    done_at = None
+    for j in range(item.a, item.b):
+        rel = j - ta
+        if item.cps:
+            c = min(total, int(math.floor(rel / fps * item.cps + 1e-9)) + 1)
+        else:
+            c = min(total, int(math.ceil((rel + 1) * total / span - 1e-9)))
+        if c >= total and done_at is None:
+            done_at = rel
+        cur_on = c < total or ((rel - done_at) // blink) % 2 == 1
+        key = (c, cur_on)
+        if key not in cache:
+            img = Image.new("RGBA", (cw, ch_), (0, 0, 0, 0))
+            d = ImageDraw.Draw(img)
+            for ch, x, y, dy, al in chars[:c]:
+                if not ch.isspace():
+                    d.text((x, y + dy), ch, font=fnt, fill=(246, 244, 236, al), anchor="ls")
+            if cur_on:
+                if c == 0:
+                    cx, cy = 0.0, asc
+                else:
+                    _, x, y, _, _ = chars[c - 1]
+                    cx, cy = x + adv, y
+                d.text((cx, cy), "_", font=fnt, fill=(246, 244, 236, 255), anchor="ls")
+            cache[key] = with_shadow(img, k, soft=(10, 4, 0.8), tight=(2, 1.5, 0.55))[0]
+        frames[j] = cache[key]
+    pad = with_shadow(Image.new("RGBA", (cw, ch_)), k, soft=(10, 4, 0.8), tight=(2, 1.5, 0.55))[1]
+    return frames, cw, ch_, pad
+
+
+def glitchtext_frames(item: TextItem, S: Settings, fps: float):
+    """-> ({local frame: RGBA}, ink w, ink h, pad). Huge heavy caps, red/cyan split copies and
+    horizontally torn slices; violent for the first ~8 frames, then a calmer twitching hold."""
+    k, F = S.k, S.fonts
+    maxw, maxh = S.maxw, (S.H - S.safe_top - S.safe_bottom) * 0.85
+    lines = wrap_text(item.content.strip().upper(), 9)
+    m, size = fit_block(lines, F.heavy, 236 * k, maxw * 0.84, maxh * 0.5, squeeze=F.squeeze, lh=0.9,
+                        tracking_em=-0.01)
+    mx, my = int(0.08 * m.width + 0.06 * size) + 2, int(0.04 * size) + 2
+    cw, ch_ = m.width + 2 * mx, m.height + 2 * my
+    base = np.zeros((ch_, cw), np.float32)
+    base[my:my + m.height, mx:mx + m.width] = np.asarray(m, np.float32) / 255.0
+    red, cyan = np.array([255, 28, 56], np.float32), np.array([0, 226, 255], np.float32)
+    seed = seed_of("glitchtext", item.content)
+    ta = item.ta if item.ta is not None else item.a
+
+    def compose(state: int, g: float):
+        rng = np.random.default_rng(seed + state * 7919)
+        dx = int(round((0.022 + 0.035 * g) * size * rng.uniform(0.7, 1.2)))
+        dy = int(round(0.01 * size * rng.uniform(-1, 1)))
+        mr = np.roll(np.roll(base, dx, axis=1), dy, axis=0)
+        mc = np.roll(np.roll(base, -dx, axis=1), -dy, axis=0)
+        col = np.clip(mr[..., None] * red + mc[..., None] * cyan, 0, 255)       # premultiplied
+        al = np.maximum(mr, mc)
+        col = col * (1 - base[..., None]) + 255.0 * base[..., None]
+        al = np.maximum(al, base)
+        rgba = np.concatenate([col, al[..., None] * 255.0], axis=2)
+        for _ in range(2 + int(g > 0.5) + int(rng.random() < g)):              # torn slices
+            hh = max(2, int(rng.uniform(0.05, 0.16) * m.height))
+            y0 = int(rng.uniform(my, my + m.height - hh))
+            sh = int(rng.choice([-1, 1]) * rng.uniform(0.025, 0.06 + 0.05 * g) * m.width)
+            band = np.roll(rgba[y0:y0 + hh], sh, axis=1)
+            if sh > 0:
+                band[:, :sh] = 0
+            elif sh < 0:
+                band[:, sh:] = 0
+            rgba[y0:y0 + hh] = band
+        a = np.maximum(rgba[..., 3:4] / 255.0, 1e-6)
+        out = np.concatenate([np.clip(rgba[..., :3] / a, 0, 255), rgba[..., 3:4]], axis=2)
+        img = Image.fromarray(out.astype(np.uint8), "RGBA")
+        return with_shadow(img, k, soft=(12, 6, 0.55), tight=(2.5, 2, 0.4))[0]
+
+    cache, frames = {}, {}
+    twitch = max(4, int(round(0.55 * fps)))
+    for j in range(item.a, item.b):
+        rel = j - ta
+        if rel < 8:
+            key, g = rel // 2, 1.0 - 0.08 * rel
+        elif rel % twitch in (0, 1):
+            key, g = 100 + rel // twitch, 0.75
+        else:
+            key, g = 99, 0.25
+        if key not in cache:
+            cache[key] = compose(key, g)
+        frames[j] = cache[key]
+    pad = with_shadow(Image.new("RGBA", (cw, ch_)), k, soft=(12, 6, 0.55), tight=(2.5, 2, 0.4))[1]
+    return frames, cw, ch_, pad
 
 
 def place_box(w, h, pos, S: Settings):
