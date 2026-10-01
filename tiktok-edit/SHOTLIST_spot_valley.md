@@ -63,8 +63,8 @@ Audio: song 5.44–8.48 s + song 18.58–34.75 s + song 46.88–77.19 s + song 8
 | s50 | 0:41.43 | 1.01 | chorus | `P10` Run and finish | 0.30 | 1.0 |  |  | step pulse |
 | s51 | 0:42.44 | 0.51 | chorus | `P10` Run and finish | 1.61 | 1.0 |  |  | invert_flash shake |
 | s52 | 0:42.95 | 0.51 | chorus | `P07` Penalty goal | 0.10 | 1.0 |  |  | zoom_blur |
-| s53 | 0:43.45 | 1.01 | chorus | `P04` Anthem | 0.50 | 1.0 | You've seen the demons— already | ALREADY | strobe pulse (bw) |
-| s54 | 0:44.46 | 1.01 | chorus | `P11` Hands | 0.47 | 1.0 | You've seen the demons— already |  | glitch glitch |
+| s53 | 0:43.45 | 1.01 | chorus | `P04` Anthem | 0.50 | 1.0 | You've seen the demons— already |  | strobe pulse (bw) |
+| s54 | 0:44.46 | 1.01 | chorus | `P11` Hands | 0.47 | 1.0 | You've seen the demons— already | ALREADY | glitch glitch |
 | s55 | 0:45.47 | 1.01 | chorus | `P03` Walkout with the mascot | 0.20 | 0.6 | You've seen the demons— already |  | echo (cold) |
 | s56 | 0:46.48 | 1.01 | chorus | `P01` Tunnel walk | 0.60 | 0.6 |  |  | echo (cold) |
 | s57 | 0:47.50 | 2.02 | chorus | `P17` Looking back | 0.00 | 0.586 | Don't you run from me | don't you run from me | reverse whip_in |

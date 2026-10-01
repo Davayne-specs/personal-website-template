@@ -1584,12 +1584,6 @@
     "amount": 0.055,
     "decay": 7,
     "phase": 0.0
-   },
-   "text": {
-    "content": "ALREADY",
-    "style": "ransom",
-    "pos": "center",
-    "in": 1.471
    }
   },
   {
@@ -1616,6 +1610,12 @@
    "glitch": {
     "whole": true,
     "amount": 0.4
+   },
+   "text": {
+    "content": "ALREADY",
+    "style": "ransom",
+    "pos": "center",
+    "in": 0.46
    }
   },
   {

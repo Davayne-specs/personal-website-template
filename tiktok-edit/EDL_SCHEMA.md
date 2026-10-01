@@ -82,8 +82,61 @@ the edit), which maps to the song at `meta.song_start + t`.
 | `title`   | very large, tight                                                 |
 | `kicker`  | small caps label in a pill                                        |
 | `quote`   | italic, in quotation marks                                        |
+| `ransom`  | punk ransom note: every letter cut from a different font on paper scraps |
+| `typewriter` | monospace, typed out letter by letter with a blinking cursor (`"cps"`: chars/second; default spreads over the text's time) |
+| `glitchtext` | huge heavy text with RGB-split copies and displaced slices      |
+| `stamp`   | red rubber stamp: rotated, distressed, in a rough box              |
 
 ## grades
 
 `teal_orange`, `warm`, `cold`, `bw`, `blaugrana` (red/blue tint), `gold` (trophy
 moments), `none`.
+
+## Punk / emo / experimental pack
+
+All optional. Old EDLs render exactly as before.
+
+### More fx
+
+| name | effect |
+|------|--------|
+| `vhs` | camcorder tape: chroma smear, scanlines, softness, noise, warm cast, rolling tracking band |
+| `rec` | camcorder HUD: blinking ● REC, running timecode, date (`meta.rec_date`), battery |
+| `xerox` | photocopy zine: grayscale, crushed contrast, toner speckle, paper-white highlights |
+| `posterize` | 3–5 level colour reduction (`"posterize": {"levels": 4}`) |
+| `invert` / `invert_flash` | negative for the whole shot / for the first 2 frames |
+| `strobe` | alternate frames: `"strobe": {"every": 2, "mode": "invert" \| "black" \| "white"}` |
+| `stutter` | re-trigger the opening: `"stutter": {"len": 0.134, "repeats": 3}` |
+| `reverse` | play the source span backwards |
+| `echo` | ghost trails (slow, dreamy) |
+| `glitch` | slice displacement + RGB jitter + block bands; burst at the start, or `"glitch": {"whole": true, "amount": 0.7}` |
+| `step` | step-printing judder: `"step": {"fps": 12}` |
+| `light_leak` | drifting warm light leaks / film burn |
+| `letterbox` | black bars that slam in over 3 frames |
+| `whip_in` / `whip_out` | whip-pan blur + slide over the first / last 4 frames |
+| `shake_hard` | heavy shake (for the drop) |
+| `flash_red` / `flash_black` | red flash / hard black frame, fading in |
+| `freeze` | hold one frame: `"freeze": {"at": 0.0}` (seconds into the source span) |
+| `zoom_blur` | radial zoom-blur punch on the first frames |
+
+Giving a settings key (`strobe`, `stutter`, `glitch`, `step`, `freeze`, `posterize`) also
+switches that fx on.
+
+### Zoom
+
+- `"zoom": {"from": 1.18, "to": 1.0, "ease": "snap"}` — punch that settles (eases: `in_out`,
+  `linear`, `in`, `out`, `snap`).
+- `"pulse": {"every": 0.5053, "amount": 0.055, "phase": 0.0, "decay": 7}` — zoom bounce every
+  `every` seconds starting `phase` seconds into the shot, decaying exponentially; multiplies with
+  `zoom`. `"anchor": "edit"` measures phase from the start of the edit instead of the shot.
+  In cut sheets, `"every": "beat" | "half" | "bar"` is resolved and phase-locked to the song's
+  grid by `tools/build_edl.py`.
+
+### Layouts
+
+`"layout": "split2" | "triptych" | "grid4"` stacks 2 / 3 panels or a 2x2 grid on
+`"layout_bg"` (default black) with `"layout_gap"` px gaps. `"panels"` is a list of
+`{clip, in, speed, delay, grade, fx, focus_x}`; missing fields inherit from the shot. Without
+`panels` every panel shows the shot's clip, delayed 0 / 0.1 / 0.2 s (the classic delayed
+stack). Shot-level fx/grade/text apply to the composed frame. In cut sheets a panel may name a
+moment instead: `{"m": "P07", "hit": 1.5}`.

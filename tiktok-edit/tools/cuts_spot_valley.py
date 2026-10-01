@@ -199,9 +199,9 @@ CHORUS = [
     R("34.1", "P10", hit=0.3, fx=["step"], pulse=PULSE),
     R("34.3", "P10", hit=1.85, fx=["invert_flash", "shake"]),
     R("34.4", "P07", hit=0.1, fx=["zoom_blur"]),
-    R("35.1", "P04", hit=0.5, fx=["strobe"], grade="bw", pulse=PULSE,
+    R("35.1", "P04", hit=0.5, fx=["strobe"], grade="bw", pulse=PULSE),
+    R("35.3", "P11", hit=0.6, fx=["glitch"], glitch={"whole": True, "amount": 0.4},
       text=ransom("ALREADY", at="@72.60")),
-    R("35.3", "P11", hit=0.6, fx=["glitch"], glitch={"whole": True, "amount": 0.4}),
     R("36.1", "P03", hit=0.2, speed=0.6, fx=["echo"], grade="cold"),
     R("36.3", "P01", hit=0.6, speed=0.6, fx=["echo"], grade="cold"),
     # "Don't you run from me" — he walks backwards into the frame
