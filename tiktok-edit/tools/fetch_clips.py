@@ -131,9 +131,11 @@ def main():
         what = f"{start:.1f}-{at + POST:.1f}s -> clips/{cid}.mp4" if section else f"full video -> sources/{cid}.mp4"
         print(f"  {cid:5} {url}  {what}", flush=True)
         if args.dry_run:
+            if not section:
+                done_urls[url] = cid
             continue
 
-        tmp = tempfile.mkdtemp(prefix=f"fetch_{cid}_", dir=src_dir)
+        tmp =tempfile.mkdtemp(prefix=f"fetch_{cid}_", dir=src_dir)
         try:
             info, got = download(url, os.path.join(tmp, cid), args.max_height,
                                  (start, at + POST) if section else None)
