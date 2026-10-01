@@ -78,15 +78,21 @@ DEFAULT_SAFE = {"top": 160, "bottom": 420, "right": 140}
 DEFAULT_ACCENT = (165, 0, 68)        # Barça garnet
 GOLD_STOPS = [(0.0, (255, 236, 160)), (0.45, (248, 196, 46)), (1.0, (196, 128, 8))]
 
+_WINFONTS = os.path.join(os.environ.get("WINDIR", r"C:\Windows"), "Fonts")
+# Windows / macOS fallbacks: Arial is metric-compatible with Liberation Sans
+_ARIAL_BOLD = [os.path.join(_WINFONTS, "arialbd.ttf"), "/System/Library/Fonts/Supplemental/Arial Bold.ttf",
+               "/Library/Fonts/Arial Bold.ttf"]
+_ARIAL = [os.path.join(_WINFONTS, "arial.ttf"), "/System/Library/Fonts/Supplemental/Arial.ttf",
+          "/Library/Fonts/Arial.ttf"]
 SYSTEM_HEAVY = ["/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
                 "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf",
-                "/usr/share/fonts/truetype/freefont/FreeSansBold.ttf"]
+                "/usr/share/fonts/truetype/freefont/FreeSansBold.ttf"] + _ARIAL_BOLD
 SYSTEM_BODY = ["/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf",
                "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
-               "/usr/share/fonts/truetype/freefont/FreeSansBold.ttf"]
+               "/usr/share/fonts/truetype/freefont/FreeSansBold.ttf"] + _ARIAL_BOLD
 SYSTEM_REGULAR = ["/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf",
                   "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
-                  "/usr/share/fonts/truetype/freefont/FreeSans.ttf"]
+                  "/usr/share/fonts/truetype/freefont/FreeSans.ttf"] + _ARIAL
 
 
 class EDLError(Exception):
