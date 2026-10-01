@@ -106,7 +106,8 @@ def stamp(content, at=None, pos="upper"):
 # ---- cold open: "Yo— … let's go" (silence, then the beat) -------------------
 OPEN = [
     # frame 0: a photocopied freeze of the name on his back — and the hook
-    R("2.3", "P14", hit=1.0, freeze={"at": 0.0}, fx=["xerox", "grain"], zoom={"from": 1.12, "to": 1.18}),
+    R("2.3", "P14", hit=1.0, freeze={"at": 0.0}, fx=["xerox", "grain"], fit="blurfill",
+      zoom={"from": 1.0, "to": 1.05}),
     # "let's go": the tape starts rolling, the camera pulls back off the name
     R("3.1", "P14", hit=0.5, speed=0.6, fx=CAM + ["flash_in"], zoom={"from": 1.25, "to": 1.0, "ease": "in_out"}),
 ]
@@ -225,11 +226,9 @@ CALL = [
 # cut density doubles each bar; then everything stops on "No one is there"
 BUILD = [
     R("48.1", "P04", hit=0.1, fx=["zoom_blur", "shake"], grade="cold", zoom=SNAP),
-    R("48.3", "P04", hit=0.6, freeze={"at": 0.0}, fx=["invert", "xerox"],
-      text=stamp("SCREAMING", at="@99.40")),
-    R("49.1", "P09", fx=["step"], pulse=PULSE),
-    R("49.2", "P06", hit=0.3, fx=["step"], pulse=PULSE),
-    R("49.3", "P09", hit=0.7, fx=["step"], pulse=PULSE),
+    R("48.3", "P04", hit=0.6, freeze={"at": 0.0}, fx=["invert", "xerox"], zoom={"from": 1.0, "to": 1.15},
+      text=stamp("SCREAMING", at="@99.90")),
+    R("49.3", "P09", hit=0.7, fx=["step", "flash_in"], pulse=PULSE),
     R("49.4", "P06", hit=1.0, fx=["step"], pulse=PULSE),
     R("50.1", "P09", hit=1.2, fx=["strobe"], pulse=PULSE,
       text=glitch_word("FIGHTING EVERYONE", at="@101.50")),
@@ -357,8 +356,8 @@ FINALE = [
     R("81.2", "P09", hit=1.2, fx=["glitch"]),
     R("81.2.5", "P06", hit=1.4, fx=["flash_in"]),
     # back to the photocopied name — the same frame the edit opened on, so it loops
-    R("81.3", "P14", hit=1.0, freeze={"at": 0.0}, fx=["xerox", "grain", "flash_in"],
-      zoom={"from": 1.25, "to": 1.12, "ease": "snap"},
+    R("81.3", "P14", hit=1.0, freeze={"at": 0.0}, fx=["xerox", "grain", "flash_in"], fit="blurfill",
+      zoom={"from": 1.1, "to": 1.05, "ease": "snap"},
       text=ransom("LAMINE YAMAL")),
 ]
 FINALE_TEXT = [

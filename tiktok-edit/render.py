@@ -1770,9 +1770,9 @@ def typewriter_frames(item: TextItem, S: Settings, fps: float):
     item.cps), so the finished line holds for a beat."""
     k = S.k
     path = _first_existing(SYSTEM_TYPEWRITER) or S.fonts.regular
-    lines = wrap_text(item.content.strip(), 22)
+    lines = wrap_text(item.content.strip(), 20)
     maxw, maxh = S.maxw, (S.H - S.safe_top - S.safe_bottom) * 0.85
-    size = 60 * k
+    size = 68 * k
     for _ in range(8):
         fnt = font(path, size)
         adv = fnt.getlength("M")
@@ -2064,33 +2064,75 @@ def ease_expr(p: str, ease: str) -> str:
         return f"({p}*{p})"
     if ease == "out":
         return f"(1-(1-{p})*(1-{p}))"
+    if ease == "snap":          # punch that settles: ~55 % of the move in the first tenth, then glides
+        return f"((1-exp(-8*{p}))/{1 - math.exp(-8):.8f})"
     return f"({p}*{p}*(3-2*{p}))"
 
 
-def perspective_filter(S: Settings, N: int, src, crop, zfun, fx_, fy_, shake: bool,
-                       enable_until: float | None = None) -> str:
-    """Sub-pixel smooth zoom / shake on a frame that already is S.W x S.H.
+def pulse_mul(pulse: dict | None, fps: float, t_shot0: float, n: str = "ld(0)") -> str:
+    """beat zoom bounce as a multiplier expression of the frame index `n`: jumps to 1+amount on
+    the frame nearest each beat (phase + k*every), then decays exponentially."""
+    if not pulse:
+        return "1"
+    off = (t_shot0 if pulse.get("anchor") == "edit" else 0.0) - pulse["phase"]
+    h = 0.5 / fps
+    d = f"max(0,mod({n}/{num(fps)}+{num(off + h)},{num(pulse['every'])})-{num(h)})"
+    return f"(1+{num(pulse['amount'])}*exp(-{num(pulse['decay'])}*{d}))"
 
-    src  = (Wd, Hd, bw, bh): source display size and its z=1 9:16 window size
-    crop = (xm, ym, wm, hm): the static window (source px) that was scaled to S.W x S.H
+
+# camera shakes: seconds, extra zoom (hides borders), x / y amplitude (of the half window),
+# rotation (rad), and the per-frame phase speeds of the sine mix (high = more random jumps)
+SHAKES = {"shake": (0.35, 0.09, 0.048, 0.032, 0.012, (2.39, 5.13, 3.17, 6.71, 2.77)),
+          "shake_hard": (0.55, 0.17, 0.095, 0.07, 0.034, (3.91, 7.37, 4.83, 8.29, 5.53))}
+WHIP_FRAMES = 4
+
+
+def whip_offset(whip, N: int, ow: float) -> str | None:
+    """horizontal content shift (output px) of whip_in (slides in from the right) / whip_out
+    (leaves to the left), as an expression of ld(0); None when there is no whip"""
+    parts = []
+    if "whip_in" in whip:
+        parts.append(f"if(lt(ld(0),{WHIP_FRAMES}),{num(0.42 * ow)}*pow(({WHIP_FRAMES}-ld(0))/{WHIP_FRAMES},2),0)")
+    if "whip_out" in whip:
+        s0 = max(N - WHIP_FRAMES, 0)
+        parts.append(f"if(gte(ld(0),{s0}),-{num(0.42 * ow)}*pow((ld(0)-{s0 - 1})/{WHIP_FRAMES},2),0)")
+    return "+".join(parts) if parts else None
+
+
+def perspective_filter(S: Settings, N: int, src, crop, zfun, fx_, fy_, shake=None,
+                       enable_until: float | None = None, whip=(), size=None, enable: str | None = None) -> str:
+    """Sub-pixel smooth zoom / shake / whip slide on a frame that already is the output size.
+
+    src  = (Wd, Hd, bw, bh): source display size and its z=1 window size
+    crop = (xm, ym, wm, hm): the static window (source px) that was scaled to the output size
     zfun(p, n) -> expression for the absolute zoom (relative to the z=1 window)
+    shake: None | True | "shake" | "shake_hard";  whip: names among whip_in / whip_out
+    size: (ow, oh) output size (default S.W x S.H)
     """
     Wd, Hd, bw, bh = src
     xm, ym, wm, hm = crop
-    sx, sy = S.W / wm, S.H / hm
+    OW, OH = size or (S.W, S.H)
+    sx, sy = OW / wm, OH / hm
     pre = ["st(0,in-1)", f"st(8,clip(ld(0)/{max(N - 1, 1)},0,1))", f"st(1,{zfun('ld(8)', 'ld(0)')})",
            f"st(2,{num(bw)}/ld(1))", f"st(3,{num(bh)}/ld(1))",
            f"st(4,(clip({num(fx_ * Wd)},ld(2)/2,{num(Wd)}-ld(2)/2)-{num(xm)})*{sx:.8f})",
            f"st(5,(clip({num(fy_ * Hd)},ld(3)/2,{num(Hd)}-ld(3)/2)-{num(ym)})*{sy:.8f})",
-           f"st(2,min(ld(2)*{sx / 2:.8f},{num(S.W / 2)}))", f"st(3,min(ld(3)*{sy / 2:.8f},{num(S.H / 2)}))",
-           f"st(4,clip(ld(4),ld(2),{num(S.W)}-ld(2)))", f"st(5,clip(ld(5),ld(3),{num(S.H)}-ld(3)))"]
+           f"st(2,min(ld(2)*{sx / 2:.8f},{num(OW / 2)}))", f"st(3,min(ld(3)*{sy / 2:.8f},{num(OH / 2)}))",
+           f"st(4,clip(ld(4),ld(2),{num(OW)}-ld(2)))", f"st(5,clip(ld(5),ld(3),{num(OH)}-ld(3)))"]
+    if shake is True:
+        shake = "shake"
     if shake:
-        sf = max(1, int(round(0.35 * S.fps)))
-        pre += [f"st(6,pow(max(0,1-ld(0)/{sf}),2))",
-                "st(2,ld(2)/(1+0.09*ld(6)))", "st(3,ld(3)/(1+0.09*ld(6)))",
-                "st(4,ld(4)+ld(2)*0.048*ld(6)*(0.65*sin(ld(0)*2.39+1.1)+0.35*sin(ld(0)*5.13+0.4)))",
-                "st(5,ld(5)+ld(3)*0.032*ld(6)*(0.6*sin(ld(0)*3.17+2.3)+0.4*sin(ld(0)*6.71+0.9)))",
-                "st(7,0.012*ld(6)*sin(ld(0)*2.77+0.7))"]
+        secs, zm, ax, ay, rot, w = SHAKES[shake]
+        sf = max(1, int(round(secs * S.fps)))
+        pw_ = 2 if shake == "shake" else 1.4
+        pre += [f"st(6,pow(max(0,1-ld(0)/{sf}),{pw_}))",
+                f"st(2,ld(2)/(1+{zm}*ld(6)))", f"st(3,ld(3)/(1+{zm}*ld(6)))",
+                f"st(4,ld(4)+ld(2)*{ax}*ld(6)*(0.65*sin(ld(0)*{w[0]}+1.1)+0.35*sin(ld(0)*{w[1]}+0.4)))",
+                f"st(5,ld(5)+ld(3)*{ay}*ld(6)*(0.6*sin(ld(0)*{w[2]}+2.3)+0.4*sin(ld(0)*{w[3]}+0.9)))",
+                f"st(7,{rot}*ld(6)*sin(ld(0)*{w[4]}+0.7))"]
+    wo = whip_offset(whip, N, OW)
+    if wo:
+        pre.append(f"st(4,ld(4)-({wo}))")
     P = ";".join(pre)
     opts = []
     for i, (a, b) in enumerate([(-1, -1), (1, -1), (-1, 1), (1, 1)]):
@@ -2103,7 +2145,9 @@ def perspective_filter(S: Settings, N: int, src, crop, zfun, fx_, fy_, shake: bo
             X, Y = f"ld(4){A}ld(2)", f"ld(5){B}ld(3)"
         opts += [f"x{i}='{P};{X}'", f"y{i}='{P};{Y}'"]
     f_ = "perspective=" + ":".join(opts) + f":interpolation={S.interp}:eval=frame"
-    if enable_until is not None:
+    if enable is not None:
+        f_ += f":enable='{enable}'"
+    elif enable_until is not None:
         f_ += f":enable='lt(t,{num(enable_until)})'"
     return f_
 
@@ -2122,6 +2166,279 @@ def int_window(x, y, w, h, Wd, Hd):
     return x2, y2, w2, h2
 
 
+# --------------------------------------------------------------------------- punk pack: procedural maps
+
+# Procedural looks are generated per shot with numpy from a seed (shot id / panel), written as
+# rawvideo / PNG into the shot's temp dir and fed to ffmpeg, so a re-render is bit-identical.
+MAP_LINES = 480                 # VHS displacement map: one row per "tape line" (4 px at 1920 high)
+GLITCH_ROWS, GLITCH_COLS = 240, 32
+LEAK_W, LEAK_H = 72, 128        # light leaks: tiny, smooth -> upscaled bicubic
+NOISE_W, NOISE_H = 136, 240     # VHS tracking noise / dropouts (soft once upscaled)
+GLITCH_BURST = [1.0, 0.92, 0.78, 0.6, 0.42, 0.25]
+
+
+def gbrp_bytes(rgb: np.ndarray) -> bytes:
+    """(frames, 3 [R,G,B], h, w) -> rawvideo bytes in ffmpeg gbrp plane order (G, B, R)"""
+    return np.ascontiguousarray(np.clip(rgb, 0, 255).astype(np.uint8)[:, [1, 2, 0]]).tobytes()
+
+
+def glitch_schedule(seed: int, N: int, cfg: dict):
+    """-> list of (state id, intensity) per frame. A burst on the first frames; with whole=true,
+    hits of 1-3 held frames all through the shot, denser and harder with `amount`."""
+    amt = float(cfg.get("amount", 0.7))
+    mag = 0.35 + 0.65 * amt
+    rng = np.random.default_rng(seed)
+    sched = [(-1, 0.0)] * N
+    for j in range(min(N, len(GLITCH_BURST))):
+        sched[j] = (j, GLITCH_BURST[j] * mag)
+    if cfg.get("whole"):
+        j, sid = len(GLITCH_BURST), 100
+        while j < N:
+            j += int(rng.integers(1, 3 + int(round(7 * (1 - amt)))))     # clean frames
+            ln, g = int(rng.integers(1, 4)), float(rng.uniform(0.45, 1.0)) * mag
+            for q in range(j, min(N, j + ln)):
+                sched[q] = (sid, g)
+            sid += 1
+            j += ln
+    return sched
+
+
+def glitch_map(seed: int, g: float, k: float) -> np.ndarray:
+    """one frame of horizontal displacement (3 [R,G,B], rows, cols) as 128 +/- px: torn slices with
+    a red/blue split inside, macroblock bands, and a whole-frame RGB jitter. Values are designed at
+    1080 px wide and scaled by k."""
+    rng = np.random.default_rng(seed)
+    R, C = GLITCH_ROWS, GLITCH_COLS
+    dx = np.zeros((3, R, C), np.float32)
+    if g > 0:
+        for _ in range(1 + int(round(g * rng.uniform(3, 7)))):               # torn slices
+            h = int(rng.integers(1, 3 + int(12 * g)))
+            y0 = int(rng.integers(0, R - h))
+            dx[:, y0:y0 + h] += rng.choice([-1, 1]) * rng.uniform(16, 28 + 95 * g)
+            cs = rng.uniform(4, 6 + 16 * g)
+            dx[0, y0:y0 + h] += cs
+            dx[2, y0:y0 + h] -= cs
+        if rng.random() < 0.3 + 0.6 * g:                                    # macroblock bands
+            for _ in range(1 + int(g > 0.6)):
+                h = int(rng.integers(2, 8))
+                y0 = int(rng.integers(0, R - h))
+                c = 0
+                while c < C:
+                    w_ = int(rng.integers(2, 6))
+                    if rng.random() < 0.6:
+                        dx[:, y0:y0 + h, c:c + w_] += rng.uniform(-75, 75) * g
+                    c += w_
+        j = rng.uniform(2, 3 + 9 * g)                                       # RGB jitter
+        dx[0] += j
+        dx[2] -= j
+    return np.clip(np.round(dx * k), -127, 127) + 128
+
+
+def vhs_maps(seed: int, N: int, k: float):
+    """-> (xmap (N, 3, MAP_LINES, 2), noise RGBA (N, NOISE_H, NOISE_W, 4)). Line wobble, head-switching
+    skew at the bottom, dropouts, and (on about 60 % of shots) a tracking band that rolls up."""
+    rng = np.random.default_rng(seed)
+    L = MAP_LINES
+    y = (np.arange(L) + 0.5) / L
+    dx = np.zeros((N, L), np.float32)
+    hs = max(2, int(L * 0.022))
+    for n in range(N):
+        dx[n] = 1.4 * np.sin(2 * np.pi * 2.3 * y + rng.uniform(0, 2 * np.pi)) + rng.normal(0, 0.5, L)
+        dx[n, L - hs:] += np.linspace(8, 55, hs) + rng.normal(0, 4, hs)
+    noise = np.zeros((N, NOISE_H, NOISE_W, 4), np.float32)
+    ny = (np.arange(NOISE_H) + 0.5) / NOISE_H
+    for n in range(N):                                                         # dropouts
+        for _ in range(int(rng.poisson(0.6))):
+            r, x0 = int(rng.integers(0, NOISE_H)), int(rng.integers(0, NOISE_W - 4))
+            ln = int(rng.integers(3, 16))
+            noise[n, r, x0:x0 + ln] = (255, 255, 255, rng.uniform(0.35, 0.8))
+    if N >= 8 and rng.random() < 0.6:                                           # tracking band
+        dur = int(min(N, rng.integers(10, 23)))
+        start = int(rng.integers(0, N - dur + 1))
+        y0, y1, hb = rng.uniform(0.8, 1.1), rng.uniform(-0.15, 0.4), rng.uniform(0.05, 0.09)
+        sign = rng.choice([-1, 1])
+        for q in range(dur):
+            n = start + q
+            cy = y0 + (y1 - y0) * q / max(dur - 1, 1)
+            env = math.sin(math.pi * (q + 0.5) / dur) ** 0.5
+            prof = np.clip(1 - np.abs(y - cy) / (hb / 2), 0, 1) ** 0.7
+            dx[n] += prof * env * (rng.normal(0, 20, L) + sign * 26)
+            nprof = np.clip(1 - np.abs(ny - cy) / (hb / 2), 0, 1)
+            streak = (rng.random((NOISE_H, NOISE_W)) < 0.22 * nprof[:, None]).astype(np.float32)
+            streak = np.maximum(streak, np.roll(streak, 1, axis=1))                # horizontal dashes
+            a = np.clip(streak * rng.uniform(0.35, 0.9, (NOISE_H, 1)) + 0.10 * nprof[:, None], 0, 1) * env
+            noise[n, ..., 3] = np.maximum(noise[n, ..., 3], a)
+            noise[n, ..., :3] = np.where((a > 0)[..., None], 245.0, noise[n, ..., :3])
+    xm = np.clip(np.round(dx * k), -127, 127) + 128
+    xmap = np.repeat(np.repeat(xm[:, None, :, None], 3, axis=1), 2, axis=3)
+    noise[..., 3] *= 255.0
+    return xmap, np.clip(noise, 0, 255).astype(np.uint8)
+
+
+LEAK_COLORS = [(255, 118, 36), (255, 64, 28), (255, 168, 72), (236, 52, 96), (255, 196, 120)]
+
+
+def leak_frames(seed: int, N: int, fps: float) -> np.ndarray:
+    """(N, LEAK_H, LEAK_W, 3) warm light leaks: 2-3 soft, vertically stretched blobs with a hot core
+    that sit on one edge and drift in, breathing; plus an edge wash. Screen-blended (black = none)."""
+    rng = np.random.default_rng(seed)
+    yy, xx = np.mgrid[0:LEAK_H, 0:LEAK_W].astype(np.float32)
+    X, Y = (xx + 0.5) / LEAK_W, (yy + 0.5) / LEAK_W            # units of frame width (Y: 0..1.78)
+    side = rng.choice([-1, 1])
+    blobs = []
+    for b in range(int(rng.integers(2, 4))):
+        s = side if b < 2 or rng.random() < 0.5 else -side
+        cx = 0.5 + s * rng.uniform(0.38, 0.62)
+        cy = rng.uniform(0.15, 1.6) if b else rng.uniform(0.3, 1.2)
+        vx = -s * rng.uniform(0.05, 0.16)                    # drifts inwards (frame widths / s)
+        vy = rng.uniform(-0.15, 0.15)
+        rx = rng.uniform(0.2, 0.36)
+        ry = rx * rng.uniform(1.5, 2.6)
+        col = np.array(LEAK_COLORS[int(rng.integers(0, len(LEAK_COLORS)))] if b else LEAK_COLORS[0],
+                       np.float32) / 255
+        inten = rng.uniform(0.8, 1.1) * (1.0 if b == 0 else 0.7)
+        blobs.append((cx, cy, vx, vy, rx, ry, col, inten, rng.uniform(0.25, 0.7), rng.uniform(0, 6.3)))
+    wash_col = np.array(LEAK_COLORS[1], np.float32) / 255
+    wash = (np.clip(1 - (X if side < 0 else 1 - X) / 0.5, 0, 1) ** 1.6)[..., None] * wash_col
+    hot = np.array([1.0, 0.86, 0.62], np.float32)
+    out = np.zeros((N, LEAK_H, LEAK_W, 3), np.float32)
+    for n in range(N):
+        t = n / fps
+        acc = 0.45 * wash * (0.8 + 0.2 * math.sin(1.7 * t))
+        for i, (cx, cy, vx, vy, rx, ry, col, inten, fq, ph) in enumerate(blobs):
+            px = cx + vx * t                     # keep leaks on the edges, off the subject's face
+            px = 0.5 + math.copysign(max(abs(px - 0.5), 0.3), cx - 0.5)
+            e = np.exp(-(((X - px) / rx) ** 2) - (((Y - cy - vy * t) / ry) ** 2))
+            amp = inten * (0.72 + 0.28 * math.sin(2 * math.pi * fq * t + ph))
+            acc = acc + (amp * e)[..., None] * col
+            if i == 0:                                   # film-burn core
+                acc = acc + (0.4 * amp * e ** 3)[..., None] * hot
+        acc = acc * (1 + 0.06 * rng.standard_normal())
+        out[n] = 255 * (1 - np.exp(-1.5 * acc))
+    return np.clip(out, 0, 255).astype(np.uint8)
+
+
+def xerox_dust(seed: int, W: int, H: int, k: float) -> Image.Image:
+    """static photocopy dirt for one shot: toner specks, white dropouts, a drum streak or two,
+    a dark copier edge and faint paper texture (RGBA, composited over the copy)."""
+    rng = np.random.default_rng(seed)
+    img = Image.new("L", (W, H), 0)
+    d = ImageDraw.Draw(img)
+    for _ in range(int(320 * W * H / (1080 * 1920) + 60)):                   # toner specks
+        x, y = rng.uniform(0, W), rng.uniform(0, H)
+        r = max(0.6, rng.gamma(1.6, 0.9) * k * 1.6)
+        d.ellipse((x - r, y - r * rng.uniform(0.6, 1.0), x + r, y + r), fill=int(rng.uniform(140, 255)))
+    a = np.asarray(img, np.float32) / 255
+    wimg = Image.new("L", (W, H), 0)
+    d = ImageDraw.Draw(wimg)
+    for _ in range(int(140 * W * H / (1080 * 1920) + 20)):                   # toner dropouts
+        x, y = rng.uniform(0, W), rng.uniform(0, H)
+        r = max(0.6, rng.gamma(1.4, 0.8) * k * 1.5)
+        d.ellipse((x - r, y - r, x + r, y + r), fill=int(rng.uniform(120, 230)))
+    white = np.asarray(wimg, np.float32) / 255
+    xs = np.arange(W, dtype=np.float32)
+    for _ in range(int(rng.integers(1, 3))):                                 # drum streaks
+        x0, wd = rng.uniform(0.08, 0.92) * W, max(1.0, rng.uniform(1.5, 4.5) * k)
+        prof = np.exp(-(((xs - x0) / wd) ** 2)) * rng.uniform(0.12, 0.3)
+        a = np.maximum(a, prof[None, :] * (0.7 + 0.3 * rng.random((H, 1)).astype(np.float32)))
+    edge = np.zeros(W, np.float32)
+    ew = 0.035 * W
+    if rng.random() < 0.7:
+        edge = np.maximum(edge, np.clip(1 - xs / ew, 0, 1) ** 1.5 * rng.uniform(0.35, 0.7))
+    if rng.random() < 0.7:
+        edge = np.maximum(edge, np.clip(1 - (W - 1 - xs) / ew, 0, 1) ** 1.5 * rng.uniform(0.35, 0.7))
+    a = np.maximum(a, edge[None, :])
+    small = rng.normal(0, 1, (H // 4 + 1, W // 4 + 1)).astype(np.float32)        # paper texture
+    tex = np.asarray(Image.fromarray(((small * 0.5 + 0.5).clip(0, 1) * 255).astype(np.uint8))
+                     .resize((W, H), Image.BILINEAR), np.float32) / 255
+    a = np.maximum(a, (tex - 0.5).clip(0, None) * 0.12)
+    rgb = np.where(white[..., None] > a[..., None], 238.0, 18.0) * np.ones((1, 1, 3), np.float32)
+    alpha = np.maximum(a, white * 0.85)
+    out = np.concatenate([rgb, alpha[..., None] * 255], axis=2)
+    return Image.fromarray(np.clip(out, 0, 255).astype(np.uint8), "RGBA")
+
+
+def scanlines(W: int, H: int, strength: float = 0.16) -> Image.Image:
+    """faint horizontal tape lines (MAP_LINES per frame height), soft so they don't alias"""
+    ph = ((np.arange(H, dtype=np.float32) + 0.5) * MAP_LINES / H) % 1.0
+    a = strength * (0.5 - 0.5 * np.cos(2 * np.pi * ph))
+    arr = np.zeros((H, W, 4), np.uint8)
+    arr[..., 3] = (a * 255).astype(np.uint8)[:, None]
+    return Image.fromarray(arr, "RGBA")
+
+
+def osd_text(d: ImageDraw.ImageDraw, xy, text, fnt, anchor="la", fill=(255, 255, 255, 255)):
+    d.text(xy, text, font=fnt, fill=fill, anchor=anchor)
+
+
+def osd_glow(layer: Image.Image, k: float) -> Image.Image:
+    """camcorder OSD finish: soft dark halo (legible on white) + slight white bloom + crisp glyphs"""
+    a = layer.getchannel("A")
+    halo = Image.new("RGBA", layer.size, (0, 0, 0, 0))     # dark rim: legible on paper-white too
+    rim = a.filter(ImageFilter.MaxFilter(odd(5 * k, 3, 9))).filter(ImageFilter.GaussianBlur(max(1.0, 2.2 * k)))
+    halo.putalpha(rim.point(lambda v: int(v * 0.62)))
+    bloom = Image.new("RGBA", layer.size, (255, 255, 255, 0))
+    bloom.putalpha(a.filter(ImageFilter.GaussianBlur(max(1.0, 7 * k))).point(lambda v: int(v * 0.35)))
+    out = Image.alpha_composite(halo, bloom)
+    return Image.alpha_composite(out, layer)
+
+
+def rec_hud(S: Settings, edl: EDL, f0: int, N: int, tmp: Path):
+    """camcorder HUD inside the safe zone. -> (top strip PNG pattern, its y, bottom PNG, its y).
+    Top strip (one PNG per frame): blinking red dot + REC at the left, battery + running timecode
+    HH:MM:SS:FF of the edit time at the right. Bottom: meta.rec_date, at the left."""
+    W, k, fps = S.W, S.k, S.fps
+    path = _first_existing(SYSTEM_OSD) or S.fonts.body
+    fnt = font(path, 58 * k)
+    fsm = font(path, 50 * k)
+    left = max(edl.safe.get("left", 60) * k, 48 * k)
+    right = W - S.safe_right - 10 * k
+    sh = int(round(110 * k))
+    y_top = int(round(S.safe_top - 12 * k))
+    cy = sh / 2
+    ifps = max(1, int(round(fps)))
+    blink = max(1, int(round(0.6 * fps)))
+    static = Image.new("RGBA", (W, sh), (0, 0, 0, 0))
+    d = ImageDraw.Draw(static)
+    r = 16 * k
+    rec_x = left + 2 * r + 16 * k
+    osd_text(d, (rec_x, cy), "REC", fnt, anchor="lm")
+    bw_, bh_ = 64 * k, 32 * k                                             # battery
+    bx1 = right
+    bx0 = bx1 - bw_
+    tc_w = fsm.getlength("00:00:00:00")
+    bx0 -= tc_w + 26 * k
+    bx1 = bx0 + bw_
+    lw = max(2, int(round(3 * k)))
+    d.rectangle((bx0, cy - bh_ / 2, bx1, cy + bh_ / 2), outline=(255, 255, 255, 255), width=lw)
+    d.rectangle((bx1, cy - bh_ / 5, bx1 + 5 * k, cy + bh_ / 5), fill=(255, 255, 255, 255))
+    cell = (bw_ - 2 * lw - 4 * 3 * k) / 3
+    for c in range(2):                                                    # 2 of 3 bars left
+        x0 = bx0 + lw + 3 * k + c * (cell + 3 * k)
+        d.rectangle((x0, cy - bh_ / 2 + lw + 3 * k, x0 + cell, cy + bh_ / 2 - lw - 3 * k),
+                    fill=(255, 255, 255, 255))
+    tc_x = right
+    pattern = tmp / "hud_%05d.png"
+    for n in range(N):
+        g = f0 + n
+        lay = static.copy()
+        dd = ImageDraw.Draw(lay)
+        if (g % ifps) < blink:
+            dd.ellipse((left, cy - r, left + 2 * r, cy + r), fill=(235, 22, 22, 255))
+        s_ = g // ifps
+        tc_ = f"{s_ // 3600:02d}:{s_ // 60 % 60:02d}:{s_ % 60:02d}:{g % ifps:02d}"
+        osd_text(dd, (tc_x, cy), tc_, fsm, anchor="rm")
+        osd_glow(lay, k).save(tmp / f"hud_{n:05d}.png", compress_level=1)
+    date = str(edl.meta.get("rec_date") or DEFAULT_REC_DATE).upper()
+    bot = Image.new("RGBA", (W, sh), (0, 0, 0, 0))
+    osd_text(ImageDraw.Draw(bot), (left, cy), date, fsm, anchor="lm")
+    bpath = tmp / "hud_bottom.png"
+    osd_glow(bot, k).save(bpath, compress_level=1)
+    # date centred 26 px above the safe-zone floor: below any "lower" caption (those end 3 % of H higher)
+    y_bot = int(round(S.H - S.safe_bottom - 26 * k - sh / 2))
+    return pattern, y_top, bpath, y_bot
+
+
 @dataclass
 class Job:
     shot: Shot
@@ -2133,141 +2450,205 @@ class Job:
 
 def shot_key(shot: Shot, S: Settings, edl: EDL, placeholder: bool) -> str:
     clip_sig = None
-    if shot.clip is not None and shot.clip_exists and not placeholder:
-        st = shot.clip.stat()
-        clip_sig = [str(shot.clip.resolve()), st.st_mtime_ns, st.st_size]
+    if not placeholder:
+        clip_sig = []
+        for v in shot.views():
+            if v.clip is not None and v.clip_exists:
+                st = v.clip.stat()
+                clip_sig.append([str(v.clip.resolve()), st.st_mtime_ns, st.st_size])
     material = {"engine": ENGINE_VERSION, "src": SOURCE_HASH, "shot": shot.raw, "f0": shot.f0,
                 "N": shot.N, "grade": shot.grade, "placeholder": placeholder, "clip": clip_sig,
-                "texts": [t.__dict__ for t in shot.texts], "settings": S.key()}
+                "texts": [t.__dict__ for t in shot.texts], "settings": S.key(),
+                "rec_date": edl.meta.get("rec_date"), "fps": edl.fps}
     return hashlib.sha256(json.dumps(material, sort_keys=True, default=str).encode()).hexdigest()[:20]
 
 
-def build_shot(job: Job, S: Settings, edl: EDL, tmp: Path):
-    """returns (ffmpeg input args, filtergraph text, output label)"""
-    shot, N, fps = job.shot, job.shot.N, S.fps
-    W, H, k = S.W, S.H, S.k
+class Graph:
+    """filtergraph under construction: ffmpeg inputs + statements + unique labels"""
+
+    def __init__(self, S: Settings, N: int, tmp: Path):
+        self.S, self.N, self.tmp = S, N, tmp
+        self.inputs, self.stm = [], []
+        self.n_in = self.n_lab = 0
+        _fr = Fraction(S.fps).limit_denominator(1001)
+        self.tb = f"{_fr.denominator}/{_fr.numerator}"          # exact 1/fps timebase
+        self.FPS = num(S.fps)
+
+    def input(self, args) -> int:
+        self.inputs.extend(str(a) for a in args)
+        self.n_in += 1
+        return self.n_in - 1
+
+    def lab(self, base="v") -> str:
+        self.n_lab += 1
+        return f"{base}{self.n_lab}"
+
+    def add(self, s: str):
+        self.stm.append(s)
+
+    def chain(self, cur: str, filters, base="v") -> str:
+        filters = [f_ for f_ in filters if f_]
+        if not filters:
+            return cur
+        out = self.lab(base)
+        self.add(f"[{cur}]" + ",".join(filters) + f"[{out}]")
+        return out
+
+    def still(self, path, main=False) -> str:
+        """decode a PNG once and loop it in-graph at the output rate"""
+        i = self.input(["-i", path])
+        return (f"[{i}:v]loop=loop=-1:size=1:start=0,settb={self.tb},setpts=N"
+                + (f",trim=end_frame={self.N}" if main else ""))
+
+    def seq(self, pattern, start_frame: int = 0) -> str:
+        """PNG sequence (frame 0 shows at shot frame `start_frame`)"""
+        i = self.input(["-framerate", self.FPS, "-start_number", "0", "-i", pattern])
+        return f"[{i}:v]settb={self.tb},setpts=N+{start_frame}"
+
+    def raw(self, path, pix_fmt: str, w: int, h: int) -> str:
+        i = self.input(["-f", "rawvideo", "-pix_fmt", pix_fmt, "-s", f"{w}x{h}", "-framerate", self.FPS,
+                        "-i", path])
+        return f"[{i}:v]settb={self.tb},setpts=N"
+
+
+def view_geometry(g: Graph, v: View, N: int, vw: int, vh: int, S: Settings, geom: set) -> str:
+    """decode + time (speed/ramp/delay, freeze/reverse/stutter/step) + fit/crop + zoom/pulse/shake/whip
+    for one view -> label of a vw x vh stream (exactly N frames)"""
+    fps, k = S.fps, S.k
     FPS = num(fps)
-    _fr = Fraction(fps).limit_denominator(1001)
-    tb = f"{_fr.denominator}/{_fr.numerator}"          # exact 1/fps timebase for looped stills
-    inputs, stm = [], []
-    fx = set(shot.fx)
-    n_inputs = [0]
-
-    def add_input(args):
-        inputs.extend(args)
-        n_inputs[0] += 1
-        return n_inputs[0] - 1
-
-    def still(path, main=False):   # decode a PNG once and loop it in-graph at the output rate
-        i = add_input(["-i", str(path)])
-        return (f"[{i}:v]loop=loop=-1:size=1:start=0,settb={tb},setpts=N"
-                + (f",trim=end_frame={N}" if main else ""))
-
-    caps = []                 # captions first: placeholder cards lay out around them
-    for ti, item in enumerate(shot.texts):
-        img, iw, ih, pad = render_caption(item, S)
-        p = tmp / f"text{ti}.png"
-        img.save(p, compress_level=1)
-        x, y = place_box(iw, ih, item.pos, S)
-        caps.append((item, p, x, y, iw, ih, pad))
-
-    chrome = None
-    if job.placeholder:
-        card, chrome, bar_h = placeholder_assets(shot, S, edl, tmp, job.missing,
-                                                 [(c[2], c[3], c[4], c[5]) for c in caps])
-        zf = (lambda p, n: f"(1+0.045*{p})*(1+0.03*exp(-{num(9 / fps)}*{n}))")
-        stm.append(f"{still(card, main=True)},format=gbrp,"
-                   + perspective_filter(S, N, (W, H, W, H), (0, 0, W, H), zf, 0.5, 0.5, "shake" in fx)
-                   + "[geo]")
-        grade = {}
+    v_info = v.clip_info or probe_media(v.clip)["video"]
+    seq, M = time_map(v, N, fps)
+    D = N / fps
+    still_img = is_image(v.clip)
+    rf = v.ramp["from"] if v.ramp else v.speed
+    lag = v.delay * rf
+    start = 0.0 if still_img else v.inp - lag
+    ss = max(0.0, start)
+    pre_s = ss - start                                    # head not in the source: padded by fps
+    src_end = lag + src_time(v, max(M / fps - v.delay, 0.0), D)
+    dur = max(src_end - pre_s, 1.0 / fps) + 0.5
+    if still_img:
+        i = g.input(["-loop", "1", "-framerate", FPS, "-t", f"{dur:.6f}", "-i", v.clip])
     else:
-        v = shot.clip_info or probe_media(shot.clip)["video"]
-        span = source_span(shot, fps)
-        if is_image(shot.clip):
-            i = add_input(["-loop", "1", "-framerate", str(fps), "-t", f"{span + 0.5:.6f}",
-                           "-i", str(shot.clip)])
+        i = g.input(["-ss", f"{ss:.6f}", "-t", f"{dur:.6f}", "-an", "-sn", "-dn", "-i", v.clip])
+    pre = []
+    if v_info["field_order"] in ("tt", "bb", "tb", "bt"):
+        pre.append("bwdif=mode=send_field:parity=auto:deint=all")
+    Wd, Hd = v_info["w"], v_info["h"]
+    if abs(v_info["sar"] - 1.0) > 0.01:
+        pre.append("scale=trunc(iw*sar/2)*2:ih,setsar=1")
+        Wd = int(v_info["w"] * v_info["sar"]) // 2 * 2
+    T = f"((PTS-STARTPTS)*TB+{num(pre_s)})"
+    if v.ramp:
+        rt, d1 = v.ramp["to"], v.ramp["at"] * D
+        s1 = lag + d1 * rf
+        pts = f"setpts='if(lt({T},{num(s1)}),{T}/{num(rf)},{num(v.delay + d1)}+({T}-{num(s1)})/{num(rt)})/TB'"
+    elif abs(v.speed - 1.0) > 1e-9 or pre_s > 0:
+        pts = f"setpts='{T}/{num(v.speed)}/TB'"
+    else:
+        pts = "setpts=PTS-STARTPTS"
+    timing = [pts, f"fps={FPS}:start_time=0", "tpad=stop=-1:stop_mode=clone", f"trim=end_frame={M}"]
+    if seq is not None:
+        timing += ["shuffleframes=" + " ".join(str(x) for x in seq + [-1] * (M - N)),
+                   f"settb={g.tb}", "setpts=N"]
+    A = vw / vh
+    pz = pulse_mul(v.pulse, fps, 0.0, "ld(0)")
+    zmin = min(v.z0, v.z1)
+    animated = abs(v.z1 - v.z0) > 1e-6 or v.pulse is not None
+    shake = "shake_hard" if "shake_hard" in geom else "shake" if "shake" in geom else None
+    whip = [f_ for f_ in ("whip_in", "whip_out") if f_ in geom]
+    if v.fit == "crop":
+        bw = Hd * A if Wd / Hd > A else Wd
+        bh = Hd if Wd / Hd > A else Wd / A
+        xm, ym, wm, hm = int_window(*window(zmin, Wd, Hd, bw, bh, v.focus_x, v.focus_y), Wd, Hd)
+        chain = list(pre)
+        if (xm, ym, wm, hm) != (0, 0, Wd, Hd):
+            chain.append(f"crop={wm}:{hm}:{xm}:{ym}")
+        chain += timing + [f"scale={vw}:{vh}:flags={S.scale_flags}", "setsar=1"]
+        if vw / wm > 1.3 and not S.preview:          # upscaled footage: lanczos + a light unsharp
+            chain.append("unsharp=5:5:0.45:5:5:0")
+        src, crop = (Wd, Hd, bw, bh), (xm, ym, wm, hm)
+        head = f"[{i}:v]"
+    else:   # blurfill
+        if Wd / Hd >= A:
+            fw, fh = vw, max(2, even(vw * Hd / Wd))
         else:
-            i = add_input(["-ss", f"{shot.inp:.6f}", "-t", f"{span + 0.5:.6f}", "-an", "-sn", "-dn",
-                           "-i", str(shot.clip)])
-        pre = []
-        if v["field_order"] in ("tt", "bb", "tb", "bt"):
-            pre.append("bwdif=mode=send_field:parity=auto:deint=all")
-        Wd, Hd = v["w"], v["h"]
-        if abs(v["sar"] - 1.0) > 0.01:
-            pre.append("scale=trunc(iw*sar/2)*2:ih,setsar=1")
-            Wd = int(v["w"] * v["sar"]) // 2 * 2
-        if shot.ramp:
-            rf, rt, ra = shot.ramp["from"], shot.ramp["to"], shot.ramp["at"]
-            d1 = ra * N / fps
-            s1 = d1 * rf
-            T = "(PTS-STARTPTS)*TB"
-            pts = (f"setpts='if(lt({T},{num(s1)}),(PTS-STARTPTS)/{num(rf)},"
-                   f"({num(d1)}+({T}-{num(s1)})/{num(rt)})/TB)'")
-        elif abs(shot.speed - 1.0) > 1e-9:
-            pts = f"setpts=(PTS-STARTPTS)/{num(shot.speed)}"
+            fw, fh = max(2, even(vh * Wd / Hd)), vh
+        bgw, bgh = max(2, even(vw / 4)), max(2, even(vh / 4))
+        if Wd / Hd > bgw / bgh:
+            cw, ch = even(bgh * Wd / Hd), bgh
         else:
-            pts = "setpts=PTS-STARTPTS"
-        timing = [pts, f"fps={FPS}", "tpad=stop=-1:stop_mode=clone", f"trim=end_frame={N}"]
-        A = W / H
-        zmin = min(shot.z0, shot.z1)
-        animated = abs(shot.z1 - shot.z0) > 1e-6
-        shake = "shake" in fx
-        sf = max(1, int(round(0.35 * fps)))
-        if shot.fit == "crop":
-            bw = Hd * A if Wd / Hd > A else Wd
-            bh = Hd if Wd / Hd > A else Wd / A
-            xm, ym, wm, hm = int_window(*window(zmin, Wd, Hd, bw, bh, shot.focus_x, shot.focus_y), Wd, Hd)
-            chain = list(pre)
-            if (xm, ym, wm, hm) != (0, 0, Wd, Hd):
-                chain.append(f"crop={wm}:{hm}:{xm}:{ym}")
-            chain += timing + [f"scale={W}:{H}:flags={S.scale_flags}", "setsar=1"]
-            if W / wm > 1.3 and not S.preview:
-                chain.append("unsharp=5:5:0.45:5:5:0")
-            src, crop = (Wd, Hd, bw, bh), (xm, ym, wm, hm)
-            fxy = (shot.focus_x, shot.focus_y)
-        else:   # blurfill
-            if Wd / Hd >= A:
-                fw, fh = W, max(2, even(W * Hd / Wd))
-            else:
-                fw, fh = max(2, even(H * Wd / Hd)), H
-            bgw, bgh = even(W / 4), even(H / 4)
-            if Wd / Hd > bgw / bgh:
-                cw, ch = even(bgh * Wd / Hd), bgh
-            else:
-                cw, ch = bgw, even(bgw * Hd / Wd)
-            cx = int(clamp(shot.focus_x * cw - bgw / 2, 0, cw - bgw))
-            cy = int(clamp(shot.focus_y * ch - bgh / 2, 0, ch - bgh))
-            sig = num(max(2.0, 10 * k))
-            head = f"[{i}:v]" + ",".join(pre + timing) + ",split=2[fg0][bg0]"
-            stm.append(head)
-            stm.append(f"[bg0]scale={cw}:{ch}:flags=bilinear,crop={bgw}:{bgh}:{cx}:{cy},gblur=sigma={sig},"
-                       f"eq=brightness=-0.10:saturation=1.15,scale={W}:{H}:flags=bicubic,setsar=1[bg1]")
-            stm.append(f"[fg0]scale={fw}:{fh}:flags={S.scale_flags},setsar=1[fg1]")
-            stm.append(f"[bg1][fg1]overlay=x={(W - fw) // 2}:y={(H - fh) // 2}[comp]")
-            Wd2, Hd2 = W, H
-            xm, ym, wm, hm = int_window(*window(zmin, Wd2, Hd2, W, H, shot.focus_x, shot.focus_y), Wd2, Hd2)
-            chain = []
-            if zmin > 1.0 + 1e-6:
-                chain += [f"crop={wm}:{hm}:{xm}:{ym}", f"scale={W}:{H}:flags={S.scale_flags}", "setsar=1"]
-            src, crop = (W, H, W, H), (xm, ym, wm, hm)
-            fxy = (shot.focus_x, shot.focus_y)
-        if animated:
-            z0, z1 = shot.z0, shot.z1
-            zf = (lambda p, n, z0=z0, z1=z1, e=shot.ease: f"({num(z0)}+{num(z1 - z0)}*{ease_expr(p, e)})")
-            chain.append(perspective_filter(S, N, src, crop, zf, fxy[0], fxy[1], shake))
-        elif shake:
-            zf = (lambda p, n, z=zmin: num(z))
-            chain.append(perspective_filter(S, N, src, crop, zf, fxy[0], fxy[1], True,
-                                            enable_until=(sf + 0.5) / fps))
-        if shot.fit == "crop":
-            stm.append(f"[{i}:v]" + ",".join(chain) + "[geo]")
-        else:
-            stm.append("[comp]" + (",".join(chain) if chain else "null") + "[geo]")
-        grade = GRADES.get(shot.grade, {})
+            cw, ch = bgw, even(bgw * Hd / Wd)
+        cx = int(clamp(v.focus_x * cw - bgw / 2, 0, cw - bgw))
+        cy = int(clamp(v.focus_y * ch - bgh / 2, 0, ch - bgh))
+        sig = num(max(2.0, 10 * k))
+        fg0, bg0, bg1, fg1, comp = g.lab("fg"), g.lab("bg"), g.lab("bg"), g.lab("fg"), g.lab("comp")
+        g.add(f"[{i}:v]" + ",".join(pre + timing) + f",split=2[{fg0}][{bg0}]")
+        g.add(f"[{bg0}]scale={cw}:{ch}:flags=bilinear,crop={bgw}:{bgh}:{cx}:{cy},gblur=sigma={sig},"
+              f"eq=brightness=-0.10:saturation=1.15,scale={vw}:{vh}:flags=bicubic,setsar=1[{bg1}]")
+        sharpen = ",unsharp=5:5:0.45:5:5:0" if fw / Wd > 1.3 and not S.preview else ""
+        g.add(f"[{fg0}]scale={fw}:{fh}:flags={S.scale_flags},setsar=1{sharpen}[{fg1}]")
+        g.add(f"[{bg1}][{fg1}]overlay=x={(vw - fw) // 2}:y={(vh - fh) // 2}[{comp}]")
+        xm, ym, wm, hm = int_window(*window(zmin, vw, vh, vw, vh, v.focus_x, v.focus_y), vw, vh)
+        chain = []
+        if zmin > 1.0 + 1e-6:
+            chain += [f"crop={wm}:{hm}:{xm}:{ym}", f"scale={vw}:{vh}:flags={S.scale_flags}", "setsar=1"]
+        src, crop = (vw, vh, vw, vh), (xm, ym, wm, hm)
+        head = f"[{comp}]"
+    if animated:
+        z0, z1 = v.z0, v.z1
+        zf = (lambda p, n, z0=z0, z1=z1, e=v.ease: f"({num(z0)}+{num(z1 - z0)}*{ease_expr(p, e)})*{pz}")
+        chain.append(perspective_filter(S, N, src, crop, zf, v.focus_x, v.focus_y, shake, whip=whip,
+                                        size=(vw, vh)))
+    elif shake or whip:
+        zf = (lambda p, n, z=zmin: num(z))
+        chain.append(perspective_filter(S, N, src, crop, zf, v.focus_x, v.focus_y, shake, whip=whip,
+                                        size=(vw, vh), enable=geom_window(shake, whip, N, fps)))
+    out = g.lab("geo")
+    g.add(head + (",".join(chain) if chain else "null") + f"[{out}]")
+    return out
 
-    # --- grade + per-pixel looks (RGB working space)
+
+def geom_window(shake, whip, N: int, fps: float) -> str | None:
+    """timeline enable (in t) covering the frames a camera move touches. Only for moves that start
+    on frame 0: perspective's frame counter (`in`) does not advance while it is disabled, so a
+    whip_out at the end needs the filter on for the whole shot (None)."""
+    if "whip_out" in whip:
+        return None
+    parts = []
+    if shake:
+        parts.append(f"lt(t,{num((int(round(SHAKES[shake][0] * fps)) + 0.5) / fps)})")
+    if "whip_in" in whip:
+        parts.append(f"lt(t,{num((WHIP_FRAMES - 0.5) / fps)})")
+    return "+".join(parts) if parts else None
+
+
+def frames_enable(frames, fps: float) -> str:
+    """enable expression true exactly on the given local frame numbers"""
+    return "+".join(f"between(t,{num((n - 0.5) / fps)},{num((n + 0.5) / fps)})" for n in frames) or "0"
+
+
+def zoom_persp(S: Settings, w: int, h: int, zexpr: str) -> str:
+    """centre zoom by zexpr (expression of n = frame index) via perspective"""
+    P = f"st(0,in-1);st(1,{zexpr});st(2,{num(w / 2)}/ld(1));st(3,{num(h / 2)}/ld(1))"
+    cx, cy = num(w / 2), num(h / 2)
+    xs = [f"{cx}-ld(2)", f"{cx}+ld(2)", f"{cx}-ld(2)", f"{cx}+ld(2)"]
+    ys = [f"{cy}-ld(3)", f"{cy}-ld(3)", f"{cy}+ld(3)", f"{cy}+ld(3)"]
+    return "perspective=" + ":".join(f"x{i}='{P};{xs[i]}':y{i}='{P};{ys[i]}'" for i in range(4)) + \
+        f":interpolation={S.interp}:eval=frame"
+
+
+def apply_looks(g: Graph, cur: str, fx: set, cfg: dict, grade_name: str, w: int, h: int, seed: int,
+                S: Settings, N: int, tmp: Path, tag: str, hud=None, yuv_in=True) -> str:
+    """grade + per-pixel looks (gbrp out). Order: camera blurs, grade, bw, echo, xerox / posterize, glow,
+    light leaks, rgb split, vignette, invert, glitch, VHS picture, REC HUD, VHS tape wear, strobe /
+    invert flash, letterbox."""
+    fps, k = S.fps, S.k
+    grade = GRADES.get(grade_name, {})
     post = []
     if grade.get("eq"):
+        if not yuv_in:
+            post.append("format=yuv444p")
         post.append(f"eq={grade['eq']}")
     post.append("format=gbrp")
     if grade.get("cb"):
@@ -2278,16 +2659,68 @@ def build_shot(job: Job, S: Settings, edl: EDL, tmp: Path):
         post.append("colorchannelmixer=rr=0.299:rg=0.587:rb=0.114:gr=0.299:gg=0.587:gb=0.114:"
                     "br=0.299:bg=0.587:bb=0.114")
         post.append("curves=all='0/0 0.25/0.21 0.75/0.81 1/1'")
-    cur = "geo"
-    stm.append(f"[{cur}]" + ",".join(post) + "[g0]")
-    cur = "g0"
+    cur = g.chain(cur, post, "g")
+
+    # camera blurs on the opening / closing frames
+    if "zoom_blur" in fx and N > 1:                 # radial punch: progressively scaled copies, 4 frames
+        nz = min(4, N)
+        a, b = g.lab("zb"), g.lab("zb")
+        g.add(f"[{cur}]split=2[{a}][{b}]")
+        copies = [0.0, 0.035, 0.07, 0.105, 0.14, 0.18]
+        labs = [g.lab("zc") for _ in copies]
+        g.add(f"[{b}]trim=end_frame={nz},split={len(copies)}" + "".join(f"[{x}]" for x in labs))
+        outs = []
+        for s_, l_ in zip(copies, labs):
+            if s_ == 0:
+                outs.append(l_)
+                continue
+            o = g.lab("zp")
+            g.add(f"[{l_}]" + zoom_persp(S, w, h, f"1+{s_}*pow(max(0,1-ld(0)/{nz}),1.3)") + f"[{o}]")
+            outs.append(o)
+        m = g.lab("zm")
+        g.add("".join(f"[{x}]" for x in outs) + f"mix=inputs={len(outs)}:weights='3 2 2 1.6 1.3 1',"
+              f"gblur=sigma={num(max(0.8, 1.5 * k))}[{m}]")
+        cur2 = g.lab("g")
+        g.add(f"[{a}][{m}]overlay=0:0:format=gbrp:eof_action=pass[{cur2}]")
+        cur = cur2
+    whip_blur = []
+    if "whip_in" in fx:
+        for n in range(min(WHIP_FRAMES, N)):
+            sig = 0.42 * w * ((WHIP_FRAMES - n) / WHIP_FRAMES) ** 2 * 0.11 + 1
+            whip_blur.append(f"gblur=sigma={num(sig)}:sigmaV=0:enable='{frames_enable([n], fps)}'")
+    if "whip_out" in fx:
+        s0 = max(N - WHIP_FRAMES, 0)
+        for n in range(s0, N):
+            sig = 0.42 * w * ((n - s0 + 1) / WHIP_FRAMES) ** 2 * 0.11 + 1
+            whip_blur.append(f"gblur=sigma={num(sig)}:sigmaV=0:enable='{frames_enable([n], fps)}'")
+    cur = g.chain(cur, whip_blur, "g")
+
+    if "echo" in fx:                                 # ghost trails: decaying frame echoes + soft bloom
+        cur = g.chain(cur, ["tmix=frames=7:weights='10 6 4.2 3 2.2 1.6 1.2'"], "g")
+    if "xerox" in fx:
+        cur = xerox_chain(g, cur, w, h, seed, S, tmp, tag)
+    if "posterize" in fx:
+        L = int((cfg.get("posterize") or FX_CFG["posterize"])["levels"])
+        e = f"'min(255,floor(val*{L}/256)*255/{L - 1})'"
+        cur = g.chain(cur, [f"gblur=sigma={num(max(0.8, 2.2 * k))}", "format=yuv444p",
+                            "eq=saturation=1.45:contrast=1.12", "format=gbrp",
+                            f"lutrgb=r={e}:g={e}:b={e}"], "g")
     if "glow" in fx:
         gs = num(max(2.0, 7 * k))
-        stm.append(f"[{cur}]split=2[ga][gb]")
-        stm.append(f"[gb]scale={even(W / 4)}:{even(H / 4)}:flags=bilinear,curves=all='0/0 0.55/0.08 1/1',"
-                   f"gblur=sigma={gs},scale={W}:{H}:flags=bilinear[gc]")
-        stm.append("[ga][gc]blend=all_mode=screen:all_opacity=0.65[g1]")
-        cur = "g1"
+        a, b, c, o = g.lab("ga"), g.lab("gb"), g.lab("gc"), g.lab("g")
+        g.add(f"[{cur}]split=2[{a}][{b}]")
+        g.add(f"[{b}]scale={even(w / 4)}:{even(h / 4)}:flags=bilinear,curves=all='0/0 0.55/0.08 1/1',"
+              f"gblur=sigma={gs},scale={w}:{h}:flags=bilinear[{c}]")
+        g.add(f"[{a}][{c}]blend=all_mode=screen:all_opacity=0.65[{o}]")
+        cur = o
+    if "light_leak" in fx:
+        lp = tmp / f"leak_{tag}.raw"
+        arr = leak_frames(seed_of(seed, "leak"), N, fps)
+        lp.write_bytes(arr.tobytes())
+        lk, o = g.lab("lk"), g.lab("g")
+        g.add(g.raw(lp, "rgb24", LEAK_W, LEAK_H) + f",scale={w}:{h}:flags=bicubic,format=gbrp[{lk}]")
+        g.add(f"[{cur}][{lk}]blend=all_mode=screen:shortest=0:repeatlast=1[{o}]")
+        cur = o
     look = []
     if "rgb_split" in fx:
         s_ = max(1, int(round(9 * k)))
@@ -2295,24 +2728,273 @@ def build_shot(job: Job, S: Settings, edl: EDL, tmp: Path):
         look.append(f"rgbashift=rh=-{s_}:rv=-{v_}:bh={s_}:bv={v_}")
     if "vignette" in fx:
         look.append("vignette=angle=PI/5.2")
-    if look:
-        stm.append(f"[{cur}]" + ",".join(look) + "[g2]")
-        cur = "g2"
+    if "invert" in fx:
+        look.append("negate")
+    cur = g.chain(cur, look, "g")
+    if "glitch" in fx:
+        cur = glitch_chain(g, cur, w, h, seed, cfg.get("glitch") or FX_CFG["glitch"], S, N, tmp, tag)
+    if "vhs" in fx:
+        cur = vhs_color(g, cur, k)
+    if hud is not None:                 # REC HUD: over the tape picture, under the tape transport wear
+        pattern, y_top, bpath, y_bot = hud
+        a, b, o1, o2 = g.lab("hud"), g.lab("hud"), g.lab("g"), g.lab("g")
+        g.add(g.seq(pattern, 0) + f",format=rgba[{a}]")
+        g.add(g.still(bpath) + f",format=rgba[{b}]")
+        g.add(f"[{cur}][{a}]overlay=0:{y_top}:format=gbrp:eof_action=pass[{o1}]")
+        g.add(f"[{o1}][{b}]overlay=0:{y_bot}:format=gbrp[{o2}]")
+        cur = o2
+    if "vhs" in fx:
+        cur = vhs_tape(g, cur, w, h, seed, S, N, tmp, tag)
+    late = []
+    if "strobe" in fx:
+        c = cfg.get("strobe") or FX_CFG["strobe"]
+        ev = int(c["every"])
+        hits = [n for n in range(N) if n % ev == ev - 1]
+        if hits:
+            en = frames_enable(hits, fps) if len(hits) < 40 else f"eq(mod(n,{ev}),{ev - 1})"
+            if c["mode"] == "invert":
+                late.append(f"negate=enable='{en}'")
+            else:
+                vv = 0 if c["mode"] == "black" else 255
+                late.append(f"lutrgb=r={vv}:g={vv}:b={vv}:enable='{en}'")
+    if "invert_flash" in fx:
+        late.append(f"negate=enable='lt(t,{num(1.5 / fps)})'")
+    if "letterbox" in fx:            # matte bars, kept black over strobe/invert: 55 % -> 107 % -> 100 %
+        bh_ = 0.14 * h
+        for n, fr_ in ((0, 0.55), (1, 1.07)):
+            if n < N:
+                hh = int(round(bh_ * fr_))
+                en = frames_enable([n], fps)
+                late += [f"drawbox=x=0:y=0:w={w}:h={hh}:c=black:t=fill:enable='{en}'",
+                         f"drawbox=x=0:y={h - hh}:w={w}:h={hh}:c=black:t=fill:enable='{en}'"]
+        hh = int(round(bh_))
+        late += [f"drawbox=x=0:y=0:w={w}:h={hh}:c=black:t=fill:enable='gte(t,{num(1.5 / fps)})'",
+                 f"drawbox=x=0:y={h - hh}:w={w}:h={hh}:c=black:t=fill:enable='gte(t,{num(1.5 / fps)})'"]
+    return g.chain(cur, late, "g")
+
+
+def xerox_chain(g: Graph, cur: str, w: int, h: int, seed: int, S: Settings, tmp: Path, tag: str) -> str:
+    """photocopy: normalised grey with local contrast (so faces survive), toner-dithered hard threshold,
+    soft ink edges, off-white paper + per-shot dirt. The threshold stage runs at a fixed working size
+    (540 wide), so toner grain has the same scale in preview and full renders."""
+    k = S.k
+    lo, hi = 88, 148
+    ws = min(1.0, 540 / w)
+    xw, xh = max(2, even(w * ws)), max(2, even(h * ws))
+    kw = k * ws                                   # px scale of the working size
+    # mono stage in yuv444p with chroma pinned to 128 (noise has no gray support, and an auto-inserted
+    # gray->gbrp conversion would put the toner noise on one colour plane)
+    a, b, bb, o = g.lab("xa"), g.lab("xb"), g.lab("xb"), g.lab("x")
+    g.add(f"[{cur}]" + (f"scale={xw}:{xh}:flags=area," if ws < 1 else "")
+          + "normalize=blackpt=black:whitept=white:smoothing=6:independence=0:strength=0.85,"
+          f"format=gray,format=yuv444p,lutyuv=y='pow(val/255,0.8)*255':u=128:v=128,split=2[{a}][{b}]")
+    g.add(f"[{b}]gblur=sigma={num(max(8.0, 48 * kw))}:planes=1[{bb}]")
+    chain = ["mix=inputs=2:weights='2.5 -1.5':scale=1",               # unsharp mask = local contrast
+             f"gblur=sigma={num(max(0.6, 1.3 * kw))}:planes=1",
+             "noise=c0s=34:c0f=t+u", f"lutyuv=y='clip((val-{lo})*255/{hi - lo},0,255)':u=128:v=128"]
+    if ws < 1:
+        chain.append(f"scale={w}:{h}:flags=bicubic")
+    chain += [f"gblur=sigma={num(max(0.5, 0.9 * k))}:planes=1", "lutyuv=y='clip((val-40)*255/175,0,255)'",
+              "format=gbrp",
+              "colorlevels=romin=0.075:gomin=0.07:bomin=0.07:romax=0.95:gomax=0.93:bomax=0.865"]
+    g.add(f"[{a}][{bb}]" + ",".join(chain) + f"[{o}]")
+    dp = tmp / f"xerox_{tag}.png"
+    xerox_dust(seed_of(seed, "xerox"), w, h, k).save(dp, compress_level=1)
+    d, o2 = g.lab("xd"), g.lab("x")
+    g.add(g.still(dp) + f",format=rgba[{d}]")
+    g.add(f"[{o}][{d}]overlay=0:0:format=gbrp[{o2}]")
+    return o2
+
+
+def glitch_chain(g: Graph, cur: str, w: int, h: int, seed: int, cfg: dict, S: Settings, N: int,
+                 tmp: Path, tag: str) -> str:
+    sched = glitch_schedule(seed_of(seed, "glitch"), N, cfg)
+    last = max([n for n, (_, gg) in enumerate(sched) if gg > 0] or [-1])
+    if last < 0:
+        return cur
+    nf = last + 1
+    frames, cache = [], {}
+    for n in range(nf):
+        sid, gg = sched[n]
+        key = (sid, round(gg, 4))
+        if key not in cache:
+            cache[key] = glitch_map(seed_of(seed, "gmap", sid), gg, S.k)
+        frames.append(cache[key])
+    mp = tmp / f"glitch_{tag}.raw"
+    mp.write_bytes(gbrp_bytes(np.stack(frames)))
+    xm, ym, o = g.lab("gx"), g.lab("gy"), g.lab("g")
+    g.add(g.raw(mp, "gbrp", GLITCH_COLS, GLITCH_ROWS) + f",scale={w}:{h}:flags=neighbor[{xm}]")
+    g.add(f"color=c=0x808080:s={w}x{h}:r={g.FPS},format=gbrp,trim=end_frame=1[{ym}]")
+    en = "" if cfg.get("whole") else f":enable='lt(t,{num((nf - 0.5) / S.fps)})'"
+    g.add(f"[{cur}][{xm}][{ym}]displace=edge=wrap{en}[{o}]")
+    return o
+
+
+def vhs_color(g: Graph, cur: str, k: float) -> str:
+    """camcorder tape, picture part: chroma offset + horizontal chroma smear, soft luma with a little
+    edge ringing, lifted blacks, warm-magenta cast at 0.85 saturation, luma/chroma noise"""
+    cs = max(1, int(round(8 * k)))
+    return g.chain(cur, [
+        "format=yuv444p", f"chromashift=cbh={cs}:crh=-{max(1, int(round(5 * k)))}:edge=smear",
+        f"gblur=sigma={num(max(2.5, 14 * k))}:sigmaV={num(max(0.3, 0.7 * k))}:planes=6",
+        f"gblur=sigma={num(max(0.7, 2.0 * k))}:sigmaV={num(max(0.3, 0.6 * k))}:planes=1",
+        "unsharp=7:3:0.8:3:3:0",
+        "eq=saturation=0.85:contrast=0.92:brightness=0.02",
+        "noise=c0s=10:c0f=t:c1s=6:c1f=t:c2s=6:c2f=t",
+        "format=gbrp",
+        "colorbalance=rs=0.05:gs=-0.025:bs=0.045:rm=0.07:gm=-0.04:bm=0.025:rh=0.03:gh=0.0:bh=-0.03",
+        "curves=all='0/0.06 0.5/0.52 1/0.93'"], "vh")
+
+
+def vhs_tape(g: Graph, cur: str, w: int, h: int, seed: int, S: Settings, N: int, tmp: Path, tag: str) -> str:
+    """camcorder tape, transport part: line wobble, head-switching skew, dropouts, rolling tracking
+    band (seeded per shot / panel) and scanlines"""
+    xmap, noise = vhs_maps(seed_of(seed, "vhs"), N, S.k)
+    mp, np_ = tmp / f"vhsmap_{tag}.raw", tmp / f"vhsnoise_{tag}.raw"
+    mp.write_bytes(gbrp_bytes(xmap))
+    np_.write_bytes(noise.tobytes())
+    xm, ym, o = g.lab("vx"), g.lab("vy"), g.lab("vh")
+    g.add(g.raw(mp, "gbrp", 2, MAP_LINES) + f",scale={w}:{h}:flags=neighbor[{xm}]")
+    g.add(f"color=c=0x808080:s={w}x{h}:r={g.FPS},format=gbrp,trim=end_frame=1[{ym}]")
+    g.add(f"[{cur}][{xm}][{ym}]displace=edge=smear[{o}]")
+    nz, o2 = g.lab("vn"), g.lab("vh")
+    g.add(g.raw(np_, "rgba", NOISE_W, NOISE_H) + f",scale={w}:{h}:flags=bilinear[{nz}]")
+    g.add(f"[{o}][{nz}]overlay=0:0:format=gbrp:eof_action=pass[{o2}]")
+    sp = tmp / f"scan_{tag}.png"
+    scanlines(w, h, 0.22).save(sp, compress_level=1)
+    sl, o3 = g.lab("vs"), g.lab("vh")
+    g.add(g.still(sp) + f",format=rgba[{sl}]")
+    g.add(f"[{o2}][{sl}]overlay=0:0:format=gbrp[{o3}]")
+    return o3
+
+
+def layout_rects(layout: str, W: int, H: int, gap: int):
+    rows, cols = {"split2": (2, 1), "triptych": (3, 1), "grid4": (2, 2)}[layout]
+    def cuts(total, n):
+        avail = total - gap * (n - 1)
+        edges = [int(round(avail * j / n / 2)) * 2 for j in range(n + 1)]
+        return [(edges[j] + gap * j, edges[j + 1] - edges[j]) for j in range(n)]
+    out = []
+    for (y, hh) in cuts(H, rows):
+        for (x, ww) in cuts(W, cols):
+            out.append((x, y, ww, hh))
+    return out
+
+
+def missing_panel_card(v: View, S: Settings, w: int, h: int, color, tmp: Path, j: int) -> Path:
+    img = Image.new("RGB", (w, h), mix(color, (0, 0, 0), 0.45))
+    d = ImageDraw.Draw(img)
+    f1 = font(S.fonts.body, max(12, 34 * S.k))
+    d.text((w / 2, h / 2), f"P{j + 1} · NO CLIP", font=f1, fill=(255, 255, 255), anchor="mm")
+    if v.clip_rel:
+        d.text((w / 2, h / 2 + 44 * S.k), v.clip_rel, font=font(S.fonts.regular, max(10, 24 * S.k)),
+               fill=(255, 255, 255), anchor="mm")
+    p = tmp / f"panel{j}.png"
+    img.save(p, compress_level=1)
+    return p
+
+
+def build_shot(job: Job, S: Settings, edl: EDL, tmp: Path):
+    """returns (ffmpeg input args, filtergraph text, output label)"""
+    shot, N, fps = job.shot, job.shot.N, S.fps
+    W, H, k = S.W, S.H, S.k
+    g = Graph(S, N, tmp)
+    fx = set(shot.fx)
+
+    caps = []                 # captions first: placeholder cards lay out around them
+    for ti, item in enumerate(shot.texts):
+        if item.style in ANIMATED_STYLES:
+            fn = typewriter_frames if item.style == "typewriter" else glitchtext_frames
+            frames, iw, ih, pad = fn(item, S, fps)
+            done = {}
+            for q, j in enumerate(range(item.a, item.b)):
+                p = tmp / f"text{ti}_{q:05d}.png"
+                img = frames[j]
+                if id(img) in done:
+                    try:
+                        os.link(done[id(img)], p)
+                    except OSError:
+                        shutil.copyfile(done[id(img)], p)
+                else:
+                    img.save(p, compress_level=1)
+                    done[id(img)] = p
+            p = tmp / f"text{ti}_%05d.png"
+        else:
+            img, iw, ih, pad = render_caption(item, S)
+            p = tmp / f"text{ti}.png"
+            img.save(p, compress_level=1)
+        x, y = place_box(iw, ih, item.pos, S)
+        caps.append((item, p, x, y, iw, ih, pad))
+
+    chrome = None
+    shot_seed = seed_of(shot.id)
+    geom = fx & (GEOM_FX | {"whip_in", "whip_out"})
+    hud = rec_hud(S, edl, shot.f0, N, tmp) if "rec" in fx else None
+    if job.placeholder:
+        card, chrome, bar_h = placeholder_assets(shot, S, edl, tmp, job.missing,
+                                                 [(c[2], c[3], c[4], c[5]) for c in caps])
+        pz = pulse_mul(shot.pulse, fps, shot.f0 / fps, "ld(0)")
+        zf = (lambda p, n: f"(1+0.045*{p})*(1+0.03*exp(-{num(9 / fps)}*{n}))*{pz}")
+        shake = "shake_hard" if "shake_hard" in fx else "shake" if "shake" in fx else None
+        whip = [f_ for f_ in ("whip_in", "whip_out") if f_ in fx]
+        cur = g.lab("geo")
+        g.add(f"{g.still(card, main=True)},format=gbrp,"
+              + perspective_filter(S, N, (W, H, W, H), (0, 0, W, H), zf, 0.5, 0.5, shake, whip=whip)
+              + f"[{cur}]")
+        cur = apply_looks(g, cur, fx - set(TIME_FX), shot.cfg, "none", W, H, shot_seed, S, N, tmp, "s",
+                          hud=hud, yuv_in=False)
+    elif shot.layout:
+        gap = int(round(shot.layout_gap * k / 2)) * 2 if shot.layout_gap > 0 else 0
+        bgc = "0x%02x%02x%02x" % tuple(shot.layout_bg)
+        cur = g.lab("bgl")
+        g.add(f"color=c={bgc}:s={W}x{H}:r={g.FPS},format=gbrp,trim=end_frame={N}[{cur}]")
+        ph_col = hex_rgb((shot.placeholder or {}).get("color"), None) or (51, 65, 85)
+        for j, (v, (x, y, pw, ph)) in enumerate(zip(shot.panels, layout_rects(shot.layout, W, H, gap))):
+            if v.usable:
+                pg = view_geometry(g, v, N, pw, ph, S, set(v.fx) & (GEOM_FX | {"whip_in", "whip_out"}))
+                pl = apply_looks(g, pg, set(v.fx) - set(TIME_FX), v.cfg, v.grade, pw, ph,
+                                 v.seed, S, N, tmp, f"p{j}")
+            else:
+                pl = g.lab("pc")
+                g.add(g.still(missing_panel_card(v, S, pw, ph, ph_col, tmp, j), main=True)
+                      + f",format=gbrp[{pl}]")
+            o = g.lab("lay")
+            g.add(f"[{cur}][{pl}]overlay={x}:{y}:format=gbrp[{o}]")
+            cur = o
+        if geom:                                       # shot-level camera moves shake the whole layout
+            shake = "shake_hard" if "shake_hard" in fx else "shake" if "shake" in fx else None
+            whip = [f_ for f_ in ("whip_in", "whip_out") if f_ in fx]
+            cur = g.chain(cur, [perspective_filter(S, N, (W, H, W, H), (0, 0, W, H), lambda p, n: "1",
+                                                   0.5, 0.5, shake, whip=whip,
+                                                   enable=geom_window(shake, whip, N, fps))], "geo")
+        cur = apply_looks(g, cur, fx - set(TIME_FX), shot.cfg, shot.grade, W, H, shot_seed, S, N, tmp, "s",
+                          hud=hud, yuv_in=False)
+    else:
+        v = shot_view(shot)
+        cur = view_geometry(g, v, N, W, H, S, geom)
+        cur = apply_looks(g, cur, fx - set(TIME_FX), shot.cfg, shot.grade, W, H, shot_seed, S, N, tmp, "s",
+                          hud=hud)
 
     # --- captions / overlays
     for ti, (item, p, x, y, iw, ih, pad) in enumerate(caps):
         x, y = x - pad, y - pad
-        lbl = f"t{ti}"
+        lbl = g.lab("t")
         f4 = 4.0 / fps
         fades = ["format=rgba"]
-        if item.fade_in:
+        animated = item.style in ANIMATED_STYLES
+        if item.fade_in and not animated:
             fades.append(f"fade=t=in:st={num((item.a - 1) / fps)}:d={num(f4)}:alpha=1")
         if item.fade_out:
             fades.append(f"fade=t=out:st={num((item.b - 4) / fps)}:d={num(f4)}:alpha=1")
-        stm.append(f"{still(p)}," + ",".join(fades) + f"[{lbl}]")
-        en = f"gte(t,{num((item.a - 0.5) / fps)})*lt(t,{num((item.b - 0.5) / fps)})"
-        stm.append(f"[{cur}][{lbl}]overlay=x={x}:y={y}:format=gbrp:enable='{en}'[o{ti}]")
-        cur = f"o{ti}"
+        o = g.lab("o")
+        if animated:
+            g.add(g.seq(p, item.a) + "," + ",".join(fades) + f"[{lbl}]")
+            g.add(f"[{cur}][{lbl}]overlay=x={x}:y={y}:format=gbrp:eof_action=pass[{o}]")
+        else:
+            g.add(f"{g.still(p)}," + ",".join(fades) + f"[{lbl}]")
+            en = f"gte(t,{num((item.a - 0.5) / fps)})*lt(t,{num((item.b - 0.5) / fps)})"
+            g.add(f"[{cur}][{lbl}]overlay=x={x}:y={y}:format=gbrp:enable='{en}'[{o}]")
+        cur = o
 
     # --- to output colourspace, grain, fades / flashes (frame exact)
     tail = ["scale=out_color_matrix=bt709:out_range=tv", "format=yuv420p"]
@@ -2324,24 +3006,28 @@ def build_shot(job: Job, S: Settings, edl: EDL, tmp: Path):
     if "fade_out" in fx:
         n_ = min(nf, max(N - 1, 1))
         tail.append(f"fade=t=out:s={max(N - 1 - n_, 0)}:n={n_}")
+    if "flash_black" in fx:
+        tail.append(f"fade=t=in:s=0:n={min(3, N)}")
     if "flash_in" in fx:
         tail.append(f"fade=t=in:s=0:n={min(3, N)}:color=white")
+    if "flash_red" in fx:
+        tail.append(f"fade=t=in:s=0:n={min(4, N)}:color=0x%02x%02x%02x" % INK_RED)
     if "flash_out" in fx:
         n_ = min(3, max(N - 1, 1))
         tail.append(f"fade=t=out:s={max(N - 1 - n_, 0)}:n={n_}:color=white")
     if "dip_white" in fx:
         n_ = min(max(1, int(round(0.25 * fps))), max(N - 1, 1))
         tail.append(f"fade=t=out:s={max(N - 1 - n_, 0)}:n={n_}:color=white")
-    stm.append(f"[{cur}]" + ",".join(tail) + "[y0]")
-    cur = "y0"
+    cur = g.chain(cur, tail, "y")
     if chrome is not None:
-        stm.append(f"{still(chrome)},format=rgba[chr]")
-        stm.append(f"[{cur}][chr]overlay=0:0[y1]")
-        stm.append(f"color=c=white:s={W}x{bar_h}:r={FPS}[pb]")
-        stm.append(f"[y1][pb]overlay=x='-w+w*min(1,(t*{FPS}+1)/{N})':y=0:eval=frame[y2]")
-        cur = "y2"
-    stm.append(f"[{cur}]setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709:range=tv[vout]")
-    return inputs, ";\n".join(stm) + "\n", "vout"
+        c1, o1, pb, o2 = g.lab("chr"), g.lab("y"), g.lab("pb"), g.lab("y")
+        g.add(f"{g.still(chrome)},format=rgba[{c1}]")
+        g.add(f"[{cur}][{c1}]overlay=0:0[{o1}]")
+        g.add(f"color=c=white:s={W}x{bar_h}:r={g.FPS}[{pb}]")
+        g.add(f"[{o1}][{pb}]overlay=x='-w+w*min(1,(t*{g.FPS}+1)/{N})':y=0:eval=frame[{o2}]")
+        cur = o2
+    g.add(f"[{cur}]setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709:range=tv[vout]")
+    return g.inputs, ";\n".join(g.stm) + "\n", "vout"
 
 
 def venc_args(S: Settings):
@@ -2565,7 +3251,12 @@ def print_check(edl: EDL, issues: list):
     print(hdr)
     print("  " + "-" * (len(hdr) + 6))
     for s in edl.shots:
-        if s.clip_rel is None:
+        if s.layout:
+            miss = [v for v in s.panels if not v.usable]
+            status = f"{s.layout}: {len(s.panels) - len(miss)}/{len(s.panels)} panel clips ok" + \
+                (" (rest → placeholder panels)" if miss and len(miss) < len(s.panels) else
+                 " → placeholder" if miss else "")
+        elif s.clip_rel is None:
             status = "placeholder (no clip set)"
         elif not s.clip_exists:
             status = "MISSING → placeholder"
@@ -2580,8 +3271,14 @@ def print_check(edl: EDL, issues: list):
         if len(clip) > 33:
             clip = "…" + clip[-32:]
         print(f"  {s.id:<7}{s.start:>8.3f}{s.end:>8.3f}{s.end - s.start:>7.3f}{s.N:>5}  {clip:<34} {status}")
-    missing = [s for s in edl.shots if s.clip_rel is None or not s.clip_exists]
+    missing = [s for s in edl.shots if (s.all_missing() if s.layout else s.clip_rel is None or not s.clip_exists)]
+    panel_missing = [v for s in edl.shots if s.layout and not s.all_missing() for v in s.panels if not v.usable]
     print()
+    if panel_missing:
+        print(f"MISSING PANEL CLIPS ({len(panel_missing)}) — these panels render as flat cards:")
+        for v in panel_missing:
+            print(f"  {v.where:<10}{v.clip_rel or '-'}")
+        print()
     if missing:
         print(f"MISSING CLIPS ({len(missing)}) — these render as placeholder cards:")
         w_clip = max(4, min(max(len(s.clip_rel or "-") for s in missing), 34))
@@ -2696,7 +3393,7 @@ def main(argv=None) -> int:
 
     jobs = []
     for s in shots:
-        missing = s.clip is None or not s.clip_exists
+        missing = s.all_missing() if s.layout else (s.clip is None or not s.clip_exists)
         ph = args.placeholders_only or missing
         key = shot_key(s, S, edl, ph)
         jobs.append(Job(shot=s, key=key, seg=cache / f"{s.id}_{key}.mp4", placeholder=ph, missing=missing))
@@ -2724,7 +3421,9 @@ def main(argv=None) -> int:
         dt = render_segment(j, S, edl, cache)
         with lock:
             done += 1
-            what = "placeholder card" if j.placeholder else j.shot.clip.name
+            what = "placeholder card" if j.placeholder else \
+                (f"{j.shot.layout} " if j.shot.layout else "") + \
+                " ".join(dict.fromkeys(v.clip.name for v in j.shot.views() if v.usable))
             print(f"  [{done:>3}/{len(todo)}] {j.shot.id:<7} {j.shot.N:>4}f  {dt:6.1f}s  {what}", flush=True)
         return dt
 
@@ -2732,6 +3431,8 @@ def main(argv=None) -> int:
     with cf.ThreadPoolExecutor(max(1, args.jobs)) as ex:
         futs = {ex.submit(work, j): j for j in sorted(todo, key=lambda j: -j.shot.N)}
         for f_ in cf.as_completed(futs):
+            if f_.cancelled():
+                continue
             try:
                 f_.result()
             except (RenderError, EDLError, OSError) as e:
