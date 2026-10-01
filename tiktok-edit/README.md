@@ -37,6 +37,16 @@ policy blocks YouTube, TikTok and other video sites).
 1. **Collect the clips** listed in [`CLIPS.md`](CLIPS.md) into `clips/`, named
    by id (`c02.mp4`, `n27.mp4`, `n01.jpg`, …). Trim each to ~8 s with the key
    action exactly **3.0 s** in (or set `hit` in `research/moments.json`).
+   `tools/fetch_clips.py` does this from the YouTube links in
+   `research/youtube_links.json` (needs ffmpeg, `pip install "yt-dlp[default]"`,
+   and deno or Node.js):
+   ```bash
+   python tools/fetch_clips.py            # whole videos → sources/<id>.mp4
+   # find each key action, put its second in "at" in research/youtube_links.json, then:
+   python tools/fetch_clips.py            # 8 s around it → clips/<id>.mp4
+   ```
+   It logs the title and channel of everything it downloads in
+   `research/sources_used.json`. `n01` is a photo: save it as `clips/n01.jpg` by hand.
 2. **Render** (Python 3, ffmpeg, `pip install numpy pillow soundfile`):
    ```bash
    cp /path/to/Mbastein_-_I_feel_it_coming.mp3 song/song.mp3
@@ -85,5 +95,6 @@ splices may clip).
 | `tools/cuts.py` | the cut sheets (edit this) |
 | `tools/build_edl.py` | turns cut sheets into EDLs + CLIPS.md + SHOTLIST.md |
 | `tools/make_audio.py` | builds each cut's soundtrack from bar-aligned song pieces |
+| `tools/fetch_clips.py` | downloads the footage in `research/youtube_links.json` |
 | `render.py` | EDL → 1080x1920 MP4 (see `EDL_SCHEMA.md`) |
-| `song/`, `clips/`, `out/` | local media, never committed |
+| `song/`, `clips/`, `sources/`, `out/` | local media, never committed |

@@ -3,6 +3,7 @@ song/*
 !song/.gitkeep
 clips/*
 !clips/.gitkeep
+sources/
 out/
 *.mp3
 *.wav

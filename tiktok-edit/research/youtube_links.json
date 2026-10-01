@@ -1,0 +1,285 @@
+{
+ "note": "One source per clip, in CLIPS.md order. Read by tools/fetch_clips.py. 'at' = second in the source video where the key action happens: set it and the tool downloads only the 8 s around it into clips/<id>.mp4 (key action at 3.0 s); leave it null and the tool downloads the whole video into sources/<id>.mp4 so you can find it. None of these links were opened when they were chosen; replace any that are dead or wrong.",
+ "clips": [
+  {
+   "id": "b02",
+   "url": "https://www.youtube.com/watch?v=XtQLolBk9qQ",
+   "at": null,
+   "from": "web search 2026-10-01 (title only)",
+   "note": "full 2025 ceremony"
+  },
+  {
+   "id": "n08",
+   "url": "https://www.youtube.com/watch?v=kt_FstDbOQs",
+   "at": null,
+   "from": "web search 2026-10-01 (title only)",
+   "note": "the hug; #b02's ceremony also has the applause"
+  },
+  {
+   "id": "n07",
+   "url": "https://www.youtube.com/watch?v=CgkyYpOCEZM",
+   "at": null,
+   "from": "research lead"
+  },
+  {
+   "id": "b01",
+   "url": "https://www.youtube.com/watch?v=8HoovzG9LNE",
+   "at": null,
+   "from": "web search 2026-10-01 (title only)",
+   "note": "2026 scenepack"
+  },
+  {
+   "id": "c18",
+   "url": "https://www.youtube.com/watch?v=ASvwItcpKDo",
+   "at": null,
+   "from": "web search 2026-10-01 (title only)"
+  },
+  {
+   "id": "c13",
+   "url": "https://www.youtube.com/watch?v=oo-4FLD-c40",
+   "at": null,
+   "from": "web search 2026-10-01 (title only)"
+  },
+  {
+   "id": "c07",
+   "url": "https://www.youtube.com/watch?v=V4pYqrhP7mI",
+   "at": null,
+   "from": "research lead"
+  },
+  {
+   "id": "c10",
+   "url": "https://www.youtube.com/watch?v=uiJEWVJXcZs",
+   "at": null,
+   "from": "web search 2026-10-01 (title only)"
+  },
+  {
+   "id": "c15",
+   "url": "https://www.youtube.com/watch?v=74ebvxLbAd8",
+   "at": null,
+   "from": "web search 2026-10-01 (title only)"
+  },
+  {
+   "id": "c16",
+   "url": "https://www.youtube.com/watch?v=2noopVNNxdo",
+   "at": null,
+   "from": "web search 2026-10-01 (title only)"
+  },
+  {
+   "id": "c20",
+   "url": "https://www.youtube.com/watch?v=LaG-UobG5X4",
+   "at": null,
+   "from": "research lead"
+  },
+  {
+   "id": "c12",
+   "url": "https://www.youtube.com/watch?v=MromzlJAqbM",
+   "at": null,
+   "from": "web search 2026-10-01 (title only)"
+  },
+  {
+   "id": "c17",
+   "url": "https://www.youtube.com/watch?v=8lkrBWPX3aw",
+   "at": null,
+   "from": "research lead"
+  },
+  {
+   "id": "c08",
+   "url": "https://www.youtube.com/watch?v=XHqCSlrrumw",
+   "at": null,
+   "from": "research lead"
+  },
+  {
+   "id": "n19",
+   "url": "https://www.youtube.com/watch?v=9UfXV-D1gNw",
+   "at": null,
+   "from": "web search 2026-10-01 (title only)"
+  },
+  {
+   "id": "n22",
+   "url": "https://www.youtube.com/watch?v=toYJUuhodZs",
+   "at": null,
+   "from": "web search 2026-10-01 (title only)"
+  },
+  {
+   "id": "n26",
+   "url": "https://www.youtube.com/watch?v=A05Nk6hYVpk",
+   "at": null,
+   "from": "web search 2026-10-01 (title only)"
+  },
+  {
+   "id": "n24w",
+   "url": "https://www.youtube.com/watch?v=RNLHetAesTs",
+   "at": null,
+   "from": "research lead"
+  },
+  {
+   "id": "c09",
+   "url": "https://www.youtube.com/watch?v=LFueFZILOFg",
+   "at": null,
+   "from": "web search 2026-10-01 (title only)"
+  },
+  {
+   "id": "k01",
+   "url": "https://www.youtube.com/watch?v=Q3kq5K_Yg-8",
+   "at": null,
+   "from": "web search 2026-10-01 (title only)",
+   "note": "skills compilation"
+  },
+  {
+   "id": "k02",
+   "url": "https://www.youtube.com/watch?v=YDkYyEEf3KU",
+   "at": null,
+   "from": "web search 2026-10-01 (title only)"
+  },
+  {
+   "id": "k03",
+   "url": "https://www.youtube.com/watch?v=TbCJybCZbR8",
+   "at": null,
+   "from": "web search 2026-10-01 (title only)"
+  },
+  {
+   "id": "k04",
+   "url": "https://www.youtube.com/watch?v=TKcGMto4V3g",
+   "at": null,
+   "from": "web search 2026-10-01 (title only)",
+   "note": "skills compilation"
+  },
+  {
+   "id": "c02",
+   "url": "https://www.youtube.com/watch?v=W-vbLsedPcU",
+   "at": null,
+   "from": "research lead"
+  },
+  {
+   "id": "k05",
+   "url": "https://www.youtube.com/shorts/4fjfjR6Cxu0",
+   "at": null,
+   "from": "web search 2026-10-01 (title only)"
+  },
+  {
+   "id": "k06",
+   "url": "https://www.youtube.com/watch?v=9cimpodPOU8",
+   "at": null,
+   "from": "web search 2026-10-01 (title only)",
+   "note": "compilation; no no-look-specific result"
+  },
+  {
+   "id": "k07",
+   "url": "https://www.youtube.com/watch?v=ObqW_bgnDCA",
+   "at": null,
+   "from": "web search 2026-10-01 (title only)",
+   "note": "compilation"
+  },
+  {
+   "id": "c14",
+   "url": "https://www.youtube.com/watch?v=EiRvvnlF2YI",
+   "at": null,
+   "from": "web search 2026-10-01 (title only)"
+  },
+  {
+   "id": "c01",
+   "url": "https://www.youtube.com/watch?v=7gnJg4yQvnI",
+   "at": null,
+   "from": "research lead"
+  },
+  {
+   "id": "c03",
+   "url": "https://www.youtube.com/watch?v=O3AM50N-0Ik",
+   "at": null,
+   "from": "research lead"
+  },
+  {
+   "id": "c06",
+   "url": "https://www.youtube.com/watch?v=GkHpo31Q1YI",
+   "at": null,
+   "from": "research lead"
+  },
+  {
+   "id": "c04",
+   "url": "https://www.youtube.com/watch?v=PKVrhezZMf4",
+   "at": null,
+   "from": "research lead"
+  },
+  {
+   "id": "c04d",
+   "url": "https://www.youtube.com/watch?v=PKVrhezZMf4",
+   "at": null,
+   "from": "research lead",
+   "note": "same video as c04, later moment"
+  },
+  {
+   "id": "c05",
+   "url": "https://www.youtube.com/watch?v=VXz6ITWrGjs",
+   "at": null,
+   "from": "web search 2026-10-01 (title only)"
+  },
+  {
+   "id": "n01",
+   "url": null,
+   "at": null,
+   "from": "",
+   "note": "still photo: save clips/n01.jpg by hand"
+  },
+  {
+   "id": "n27",
+   "url": "https://www.youtube.com/shorts/XPPUk9Lzqy4",
+   "at": null,
+   "from": "web search 2026-10-01 (title only)"
+  },
+  {
+   "id": "n17",
+   "url": "https://www.youtube.com/watch?v=ZPGBZ5m3Qsk",
+   "at": null,
+   "from": "web search 2026-10-01 (title only)"
+  },
+  {
+   "id": "n12",
+   "url": "https://www.youtube.com/watch?v=xMv8OELXP_E",
+   "at": null,
+   "from": "web search 2026-10-01 (title only)",
+   "note": "weakest pick: highlights may not show the gesture"
+  },
+  {
+   "id": "b03",
+   "url": "https://www.youtube.com/watch?v=iELbThTPSn8",
+   "at": null,
+   "from": "web search 2026-10-01 (title only)"
+  },
+  {
+   "id": "n30",
+   "url": "https://www.youtube.com/watch?v=Tr5ZftI45G0",
+   "at": null,
+   "from": "research lead"
+  },
+  {
+   "id": "n25",
+   "url": "https://www.youtube.com/watch?v=DFX5sIPTM_E",
+   "at": null,
+   "from": "web search 2026-10-01 (title only)"
+  },
+  {
+   "id": "n18",
+   "url": "https://www.youtube.com/watch?v=WceMtkdOBEE",
+   "at": null,
+   "from": "research lead"
+  },
+  {
+   "id": "n05",
+   "url": "https://www.youtube.com/watch?v=_n6x1eiea_M",
+   "at": null,
+   "from": "web search 2026-10-01 (title only)"
+  },
+  {
+   "id": "n24",
+   "url": "https://www.youtube.com/watch?v=RNLHetAesTs",
+   "at": null,
+   "from": "research lead"
+  },
+  {
+   "id": "n03",
+   "url": "https://www.youtube.com/watch?v=e9BkCl4XBdk",
+   "at": null,
+   "from": "web search 2026-10-01 (title only)"
+  }
+ ]
+}
