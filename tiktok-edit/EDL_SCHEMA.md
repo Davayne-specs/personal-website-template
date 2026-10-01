@@ -37,7 +37,7 @@ the edit), which maps to the song at `meta.song_start + t`.
       "grade": "teal_orange",              // overrides meta.default_grade
       "text": {
         "content": "I FEEL IT COMING",
-        "style": "lyric",                  // lyric | stat | title | kicker | quote
+        "style": "lyric",                  // lyric | stat | title | kicker | quote | whisper
         "pos": "center",                   // upper | center | lower (all respect safe_zone)
         "in": 0.0,                         // seconds into the shot the text appears
         "out": null                        // seconds into the shot it disappears (null = shot end)
@@ -71,6 +71,17 @@ the edit), which maps to the song at `meta.song_start + t`.
 | `fade_in`   | fade from black over ~0.4s                                    |
 | `fade_out`  | fade to black over ~0.4s                                      |
 | `dip_white` | fade to white over the last ~0.25s (into a drop)              |
+
+## text styles
+
+| style     | look                                                              |
+|-----------|-------------------------------------------------------------------|
+| `lyric`   | big bold ALL CAPS, for hype lines                                 |
+| `whisper` | as written, light weight, letter-spaced — soft lyrics in slow parts |
+| `stat`    | big number line + small label line (split with `\n`), gold accent |
+| `title`   | very large, tight                                                 |
+| `kicker`  | small caps label in a pill                                        |
+| `quote`   | italic, in quotation marks                                        |
 
 ## grades
 

@@ -11,3 +11,5 @@ out/
 *.webm
 __pycache__/
 .cache/
+# engine test fixtures point at local scratch clips
+edl/_*.json

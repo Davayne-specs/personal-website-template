@@ -42,6 +42,7 @@ import sys
 import threading
 import time
 from dataclasses import dataclass, field
+from fractions import Fraction
 from pathlib import Path
 
 try:
@@ -58,7 +59,7 @@ REF_W, REF_H = 1080, 1920          # all pixel constants below are defined at th
 FX_NAMES = ["flash_in", "flash_out", "shake", "bw", "rgb_split", "glow", "vignette",
             "grain", "fade_in", "fade_out", "dip_white"]
 GRADE_NAMES = ["teal_orange", "warm", "cold", "bw", "blaugrana", "gold", "none"]
-STYLES = ["lyric", "stat", "title", "kicker", "quote"]
+STYLES = ["lyric", "stat", "title", "kicker", "quote", "whisper"]
 POSITIONS = ["upper", "center", "lower"]
 FITS = ["crop", "blurfill"]
 EASES = ["in_out", "linear", "in", "out"]
@@ -69,7 +70,7 @@ NOTE_KEYS = {"note", "notes", "comment", "comments", "lyric", "lyrics", "beat", 
              "why", "desc", "description", "source", "url"}
 META_KEYS = {"title", "song", "song_start", "song_end", "fade_out", "fps", "width", "height",
              "default_grade", "safe_zone", "font", "font_body", "accent", "bpm", "notes", "note",
-             "artist", "version", "author"}
+             "artist", "version", "author", "audio_plan"}
 TEXT_KEYS = {"content", "style", "pos", "in", "out", "accent"}
 OVERLAY_KEYS = {"start", "end", "content", "style", "pos", "accent"}
 
@@ -256,6 +257,14 @@ def load_jsonc(path: Path):
 
 _PROBE: dict = {}
 _PROBE_LOCK = threading.Lock()
+
+
+IMAGE_EXTS = {".jpg", ".jpeg", ".png", ".webp", ".bmp"}
+
+
+def is_image(path) -> bool:
+    """Still photos are valid clips: they are looped for the whole shot."""
+    return Path(path).suffix.lower() in IMAGE_EXTS
 
 
 def probe_media(path: Path) -> dict:
@@ -642,7 +651,7 @@ def load_edl(edl_path: Path, issues: list) -> EDL:
     return edl
 
 
-def validate_text(where, t: dict, dur: float, issues: list, kind="text"):
+def validate_text(where, t: dict, dur: float, issues: list, kind="text", fps: float = 30.0):
     ok = True
     content = t.get("content")
     if not isinstance(content, str) or not content.strip():
@@ -674,7 +683,7 @@ def validate_text(where, t: dict, dur: float, issues: list, kind="text"):
             elif is_num(a) and b <= a:
                 issues.append(Issue("ERROR", where, f"text.out ({b}) must be after text.in ({a})"))
                 ok = False
-            elif b > dur + 0.5 / 30:
+            elif b > dur + 0.5 / fps:
                 issues.append(Issue("WARN", where, f"text.out ({b}) is past the shot end ({dur:.3f}s); clamped"))
     return ok
 
@@ -735,7 +744,7 @@ def validate(edl: EDL, issues: list, placeholders_only: bool = False, probe_clip
         if s.text_raw:
             good = []
             for t_ in s.text_raw:
-                if validate_text(s.id, t_, max(dur, 1e-6), issues):
+                if validate_text(s.id, t_, max(dur, 1e-6), issues, fps=fps):
                     good.append(t_)
             s.text_raw = good
         if s.clip_rel is None:
@@ -753,7 +762,7 @@ def validate(edl: EDL, issues: list, placeholders_only: bool = False, probe_clip
             E(s.id, f"clip has no video stream: {s.clip_rel}", "clip_bad")
             continue
         s.clip_info = info["video"]
-        cd = info["video"]["duration"] or info["duration"]
+        cd = float("inf") if is_image(s.clip) else (info["video"]["duration"] or info["duration"])
         span = source_span(s, fps)
         tol = 1.0 / max(info["video"]["fps"] or fps, 1.0)
         if s.inp >= cd:
@@ -769,23 +778,31 @@ def validate(edl: EDL, issues: list, placeholders_only: bool = False, probe_clip
     # overlays inside the edit
     for j, o in enumerate(edl.overlays):
         where = f"overlay[{j}]"
-        validate_text(where, o, L, issues, kind="overlay")
+        validate_text(where, o, L, issues, kind="overlay", fps=fps)
         if o["start"] < 0 or fr(o["end"], fps) > LF:
             W(where, f"overlay {o['start']}-{o['end']}s extends outside the edit (0-{L:.3f}s); clipped")
         if fr(o["end"], fps) <= fr(o["start"], fps):
             W(where, "overlay is shorter than one frame (skipped)")
 
-    # same position, same time -> collision warning
+    # same position at the same moment -> collision warning (intervals in global frames)
+    seen_pairs = set()
     for s in shots:
-        uses = {}
+        items = []
         for t_ in s.text_raw:
-            uses.setdefault(t_.get("pos", "center"), []).append("text")
+            a = s.f0 + fr(float(t_.get("in", 0.0) or 0.0), fps)
+            b = s.f1 if t_.get("out") is None else min(s.f1, s.f0 + fr(float(t_["out"]), fps))
+            items.append((f"{s.id} text", t_.get("pos", "center"), a, b))
         for j, o in enumerate(edl.overlays):
-            if fr(o["start"], fps) < s.f1 and fr(o["end"], fps) > s.f0:
-                uses.setdefault(o.get("pos", "center"), []).append(f"overlay[{j}]")
-        for pos, who in uses.items():
-            if len(who) > 1:
-                W(s.id, f"{' and '.join(who)} share pos '{pos}' at the same time (they will overlap)")
+            a, b = max(fr(o["start"], fps), s.f0), min(fr(o["end"], fps), s.f1)
+            if a < b:
+                items.append((f"overlay[{j}]", o.get("pos", "upper"), a, b))
+        for x in range(len(items)):
+            for y in range(x + 1, len(items)):
+                n1, p1, a1, b1 = items[x]
+                n2, p2, a2, b2 = items[y]
+                if p1 == p2 and a1 < b2 and a2 < b1 and (n1, n2) not in seen_pairs:
+                    seen_pairs.add((n1, n2))
+                    W(s.id, f"{n1} and {n2} share pos '{p1}' at the same time (they will overlap)")
 
 
 def attach_texts(edl: EDL):
@@ -1170,6 +1187,11 @@ def render_caption(item: TextItem, S: Settings):
         tcol = (17, 17, 17) if luma(accent) > 0.62 else (255, 255, 255)
         box.alpha_composite(solid(m, tcol), ((pw - m.width) // 2, (ph_ - m.height) // 2))
         img, pad = with_shadow(box, k, soft=(10, 4, 0.35), tight=(0, 0, 0))
+    elif st == "whisper":   # soft sung lyric for slow sections: as written, light, letter-spaced
+        lines = wrap_text(content, 24)
+        m, _ = fit_block(lines, F.regular, 66 * k, maxw, maxh, tracking_em=0.05, lh=1.25)
+        fill = solid(m, (255, 255, 255))
+        img, pad = with_shadow(fill, k, soft=(12, 4, 0.7), tight=(2, 1.5, 0.45))
     else:  # quote
         txt = content
         if txt[:1] not in "\"“'«":
@@ -1196,7 +1218,8 @@ def place_box(w, h, pos, S: Settings):
 
 # --------------------------------------------------------------------------- placeholder card
 
-def placeholder_assets(shot: Shot, S: Settings, edl: EDL, outdir: Path, missing: bool):
+def placeholder_assets(shot: Shot, S: Settings, edl: EDL, outdir: Path, missing: bool,
+                       avoid_rects=()):
     W, H, k, F = S.W, S.H, S.k, S.fonts
     ph = shot.placeholder or {}
     c = hex_rgb(ph.get("color"), None) or (51, 65, 85)
@@ -1230,63 +1253,101 @@ def placeholder_assets(shot: Shot, S: Settings, edl: EDL, outdir: Path, missing:
         wm = wm.resize((int(W * 0.9), int(wm.height * W * 0.9 / wm.width)), Image.LANCZOS)
     card.alpha_composite(solid(wm, (255, 255, 255), 0.10), ((W - wm.width) // 2, int(H - 0.035 * H - wm.height)))
 
-    # --- title block, placed where the shot's captions are not
-    used = {t_.pos for t_ in shot.texts}
-    region = next((p for p in ("center", "upper", "lower") if p not in used), "center")
-    maxw = S.maxw
-    parts, gaps = [], []
-    tm, tsize = fit_block(wrap_text(title.upper(), 13), F.heavy, 100 * k, maxw, 0.3 * H,
-                          squeeze=F.squeeze, lh=0.95)
-    tm_img, tpad = with_shadow(solid(tm, (255, 255, 255)), k, soft=(10, 5, 0.45), tight=(2, 2, 0.35))
-    parts.append(tm_img)
-    if sub:
-        sm, ssize = fit_block(wrap_text(sub, 30), F.body, 40 * k, maxw, 0.12 * H, lh=1.25)
-        gaps.append(int(round(0.28 * tsize)) - tpad)
-        parts.append(solid(sm, (255, 255, 255), 0.92))
-    if hint:
-        hm, hsize = fit_block(wrap_text(hint, 40), F.regular, 29 * k, maxw - 40 * k, 0.15 * H, lh=1.3)
-        bw_, bh_ = int(hm.width + 40 * k), int(hm.height + 28 * k)
-        box = Image.new("RGBA", (bw_, bh_), (0, 0, 0, 0))
-        ImageDraw.Draw(box).rounded_rectangle((0, 0, bw_ - 1, bh_ - 1), radius=int(14 * k), fill=(0, 0, 0, 80))
-        box.alpha_composite(solid(hm, (255, 255, 255), 0.85), ((bw_ - hm.width) // 2, (bh_ - hm.height) // 2))
-        gaps.append(int(round(34 * k)))
-        parts.append(box)
-    block = stack(parts, gaps)
-    top, bot = S.safe_top, H - S.safe_bottom
-    if region == "upper":
-        y = top + 0.13 * H
-    elif region == "lower":
-        y = bot - 0.03 * H - block.height
-    else:
-        y = (top + bot) / 2 - block.height / 2
-    y = clamp(y, top, max(top, bot - block.height))
-    card.alpha_composite(block, ((W - block.width) // 2, int(round(y))))
-    card_path = outdir / "card.png"
-    card.convert("RGB").save(card_path, compress_level=1)
-
     # --- chrome (static, never zoomed/shaken): progress track + corner label + tag
     chrome = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(chrome)
     bar_h = max(4, int(round(10 * k)))
     d.rectangle((0, 0, W, bar_h - 1), fill=(0, 0, 0, 110))
-    l1 = f"{shot.id.upper()}" + (f"  ·  {shot.section.upper()}" if shot.section else "")
-    l2 = f"{tc(shot.f0 / S.fps)} → {tc(shot.f1 / S.fps)}   {shot.N}f"
-    f1_, f2_ = font(F.body, 30 * k), font(F.regular, 24 * k)
-    w1, w2 = f1_.getlength(l1), f2_.getlength(l2)
-    padx, pady = 18 * k, 12 * k
-    bx, by = 36 * k, S.safe_top + 22 * k
-    bw_ = max(w1, w2) + 2 * padx
-    bh_ = 30 * k + 8 * k + 24 * k + 2 * pady + 6 * k
-    d.rounded_rectangle((bx, by, bx + bw_, by + bh_), radius=int(12 * k), fill=(0, 0, 0, 120))
-    d.text((bx + padx, by + pady), l1, font=f1_, fill=(255, 255, 255, 255))
-    d.text((bx + padx, by + pady + 38 * k), l2, font=f2_, fill=(255, 255, 255, 215))
+    # one compact row in the top UI band (above the safe zone, where captions never go)
     tag = "NO CLIP" if missing else "ANIMATIC"
-    tf = font(F.body, 22 * k)
-    tw = tf.getlength(tag) + 2 * 12 * k
-    ty = by + bh_ + 10 * k
+    l1 = f"{shot.id.upper()}" + (f" · {shot.section.upper()}" if shot.section else "")
+    l2 = f"{tc(shot.f0 / S.fps)} → {tc(shot.f1 / S.fps)} · {shot.N}f"
+    fs = 26 * k
+    for _ in range(4):
+        f1_, f2_, tf = font(F.body, fs), font(F.regular, fs * 0.9), font(F.body, fs * 0.8)
+        padx, gap = 16 * k, 14 * k
+        w1, w2, wt = f1_.getlength(l1), f2_.getlength(l2), tf.getlength(tag) + 2 * 11 * k
+        total = padx + w1 + gap + w2 + padx + gap + wt
+        if total <= W - 72 * k:
+            break
+        fs *= (W - 72 * k) / total
+    bh_ = fs * 1.75
+    bx, by = 36 * k, bar_h + max(12 * k, (S.safe_top - bar_h - bh_) / 2)
+    bw_ = padx + w1 + gap + w2 + padx
+    cy = by + bh_ / 2
+    d.rounded_rectangle((bx, by, bx + bw_, by + bh_), radius=int(bh_ / 2), fill=(0, 0, 0, 125))
+    d.text((bx + padx, cy), l1, font=f1_, fill=(255, 255, 255, 255), anchor="lm")
+    d.text((bx + padx + w1 + gap, cy), l2, font=f2_, fill=(255, 255, 255, 210), anchor="lm")
+    tx = bx + bw_ + gap
+    th_ = fs * 1.3
     tagcol = (255, 176, 32, 235) if missing else (255, 255, 255, 215)
-    d.rounded_rectangle((bx, ty, bx + tw, ty + 34 * k), radius=int(17 * k), fill=tagcol)
-    d.text((bx + 12 * k, ty + 17 * k), tag, font=tf, fill=(17, 17, 17, 255), anchor="lm")
+    d.rounded_rectangle((tx, cy - th_ / 2, tx + wt, cy + th_ / 2), radius=int(th_ / 2), fill=tagcol)
+    d.text((tx + wt / 2, cy), tag, font=tf, fill=(17, 17, 17, 255), anchor="mm")
+    label_rect = (bx, by, tx + wt - bx, bh_)
+
+    # --- title block: placed where it collides with no caption (and not the corner label)
+    def build_block(sc):
+        maxw = S.maxw
+        parts, gaps = [], []
+        tm, tsize = fit_block(wrap_text(title.upper(), 13), F.heavy, 100 * k * sc, maxw, 0.3 * H,
+                              squeeze=F.squeeze, lh=0.95)
+        tm_img, tpad = with_shadow(solid(tm, (255, 255, 255)), k, soft=(10, 5, 0.45), tight=(2, 2, 0.35))
+        parts.append(tm_img)
+        if sub:
+            sm, _ = fit_block(wrap_text(sub, 30), F.body, 40 * k * sc, maxw, 0.12 * H, lh=1.25)
+            gaps.append(int(round(0.28 * tsize)) - tpad)
+            parts.append(solid(sm, (255, 255, 255), 0.92))
+        if hint:
+            hm, _ = fit_block(wrap_text(hint, 40), F.regular, 29 * k * max(sc, 0.85), maxw - 40 * k,
+                              0.15 * H, lh=1.3)
+            bw2, bh2 = int(hm.width + 40 * k), int(hm.height + 28 * k)
+            box = Image.new("RGBA", (bw2, bh2), (0, 0, 0, 0))
+            ImageDraw.Draw(box).rounded_rectangle((0, 0, bw2 - 1, bh2 - 1), radius=int(14 * k),
+                                                  fill=(0, 0, 0, 80))
+            box.alpha_composite(solid(hm, (255, 255, 255), 0.85), ((bw2 - hm.width) // 2, (bh2 - hm.height) // 2))
+            gaps.append(int(round(34 * k * sc)))
+            parts.append(box)
+        inner = stack(parts, gaps)
+        # a translucent slate panel so the card info never reads as one of the edit's captions
+        px_, py_ = int(30 * k), int(26 * k)
+        pw, ph2 = min(int(W - 2 * 36 * k), inner.width - 2 * tpad + 2 * px_), inner.height - tpad + 2 * py_
+        pw = max(pw, inner.width - 2 * tpad)
+        panel = Image.new("RGBA", (pw + 2 * tpad, ph2 + 2 * tpad), (0, 0, 0, 0))
+        ImageDraw.Draw(panel).rounded_rectangle((tpad, tpad, tpad + pw - 1, tpad + ph2 - 1), radius=int(26 * k),
+                                                fill=(0, 0, 0, 70), outline=(255, 255, 255, 70),
+                                                width=max(1, int(round(2 * k))))
+        panel.alpha_composite(inner, ((panel.width - inner.width) // 2, py_))
+        return panel, tpad
+
+    top, bot = S.safe_top, H - S.safe_bottom
+    margin = 30 * k
+    avoid = [label_rect] + [(x - margin, y - margin, w + 2 * margin, h + 2 * margin) for x, y, w, h in avoid_rects]
+
+    def overlap(r1, r2):
+        ox = min(r1[0] + r1[2], r2[0] + r2[2]) - max(r1[0], r2[0])
+        oy = min(r1[1] + r1[3], r2[1] + r2[3]) - max(r1[1], r2[1])
+        return max(ox, 0) * max(oy, 0)
+
+    best = None
+    for sc in (1.0, 0.85, 0.72, 0.6):
+        block, tpad = build_block(sc)
+        bxw, bxh = block.width - 2 * tpad, block.height - 2 * tpad    # panel box (without shadow pad)
+        x0 = (W - bxw) / 2
+        y_lo, y_hi = top + 8 * k, max(top + 8 * k, bot - 0.02 * H - bxh)
+        centre = (top + bot) / 2
+        cands = sorted(set([y_lo, y_hi, clamp(centre - bxh / 2, y_lo, y_hi)]
+                           + [y_lo + i * 6 * k for i in range(int((y_hi - y_lo) / (6 * k)) + 1)]))
+        for yy in cands:
+            ov = sum(overlap((x0, yy, bxw, bxh), r) for r in avoid)
+            cost = ov * 100 + abs(yy + bxh / 2 - centre)
+            if best is None or cost < best[0]:
+                best = (cost, ov, block, tpad, yy)
+        if best[1] == 0:
+            break
+    _, _, block, tpad, yy = best
+    card.alpha_composite(block, ((W - block.width) // 2, int(round(yy - tpad))))
+    card_path = outdir / "card.png"
+    card.convert("RGB").save(card_path, compress_level=1)
     chrome_path = outdir / "chrome.png"
     chrome.save(chrome_path, compress_level=1)
     return card_path, chrome_path, bar_h
@@ -1296,9 +1357,9 @@ def placeholder_assets(shot: Shot, S: Settings, edl: EDL, outdir: Path, missing:
 
 GRADES = {
     "none": {},
-    "teal_orange": {"eq": "contrast=1.07:saturation=1.16",
-                    "cb": "rs=-0.09:gs=-0.01:bs=0.11:rm=0.04:gm=0.0:bm=-0.04:rh=0.09:gh=0.02:bh=-0.09",
-                    "curves": "all='0/0 0.25/0.22 0.75/0.79 1/1'"},
+    "teal_orange": {"eq": "contrast=1.08:saturation=1.15",
+                    "cb": "rs=-0.13:gs=0.01:bs=0.15:rm=0.05:gm=-0.01:bm=-0.05:rh=0.10:gh=0.03:bh=-0.11",
+                    "curves": "all='0/0 0.25/0.21 0.75/0.80 1/1'"},
     "warm": {"eq": "contrast=1.04:saturation=1.10",
              "cb": "rs=0.04:gs=0.01:bs=-0.06:rm=0.08:gm=0.02:bm=-0.08:rh=0.06:gh=0.02:bh=-0.06"},
     "cold": {"eq": "contrast=1.06:saturation=0.86",
@@ -1309,9 +1370,9 @@ GRADES = {
     "blaugrana": {"eq": "contrast=1.08:saturation=1.14",
                   "cb": "rs=-0.05:gs=-0.03:bs=0.17:rm=0.09:gm=-0.05:bm=0.04:rh=0.12:gh=-0.04:bh=-0.02",
                   "curves": "all='0/0 0.25/0.22 0.75/0.78 1/1'"},
-    "gold": {"eq": "contrast=1.06:saturation=1.08:brightness=0.02",
-             "cb": "rs=0.05:gs=0.02:bs=-0.10:rm=0.10:gm=0.05:bm=-0.11:rh=0.08:gh=0.05:bh=-0.10",
-             "curves": "all='0/0.02 0.5/0.52 1/1'"},
+    "gold": {"eq": "contrast=1.06:saturation=1.05:brightness=0.02",
+             "cb": "rs=0.07:gs=0.01:bs=-0.10:rm=0.13:gm=0.03:bm=-0.13:rh=0.10:gh=0.05:bh=-0.13",
+             "curves": "all='0/0.02 0.5/0.53 1/1'"},
 }
 
 
@@ -1405,36 +1466,48 @@ def build_shot(job: Job, S: Settings, edl: EDL, tmp: Path):
     shot, N, fps = job.shot, job.shot.N, S.fps
     W, H, k = S.W, S.H, S.k
     FPS = num(fps)
+    _fr = Fraction(fps).limit_denominator(1001)
+    tb = f"{_fr.denominator}/{_fr.numerator}"          # exact 1/fps timebase for looped stills
     inputs, stm = [], []
     fx = set(shot.fx)
+    n_inputs = [0]
 
     def add_input(args):
         inputs.extend(args)
-        return add_input.n_inc()
-    counter = {"n": 0}
+        n_inputs[0] += 1
+        return n_inputs[0] - 1
 
-    def n_inc():
-        counter["n"] += 1
-        return counter["n"] - 1
-    add_input.n_inc = n_inc
-
-    def still(path):          # decode a PNG once and loop it in-graph at the output rate
+    def still(path, main=False):   # decode a PNG once and loop it in-graph at the output rate
         i = add_input(["-i", str(path)])
-        return f"[{i}:v]loop=loop=-1:size=1:start=0,setpts=N/({FPS}*TB)"
+        return (f"[{i}:v]loop=loop=-1:size=1:start=0,settb={tb},setpts=N"
+                + (f",trim=end_frame={N}" if main else ""))
+
+    caps = []                 # captions first: placeholder cards lay out around them
+    for ti, item in enumerate(shot.texts):
+        img, iw, ih, pad = render_caption(item, S)
+        p = tmp / f"text{ti}.png"
+        img.save(p, compress_level=1)
+        x, y = place_box(iw, ih, item.pos, S)
+        caps.append((item, p, x, y, iw, ih, pad))
 
     chrome = None
     if job.placeholder:
-        card, chrome, bar_h = placeholder_assets(shot, S, edl, tmp, job.missing)
+        card, chrome, bar_h = placeholder_assets(shot, S, edl, tmp, job.missing,
+                                                 [(c[2], c[3], c[4], c[5]) for c in caps])
         zf = (lambda p, n: f"(1+0.045*{p})*(1+0.03*exp(-{num(9 / fps)}*{n}))")
-        stm.append(f"{still(card)},format=gbrp,"
+        stm.append(f"{still(card, main=True)},format=gbrp,"
                    + perspective_filter(S, N, (W, H, W, H), (0, 0, W, H), zf, 0.5, 0.5, "shake" in fx)
                    + "[geo]")
         grade = {}
     else:
         v = shot.clip_info or probe_media(shot.clip)["video"]
         span = source_span(shot, fps)
-        i = add_input(["-ss", f"{shot.inp:.6f}", "-t", f"{span + 0.5:.6f}", "-an", "-sn", "-dn",
-                       "-i", str(shot.clip)])
+        if is_image(shot.clip):
+            i = add_input(["-loop", "1", "-framerate", str(fps), "-t", f"{span + 0.5:.6f}",
+                           "-i", str(shot.clip)])
+        else:
+            i = add_input(["-ss", f"{shot.inp:.6f}", "-t", f"{span + 0.5:.6f}", "-an", "-sn", "-dn",
+                           "-i", str(shot.clip)])
         pre = []
         if v["field_order"] in ("tt", "bb", "tb", "bt"):
             pre.append("bwdif=mode=send_field:parity=auto:deint=all")
@@ -1453,9 +1526,9 @@ def build_shot(job: Job, S: Settings, edl: EDL, tmp: Path):
             pts = f"setpts=(PTS-STARTPTS)/{num(shot.speed)}"
         else:
             pts = "setpts=PTS-STARTPTS"
-        timing = [pts, f"fps={FPS}", "tpad=stop=-1:stop_mode=clone"]
+        timing = [pts, f"fps={FPS}", "tpad=stop=-1:stop_mode=clone", f"trim=end_frame={N}"]
         A = W / H
-        zmin, zmax = min(shot.z0, shot.z1), max(shot.z0, shot.z1)
+        zmin = min(shot.z0, shot.z1)
         animated = abs(shot.z1 - shot.z0) > 1e-6
         shake = "shake" in fx
         sf = max(1, int(round(0.35 * fps)))
@@ -1540,17 +1613,13 @@ def build_shot(job: Job, S: Settings, edl: EDL, tmp: Path):
         v_ = max(1, int(round(2 * k)))
         look.append(f"rgbashift=rh=-{s_}:rv=-{v_}:bh={s_}:bv={v_}")
     if "vignette" in fx:
-        look.append("vignette=angle=PI/4.2")
+        look.append("vignette=angle=PI/5.2")
     if look:
         stm.append(f"[{cur}]" + ",".join(look) + "[g2]")
         cur = "g2"
 
     # --- captions / overlays
-    for ti, item in enumerate(shot.texts):
-        img, iw, ih, pad = render_caption(item, S)
-        p = tmp / f"text{ti}.png"
-        img.save(p, compress_level=1)
-        x, y = place_box(iw, ih, item.pos, S)
+    for ti, (item, p, x, y, iw, ih, pad) in enumerate(caps):
         x, y = x - pad, y - pad
         lbl = f"t{ti}"
         f4 = 4.0 / fps
@@ -1625,6 +1694,26 @@ def render_segment(job: Job, S: Settings, edl: EDL, cache: Path) -> float:
     os.replace(part, job.seg)
     shutil.rmtree(tmp, ignore_errors=True)
     return time.time() - t0
+
+
+def prune_cache(cache: Path, days: float = 14.0):
+    """drop cached segments nobody used for `days` and stale temp dirs (old renders, old engine)"""
+    now = time.time()
+    for f_ in cache.glob("*.mp4"):
+        try:
+            if now - f_.stat().st_mtime > days * 86400 or f_.name.endswith(".part.mp4") and \
+                    now - f_.stat().st_mtime > 3600:
+                f_.unlink()
+        except OSError:
+            pass
+    tmp = cache / "tmp"
+    if tmp.is_dir():
+        for d in tmp.iterdir():
+            try:
+                if now - d.stat().st_mtime > 86400:
+                    shutil.rmtree(d, ignore_errors=True) if d.is_dir() else d.unlink()
+            except OSError:
+                pass
 
 
 # --------------------------------------------------------------------------- concat + mux
@@ -1708,16 +1797,19 @@ def contact_sheet(edl: EDL, S: Settings, jobs: list, out_path: Path):
     d = ImageDraw.Draw(sheet)
     F = S.fonts
     fh, fb, fr_ = font(F.body, 26), font(F.body, 16), font(F.regular, 13)
+    subtitle = (f"{len(edl.shots)} shots · {edl.length:.2f}s · {S.W}x{S.H} @ {num(S.fps)} fps"
+                f"{' · preview' if S.preview else ''}{' · placeholders only' if S.placeholders_only else ''}"
+                f"  — red lines = safe zone")
     d.text((gut, 18), edl.title, font=fh, fill=(255, 255, 255))
-    d.text((gut + fh.getlength(edl.title) + 20, 26),
-           f"{len(edl.shots)} shots · {edl.length:.2f}s · {S.W}x{S.H} @ {num(S.fps)} fps"
-           f"{' · preview' if S.preview else ''}{' · placeholders only' if S.placeholders_only else ''}"
-           f"  — red lines = safe zone", font=fb, fill=(170, 170, 180))
+    if gut + fh.getlength(edl.title) + 20 + fb.getlength(subtitle) < sheet.width - gut:
+        d.text((gut + fh.getlength(edl.title) + 20, 26), subtitle, font=fb, fill=(170, 170, 180))
+    else:
+        d.text((gut, 46), subtitle, font=fr_, fill=(170, 170, 180))
 
     def grab(job):
         mid = job.shot.N // 2
-        p = subprocess.run(["ffmpeg", "-v", "error", "-ss", f"{(mid + 0.25) / S.fps:.4f}", "-i", str(job.seg),
-                            "-frames:v", "1", "-vf", f"scale={tw}:{th}:flags=area", "-f", "rawvideo",
+        p = subprocess.run(["ffmpeg", "-v", "error", "-i", str(job.seg), "-frames:v", "1",
+                            "-vf", f"select=eq(n\\,{mid}),scale={tw}:{th}:flags=area", "-f", "rawvideo",
                             "-pix_fmt", "rgb24", "-"], capture_output=True)
         if p.returncode != 0 or len(p.stdout) < tw * th * 3:
             return Image.new("RGB", (tw, th), (60, 0, 0))
@@ -1764,9 +1856,11 @@ def contact_sheet(edl: EDL, S: Settings, jobs: list, out_path: Path):
 
 # --------------------------------------------------------------------------- reporting
 
-def print_issues(issues):
-    errs = [i for i in issues if i.level == "ERROR"]
-    warns = [i for i in issues if i.level == "WARN"]
+def print_issues(issues, order=None):
+    order = order or {}
+    key = lambda i: (order.get(i.where, -1 if i.where in ("meta", "edl", "shots") else 10 ** 6), i.where)
+    errs = sorted([i for i in issues if i.level == "ERROR"], key=key)
+    warns = sorted([i for i in issues if i.level == "WARN"], key=key)
     for i in errs + warns:
         print(f"  {i.level:<5} {i.where:<10} {i.msg}")
     return errs, warns
@@ -1804,13 +1898,13 @@ def print_check(edl: EDL, issues: list):
         clip = (s.clip_rel or "-")
         if len(clip) > 33:
             clip = "…" + clip[-32:]
-        print(f"  {s.id:<7}{s.start:>8.3f}{s.end:>8.3f}{s.end - s.start:>7.3f}{s.N:>5}  {clip:<34}{status}")
+        print(f"  {s.id:<7}{s.start:>8.3f}{s.end:>8.3f}{s.end - s.start:>7.3f}{s.N:>5}  {clip:<34} {status}")
     missing = [s for s in edl.shots if s.clip_rel is None or not s.clip_exists]
     print()
     if missing:
         print(f"MISSING CLIPS ({len(missing)}) — these render as placeholder cards:")
-        w_clip = min(max(len(s.clip_rel or "-") for s in missing), 34)
-        w_title = min(max(len(str(s.placeholder.get("title") or "")) for s in missing), 34)
+        w_clip = max(4, min(max(len(s.clip_rel or "-") for s in missing), 34))
+        w_title = max(5, min(max(len(str(s.placeholder.get("title") or "")) for s in missing), 34))
         print(f"  {'id':<7}{'clip':<{w_clip + 2}}{'title':<{w_title + 2}}hint")
         for s in missing:
             clip = s.clip_rel or "-"
@@ -1825,7 +1919,7 @@ def print_check(edl: EDL, issues: list):
     warns = [i for i in issues if i.level == "WARN"]
     if issues:
         print("ISSUES:")
-        print_issues(issues)
+        print_issues(issues, {sh.id: n for n, sh in enumerate(edl.shots)})
         print()
     print(f"Result: {'FAILED' if errs else 'OK'} — {len(errs)} error(s), {len(warns)} warning(s)")
     return 1 if errs else 0
@@ -1886,7 +1980,7 @@ def main(argv=None) -> int:
     errs = [i for i in issues if i.level == "ERROR"]
     if issues:
         print("Validation:")
-        print_issues(issues)
+        print_issues(issues, {sh.id: n for n, sh in enumerate(edl.shots)})
     if errs:
         print(f"\nerror: {len(errs)} validation error(s); fix the EDL (run with --check for the full report)",
               file=sys.stderr)
@@ -1932,9 +2026,11 @@ def main(argv=None) -> int:
           f"{S.W}x{S.H} @ {num(S.fps)} fps, preset {S.preset} crf {S.crf}, {args.jobs} job(s)")
     print(f"  fonts: {fonts.describe()}")
     t_start = time.time()
+    prune_cache(cache)
     todo = []
     for j in jobs:
         if j.seg.exists() and not args.no_cache and count_frames(j.seg) == j.shot.N:
+            os.utime(j.seg)                       # keep recently used segments out of the prune
             continue
         todo.append(j)
     if len(todo) < len(jobs):
@@ -1947,7 +2043,7 @@ def main(argv=None) -> int:
         dt = render_segment(j, S, edl, cache)
         with lock:
             done += 1
-            what = "placeholder" if j.placeholder else rel(j.shot.clip)
+            what = "placeholder card" if j.placeholder else j.shot.clip.name
             print(f"  [{done:>3}/{len(todo)}] {j.shot.id:<7} {j.shot.N:>4}f  {dt:6.1f}s  {what}", flush=True)
         return dt
 
@@ -1966,6 +2062,10 @@ def main(argv=None) -> int:
         print(f"\nerror: {failed}", file=sys.stderr)
         return 1
     t_seg = time.time() - t_start
+    try:
+        (cache / "tmp").rmdir()
+    except OSError:
+        pass
     try:
         mux(edl, S, jobs, out, cache, subset)
         summary, problems = verify_output(out, S, total_frames,

@@ -1154,7 +1154,7 @@
    "end": 36.4226,
    "section": "bridge",
    "moment": "n01",
-   "clip": "clips/n01.mp4",
+   "clip": "clips/n01.jpg",
    "in": 0.0,
    "speed": 1.0,
    "focus_x": 0.5,
@@ -2219,63 +2219,63 @@
    "start": 31.5925,
    "end": 34.2801,
    "content": "fighting my whole life, i'm still defeated",
-   "style": "quote",
+   "style": "whisper",
    "pos": "lower"
   },
   {
    "start": 35.3723,
    "end": 36.4226,
    "content": "settle down, babe",
-   "style": "quote",
+   "style": "whisper",
    "pos": "lower"
   },
   {
    "start": 36.7723,
    "end": 38.9923,
    "content": "settle down, my child",
-   "style": "quote",
+   "style": "whisper",
    "pos": "lower"
   },
   {
    "start": 39.1823,
    "end": 41.0923,
    "content": "you worry too much",
-   "style": "quote",
+   "style": "whisper",
    "pos": "lower"
   },
   {
    "start": 41.3623,
    "end": 43.0723,
    "content": "you try to fight the whole crowd",
-   "style": "quote",
+   "style": "whisper",
    "pos": "lower"
   },
   {
    "start": 43.1223,
    "end": 44.6423,
    "content": "just run at your pace",
-   "style": "quote",
+   "style": "whisper",
    "pos": "lower"
   },
   {
    "start": 44.7623,
    "end": 47.5923,
    "content": "don't think about them",
-   "style": "quote",
+   "style": "whisper",
    "pos": "lower"
   },
   {
    "start": 47.8323,
    "end": 50.0723,
    "content": "they're running at the stars in the sky",
-   "style": "quote",
+   "style": "whisper",
    "pos": "lower"
   },
   {
    "start": 50.0923,
    "end": 51.4202,
    "content": "they can catch them",
-   "style": "quote",
+   "style": "whisper",
    "pos": "lower"
   },
   {

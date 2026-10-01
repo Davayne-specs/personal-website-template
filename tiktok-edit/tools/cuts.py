@@ -35,7 +35,7 @@ def card(content):
 
 def soft(content, start, end):
     """Lower-case bridge lyric as a global overlay (spans cuts)."""
-    return {"start": start, "end": end, "content": content, "style": "quote", "pos": "lower"}
+    return {"start": start, "end": end, "content": content, "style": "whisper", "pos": "lower"}
 
 
 PUNCH = {"from": 1.0, "to": 1.14}

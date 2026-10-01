@@ -109,15 +109,15 @@ Audio: song 13.03–47.31 s + song 81.59–98.73 s + song 128.72–150.84 s
 Text overlays:
 
 - 0:00.00–0:04.29 · kicker · "BALLON D'OR 2026"
-- 0:31.59–0:34.28 · quote · "fighting my whole life, i'm still defeated"
-- 0:35.37–0:36.42 · quote · "settle down, babe"
-- 0:36.77–0:38.99 · quote · "settle down, my child"
-- 0:39.18–0:41.09 · quote · "you worry too much"
-- 0:41.36–0:43.07 · quote · "you try to fight the whole crowd"
-- 0:43.12–0:44.64 · quote · "just run at your pace"
-- 0:44.76–0:47.59 · quote · "don't think about them"
-- 0:47.83–0:50.07 · quote · "they're running at the stars in the sky"
-- 0:50.09–0:51.42 · quote · "they can catch them"
+- 0:31.59–0:34.28 · whisper · "fighting my whole life, i'm still defeated"
+- 0:35.37–0:36.42 · whisper · "settle down, babe"
+- 0:36.77–0:38.99 · whisper · "settle down, my child"
+- 0:39.18–0:41.09 · whisper · "you worry too much"
+- 0:41.36–0:43.07 · whisper · "you try to fight the whole crowd"
+- 0:43.12–0:44.64 · whisper · "just run at your pace"
+- 0:44.76–0:47.59 · whisper · "don't think about them"
+- 0:47.83–0:50.07 · whisper · "they're running at the stars in the sky"
+- 0:50.09–0:51.42 · whisper · "they can catch them"
 - 1:10.93–1:13.54 · kicker · "BALLON D'OR 2026"
 
 ## short cut — 30.7 s, 45 shots

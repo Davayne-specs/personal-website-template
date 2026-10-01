@@ -96,7 +96,7 @@ def build(name, sheet, overlays, plan):
             "end": round(t1, 4),
             "section": row.get("section", section_at(pos(row["at"]))),
             "moment": row["m"],
-            "clip": f"clips/{row['m']}.mp4",
+            "clip": f"clips/{row['m']}.{'jpg' if m.get('kind') == 'image' else 'mp4'}",
             "in": 0.0,
             "speed": speed,
             "focus_x": row.get("focus_x", m.get("focus_x", 0.5)),
