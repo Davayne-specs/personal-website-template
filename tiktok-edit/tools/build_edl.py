@@ -147,7 +147,8 @@ def build(name, sheet, overlays, plan):
             "default_grade": "teal_orange",
             "safe_zone": {"top": 130, "bottom": 484, "left": 60, "right": 140},
             "audio_plan": {"source": "song/song.mp3", "stems": STEMS, "segments": plan,
-                           "gain_db": 1.0},   # ~-14 LUFS for TikTok
+                           "gain_db": 1.0,    # ~-14 LUFS for TikTok
+                           "delay": 0.05},    # beats measured ~50 ms ahead of the cuts
         },
         "shots": shots,
         "overlays": ov,

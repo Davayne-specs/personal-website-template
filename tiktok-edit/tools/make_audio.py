@@ -16,7 +16,8 @@ audio_plan:
          "vocals_to": 47.85,                    # optional: let a word ring past the cut
          "mute_vocals": [[a, b], ...]}          # optional: silence vocal bleed (song seconds)
       ],
-      "gain_db": 1.0                            # optional: overall gain (song is ~-15 LUFS)
+      "gain_db": 1.0,                           # optional: overall gain (song is ~-15 LUFS)
+      "delay": 0.05                             # optional: shift the track later (s), same length
     }
 
 With stems, the instrumental is cut hard on the grid (short crossfade) while
@@ -123,6 +124,11 @@ def build(plan, root):
                 vp[-nv:] *= ramp(nv, False)
             place(buf, vp, pos + (va - a), sr)
         pos += b - a
+
+    # delay: silence in front, drop the same amount off the tail, so cuts stay on the grid
+    nd = int(round(plan.get("delay", 0.0) * sr))
+    if nd > 0:
+        buf = np.concatenate([np.zeros((nd, 2), dtype=np.float32), buf[:-nd]])
 
     buf *= 10 ** (plan.get("gain_db", 0.0) / 20)
     peak = float(np.abs(buf).max())
