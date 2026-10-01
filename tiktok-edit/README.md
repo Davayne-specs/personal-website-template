@@ -10,6 +10,31 @@ Two cuts share one shot language:
 | **story** | 73.5 s | drop-out → verse → chorus → bridge → build → climax | the main post: over 60 s (Creator Rewards eligible), tells the whole arc |
 | **short** | 30.7 s | drop-out → 2 bars of goals → build → climax | reach: 14 bars, loops cleanly |
 
+## Scene-pack edit (current)
+
+The footage plan below was dropped: the clips could not be downloaded. Instead,
+`tools/scenepack_edl.py` cuts one uploaded scene pack (`sources/scenepack.mp4`,
+640x360, not committed) to the song, reusing the beat-grid timing, effects and
+sung lyric captions of the story and short cuts:
+
+```bash
+python tools/scenepack_edl.py                   # edl/sp_story.json + edl/sp_short.json
+python render.py edl/sp_story.json --contact-sheet   # out/sp_story.mp4 (73.5 s)
+python render.py edl/sp_short.json --contact-sheet   # out/sp_short.mp4 (30.7 s)
+```
+
+- `research/scenepack.json`: the pack's 46 shots (split at detected cuts), each
+  with a mood (arrival, close-up, action, celebration, sad), and either a crop
+  position for Yamal (`focus_x`, or `focus_track` when he moves) or `blurfill`
+  for wide dribbles, where a 9:16 crop would lose the ball.
+- `CAST` in `tools/scenepack_edl.py` says which shot goes in each section:
+  arrivals and close-ups in the intro, dribbles as the verse tightens,
+  celebrations on the chorus hooks, the dejected shots in the black-and-white
+  drop and the bridge (matched line by line to the lyrics), the best moments one
+  per beat in the climax, and the 304 sign on the end card.
+- In-points follow the footage's motion; the Twixtor source is never slowed
+  below 1x, and is sped to 1.5x or ramped 2x→1x in the chorus and climax.
+
 ## The story, mapped to the song
 
 | Edit time | Song section (lyric) | What we see |
@@ -97,4 +122,6 @@ splices may clip).
 | `tools/make_audio.py` | builds each cut's soundtrack from bar-aligned song pieces |
 | `tools/fetch_clips.py` | downloads the footage in `research/youtube_links.json` |
 | `render.py` | EDL → 1080x1920 MP4 (see `EDL_SCHEMA.md`) |
+| `tools/scenepack_edl.py` | casts the scene pack into the song's cut grid |
+| `research/scenepack.json` | the scene pack's shots: times, mood, crop position |
 | `song/`, `clips/`, `sources/`, `out/` | local media, never committed |

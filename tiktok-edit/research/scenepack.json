@@ -1,0 +1,640 @@
+{
+ "source": "sources/scenepack.mp4",
+ "note": "Shots of the uploaded Lamine Yamal scene pack (640x360, 30 fps, 164.5 s), split at detected cuts. S00 (channel title card) is left out. kind = mood used for casting; crop shots use focus_x, or focus_track [[source s, x], ...] when he moves (0..1, Yamal's horizontal position, read off frames), wide action uses blurfill.",
+ "scenes": {
+  "S01": {
+   "start": 4.9,
+   "end": 8.2,
+   "kind": "arrival",
+   "fit": "crop",
+   "desc": "tunnel walk-in at St James' Park, wash bag in hand",
+   "focus_x": 0.51
+  },
+  "S02": {
+   "start": 8.2,
+   "end": 11.6,
+   "kind": "closeup",
+   "fit": "crop",
+   "desc": "warm-up, looks around, walks off",
+   "focus_track": [
+    [
+     8.3,
+     0.6
+    ],
+    [
+     9.1,
+     0.6
+    ],
+    [
+     9.9,
+     0.54
+    ],
+    [
+     10.7,
+     0.45
+    ],
+    [
+     11.5,
+     0.25
+    ]
+   ]
+  },
+  "S03": {
+   "start": 11.6,
+   "end": 14.667,
+   "kind": "closeup",
+   "fit": "crop",
+   "desc": "warm-up close-up, eyes down",
+   "focus_x": 0.3
+  },
+  "S04": {
+   "start": 14.667,
+   "end": 17.6,
+   "kind": "closeup",
+   "fit": "crop",
+   "desc": "close-up in the stands, hand on chin",
+   "focus_track": [
+    [
+     14.8,
+     0.65
+    ],
+    [
+     16.1,
+     0.66
+    ],
+    [
+     16.8,
+     0.6
+    ],
+    [
+     17.5,
+     0.48
+    ]
+   ]
+  },
+  "S05": {
+   "start": 17.6,
+   "end": 20.6,
+   "kind": "action",
+   "fit": "blurfill",
+   "desc": "dribble v Newcastle (red kit)"
+  },
+  "S06": {
+   "start": 20.6,
+   "end": 23.633,
+   "kind": "action",
+   "fit": "blurfill",
+   "desc": "dribble past a Newcastle defender (Heineken boards)"
+  },
+  "S07": {
+   "start": 23.633,
+   "end": 27.133,
+   "kind": "action",
+   "fit": "blurfill",
+   "desc": "running with the ball, red kit"
+  },
+  "S08": {
+   "start": 27.133,
+   "end": 30.2,
+   "kind": "closeup",
+   "fit": "crop",
+   "desc": "by the goal net, walks right",
+   "focus_track": [
+    [
+     27.2,
+     0.45
+    ],
+    [
+     30.1,
+     0.59
+    ]
+   ]
+  },
+  "S09": {
+   "start": 30.2,
+   "end": 33.733,
+   "kind": "celebration",
+   "fit": "crop",
+   "desc": "fingers in ears to the crowd",
+   "focus_x": 0.45
+  },
+  "S10": {
+   "start": 33.733,
+   "end": 36.967,
+   "kind": "celebration",
+   "fit": "crop",
+   "desc": "arms spread, shrug to the crowd",
+   "focus_track": [
+    [
+     33.8,
+     0.44
+    ],
+    [
+     35.3,
+     0.43
+    ],
+    [
+     36.9,
+     0.37
+    ]
+   ]
+  },
+  "S11": {
+   "start": 36.967,
+   "end": 40.6,
+   "kind": "closeup",
+   "fit": "crop",
+   "desc": "close-up, looking down",
+   "focus_x": 0.54
+  },
+  "S12": {
+   "start": 40.6,
+   "end": 44.467,
+   "kind": "closeup",
+   "fit": "crop",
+   "desc": "dark kit, looks around, arms out",
+   "focus_track": [
+    [
+     40.7,
+     0.48
+    ],
+    [
+     41.6,
+     0.6
+    ],
+    [
+     42.5,
+     0.62
+    ],
+    [
+     43.5,
+     0.59
+    ],
+    [
+     44.4,
+     0.5
+    ]
+   ]
+  },
+  "S13": {
+   "start": 44.467,
+   "end": 47.967,
+   "kind": "arrival",
+   "fit": "blurfill",
+   "desc": "two players walking out of a red tunnel"
+  },
+  "S14": {
+   "start": 47.967,
+   "end": 51.533,
+   "kind": "arrival",
+   "fit": "crop",
+   "desc": "walkout, high-fives the mascots",
+   "focus_x": 0.67
+  },
+  "S15": {
+   "start": 51.533,
+   "end": 55.2,
+   "kind": "closeup",
+   "fit": "crop",
+   "desc": "cream away kit, looking at the crowd",
+   "focus_x": 0.52
+  },
+  "S16": {
+   "start": 55.2,
+   "end": 58.933,
+   "kind": "celebration",
+   "fit": "crop",
+   "desc": "knee slide, back to camera (LAMINE YAMAL 10)",
+   "focus_track": [
+    [
+     55.3,
+     0.48
+    ],
+    [
+     56.2,
+     0.56
+    ],
+    [
+     57.1,
+     0.59
+    ],
+    [
+     58.8,
+     0.56
+    ]
+   ]
+  },
+  "S17": {
+   "start": 58.933,
+   "end": 62.467,
+   "kind": "closeup",
+   "fit": "crop",
+   "desc": "profile close-up, cream kit",
+   "focus_track": [
+    [
+     59.0,
+     0.44
+    ],
+    [
+     59.9,
+     0.49
+    ],
+    [
+     61.5,
+     0.53
+    ],
+    [
+     62.4,
+     0.54
+    ]
+   ]
+  },
+  "S18": {
+   "start": 62.467,
+   "end": 66.567,
+   "kind": "celebration",
+   "fit": "crop",
+   "desc": "hug with a staff member under the lights",
+   "focus_track": [
+    [
+     62.6,
+     0.65
+    ],
+    [
+     65.5,
+     0.63
+    ],
+    [
+     66.5,
+     0.53
+    ]
+   ]
+  },
+  "S19": {
+   "start": 66.567,
+   "end": 69.933,
+   "kind": "closeup",
+   "fit": "crop",
+   "desc": "gesturing, palm up",
+   "focus_x": 0.34
+  },
+  "S20": {
+   "start": 69.933,
+   "end": 74.033,
+   "kind": "action",
+   "fit": "blurfill",
+   "desc": "dribble v Newcastle at home (crypto.com boards)"
+  },
+  "S21": {
+   "start": 74.033,
+   "end": 77.867,
+   "kind": "action",
+   "fit": "blurfill",
+   "desc": "dribble, defender goes to ground (Pepsi boards)"
+  },
+  "S22": {
+   "start": 77.867,
+   "end": 81.567,
+   "kind": "celebration",
+   "fit": "crop",
+   "desc": "handshake with Raphinha by the crowd",
+   "focus_x": 0.36
+  },
+  "S23": {
+   "start": 81.567,
+   "end": 85.7,
+   "kind": "celebration",
+   "fit": "crop",
+   "desc": "fist pump, pointing",
+   "focus_track": [
+    [
+     81.7,
+     0.51
+    ],
+    [
+     83.6,
+     0.47
+    ],
+    [
+     85.6,
+     0.43
+    ]
+   ]
+  },
+  "S24": {
+   "start": 85.7,
+   "end": 90.2,
+   "kind": "sad",
+   "fit": "crop",
+   "desc": "hands on head, then a smile",
+   "focus_track": [
+    [
+     85.8,
+     0.42
+    ],
+    [
+     88.0,
+     0.47
+    ],
+    [
+     89.0,
+     0.45
+    ],
+    [
+     90.1,
+     0.62
+    ]
+   ]
+  },
+  "S25": {
+   "start": 90.2,
+   "end": 93.933,
+   "kind": "skip",
+   "fit": "blurfill",
+   "desc": "Spain training, distant"
+  },
+  "S26": {
+   "start": 93.933,
+   "end": 97.267,
+   "kind": "arrival",
+   "fit": "blurfill",
+   "desc": "Spain bench area, walking with staff"
+  },
+  "S27": {
+   "start": 97.267,
+   "end": 100.767,
+   "kind": "closeup",
+   "fit": "crop",
+   "desc": "Spain close-up, headband",
+   "focus_track": [
+    [
+     97.4,
+     0.75
+    ],
+    [
+     98.2,
+     0.63
+    ],
+    [
+     99.0,
+     0.58
+    ],
+    [
+     100.7,
+     0.56
+    ]
+   ]
+  },
+  "S28": {
+   "start": 100.767,
+   "end": 104.033,
+   "kind": "closeup",
+   "fit": "crop",
+   "desc": "Spain #19, looking",
+   "focus_track": [
+    [
+     100.9,
+     0.37
+    ],
+    [
+     102.4,
+     0.47
+    ],
+    [
+     103.2,
+     0.47
+    ],
+    [
+     103.9,
+     0.4
+    ]
+   ]
+  },
+  "S29": {
+   "start": 104.033,
+   "end": 107.433,
+   "kind": "action",
+   "fit": "blurfill",
+   "desc": "Spain #19 dribble"
+  },
+  "S30": {
+   "start": 107.433,
+   "end": 111.3,
+   "kind": "sad",
+   "fit": "crop",
+   "desc": "Spain, hands on knees, half smile",
+   "focus_x": 0.54
+  },
+  "S31": {
+   "start": 111.3,
+   "end": 114.767,
+   "kind": "arrival",
+   "fit": "crop",
+   "desc": "Spain tunnel, drinking",
+   "focus_x": 0.28
+  },
+  "S32": {
+   "start": 114.767,
+   "end": 118.067,
+   "kind": "celebration",
+   "fit": "crop",
+   "desc": "Spain bench, laughing",
+   "focus_x": 0.33
+  },
+  "S33": {
+   "start": 118.067,
+   "end": 124.467,
+   "kind": "closeup",
+   "fit": "crop",
+   "desc": "warm-up close-up, hands through hair",
+   "focus_track": [
+    [
+     118.2,
+     0.62
+    ],
+    [
+     119.7,
+     0.6
+    ],
+    [
+     121.3,
+     0.4
+    ],
+    [
+     122.8,
+     0.33
+    ],
+    [
+     124.4,
+     0.31
+    ]
+   ]
+  },
+  "S34": {
+   "start": 124.467,
+   "end": 127.133,
+   "kind": "closeup",
+   "fit": "crop",
+   "desc": "close-up, focused",
+   "focus_x": 0.5
+  },
+  "S35": {
+   "start": 127.133,
+   "end": 130.267,
+   "kind": "sad",
+   "fit": "crop",
+   "desc": "arguing with the referee, back to camera (10)",
+   "focus_x": 0.3
+  },
+  "S36": {
+   "start": 130.267,
+   "end": 134.433,
+   "kind": "action",
+   "fit": "blurfill",
+   "desc": "dribble through the Atlético defence"
+  },
+  "S37": {
+   "start": 134.433,
+   "end": 137.733,
+   "kind": "action",
+   "fit": "blurfill",
+   "desc": "dribble v Atlético #10 (Lay's boards)"
+  },
+  "S38": {
+   "start": 137.733,
+   "end": 140.9,
+   "kind": "sad",
+   "fit": "crop",
+   "desc": "crouching, dejected, by the stands",
+   "focus_x": 0.5
+  },
+  "S39": {
+   "start": 140.9,
+   "end": 144.167,
+   "kind": "sad",
+   "fit": "crop",
+   "desc": "close-up, crouching, dejected",
+   "focus_x": 0.48
+  },
+  "S40": {
+   "start": 144.167,
+   "end": 147.0,
+   "kind": "arrival",
+   "fit": "crop",
+   "desc": "steps off the team bus",
+   "focus_x": 0.42
+  },
+  "S41": {
+   "start": 147.0,
+   "end": 150.267,
+   "kind": "closeup",
+   "fit": "crop",
+   "desc": "walking, head down",
+   "focus_track": [
+    [
+     147.1,
+     0.47
+    ],
+    [
+     149.4,
+     0.47
+    ],
+    [
+     150.2,
+     0.54
+    ]
+   ]
+  },
+  "S42": {
+   "start": 150.267,
+   "end": 153.433,
+   "kind": "closeup",
+   "fit": "crop",
+   "desc": "close-up smile",
+   "focus_x": 0.44
+  },
+  "S43": {
+   "start": 153.433,
+   "end": 156.533,
+   "kind": "sad",
+   "fit": "crop",
+   "desc": "sitting by the corner flag, linesman beside him",
+   "focus_x": 0.48
+  },
+  "S44": {
+   "start": 156.533,
+   "end": 159.367,
+   "kind": "celebration",
+   "fit": "crop",
+   "desc": "304 hand sign",
+   "focus_track": [
+    [
+     156.6,
+     0.46
+    ],
+    [
+     157.3,
+     0.5
+    ],
+    [
+     157.9,
+     0.54
+    ],
+    [
+     159.3,
+     0.58
+    ]
+   ]
+  },
+  "S45": {
+   "start": 159.367,
+   "end": 161.867,
+   "kind": "celebration",
+   "fit": "crop",
+   "desc": "walking, thumbs gesture",
+   "focus_track": [
+    [
+     159.5,
+     0.2
+    ],
+    [
+     160.0,
+     0.4
+    ],
+    [
+     161.8,
+     0.44
+    ]
+   ]
+  },
+  "S46": {
+   "start": 161.867,
+   "end": 163.6,
+   "kind": "celebration",
+   "fit": "crop",
+   "desc": "knee slide toward camera; cut short: after 163.6 s he is too close and his head leaves the frame",
+   "focus_track": [
+    [
+     162.0,
+     0.42
+    ],
+    [
+     162.6,
+     0.49
+    ],
+    [
+     163.1,
+     0.53
+    ],
+    [
+     163.7,
+     0.48
+    ],
+    [
+     164.3,
+     0.43
+    ]
+   ]
+  }
+ }
+}

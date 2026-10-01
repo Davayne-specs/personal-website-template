@@ -1397,7 +1397,9 @@ def perspective_filter(S: Settings, N: int, src, crop, zfun, fx_, fy_, shake: bo
     Wd, Hd, bw, bh = src
     xm, ym, wm, hm = crop
     sx, sy = S.W / wm, S.H / hm
-    pre = ["st(0,in-1)", f"st(8,clip(ld(0)/{max(N - 1, 1)},0,1))", f"st(1,{zfun('ld(8)', 'ld(0)')})",
+    # max(1, …): a zoom ending on 1.0 can evaluate to 0.9999999999999999 (e.g. 1.15-0.15), which
+    # inverts the clip() ranges below and hands perspective NaN corners ("Invalid argument")
+    pre = ["st(0,in-1)", f"st(8,clip(ld(0)/{max(N - 1, 1)},0,1))", f"st(1,max(1,{zfun('ld(8)', 'ld(0)')}))",
            f"st(2,{num(bw)}/ld(1))", f"st(3,{num(bh)}/ld(1))",
            f"st(4,(clip({num(fx_ * Wd)},ld(2)/2,{num(Wd)}-ld(2)/2)-{num(xm)})*{sx:.8f})",
            f"st(5,(clip({num(fy_ * Hd)},ld(3)/2,{num(Hd)}-ld(3)/2)-{num(ym)})*{sy:.8f})",
@@ -2053,6 +2055,8 @@ def main(argv=None) -> int:
         for f_ in cf.as_completed(futs):
             try:
                 f_.result()
+            except cf.CancelledError:             # cancelled after an earlier failure
+                continue
             except (RenderError, EDLError, OSError) as e:
                 if failed is None:
                     failed = e
