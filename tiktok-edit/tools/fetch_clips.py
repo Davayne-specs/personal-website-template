@@ -104,6 +104,13 @@ def main():
     clip_dir, src_dir = os.path.join(ROOT, "clips"), os.path.join(ROOT, "sources")
     log_path = os.path.join(ROOT, "research", "sources_used.json")
     log = json.load(open(log_path)) if os.path.exists(log_path) else {}
+
+    def record(cid, entry):
+        log[cid] = entry
+        with open(log_path, "w") as f:
+            json.dump(dict(sorted(log.items())), f, indent=1, ensure_ascii=False)
+            f.write("\n")
+
     os.makedirs(clip_dir, exist_ok=True)
     os.makedirs(src_dir, exist_ok=True)
 
@@ -124,7 +131,7 @@ def main():
             continue
         if not section and url in done_urls:
             print(f"  {cid:5} same video as {done_urls[url]}, not downloaded again")
-            log[cid] = {**log.get(done_urls[url], {}), "same_as": done_urls[url]}
+            record(cid, {**log.get(done_urls[url], {}), "same_as": done_urls[url]})
             counts["skipped"] += 1
             continue
         start = max(at - PRE, 0.0) if section else None
@@ -135,7 +142,7 @@ def main():
                 done_urls[url] = cid
             continue
 
-        tmp =tempfile.mkdtemp(prefix=f"fetch_{cid}_", dir=src_dir)
+        tmp = tempfile.mkdtemp(prefix=f"fetch_{cid}_", dir=src_dir)
         try:
             info, got = download(url, os.path.join(tmp, cid), args.max_height,
                                  (start, at + POST) if section else None)
@@ -149,11 +156,11 @@ def main():
                 done_urls[url] = cid
             dur = probe_duration(dst)
             print(f"        ok  {dur:.2f}s  \"{info.get('title', '')}\" ({info.get('channel') or info.get('uploader')})")
-            log[cid] = {"url": url, "title": info.get("title"), "channel": info.get("channel") or info.get("uploader"),
+            record(cid, {"url": url, "title": info.get("title"), "channel": info.get("channel") or info.get("uploader"),
                         "channel_url": info.get("channel_url") or info.get("uploader_url"),
                         "upload_date": info.get("upload_date"), "source_duration": info.get("duration"),
                         "at": at if section else None, "file": os.path.relpath(dst, ROOT),
-                        "downloaded": date.today().isoformat()}
+                        "downloaded": date.today().isoformat()})
             counts["ok"] += 1
         except (DownloadError, subprocess.CalledProcessError) as e:
             msg = str(e).strip().splitlines()[-1] if str(e).strip() else type(e).__name__
@@ -166,10 +173,6 @@ def main():
             failed.append(cid)
         finally:
             shutil.rmtree(tmp, ignore_errors=True)
-            if not args.dry_run:
-                with open(log_path, "w") as f:
-                    json.dump(dict(sorted(log.items())), f, indent=1, ensure_ascii=False)
-                    f.write("\n")
 
     if args.dry_run:
         return
