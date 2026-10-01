@@ -1,0 +1,853 @@
+{
+ "song": "Mbastein \u2014 I Feel It Coming",
+ "duration": 150.84,
+ "bpm": 112.018,
+ "beat": 0.53563,
+ "bar": 2.14251,
+ "first_downbeat": 0.1724,
+ "note": "Constant tempo. Bar k starts at first_downbeat + k*bar. Kick on beat 1, snare/clap on 2 and 4. Lyric times are song seconds (\u00b10.1 s), from a vocal-isolated stem; outro 133\u2013148 s is mostly vocal chops, not captioned.",
+ "sections": [
+  {
+   "name": "intro",
+   "bars": [
+    0,
+    5
+   ],
+   "start": 0.172,
+   "end": 13.027,
+   "energy": "mid",
+   "note": "chant 'hey\u2026 I feel it coming'"
+  },
+  {
+   "name": "drop-out 1",
+   "bars": [
+    6,
+    7
+   ],
+   "start": 13.027,
+   "end": 17.312,
+   "energy": "low",
+   "note": "instrumental thins out: 'Yeah, it's so damn close'"
+  },
+  {
+   "name": "verse1",
+   "bars": [
+    8,
+    13
+   ],
+   "start": 17.312,
+   "end": 30.168,
+   "energy": "mid-high",
+   "note": "kick returns; 'Hey, I feel it coming' x4 builds into chorus"
+  },
+  {
+   "name": "chorus",
+   "bars": [
+    14,
+    20
+   ],
+   "start": 30.168,
+   "end": 45.165,
+   "energy": "high",
+   "note": "'Rain on me' / 'Bring it down, I need it'"
+  },
+  {
+   "name": "drop-out 2",
+   "bars": [
+    21,
+    21
+   ],
+   "start": 45.165,
+   "end": 47.308,
+   "energy": "low",
+   "note": "'Fighting my whole life, I'm still defeated' over a thinned beat"
+  },
+  {
+   "name": "chorus-b",
+   "bars": [
+    22,
+    28
+   ],
+   "start": 47.308,
+   "end": 62.305,
+   "energy": "high",
+   "note": "'rain, rain' / 'Show me in\u2026 take me to town'"
+  },
+  {
+   "name": "drop-out 3",
+   "bars": [
+    29,
+    29
+   ],
+   "start": 62.305,
+   "end": 64.448,
+   "energy": "low",
+   "note": "held 'town'"
+  },
+  {
+   "name": "verse2",
+   "bars": [
+    30,
+    37
+   ],
+   "start": 64.448,
+   "end": 81.588,
+   "energy": "high",
+   "note": "sparse 'Hey, I feel it coming' \u2014 mostly beat"
+  },
+  {
+   "name": "bridge",
+   "bars": [
+    38,
+    44
+   ],
+   "start": 81.588,
+   "end": 96.585,
+   "energy": "mid",
+   "note": "'Settle down, my child' \u2014 emotional core"
+  },
+  {
+   "name": "drop-out 4",
+   "bars": [
+    45,
+    45
+   ],
+   "start": 96.585,
+   "end": 98.728,
+   "energy": "low",
+   "note": "'\u2026they can catch them'"
+  },
+  {
+   "name": "bridge-rap",
+   "bars": [
+    46,
+    53
+   ],
+   "start": 98.728,
+   "end": 115.868,
+   "energy": "mid-high",
+   "note": "'holy demons' rap"
+  },
+  {
+   "name": "outro",
+   "bars": [
+    54,
+    59
+   ],
+   "start": 115.868,
+   "end": 128.723,
+   "energy": "high",
+   "note": "'Yeah, I feel it coming'"
+  },
+  {
+   "name": "break / build",
+   "bars": [
+    60,
+    61
+   ],
+   "start": 128.723,
+   "end": 133.008,
+   "energy": "low",
+   "note": "'Hey, I feel it coming' x2 \u2014 tension before the climax"
+  },
+  {
+   "name": "climax",
+   "bars": [
+    62,
+    68
+   ],
+   "start": 133.008,
+   "end": 148.006,
+   "energy": "peak",
+   "note": "loudest part of the song (133\u2013148 s)"
+  },
+  {
+   "name": "end",
+   "bars": [
+    69,
+    69
+   ],
+   "start": 148.006,
+   "end": 150.84,
+   "energy": "low",
+   "note": "last 'Hey, I feel it coming', ring-out"
+  }
+ ],
+ "lyrics": [
+  {
+   "start": 3.45,
+   "end": 8.72,
+   "text": "Hey, hey, hey, hey, hey",
+   "section": "intro"
+  },
+  {
+   "start": 7.75,
+   "end": 8.72,
+   "text": "I feel it coming",
+   "section": "intro"
+  },
+  {
+   "start": 10.17,
+   "end": 13.02,
+   "text": "Oh, I feel it coming",
+   "section": "intro"
+  },
+  {
+   "start": 13.84,
+   "end": 15.51,
+   "text": "Yeah, I feel it coming \u2014 I feel it",
+   "section": "verse1"
+  },
+  {
+   "start": 15.66,
+   "end": 16.58,
+   "text": "Yeah, it's so damn close",
+   "section": "verse1"
+  },
+  {
+   "start": 17.12,
+   "end": 18.64,
+   "text": "Yeah, I feel it coming",
+   "section": "verse1"
+  },
+  {
+   "start": 19.24,
+   "end": 20.81,
+   "text": "Hey, right through my nose",
+   "section": "verse1"
+  },
+  {
+   "start": 21.37,
+   "end": 22.91,
+   "text": "Hey, I feel it coming",
+   "section": "verse1"
+  },
+  {
+   "start": 23.53,
+   "end": 25.07,
+   "text": "Hey, I feel it coming",
+   "section": "verse1"
+  },
+  {
+   "start": 25.65,
+   "end": 27.44,
+   "text": "Hey, I feel it coming",
+   "section": "verse1"
+  },
+  {
+   "start": 27.8,
+   "end": 29.99,
+   "text": "Hey, I feel it coming",
+   "section": "verse1"
+  },
+  {
+   "start": 30.27,
+   "end": 31.66,
+   "text": "Rain on me",
+   "section": "chorus"
+  },
+  {
+   "start": 32.39,
+   "end": 33.84,
+   "text": "Don't tell me stop, no",
+   "section": "chorus"
+  },
+  {
+   "start": 34.58,
+   "end": 35.96,
+   "text": "Rain on me",
+   "section": "chorus"
+  },
+  {
+   "start": 36.14,
+   "end": 38.08,
+   "text": "I don't care 'bout cops, just",
+   "section": "chorus"
+  },
+  {
+   "start": 38.86,
+   "end": 40.23,
+   "text": "Rain on me",
+   "section": "chorus"
+  },
+  {
+   "start": 40.56,
+   "end": 42.3,
+   "text": "Bring it down, I need it",
+   "section": "chorus"
+  },
+  {
+   "start": 42.51,
+   "end": 44.46,
+   "text": "Bring it down, I need it",
+   "section": "chorus"
+  },
+  {
+   "start": 44.62,
+   "end": 47.79,
+   "text": "Fighting my whole life, I'm still defeated",
+   "section": "chorus"
+  },
+  {
+   "start": 48.06,
+   "end": 48.9,
+   "text": "Yeah, rain, rain",
+   "section": "chorus"
+  },
+  {
+   "start": 49.09,
+   "end": 49.78,
+   "text": "I'm a needy curf-",
+   "section": "chorus"
+  },
+  {
+   "start": 50.57,
+   "end": 51.47,
+   "text": "Rain, rain",
+   "section": "chorus"
+  },
+  {
+   "start": 51.7,
+   "end": 53.14,
+   "text": "I'm a needy curf-",
+   "section": "chorus"
+  },
+  {
+   "start": 53.43,
+   "end": 53.96,
+   "text": "Rain",
+   "section": "chorus"
+  },
+  {
+   "start": 54.85,
+   "end": 58.0,
+   "text": "Show me in, help me in, take me to town",
+   "section": "chorus"
+  },
+  {
+   "start": 58.1,
+   "end": 64.03,
+   "text": "Show me in, show me in, take me to town",
+   "section": "chorus"
+  },
+  {
+   "start": 67.41,
+   "end": 68.72,
+   "text": "Hey, I feel it coming",
+   "section": "verse2"
+  },
+  {
+   "start": 71.15,
+   "end": 73.01,
+   "text": "Hey, I feel it coming",
+   "section": "verse2"
+  },
+  {
+   "start": 74.89,
+   "end": 77.28,
+   "text": "Hey, I feel it coming",
+   "section": "verse2"
+  },
+  {
+   "start": 77.94,
+   "end": 82.29,
+   "text": "I feel it \u2014 hey, I feel it coming",
+   "section": "verse2"
+  },
+  {
+   "start": 82.68,
+   "end": 83.73,
+   "text": "Settle down, babe",
+   "section": "bridge"
+  },
+  {
+   "start": 84.08,
+   "end": 86.16,
+   "text": "Settle down, my child",
+   "section": "bridge"
+  },
+  {
+   "start": 86.49,
+   "end": 88.0,
+   "text": "You worry too much",
+   "section": "bridge"
+  },
+  {
+   "start": 88.67,
+   "end": 90.31,
+   "text": "You try to fight the whole crowd",
+   "section": "bridge"
+  },
+  {
+   "start": 90.43,
+   "end": 91.88,
+   "text": "Just run at your pace",
+   "section": "bridge"
+  },
+  {
+   "start": 92.07,
+   "end": 94.82,
+   "text": "Don't think about them",
+   "section": "bridge"
+  },
+  {
+   "start": 95.14,
+   "end": 97.4,
+   "text": "They're running at the stars in the sky",
+   "section": "bridge"
+  },
+  {
+   "start": 97.4,
+   "end": 98.71,
+   "text": "they can catch them",
+   "section": "bridge"
+  },
+  {
+   "start": 98.86,
+   "end": 100.25,
+   "text": "And I know you feel it",
+   "section": "bridge"
+  },
+  {
+   "start": 100.38,
+   "end": 101.94,
+   "text": "You feel your soul and it's slowly creeping",
+   "section": "bridge-rap"
+  },
+  {
+   "start": 102.06,
+   "end": 104.0,
+   "text": "You want to talk about the holy demons",
+   "section": "bridge-rap"
+  },
+  {
+   "start": 104.0,
+   "end": 105.96,
+   "text": "The holy demons, they come and feed it",
+   "section": "bridge-rap"
+  },
+  {
+   "start": 106.12,
+   "end": 107.87,
+   "text": "Feeding for your soul and shit",
+   "section": "bridge-rap"
+  },
+  {
+   "start": 108.1,
+   "end": 110.0,
+   "text": "I know the shit, I own the shit",
+   "section": "bridge-rap"
+  },
+  {
+   "start": 110.0,
+   "end": 110.6,
+   "text": "It needs all the shit",
+   "section": "bridge-rap"
+  },
+  {
+   "start": 110.6,
+   "end": 112.49,
+   "text": "You buy a house and land, no ownership",
+   "section": "bridge-rap"
+  },
+  {
+   "start": 112.63,
+   "end": 115.34,
+   "text": "My n*gga, you really just poured the shit",
+   "section": "bridge-rap"
+  },
+  {
+   "start": 115.62,
+   "end": 119.88,
+   "text": "Yeah \u2014 I feel it coming",
+   "section": "outro"
+  },
+  {
+   "start": 120.75,
+   "end": 123.27,
+   "text": "Yeah \u2014 I feel it coming",
+   "section": "outro"
+  },
+  {
+   "start": 125.42,
+   "end": 127.56,
+   "text": "Hey, I feel it coming",
+   "section": "outro"
+  },
+  {
+   "start": 128.98,
+   "end": 130.79,
+   "text": "Hey, I feel it coming",
+   "section": "outro-break"
+  },
+  {
+   "start": 131.11,
+   "end": 132.94,
+   "text": "Hey, I feel it coming",
+   "section": "outro-break"
+  },
+  {
+   "start": 148.23,
+   "end": 149.79,
+   "text": "Hey, I feel it coming",
+   "section": "end"
+  }
+ ],
+ "downbeats": [
+  0.172,
+  2.315,
+  4.457,
+  6.6,
+  8.742,
+  10.885,
+  13.027,
+  15.17,
+  17.312,
+  19.455,
+  21.597,
+  23.74,
+  25.883,
+  28.025,
+  30.168,
+  32.31,
+  34.453,
+  36.595,
+  38.738,
+  40.88,
+  43.023,
+  45.165,
+  47.308,
+  49.45,
+  51.593,
+  53.735,
+  55.878,
+  58.02,
+  60.163,
+  62.305,
+  64.448,
+  66.59,
+  68.733,
+  70.875,
+  73.018,
+  75.16,
+  77.303,
+  79.445,
+  81.588,
+  83.73,
+  85.873,
+  88.015,
+  90.158,
+  92.3,
+  94.443,
+  96.585,
+  98.728,
+  100.87,
+  103.013,
+  105.155,
+  107.298,
+  109.44,
+  111.583,
+  113.725,
+  115.868,
+  118.01,
+  120.153,
+  122.295,
+  124.438,
+  126.58,
+  128.723,
+  130.865,
+  133.008,
+  135.15,
+  137.293,
+  139.435,
+  141.578,
+  143.72,
+  145.863,
+  148.006,
+  150.148
+ ],
+ "beats": [
+  0.172,
+  0.708,
+  1.244,
+  1.779,
+  2.315,
+  2.851,
+  3.386,
+  3.922,
+  4.457,
+  4.993,
+  5.529,
+  6.064,
+  6.6,
+  7.136,
+  7.671,
+  8.207,
+  8.742,
+  9.278,
+  9.814,
+  10.349,
+  10.885,
+  11.421,
+  11.956,
+  12.492,
+  13.027,
+  13.563,
+  14.099,
+  14.634,
+  15.17,
+  15.706,
+  16.241,
+  16.777,
+  17.312,
+  17.848,
+  18.384,
+  18.919,
+  19.455,
+  19.991,
+  20.526,
+  21.062,
+  21.597,
+  22.133,
+  22.669,
+  23.204,
+  23.74,
+  24.276,
+  24.811,
+  25.347,
+  25.883,
+  26.418,
+  26.954,
+  27.489,
+  28.025,
+  28.561,
+  29.096,
+  29.632,
+  30.168,
+  30.703,
+  31.239,
+  31.774,
+  32.31,
+  32.846,
+  33.381,
+  33.917,
+  34.453,
+  34.988,
+  35.524,
+  36.059,
+  36.595,
+  37.131,
+  37.666,
+  38.202,
+  38.738,
+  39.273,
+  39.809,
+  40.344,
+  40.88,
+  41.416,
+  41.951,
+  42.487,
+  43.023,
+  43.558,
+  44.094,
+  44.629,
+  45.165,
+  45.701,
+  46.236,
+  46.772,
+  47.308,
+  47.843,
+  48.379,
+  48.914,
+  49.45,
+  49.986,
+  50.521,
+  51.057,
+  51.593,
+  52.128,
+  52.664,
+  53.199,
+  53.735,
+  54.271,
+  54.806,
+  55.342,
+  55.878,
+  56.413,
+  56.949,
+  57.485,
+  58.02,
+  58.556,
+  59.091,
+  59.627,
+  60.163,
+  60.698,
+  61.234,
+  61.77,
+  62.305,
+  62.841,
+  63.376,
+  63.912,
+  64.448,
+  64.983,
+  65.519,
+  66.055,
+  66.59,
+  67.126,
+  67.661,
+  68.197,
+  68.733,
+  69.268,
+  69.804,
+  70.34,
+  70.875,
+  71.411,
+  71.946,
+  72.482,
+  73.018,
+  73.553,
+  74.089,
+  74.625,
+  75.16,
+  75.696,
+  76.231,
+  76.767,
+  77.303,
+  77.838,
+  78.374,
+  78.91,
+  79.445,
+  79.981,
+  80.516,
+  81.052,
+  81.588,
+  82.123,
+  82.659,
+  83.195,
+  83.73,
+  84.266,
+  84.802,
+  85.337,
+  85.873,
+  86.408,
+  86.944,
+  87.48,
+  88.015,
+  88.551,
+  89.087,
+  89.622,
+  90.158,
+  90.693,
+  91.229,
+  91.765,
+  92.3,
+  92.836,
+  93.372,
+  93.907,
+  94.443,
+  94.978,
+  95.514,
+  96.05,
+  96.585,
+  97.121,
+  97.657,
+  98.192,
+  98.728,
+  99.263,
+  99.799,
+  100.335,
+  100.87,
+  101.406,
+  101.942,
+  102.477,
+  103.013,
+  103.548,
+  104.084,
+  104.62,
+  105.155,
+  105.691,
+  106.227,
+  106.762,
+  107.298,
+  107.833,
+  108.369,
+  108.905,
+  109.44,
+  109.976,
+  110.512,
+  111.047,
+  111.583,
+  112.118,
+  112.654,
+  113.19,
+  113.725,
+  114.261,
+  114.797,
+  115.332,
+  115.868,
+  116.404,
+  116.939,
+  117.475,
+  118.01,
+  118.546,
+  119.082,
+  119.617,
+  120.153,
+  120.689,
+  121.224,
+  121.76,
+  122.295,
+  122.831,
+  123.367,
+  123.902,
+  124.438,
+  124.974,
+  125.509,
+  126.045,
+  126.58,
+  127.116,
+  127.652,
+  128.187,
+  128.723,
+  129.259,
+  129.794,
+  130.33,
+  130.865,
+  131.401,
+  131.937,
+  132.472,
+  133.008,
+  133.544,
+  134.079,
+  134.615,
+  135.15,
+  135.686,
+  136.222,
+  136.757,
+  137.293,
+  137.829,
+  138.364,
+  138.9,
+  139.435,
+  139.971,
+  140.507,
+  141.042,
+  141.578,
+  142.114,
+  142.649,
+  143.185,
+  143.72,
+  144.256,
+  144.792,
+  145.327,
+  145.863,
+  146.399,
+  146.934,
+  147.47,
+  148.006,
+  148.541,
+  149.077,
+  149.612,
+  150.148,
+  150.684
+ ]
+}

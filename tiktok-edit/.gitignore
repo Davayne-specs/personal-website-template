@@ -1,0 +1,13 @@
+# Media stays local — never commit the song, source footage or renders
+song/*
+!song/.gitkeep
+clips/*
+!clips/.gitkeep
+out/
+*.mp3
+*.wav
+*.mp4
+*.mov
+*.webm
+__pycache__/
+.cache/

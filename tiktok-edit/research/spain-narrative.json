@@ -1,0 +1,2185 @@
+{
+  "meta": {
+    "generated_for": "Lamine Yamal 2026 Ballon d'Or TikTok edit ('I Feel It Coming' - Mbastein)",
+    "as_of": "2026-10-01",
+    "method_limits": [
+      "WebFetch was egress-blocked for EVERY domain tried (nbcsports, foxsports, espn, fifa, wikipedia, aljazeera, bbc, guardian, youtube...). No page or video was opened.",
+      "All facts come from WebSearch result summaries (200-call search budget exhausted); most key facts have 2+ corroborating headlines; single-source items are marked.",
+      "All footage entries are verified:false = 'listed in search results, unopened'. Channels are inferred from title format only. Timecodes could not be checked - best_seconds are visual cues to scrub for, not timestamps.",
+      "Euro 2024 details in n05 and 2007-14 La Masia details are partly background knowledge: confirm in clip."
+    ],
+    "unreliable_sources_flagged": [
+      "zonalsports.com 'Yamal has won the 2026 Ballon d'Or' (fabricated - ceremony is 26 Oct)",
+      "leaguecricketschedule.com (claims Yamal scored v France; wrong)",
+      "thoughtcatalog.com quote about 'my mother had me at 16' (not corroborated)",
+      "Social posts (X) quoting the father are fan-account reposts"
+    ]
+  },
+  "world_cup": {
+    "summary": "Spain WON the 2026 FIFA World Cup (second title, first since 2010): beat Argentina 1-0 after extra time at MetLife (New York New Jersey Stadium) on Sun 19 July 2026, Ferran Torres 106'. Spain were unbeaten across 8 games (W7 D1), kept 7 clean sheets and conceded 1 goal (Unai Simon, Golden Glove). Yamal, 19 years 6 days old at the final, played all 120 minutes, became the first teenager ever to win both the Euros and the World Cup, but scored 1 goal / 0 assists in 8 games and did NOT win a FIFA individual award (Golden Ball: Rodri; Best Young Player: Pau Cubarsi; Golden Boot: Mbappe, 10). He came in managing a hamstring injury (torn on 22 April 2026) and was eased in from 25 minutes off the bench.",
+    "spain_results": [
+      {
+        "stage": "Qualifying summary",
+        "date": "2025-09 to 2025-11",
+        "opponent": "Group E (Bulgaria, Turkiye, Georgia)",
+        "score": "perfect start; qualified unbeaten (final game 2-2 v Turkiye, 18 Nov 2025)",
+        "yamal": "Played v Bulgaria 4 Sep 2025 (assist, involved in all 3 goals); missed Oct and Nov qualifiers (pubalgia). Not a notable part of the case.",
+        "source_keys": [
+          "espn_bulgaria",
+          "bein_bulgaria",
+          "espn_turkey",
+          "fox_georgia",
+          "gulf_qualify",
+          "aj_pubalgia"
+        ],
+        "sources": [
+          {
+            "title": "ESPN: Bulgaria 0-3 Spain (Sep 4, 2025)",
+            "url": "https://www.espn.com/soccer/report/_/gameId/724973"
+          },
+          {
+            "title": "beIN: Bulgaria 0-3 Spain - Yamal shines in routine qualifying victory",
+            "url": "https://www.beinsports.com/en-us/soccer/uefa-world-cup-qualifiers/articles/bulgaria-0-3-spain-yamal-shines-in-routine-world-cup-qualifying-victory-2025-09-04"
+          },
+          {
+            "title": "ESPN: Turkiye 0-6 Spain (Sep 7, 2025)",
+            "url": "https://www.espn.com/soccer/match/_/gameId/725002/spain-turkiye"
+          },
+          {
+            "title": "Fox Sports: Oyarzabal stars as Spain stay perfect in qualifying (Yamal absent, 15 Nov 2025)",
+            "url": "https://www.foxsports.com/stories/soccer/mikel-oyarzabal-stars-as-spain-remains-perfect-in-world-cup-qualifying-belgium-held"
+          },
+          {
+            "title": "Gulf News: Unbeaten Spain qualify for 2026 World Cup with Turkey draw",
+            "url": "https://gulfnews.com/sport/football/unbeaten-spain-qualify-for-2026-world-cup-with-turkey-draw-1.500351495"
+          },
+          {
+            "title": "Al Jazeera (3 Oct 2025): Injured Yamal out of Spain's WC qualifiers",
+            "url": "https://www.aljazeera.com/sports/2025/10/3/injured-yamal-out-of-spains-world-cup-2026-qualifiers-could-miss-clasico"
+          }
+        ]
+      },
+      {
+        "stage": "Group H, MD1",
+        "date": "2026-06-15",
+        "opponent": "Cape Verde",
+        "score": "0-0",
+        "venue": "Atlanta, USA",
+        "yamal": "Off the bench for 25 minutes, first appearance in nearly two months after the April hamstring injury.",
+        "source_keys": [
+          "yahoo_grouph",
+          "bola_grouph",
+          "tribune_fit"
+        ],
+        "sources": [
+          {
+            "title": "Yahoo Sports: Spain wins Group H thanks to Muslera blunder",
+            "url": "https://sports.yahoo.com/soccer/breaking-news/article/2026-world-cup-spain-wins-group-h-thanks-to-fernando-musleras-blunder-as-cape-verde-takes-second-over-uruguay-020219723.html"
+          },
+          {
+            "title": "Bolavip: 2026 World Cup Group H final standings",
+            "url": "https://bolavip.com/en/world-cup/2026-world-cup-group-h-final-standings-after-uruguay-vs-spain-and-cape-verde-vs-saudi-arabia"
+          },
+          {
+            "title": "The Tribune: Yamal says he is fit but Spain managing his injury carefully",
+            "url": "https://www.tribuneindia.com/news/sports/fifa-world-cup-2026-lamine-yamal-says-he-is-fit-but-spain-managing-his-injury-carefully/"
+          }
+        ]
+      },
+      {
+        "stage": "Group H, MD2",
+        "date": "2026-06-21",
+        "opponent": "Saudi Arabia",
+        "score": "4-0",
+        "venue": "Atlanta, USA",
+        "yamal": "First World Cup start; scored the opener ~10th minute (slid in at the far post to touch home a low cross). 8th-youngest scorer in WC history.",
+        "source_keys": [
+          "espn_saudi",
+          "cbs_saudi",
+          "yahoo_saudi",
+          "deccan_saudi",
+          "fcb_wcgoal"
+        ],
+        "sources": [
+          {
+            "title": "ESPN: Spain 4-0 Saudi Arabia (Jun 21, 2026)",
+            "url": "https://www.espn.com/soccer/report/_/gameId/760453"
+          },
+          {
+            "title": "CBS Atlanta: Yamal scores 10 minutes into his first World Cup start",
+            "url": "https://www.cbsnews.com/atlanta/news/spain-star-lamine-yamal-scores-after-10-minutes-of-his-first-start-at-the-world-cup/"
+          },
+          {
+            "title": "Yahoo Sports: Yamal scores first World Cup goal as Spain run rampant vs Saudi Arabia",
+            "url": "https://sports.yahoo.com/articles/lamine-yamal-scores-first-world-192258127.html"
+          },
+          {
+            "title": "Deccan Chronicle: Yamal becomes 8th youngest World Cup scorer",
+            "url": "https://www.deccanchronicle.com/fifa-world-cup-2026/lamine-yamal-becomes-eighth-youngest-world-cup-scorer-as-spain-beat-saudi-arabia-4-0-1965319"
+          },
+          {
+            "title": "FC Barcelona: Lamine Yamal opens his goalscoring account in the World Cup",
+            "url": "https://www.fcbarcelona.com/en/news/4523396/lamine-yamal-opens-his-goalscoring-account-in-the-world-cup"
+          }
+        ]
+      },
+      {
+        "stage": "Group H, MD3",
+        "date": "2026-06-27",
+        "opponent": "Uruguay",
+        "score": "1-0",
+        "venue": "Zapopan, Mexico",
+        "yamal": "Started (deduced: 7 starts in 8 games, only Cape Verde was a sub appearance). Winner: Alex Baena 42' via Muslera blunder. Spain top Group H on 7 pts.",
+        "source_keys": [
+          "yahoo_grouph",
+          "bola_grouph"
+        ],
+        "sources": [
+          {
+            "title": "Yahoo Sports: Spain wins Group H thanks to Muslera blunder",
+            "url": "https://sports.yahoo.com/soccer/breaking-news/article/2026-world-cup-spain-wins-group-h-thanks-to-fernando-musleras-blunder-as-cape-verde-takes-second-over-uruguay-020219723.html"
+          },
+          {
+            "title": "Bolavip: 2026 World Cup Group H final standings",
+            "url": "https://bolavip.com/en/world-cup/2026-world-cup-group-h-final-standings-after-uruguay-vs-spain-and-cape-verde-vs-saudi-arabia"
+          }
+        ]
+      },
+      {
+        "stage": "Round of 32",
+        "date": "2026-07-02",
+        "opponent": "Austria",
+        "score": "3-0",
+        "venue": "Los Angeles (SoFi)",
+        "yamal": "Player of the Match. Oyarzabal 36' and 89', Porro 66'. David Alaba's late goal-line clearance denied Yamal a goal. Post-match: 'World Cup starts now.'",
+        "source_keys": [
+          "espn_austria",
+          "fifa_austria",
+          "tnt_austria",
+          "dailystar_motm",
+          "espn_wcstarts"
+        ],
+        "sources": [
+          {
+            "title": "ESPN: Spain 3-0 Austria (Jul 2, 2026)",
+            "url": "https://www.espn.com/soccer/match/_/gameId/760497/austria-spain"
+          },
+          {
+            "title": "FIFA: Spain 3-0 Austria match report",
+            "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/spain-austria-match-report-highlights"
+          },
+          {
+            "title": "TNT Sports: Spain v Austria - Yamal sizzles, Oyarzabal double",
+            "url": "https://www.tntsports.co.uk/football/world-cup/2026/live-spain-austria_mtc1579499/live-commentary.shtml"
+          },
+          {
+            "title": "The Daily Star: 'I was just missing goal or assist' - MOTM Yamal after Austria win",
+            "url": "https://www.thedailystar.net/sports/sports-special/fifa-world-cup-2026/news/i-was-just-missing-goal-or-assist-motm-yamal-after-spains-win-over-austria-4214721"
+          },
+          {
+            "title": "ESPN: Yamal declares 'World Cup starts now' after Austria win",
+            "url": "https://www.espn.com/soccer/story/_/id/49252369/after-spain-beat-austria-yamal-world-cup-starts-now"
+          }
+        ]
+      },
+      {
+        "stage": "Round of 16",
+        "date": "2026-07-06",
+        "opponent": "Portugal",
+        "score": "1-0",
+        "venue": "Dallas Stadium (Arlington)",
+        "yamal": "Kept in check by makeshift left-back Nelson Semedo. Winner: Mikel Merino 91' (sub, set up by sub Ferran Torres). Likely Ronaldo's last World Cup game.",
+        "source_keys": [
+          "espn_portugal",
+          "cbs_portugal",
+          "fifa_ko"
+        ],
+        "sources": [
+          {
+            "title": "ESPN: Portugal 0-1 Spain (Jul 6, 2026)",
+            "url": "https://www.espn.com/soccer/match/_/gameId/760506/spain-portugal"
+          },
+          {
+            "title": "CBS Sports: Spain eliminate Portugal on late goal",
+            "url": "https://www.cbssports.com/soccer/news/portugal-spain-live-updates-world-cup-2026-score-result/live/"
+          },
+          {
+            "title": "FIFA: World Cup 2026 knockout stages - all the results",
+            "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/knockout-stage-match-schedule-bracket"
+          }
+        ]
+      },
+      {
+        "stage": "Quarter-final",
+        "date": "2026-07-10",
+        "opponent": "Belgium",
+        "score": "2-1",
+        "venue": "Los Angeles (Inglewood)",
+        "yamal": "Cut inside and flashed an effort narrowly wide; started alongside 18/19-yr-old Cubarsi. Fabian Ruiz 30', Merino 88' (sub); De Ketelaere 41'. Spain's first semi-final since 2010.",
+        "source_keys": [
+          "espn_belgium",
+          "fifa_belgium",
+          "espn_belgium_stats"
+        ],
+        "sources": [
+          {
+            "title": "ESPN: Spain 2-1 Belgium (Jul 10, 2026)",
+            "url": "https://www.espn.com/soccer/match/_/gameId/760511/belgium-spain"
+          },
+          {
+            "title": "FIFA: Spain edge Belgium in quarter-finals",
+            "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/spain-belgium-match-report-highlights"
+          },
+          {
+            "title": "ESPN: WC 2026 stats - Merino makes history; Yamal-Cubarsi first since Pele-Altafini",
+            "url": "https://www.espn.com/soccer/story/_/id/49329568/fifa-world-cup-2026-stats-mikel-merino-makes-history-lamine-yamal-pau-cubarsi-first-pele-altafini-spain-belgium"
+          }
+        ]
+      },
+      {
+        "stage": "Semi-final",
+        "date": "2026-07-14",
+        "opponent": "France (Mbappe)",
+        "score": "2-0",
+        "venue": "not confirmed in sources read",
+        "yamal": "Won the penalty (his run at Lucas Digne drew the foul); Oyarzabal pen 22', Porro 58'. A Yamal goal at 61' was ruled offside. Took a 'dead leg' knock afterwards.",
+        "source_keys": [
+          "nbc_france",
+          "abc_france",
+          "yahoo_sneaky",
+          "forbes_deadleg",
+          "si_final_fit"
+        ],
+        "sources": [
+          {
+            "title": "NBC News live blog: Spain defeats France 2-0 to advance to final",
+            "url": "https://www.nbcnews.com/sports/soccer/live-blog/spain-france-world-cup-2026-july-14-live-updates-rcna587324"
+          },
+          {
+            "title": "ABC News: Spain advances to World Cup final with 2-0 win over France",
+            "url": "https://abcnews.com/Sports/wireStory/kylian-mbapp-france-world-cup-semifinals-spain-after-134756674"
+          },
+          {
+            "title": "Yahoo Sports: Yamal didn't score, but a sneaky play helped Spain beat France",
+            "url": "https://sports.yahoo.com/articles/lamine-yamal-didnt-score-sneaky-010534760.html"
+          },
+          {
+            "title": "Forbes: Yamal limping after semis, skips drills",
+            "url": "https://www.forbes.com/sites/brucelee/2026/07/16/spains-lamine-yamal-seen-limping-after-world-cup-semis-skips-drills/"
+          },
+          {
+            "title": "SI: Yamal injury - Spain boss update for World Cup final",
+            "url": "https://www.si.com/soccer/lamine-yamal-injury-spain-update-2026-world-cup-final"
+          }
+        ]
+      },
+      {
+        "stage": "FINAL",
+        "date": "2026-07-19",
+        "opponent": "Argentina (Messi)",
+        "score": "1-0 aet",
+        "venue": "MetLife / New York New Jersey Stadium, East Rutherford",
+        "yamal": "Played all 120 min; more shots, more dribbles and more tackles won than any other player on the pitch (NBC Sports). Drew two defenders, leaving Pedro Porro free; Porro's cross led to Ferran Torres' 106' winner. Argentina were down to 10 after Enzo Fernandez's second yellow.",
+        "source_keys": [
+          "nbc_final",
+          "nbcs_baton",
+          "fox_final",
+          "espn_final_match"
+        ],
+        "sources": [
+          {
+            "title": "NBC News live blog: Spain outlasts Argentina 1-0 to win second title",
+            "url": "https://www.nbcnews.com/sports/soccer/live-blog/fifa-world-cup-final-2026-argentina-spain-messi-yamal-live-updates-rcna587754"
+          },
+          {
+            "title": "NBC Sports: Lamine Yamal shines in World Cup final as Messi passes the baton",
+            "url": "https://www.nbcsports.com/soccer/news/lamine-yamal-shines-in-world-cup-final-as-lionel-messi-passes-the-baton"
+          },
+          {
+            "title": "Fox Sports: Spain wins 2026 FIFA World Cup over Messi, Argentina",
+            "url": "https://www.foxsports.com/stories/soccer/world-cup-spain-wins-argentina-lamine-yamal-lionel-messi"
+          },
+          {
+            "title": "ESPN: Spain 1-0 Argentina (Jul 19, 2026) final score",
+            "url": "https://www.espn.com/soccer/match/_/gameId/760517/argentina-spain"
+          }
+        ]
+      }
+    ],
+    "yamal_stats": {
+      "appearances": 8,
+      "starts": 7,
+      "minutes": 615,
+      "goals": 1,
+      "assists": 0,
+      "minutes_assists_caveat": "615 min / 0 assists / 22 dribbles come from a stats aggregator (Tribuna/World Cup schedule sites) via search snippet - single-source. Treat as indicative.",
+      "squawka": {
+        "final_third_passes_completed": 121,
+        "successful_take_ons": 27,
+        "shots": 27,
+        "shots_on_target": 12,
+        "possessions_won_att_third": 9,
+        "crosses_completed": 7,
+        "goals": 1
+      },
+      "dribble_conflict": "Dribble totals conflict by provider: 22 (aggregator), 27 take-ons (Squawka), 35 'most at the tournament' (World Soccer Talk). Do NOT put a dribble number on screen.",
+      "records_confirmed": [
+        "First-ever teenager to win both the Euros and the World Cup (ESPN final stats). World Soccer Talk: youngest player to win both.",
+        "19 years 6 days at the final whistle = tied 4th-youngest World Cup winner (ESPN); only Pele, Bergomi, Ronaldo younger (World Soccer Talk).",
+        "3rd-youngest player to appear in a World Cup final, behind Pele 1958 (17y 249d) and Bergomi 1982 (18y 201d) (ESPN).",
+        "6th appearance of the tournament = most by any player aged 18 or younger at a WC (ESPN).",
+        "With Pau Cubarsi, first pair of teenagers to start a WC match for one nation since Pele & Altafini (Brazil v Wales, 1958) - FIFA via Barca Buzz / ESPN.",
+        "Started 13 major-tournament games for Spain (Euro 2024 + WC 2026) and won all 13 (World Soccer Talk; ESPN/Yahoo 'keeps incredible tournament record intact').",
+        "8th-youngest goalscorer in World Cup history (Deccan Chronicle) after the Saudi Arabia goal.",
+        "Final: Messi (b. June 1987) v Yamal (b. July 2007) = first WC final with starters 20+ years apart (20y 19d) (ESPN)."
+      ],
+      "claims_to_avoid": [
+        "'Youngest Spanish World Cup scorer' - several outlets say it, but Gavi (18y 110d, 2022) was younger than Yamal (18y 343d); the Deccan Chronicle text itself says so. Use '8th-youngest World Cup scorer ever' (single-source) or nothing.",
+        "'Best Young Player of the World Cup' - that was Pau Cubarsi (Yahoo Sports awards list). A low-grade aggregator claims UEFA observers named Yamal 'Young Player' - unsupported.",
+        "'Yamal scored v France in the semi-final' - false (one aggregator says so; NBC/ABC/Yahoo: he did not score, goal ruled offside).",
+        "'Yamal won the 2026 Ballon d'Or / first teenager to win WC + Ballon d'Or' - from zonalsports.com 'exclusive'; the ceremony has NOT happened (26 Oct 2026). Fabricated/unreliable."
+      ]
+    },
+    "awards": {
+      "tournament": {
+        "golden_ball": "Rodri (Spain); silver Messi; bronze Mbappe",
+        "golden_boot": "Kylian Mbappe, 10 goals (first player to win it at two World Cups)",
+        "best_young_player": "Pau Cubarsi (Spain)",
+        "golden_glove": "Unai Simon (Spain) - record 7 clean sheets, 1 goal conceded"
+      },
+      "yamal": [
+        "No FIFA individual award found in sources read.",
+        "Player of the Match v Austria, R32, 2 Jul 2026 (TNT / Goal / Daily Star headlines).",
+        "Final PotM not confirmed in any source read."
+      ],
+      "source_keys": [
+        "yahoo_awards",
+        "yahoo_rodri",
+        "espn_final_stats",
+        "wst_records",
+        "bdo_record"
+      ],
+      "sources": [
+        {
+          "title": "Yahoo Sports: 2026 World Cup award winners (Golden Boot, Golden Ball, Young Player, Glove)",
+          "url": "https://sports.yahoo.com/articles/2026-world-cup-award-winners-225707815.html"
+        },
+        {
+          "title": "Yahoo Sports: Rodri beats Messi to Golden Ball as Spain sweep individual awards",
+          "url": "https://sports.yahoo.com/articles/rodri-beats-lionel-messi-world-232035250.html"
+        },
+        {
+          "title": "ESPN: World Cup 2026 final stats - Yamal first-ever teenager; Messi records; Mbappe history",
+          "url": "https://www.espn.com/soccer/story/_/id/49404955/fifa-world-cup-2026-stats-final-lamine-yamal-first-ever-teenager-lionel-messi-sets-new-wc-records-kylian-mbappe-makes-history"
+        },
+        {
+          "title": "World Soccer Talk: Every World Cup record Yamal set during Spain's 2026 winning campaign",
+          "url": "https://worldsoccertalk.com/world-cup/every-world-cup-record-lamine-yamal-set-during-spains-2026-winning-campaign/"
+        },
+        {
+          "title": "Ballon d'Or (official site): Spain wins the World Cup and Lamine Yamal sets a legendary record",
+          "url": "https://ballondor.com/news/posts/spain-wins-the-world-cup-and-lamine-yamal-sets-a-legendary-record"
+        }
+      ]
+    },
+    "other_spain_internationals_in_window": [
+      "Sep 2025 WC qualifiers: Bulgaria 0-3 Spain (4 Sep, Yamal assist + involved in all 3 goals); Turkiye 0-6 Spain (7 Sep, Merino hat-trick).",
+      "Oct-Nov 2025: Yamal out of Spain squads with pubalgia; Flick publicly criticised Spain's handling; Spain qualified unbeaten (4-0 Georgia 15 Nov; 2-2 Turkiye 18 Nov).",
+      "27 Mar 2026 Finalissima (Spain v Argentina, Doha) CANCELLED over Middle East security - no Messi-Yamal meeting before the final.",
+      "31 Mar 2026 Spain 0-0 Egypt (Cornella): anti-Muslim chants from the stands; Yamal (Muslim) condemned them on Instagram.",
+      "AFTER the window (not eligible, but usable as live hype): 26 Sep 2026 England 2-3 Spain, Wembley, Nations League - Yamal scored inside 2 minutes."
+    ]
+  },
+  "race": {
+    "ceremony": "Monday 26 October 2026, London Palladium (France Football). Voting closed end of Monday 28 September 2026. 30-man shortlist announced 8 September 2026.",
+    "yamal_position": "Clear No.2 behind Kane in betting; Mbappe a distant third. Yamal runner-up in 2025 (Dembele), Kopa Trophy winner 2024 and 2025.",
+    "odds_snapshot": {
+      "as_of": "2026-09-29",
+      "kane": "best 5/4 (BetVictor); most bookmakers as short as 4/6 (Oddschecker); 4/7 (Statsniper)",
+      "yamal": "best 2/1 (Ladbrokes, Coral) (Oddschecker)",
+      "mbappe": "~14/1 (CryptoSlate snippet)",
+      "history": "25 Jul 2026 (beIN): Kane evens, Yamal 11/10 - Yamal has drifted since the World Cup.",
+      "source_keys": [
+        "oddschecker",
+        "statsniper",
+        "bookies",
+        "cryptoslate",
+        "bein_july25"
+      ],
+      "sources": [
+        {
+          "title": "Oddschecker (29 Sep 2026): Ballon d'Or 2026 odds - Kane favourite ahead of Yamal",
+          "url": "https://www.oddschecker.com/insight/football/20260929-ballon-dor-2026-odds-harry-kane-favourite-ahead-of-lamine-yamal"
+        },
+        {
+          "title": "Statsniper: Ballon d'Or 2026 odds - Kane 4/7 as the 30-man shortlist lands",
+          "url": "https://statsniper.com/blog/soccer/ballon-dor-2026-odds-kane-yamal-mbappe/"
+        },
+        {
+          "title": "Bookies.com (29 Sep 2026): Kane clear odds-on over Yamal and Mbappe",
+          "url": "https://bookies.com/uk/news/ballon-dor-betting-odds-2026-harry-kane-clear-favourite-over-yamal-mbappe-29-september"
+        },
+        {
+          "title": "CryptoSlate: Ballon d'Or winner 2026 odds and market analysis",
+          "url": "https://cryptoslate.com/predictions/market/ballon-dor-winner-2026/"
+        },
+        {
+          "title": "beIN (25 Jul 2026): Can Yamal really win the 2026 Ballon d'Or after Spain's WC triumph?",
+          "url": "https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/can-lamine-yamal-really-win-the-2026-ballon-d-or-after-spain-s-world-cup-triumph-2026-07-25"
+        }
+      ]
+    },
+    "yamal_2025_26_headline_numbers": {
+      "la_liga": "28 apps, 16 goals, 11 assists (top assist provider); LaLiga Player of the Season; shared Zarra Trophy with Ferran Torres",
+      "ucl": "6 goals, 4 assists (per Yahoo/StatMuse summary, single-source)",
+      "copa": "2 goals, 2 assists",
+      "milestones": [
+        "First pro hat-trick 28 Feb 2026 v Villarreal (4-1) - youngest player of the 21st century with a La Liga hat-trick",
+        "Barcelona La Liga champions (29th title, clinched 10 May 2026 with Yamal injured)",
+        "Spanish Super Cup winners (Jan 2026, 3-2 v Real Madrid)",
+        "Club failures: UCL QF exit to Atletico (3-2 agg), Copa semi-final exit to Atletico (4-0, 3-0)"
+      ],
+      "note": "Club season belongs to the other scout; numbers above from FC Barcelona / Yahoo / beIN snippets.",
+      "source_keys": [
+        "fcb_lalpots",
+        "yahoo_record",
+        "bein_react"
+      ],
+      "sources": [
+        {
+          "title": "FC Barcelona: Yamal, 2025/26 LaLiga Player of the Season",
+          "url": "https://www.fcbarcelona.com/en/football/first-team/news/4514485/lamine-yamal-202526-laliga-player-of-the-season"
+        },
+        {
+          "title": "Yahoo Sports: Yamal's 2025-26 record for FC Barcelona",
+          "url": "https://sports.yahoo.com/articles/lamine-yamals-2025-26-record-193800490.html"
+        },
+        {
+          "title": "beIN: How did Yamal react to his 2026 Ballon d'Or nomination - real chances?",
+          "url": "https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/how-did-lamine-yamal-react-to-his-2026-ballon-d-or-nomination-and-what-are-his-real-chances-of-winning-2026-09-08"
+        }
+      ]
+    },
+    "rivals": [
+      {
+        "name": "Harry Kane (Bayern / England)",
+        "headline": "73 goals in 65 games for club and country (Oddschecker/Yahoo); 61 club goals; 36 Bundesliga goals - top scorer 3rd year running; Bundesliga + DFB-Pokal (hat-trick in the final); European Golden Shoe; England 3rd at WC (lost semi 2-1 to Argentina) and became England's WC record scorer.",
+        "contrast": "Numbers king, but no World Cup final and no Champions League run to match; lost to Spain's champion side in the Nations League at Wembley on 26 Sep (missed a penalty).",
+        "source_keys": [
+          "bundesliga_shoe",
+          "sofa_kane",
+          "eng_kane_wc",
+          "oddschecker",
+          "yahoo_case"
+        ],
+        "sources": [
+          {
+            "title": "Bundesliga: Kane wins 2025/26 European Golden Shoe",
+            "url": "https://www.bundesliga.com/en/bundesliga/news/harry-kane-wins-golden-shoe-2025-26-bayern-munich-england-37552"
+          },
+          {
+            "title": "Sofascore: Kane wins European Golden Shoe after 61-goal season",
+            "url": "https://www.sofascore.com/news/harry-kane-wins-european-golden-shoe-after-61-goal-season"
+          },
+          {
+            "title": "England Football: Kane reflects on World Cup exit (semi-final v Argentina)",
+            "url": "https://www.englandfootball.com/articles/2026/Jul/15/harry-kane-reaction-england-argentina-world-cup-20261507"
+          },
+          {
+            "title": "Oddschecker (29 Sep 2026): Ballon d'Or 2026 odds - Kane favourite ahead of Yamal",
+            "url": "https://www.oddschecker.com/insight/football/20260929-ballon-dor-2026-odds-harry-kane-favourite-ahead-of-lamine-yamal"
+          },
+          {
+            "title": "Yahoo Sports: Ballon d'Or 2026 - the case for and against the 7 leading contenders",
+            "url": "https://sports.yahoo.com/articles/ballon-dor-2026-case-against-184057434.html"
+          }
+        ]
+      },
+      {
+        "name": "Kylian Mbappe (Real Madrid / France)",
+        "headline": "10 goals at the World Cup (Golden Boot, 2nd time); 25 La Liga goals (top scorer); 15 UCL goals in 11 games (top scorer); 42 goals for Real Madrid; France lost the semi 0-2 to Spain.",
+        "contrast": "Real Madrid won no major trophy (single-source: CryptoSlate); beaten by Yamal's Spain in the semi.",
+        "source_keys": [
+          "yahoo_awards",
+          "rm_ucl_mbappe",
+          "uefa_ucl_mbappe",
+          "yahoo_case"
+        ],
+        "sources": [
+          {
+            "title": "Yahoo Sports: 2026 World Cup award winners (Golden Boot, Golden Ball, Young Player, Glove)",
+            "url": "https://sports.yahoo.com/articles/2026-world-cup-award-winners-225707815.html"
+          },
+          {
+            "title": "Real Madrid: Mbappe, top scorer of the Champions League 2025/26",
+            "url": "https://www.realmadrid.com/en-US/news/football/first-team/latest-news/mbappe-maximo-goleador-de-la-champions-league-2025-26-31-05-2026"
+          },
+          {
+            "title": "UEFA: Champions League top scorer Kylian Mbappe",
+            "url": "https://www.uefa.com/uefachampionsleague/news/029d-1ec1670159ea-2d1882e6a430-1000--champions-league-top-scorer-kylian-mbappe/"
+          },
+          {
+            "title": "Yahoo Sports: Ballon d'Or 2026 - the case for and against the 7 leading contenders",
+            "url": "https://sports.yahoo.com/articles/ballon-dor-2026-case-against-184057434.html"
+          }
+        ]
+      },
+      {
+        "name": "Rodri (Spain)",
+        "headline": "World Cup Golden Ball; World Cup winner and captain who lifted the trophy.",
+        "contrast": "Teammate - can split the 'Spain / World Cup' vote.",
+        "source_keys": [
+          "yahoo_awards",
+          "yahoo_case"
+        ],
+        "sources": [
+          {
+            "title": "Yahoo Sports: 2026 World Cup award winners (Golden Boot, Golden Ball, Young Player, Glove)",
+            "url": "https://sports.yahoo.com/articles/2026-world-cup-award-winners-225707815.html"
+          },
+          {
+            "title": "Yahoo Sports: Ballon d'Or 2026 - the case for and against the 7 leading contenders",
+            "url": "https://sports.yahoo.com/articles/ballon-dor-2026-case-against-184057434.html"
+          }
+        ]
+      },
+      {
+        "name": "Ousmane Dembele (PSG)",
+        "headline": "Defending champion; PSG won back-to-back Champions Leagues (30 May 2026, beat Arsenal 4-3 pens after 1-1).",
+        "contrast": "Reduced individual numbers vs 2025 (Yahoo).",
+        "source_keys": [
+          "npr_ucl",
+          "yahoo_case"
+        ],
+        "sources": [
+          {
+            "title": "NPR: PSG win back-to-back Champions League titles after shootout v Arsenal",
+            "url": "https://www.npr.org/2026/05/30/nx-s1-5841380/psg-champions-league-victory-against-arsenal"
+          },
+          {
+            "title": "Yahoo Sports: Ballon d'Or 2026 - the case for and against the 7 leading contenders",
+            "url": "https://sports.yahoo.com/articles/ballon-dor-2026-case-against-184057434.html"
+          }
+        ]
+      },
+      {
+        "name": "Lionel Messi (Argentina)",
+        "headline": "Aged 39: World Cup Silver Ball, runner-up; first man to start 3 WC finals.",
+        "contrast": "Sentimental vote; lost the final to Yamal's Spain.",
+        "source_keys": [
+          "yahoo_awards",
+          "espn_final_stats"
+        ],
+        "sources": [
+          {
+            "title": "Yahoo Sports: 2026 World Cup award winners (Golden Boot, Golden Ball, Young Player, Glove)",
+            "url": "https://sports.yahoo.com/articles/2026-world-cup-award-winners-225707815.html"
+          },
+          {
+            "title": "ESPN: World Cup 2026 final stats - Yamal first-ever teenager; Messi records; Mbappe history",
+            "url": "https://www.espn.com/soccer/story/_/id/49404955/fifa-world-cup-2026-stats-final-lamine-yamal-first-ever-teenager-lionel-messi-sets-new-wc-records-kylian-mbappe-makes-history"
+          }
+        ]
+      },
+      {
+        "name": "Others on shortlist",
+        "headline": "Michael Olise (15 goals, 19 assists); Fabian Ruiz (Champions League + World Cup same year); Vitinha, Hakimi, Joao Neves, Nuno Mendes, Kvaratskhelia, Pacho, Marquinhos, Ferran Torres.",
+        "contrast": "",
+        "source_keys": [
+          "yahoo_case",
+          "espn_shortlist",
+          "aj_shortlist"
+        ],
+        "sources": [
+          {
+            "title": "Yahoo Sports: Ballon d'Or 2026 - the case for and against the 7 leading contenders",
+            "url": "https://sports.yahoo.com/articles/ballon-dor-2026-case-against-184057434.html"
+          },
+          {
+            "title": "ESPN: Ballon d'Or 2026 nominees - Kane, Mbappe lead 30-man shortlist",
+            "url": "https://www.espn.com/soccer/story/_/id/49866841/ballon-dor-2026-nominees-harry-kane-kylian-mbappe-lead-30-man-shortlist"
+          },
+          {
+            "title": "Al Jazeera: Dembele, Mbappe, Kane and Yamal top Ballon d'Or shortlist",
+            "url": "https://www.aljazeera.com/sports/2026/9/8/dembele-mbappe-kane-and-yamal-top-ballon-dor-shortlist"
+          }
+        ]
+      }
+    ],
+    "prior_year_2025": {
+      "date": "2025-09-22, Theatre du Chatelet, Paris",
+      "result": "Yamal 2nd behind Ousmane Dembele (PSG; 35 goals, 14 assists in 53 games, Champions League/Ligue 1/Coupe de France). Top 10: 1 Dembele, 2 Yamal, 3 Vitinha, 4 Salah, 5 Raphinha, 6 Hakimi, 7 Mbappe, 8 Palmer, 9 Donnarumma, 10 Nuno Mendes.",
+      "kopa": "Won the Kopa Trophy for the 2nd year running - first player ever to win it twice in a row.",
+      "quotes": [
+        "Speech: 'Thank you very much to France Football for the award. It's an honour to be here again... I want to thank my family and my teammates.'",
+        "'I don't know if I'm ready for the big trophy... Maybe we'll see each other later.'",
+        "Dembele on stage: 'He's extraordinary... I think he's going to be winning a lot of trophies like the Ballon d'Or.'",
+        "Later: 'Honestly, if I'm being sincere, I thought I was going to win it that day because of some things that happened.' and that it was 'good' Dembele won because he was still a kid (Goal/Vanguard, June 2026)."
+      ],
+      "source_keys": [
+        "espn_bdo25",
+        "uefa_bdo25",
+        "yahoo_kopa",
+        "fcb_kopa",
+        "gulf_kopa",
+        "yahoo_bdo25_rank",
+        "yahoo_dembele_quote",
+        "st_thought",
+        "goal_thought"
+      ],
+      "sources": [
+        {
+          "title": "ESPN: PSG's Dembele wins Ballon d'Or ahead of Yamal",
+          "url": "https://www.espn.com/soccer/story/_/id/46344733/psg-ousmane-dembele-wins-ballon-dor-ahead-lamine-yamal"
+        },
+        {
+          "title": "UEFA: Ousmane Dembele wins 2025 men's Ballon d'Or",
+          "url": "https://www.uefa.com/uefachampionsleague/news/029d-1ec96c30aa3f-f6868c869cbd-1000--ousmane-dembele-wins-2025-men-s-ballon-d-or/"
+        },
+        {
+          "title": "Yahoo Sports: Official - Yamal wins the 2025 Kopa Trophy",
+          "url": "https://sports.yahoo.com/article/official-lamine-yamal-wins-2025-192000563.html"
+        },
+        {
+          "title": "FC Barcelona: Lamine Yamal retains Kopa Trophy",
+          "url": "https://www.fcbarcelona.com/en/football/first-team/news/4367534/lamine-yamal-retains-kopa-trophy/featured"
+        },
+        {
+          "title": "Gulf News: Yamal first player to win Kopa Trophy twice",
+          "url": "https://gulfnews.com/sport/football/lamine-yamal-makes-history-first-player-to-win-kopa-trophy-twice-1.500279314"
+        },
+        {
+          "title": "Yahoo Sports: Ballon d'Or 2025 full ranking",
+          "url": "https://sports.yahoo.com/article/ballon-dor-2025-full-ranking-125500371.html"
+        },
+        {
+          "title": "Yahoo Sports: What Dembele said about Yamal at the Ballon d'Or gala",
+          "url": "https://ca.sports.yahoo.com/news/ousmane-demb-l-said-lamine-151000073.html"
+        },
+        {
+          "title": "Sporting Tribune: 2025 Ballon d'Or - 'I thought I was going to win' - Yamal",
+          "url": "https://sportingtribune.com/2025-ballon-dor-i-thought-i-was-going-to-win-yamal/"
+        },
+        {
+          "title": "Goal: 'I thought I was going to win' - why the defeat was 'good' for Yamal",
+          "url": "https://www.goal.com/en-us/lists/ballon-dor-ousmane-dembele-lamine-yamal-barcelona-spain-2026-golden-ball/blt446890fc768dbe7a"
+        }
+      ]
+    },
+    "yamal_quotes_2026": [
+      {
+        "date": "2025 (pre-ceremony)",
+        "quote": "I don't dream about winning a Ballon d'Or, I dream about winning many. ... If I don't achieve it, it'll be because I haven't done things the right way or haven't wanted it enough.",
+        "source_key": "espn_many",
+        "source": {
+          "title": "ESPN: Yamal targets multiple Ballon d'Or wins ('I dream about winning many')",
+          "url": "https://www.espn.com/soccer/story/_/id/46213604/barcelona-lamine-yamal-targets-multiple-ballon-dor-wins"
+        }
+      },
+      {
+        "date": "2026-09-08",
+        "quote": "It doesn't depend on me, it depends on you [the media]. ... I don't think I need to run a campaign. I am proud of the year I had, winning the World Cup and LaLiga. ... I am not going to beg for anything.",
+        "source_key": "espn_beg",
+        "source": {
+          "title": "ESPN: Yamal says he won't 'beg' to win Ballon d'Or",
+          "url": "https://www.espn.com/soccer/story/_/id/49868658/barcelona-spain-lamine-yamal-not-beg-win-ballon-dor"
+        }
+      },
+      {
+        "date": "2026-09-14 (Movistar Plus)",
+        "quote": "For me, Mbappe and me, we're the two best players in the world ... this year I would deserve it because of what I've won.",
+        "source_key": "malay_deserve",
+        "source": {
+          "title": "Malay Mail (14 Sep 2026): 'This year I deserve Ballon d'Or' - Yamal",
+          "url": "https://www.malaymail.com/news/sports/2026/09/14/this-year-i-deserve-ballon-dor-barcas-yamal/235087"
+        }
+      },
+      {
+        "date": "2026-09-26",
+        "quote": "Hate me or love me, I don't care. (Instagram caption after scoring v England at Wembley)",
+        "source_key": "yahoo_hate",
+        "source": {
+          "title": "Yahoo Sports: 'Hate me or love me, I don't care'",
+          "url": "https://sports.yahoo.com/articles/hate-love-don-t-care-062245582.html"
+        }
+      }
+    ],
+    "endorsements": [
+      "Spain coach Luis de la Fuente says Yamal deserves the award (YEN / beIN).",
+      "Deco, Eto'o, Nico Williams have backed him (beIN / Yahoo headlines; not opened)."
+    ],
+    "source_keys": [
+      "oddschecker",
+      "espn_shortlist",
+      "cnn_shortlist",
+      "yahoo_case",
+      "forbes_race"
+    ],
+    "sources": [
+      {
+        "title": "Oddschecker (29 Sep 2026): Ballon d'Or 2026 odds - Kane favourite ahead of Yamal",
+        "url": "https://www.oddschecker.com/insight/football/20260929-ballon-dor-2026-odds-harry-kane-favourite-ahead-of-lamine-yamal"
+      },
+      {
+        "title": "ESPN: Ballon d'Or 2026 nominees - Kane, Mbappe lead 30-man shortlist",
+        "url": "https://www.espn.com/soccer/story/_/id/49866841/ballon-dor-2026-nominees-harry-kane-kylian-mbappe-lead-30-man-shortlist"
+      },
+      {
+        "title": "CNN: Messi and World Cup winner Yamal on 2026 Ballon d'Or nominee list",
+        "url": "https://www.cnn.com/2026/09/08/sport/ballon-dor-longlist-announcement"
+      },
+      {
+        "title": "Yahoo Sports: Ballon d'Or 2026 - the case for and against the 7 leading contenders",
+        "url": "https://sports.yahoo.com/articles/ballon-dor-2026-case-against-184057434.html"
+      },
+      {
+        "title": "Forbes (28 Sep 2026): Who will win the 2026 Ballon d'Or?",
+        "url": "https://www.forbes.com/sites/samleveridge/2026/09/28/who-will-win-the-2026-ballon-dor/"
+      }
+    ]
+  },
+  "case_lines": [
+    {
+      "text": "World champion at 19.",
+      "words": 4,
+      "evidence": "Spain 1-0 Argentina aet, 19 Jul 2026; Yamal was 19 years 6 days (tied 4th-youngest WC winner).",
+      "source_keys": [
+        "espn_final_stats",
+        "nbc_final",
+        "wst_records"
+      ],
+      "sources": [
+        {
+          "title": "ESPN: World Cup 2026 final stats - Yamal first-ever teenager; Messi records; Mbappe history",
+          "url": "https://www.espn.com/soccer/story/_/id/49404955/fifa-world-cup-2026-stats-final-lamine-yamal-first-ever-teenager-lionel-messi-sets-new-wc-records-kylian-mbappe-makes-history"
+        },
+        {
+          "title": "NBC News live blog: Spain outlasts Argentina 1-0 to win second title",
+          "url": "https://www.nbcnews.com/sports/soccer/live-blog/fifa-world-cup-final-2026-argentina-spain-messi-yamal-live-updates-rcna587754"
+        },
+        {
+          "title": "World Soccer Talk: Every World Cup record Yamal set during Spain's 2026 winning campaign",
+          "url": "https://worldsoccertalk.com/world-cup/every-world-cup-record-lamine-yamal-set-during-spains-2026-winning-campaign/"
+        }
+      ]
+    },
+    {
+      "text": "First teenager: Euros and World Cup.",
+      "words": 5,
+      "evidence": "ESPN: first-ever teenager to win both (Euro 2024 at 17, World Cup 2026 at 19).",
+      "source_keys": [
+        "espn_final_stats",
+        "wst_records",
+        "bdo_record"
+      ],
+      "sources": [
+        {
+          "title": "ESPN: World Cup 2026 final stats - Yamal first-ever teenager; Messi records; Mbappe history",
+          "url": "https://www.espn.com/soccer/story/_/id/49404955/fifa-world-cup-2026-stats-final-lamine-yamal-first-ever-teenager-lionel-messi-sets-new-wc-records-kylian-mbappe-makes-history"
+        },
+        {
+          "title": "World Soccer Talk: Every World Cup record Yamal set during Spain's 2026 winning campaign",
+          "url": "https://worldsoccertalk.com/world-cup/every-world-cup-record-lamine-yamal-set-during-spains-2026-winning-campaign/"
+        },
+        {
+          "title": "Ballon d'Or (official site): Spain wins the World Cup and Lamine Yamal sets a legendary record",
+          "url": "https://ballondor.com/news/posts/spain-wins-the-world-cup-and-lamine-yamal-sets-a-legendary-record"
+        }
+      ]
+    },
+    {
+      "text": "LaLiga champion. Player of the Season.",
+      "words": 5,
+      "evidence": "Barcelona won the 2025/26 league (29th title); FC Barcelona announced Yamal as LaLiga Player of the Season; 16 goals + 11 assists, top assister (optional sub-caption).",
+      "source_keys": [
+        "fcb_lalpots",
+        "aj_clasico",
+        "yahoo_record"
+      ],
+      "sources": [
+        {
+          "title": "FC Barcelona: Yamal, 2025/26 LaLiga Player of the Season",
+          "url": "https://www.fcbarcelona.com/en/football/first-team/news/4514485/lamine-yamal-202526-laliga-player-of-the-season"
+        },
+        {
+          "title": "Al Jazeera: Barcelona beat Real Madrid 2-0 to retain La Liga (10 May 2026)",
+          "url": "https://www.aljazeera.com/sports/2026/5/10/barcelona-beat-real-madrid-2-0-in-el-clasico-to-retain-la-liga-title"
+        },
+        {
+          "title": "Yahoo Sports: Yamal's 2025-26 record for FC Barcelona",
+          "url": "https://sports.yahoo.com/articles/lamine-yamals-2025-26-record-193800490.html"
+        }
+      ]
+    },
+    {
+      "text": "Ballon d'Or runner-up at 18.",
+      "words": 5,
+      "evidence": "2nd to Dembele on 22 Sep 2025 (Yamal born 13 Jul 2007 = 18); also first player to win the Kopa Trophy twice in a row.",
+      "source_keys": [
+        "espn_bdo25",
+        "yahoo_bdo25_rank",
+        "gulf_kopa"
+      ],
+      "sources": [
+        {
+          "title": "ESPN: PSG's Dembele wins Ballon d'Or ahead of Yamal",
+          "url": "https://www.espn.com/soccer/story/_/id/46344733/psg-ousmane-dembele-wins-ballon-dor-ahead-lamine-yamal"
+        },
+        {
+          "title": "Yahoo Sports: Ballon d'Or 2025 full ranking",
+          "url": "https://sports.yahoo.com/article/ballon-dor-2025-full-ranking-125500371.html"
+        },
+        {
+          "title": "Gulf News: Yamal first player to win Kopa Trophy twice",
+          "url": "https://gulfnews.com/sport/football/lamine-yamal-makes-history-first-player-to-win-kopa-trophy-twice-1.500279314"
+        }
+      ]
+    },
+    {
+      "text": "13 major-tournament starts. 13 wins.",
+      "words": 5,
+      "evidence": "World Soccer Talk / ESPN-Yahoo: started 13 Euro 2024 + WC 2026 games for Spain and won all 13.",
+      "source_keys": [
+        "wst_records",
+        "yahoo_record_intact"
+      ],
+      "sources": [
+        {
+          "title": "World Soccer Talk: Every World Cup record Yamal set during Spain's 2026 winning campaign",
+          "url": "https://worldsoccertalk.com/world-cup/every-world-cup-record-lamine-yamal-set-during-spains-2026-winning-campaign/"
+        },
+        {
+          "title": "Yahoo Sports: Yamal keeps incredible tournament record intact as Spain reach World Cup final",
+          "url": "https://sports.yahoo.com/articles/lamine-yamal-keeps-incredible-tournament-034417274.html"
+        }
+      ]
+    }
+  ],
+  "case_lines_text": [
+    "World champion at 19.",
+    "First teenager: Euros and World Cup.",
+    "LaLiga champion. Player of the Season.",
+    "Ballon d'Or runner-up at 18.",
+    "13 major-tournament starts. 13 wins."
+  ],
+  "case_line_alternates": [
+    {
+      "text": "Beat Mbappe's France. Beat Messi's Argentina.",
+      "note": "Team results (2-0 SF, 1-0 aet final); safe if framed as Spain's.",
+      "source_keys": [
+        "nbc_france",
+        "nbc_final"
+      ],
+      "sources": [
+        {
+          "title": "NBC News live blog: Spain defeats France 2-0 to advance to final",
+          "url": "https://www.nbcnews.com/sports/soccer/live-blog/spain-france-world-cup-2026-july-14-live-updates-rcna587324"
+        },
+        {
+          "title": "NBC News live blog: Spain outlasts Argentina 1-0 to win second title",
+          "url": "https://www.nbcnews.com/sports/soccer/live-blog/fifa-world-cup-final-2026-argentina-spain-messi-yamal-live-updates-rcna587754"
+        }
+      ]
+    },
+    {
+      "text": "Hat-trick in LaLiga at 18.",
+      "note": "28 Feb 2026 v Villarreal (4-1); youngest of the 21st century in La Liga. Single-source snippet - confirm with club scout.",
+      "source_keys": [
+        "yahoo_record"
+      ],
+      "sources": [
+        {
+          "title": "Yahoo Sports: Yamal's 2025-26 record for FC Barcelona",
+          "url": "https://sports.yahoo.com/articles/lamine-yamals-2025-26-record-193800490.html"
+        }
+      ]
+    },
+    {
+      "text": "Kane: 73 goals. Yamal: the trophies.",
+      "note": "Contrast line; Kane 73 goals in 65 games (Oddschecker). Opinion framing - fine for hype, not a 'fact claim'.",
+      "source_keys": [
+        "oddschecker"
+      ],
+      "sources": [
+        {
+          "title": "Oddschecker (29 Sep 2026): Ballon d'Or 2026 odds - Kane favourite ahead of Yamal",
+          "url": "https://www.oddschecker.com/insight/football/20260929-ballon-dor-2026-odds-harry-kane-favourite-ahead-of-lamine-yamal"
+        }
+      ]
+    },
+    {
+      "text": "Unbeaten Spain. Unbeaten Yamal.",
+      "note": "Careful - Spain 'gone 40 matches without a loss' is a Fox Sports headline (unopened); 'unbeaten Yamal' = the 13/13 stat.",
+      "source_keys": [
+        "wst_records"
+      ],
+      "sources": [
+        {
+          "title": "World Soccer Talk: Every World Cup record Yamal set during Spain's 2026 winning campaign",
+          "url": "https://worldsoccertalk.com/world-cup/every-world-cup-record-lamine-yamal-set-during-spains-2026-winning-campaign/"
+        }
+      ]
+    }
+  ],
+  "claims_to_avoid": [
+    "'Youngest Spanish World Cup scorer' - several outlets say it, but Gavi (18y 110d, 2022) was younger than Yamal (18y 343d); the Deccan Chronicle text itself says so. Use '8th-youngest World Cup scorer ever' (single-source) or nothing.",
+    "'Best Young Player of the World Cup' - that was Pau Cubarsi (Yahoo Sports awards list). A low-grade aggregator claims UEFA observers named Yamal 'Young Player' - unsupported.",
+    "'Yamal scored v France in the semi-final' - false (one aggregator says so; NBC/ABC/Yahoo: he did not score, goal ruled offside).",
+    "'Yamal won the 2026 Ballon d'Or / first teenager to win WC + Ballon d'Or' - from zonalsports.com 'exclusive'; the ceremony has NOT happened (26 Oct 2026). Fabricated/unreliable."
+  ],
+  "bridge_map": [
+    {
+      "lyric": "Settle down, babe / Settle down, my child",
+      "moments": [
+        "n01",
+        "n02",
+        "n27"
+      ],
+      "idea": "2007 baby-bath photo, slow push-in; dissolve to Keyne running into Lamine's arms."
+    },
+    {
+      "lyric": "You worry too much",
+      "moments": [
+        "n14",
+        "n17",
+        "n16"
+      ],
+      "idea": "Hamstring quote card ('praying inside'), 25 minutes off the bench, 'I thought I was going to win'."
+    },
+    {
+      "lyric": "You try to fight the whole crowd",
+      "moments": [
+        "n12",
+        "n32",
+        "n30"
+      ],
+      "idea": "Sevilla 'more... more' gesture; 'I am not going to beg for anything'; 'Hate me or love me'."
+    },
+    {
+      "lyric": "Just run at your pace",
+      "moments": [
+        "n19",
+        "n18",
+        "n24"
+      ],
+      "idea": "The runs: Saudi far-post slide-in, Austria shot cleared by Alaba, 120 minutes in the final."
+    },
+    {
+      "lyric": "Don't think about them",
+      "moments": [
+        "n13",
+        "n19"
+      ],
+      "idea": "'Giving up is not an option' / 'Little by little I'm feeling like myself again'."
+    },
+    {
+      "lyric": "They're running at the stars in the sky, they can catch them",
+      "moments": [
+        "n20",
+        "n22",
+        "n26",
+        "n33"
+      ],
+      "idea": "Ronaldo walking off, Mbappe walking off, Rodri lifting the trophy; rivals' numbers as text."
+    },
+    {
+      "lyric": "And I know you feel it",
+      "moments": [
+        "n25",
+        "n23",
+        "n07"
+      ],
+      "idea": "Messi embrace, hold on his face; match-cut back to 2007; end on the Kopa stage 'maybe we'll see each other later' then '26 OCT'."
+    }
+  ],
+  "moments": [
+    {
+      "id": "n01",
+      "date": "2007 (late; Yamal ~5 months old - exact day not sourced)",
+      "type": "photo",
+      "emotion": "innocence",
+      "what_we_see": "Grainy 2007 press photo, Camp Nou visitors' dressing room: 20-year-old Lionel Messi leaning over a small plastic baby bath, bathing baby Lamine; Yamal's mother Sheila beside them helping. Companion frame: Messi cradling the baby. Domestic, soft, handheld feel.",
+      "best_seconds": "STILL PHOTO - hold 2-3 s on the bath frame with a very slow push-in toward the baby's face / Messi's hands; cross-dissolve into n27 (Keyne hugging Lamine).",
+      "lyric_fit": "'Settle down, babe / Settle down, my child' - literally a child being soothed, in the hands of the man whose baton he will later take.",
+      "case_value": "The destiny hook: bathed by Messi in 2007 -> embraced by Messi as world champion in 2026. Verified real (Snopes, UNICEF, photographer Joan Monfort for AP; shot for the Diario Sport/UNICEF charity calendar). Rights: credit Joan Monfort/AP and UNICEF - clear before use.",
+      "footage": [
+        {
+          "title": "Snopes: Photo shows Messi bathing baby Yamal (2007) - verified",
+          "url": "https://www.snopes.com/fact-check/lmessi-yamal-baby-photo/",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "UNICEF on X: 'Yes, those photos you've seen are real...'",
+          "url": "https://x.com/UNICEF/status/2077817597051982222",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "CBS News: Photos of Messi with baby Yamal resurface (photographer Joan Monfort)",
+          "url": "https://www.cbsnews.com/news/lionel-messi-lamine-yamal-baby-barcelona-photos-joan-monfort/",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "CNN (2024): Photographer who captured Messi with baby Yamal details the shoot",
+          "url": "https://www.cnn.com/2024/07/14/sport/lamine-yamal-lionel-messi-photoshoot-2007-spt-intl",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "Fox Sports: The lore of Lamine Yamal - from the Messi baby picture to the 2026 World Cup",
+          "url": "https://www.foxsports.com/stories/soccer/lore-lamine-yamal-from-lionel-messi-baby-picture-2026-world-cup",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        }
+      ]
+    },
+    {
+      "id": "n02",
+      "date": "2024-07-04 (father's Instagram post) and again 2026-07-19",
+      "type": "archive",
+      "emotion": "innocence",
+      "what_we_see": "Father Mounir Nasraoui's Instagram post of the baby photo captioned 'the beginning of two legends' (4 Jul 2024, days before the Euro 2024 final); the same image reused in broadcast graphics, and again before the 2026 final when UNICEF confirmed the photos are real and Messi commented. Editor idea: split-screen 2007 photo vs 2026 hug.",
+      "best_seconds": "Graphic/still: 1.5-2 s each for 2007 photo then the 2026 handshake-hug as a match cut.",
+      "lyric_fit": "'Settle down, my child' -> 'And I know you feel it' (the bookend structure of the bridge).",
+      "case_value": "Social proof / virality: the story became the narrative of the final (ABC/CNN/Fox pieces).",
+      "footage": [
+        {
+          "title": "NBC News (2024): Messi / Yamal baby photo, Euros and Copa America",
+          "url": "https://www.nbcnews.com/news/world/lionel-messi-lamine-yamal-baby-photo-euros-copa-america-rcna161092",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "ABC News: How Messi and Yamal's viral baby photo came full circle at the World Cup",
+          "url": "https://abcnews.com/GMA/Culture/lionel-messi-lamine-yamals-viral-baby-photo/story?id=134805177",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "UNICEF on X: 'Yes, those photos you've seen are real...'",
+          "url": "https://x.com/UNICEF/status/2077817597051982222",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "X (fan account) quoting father Mounir ahead of final - UNVERIFIED",
+          "url": "https://x.com/UTD_Seth001/status/2078543869205975525",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        }
+      ]
+    },
+    {
+      "id": "n03",
+      "date": "2024-06 / 07 (Euro 2024) - gesture continues; also on his boots",
+      "type": "archive",
+      "emotion": "celebration",
+      "what_we_see": "Yamal's '304' gesture after goals: one hand with the circled thumb-finger and three fingers up, the other showing four, arms crossed - 08304 is the postcode of Rocafonda, the working-class Mataro neighbourhood where he grew up. 304 is engraved on his boots and in his LY logo; he has trademarked it. Hometown streets and fans in Rocafonda cheering on big screens.",
+      "best_seconds": "1-2 s on the gesture close-up right after a goal; (not confirmed whether he did it after the 2026 Saudi goal - check the clip).",
+      "lyric_fit": "'And I know you feel it' - roots; also 'Don't think about them' - he represents the block, not the critics.",
+      "case_value": "Identity story that makes the achievement emotional rather than purely statistical.",
+      "footage": [
+        {
+          "title": "Athlon Sports: Yamal's '304' celebration - meaning and origin",
+          "url": "https://athlonsports.com/soccer/lamine-yamals-304-celebration-meaning-origin",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "AP via US News: Yamal has electrified Euro 2024 - in hometown, family and friends not surprised",
+          "url": "https://www.usnews.com/news/sports/articles/2024-07-13/spain-phenom-lamine-yamal-has-electrified-euro-2024-in-hometown-family-and-friends-not-surprised",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "FIFA: Lamine Yamal's first step in football",
+          "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/lamine-yamal-spain-first-steps",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "Search 'Yamal 304 celebration' on the official UEFA / FC Barcelona YouTube channels (not found in this session)",
+          "url": null,
+          "verified": false,
+          "status": "suggested_channel_search_not_found"
+        }
+      ]
+    },
+    {
+      "id": "n04",
+      "date": "2014 (arrived La Masia aged 7; scouted at 6) - archive",
+      "type": "archive",
+      "emotion": "innocence",
+      "what_we_see": "Child-age archive: tiny Yamal in oversized academy kit, La Masia training pitch, mini-sided games; CNN interview with his former Barcelona youth coach ('had what other kids didn't'). Debut April 2023 (15y 9m) in a 4-0 win v Real Betis - youngest ever Barca first-team player (FC Barcelona profile).",
+      "best_seconds": "No verified clip. Suggested: 2-3 s of the smallest-kid La Masia training shot where he drops a shoulder past a larger boy.",
+      "lyric_fit": "'Just run at your pace' - 'raced through the age categories quicker than any player of his generation'.",
+      "case_value": "Pure Barca product; youngest-ever debutant.",
+      "footage": [
+        {
+          "title": "Fortune: Yamal is the third-youngest World Cup finalist - scouted at 6",
+          "url": "https://fortune.com/2026/07/16/lamine-yamal-third-youngest-world-cup-finalist-scouted-from-working-class-neighborhood-6-years-old/",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "CNN: Yamal 'had what other kids didn't', says former Barcelona youth coach",
+          "url": "https://www.cnn.com/2026/06/15/sport/lamine-yamal-spain-youth-coach-world-cup",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "FC Barcelona: Lamine Yamal player profile (Barca B)",
+          "url": "https://www.fcbarcelona.com/en/football/barca-b/players/3673478/lamine-yamal",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "FC Barcelona official YouTube / Barca Studios: La Masia Yamal childhood footage (search not completed - WebSearch budget exhausted)",
+          "url": null,
+          "verified": false,
+          "status": "suggested_channel_search_not_found"
+        }
+      ]
+    },
+    {
+      "id": "n05",
+      "date": "2024-07-14",
+      "type": "match",
+      "emotion": "trophy",
+      "what_we_see": "Berlin Euro 2024 final, Spain 2-1 England: the 17-year-old (turned 17 the day before) starting, then lifting the Henri Delaunay Trophy with Spain. BACKGROUND KNOWLEDGE + titles only: Yamal assisted Nico Williams' goal and was Young Player of the Tournament; scored the curler v France in the semi (youngest scorer in Euros history). Confirm each in the clip before captioning.",
+      "best_seconds": "1-3 s of the trophy-lift with Yamal at the edge of the group (scrub the UEFA final highlights).",
+      "lyric_fit": "'They're running at the stars in the sky, they can catch them' - the 17-year-old who already caught one.",
+      "case_value": "Half of the record 'first teenager to win Euros and World Cup' (ESPN).",
+      "footage": [
+        {
+          "title": "FC Barcelona: Yamal, Ferran, Fermin and Pedri - Euro 2024 winners",
+          "url": "https://www.fcbarcelona.com/en/football/first-team/news/4058379/lamine-yamal-ferran-fermin-and-pedri-euro-2024-winners",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "ESPN (2024): Spain's Yamal, 16, youngest Euro scorer",
+          "url": "https://africa.espn.com/football/story/_/id/40527430/spain-lamine-yamal-16-youngest-euro-scorer",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "UEFA official YouTube: Euro 2024 final highlights Spain v England (not located via search)",
+          "url": null,
+          "verified": false,
+          "status": "suggested_channel_search_not_found"
+        }
+      ]
+    },
+    {
+      "id": "n06",
+      "date": "2025-09-04",
+      "type": "match",
+      "emotion": "hype",
+      "what_we_see": "Bulgaria 0-3 Spain (WC qualifier): Yamal whips in a corner that Merino heads home, and a cross that falls to Cucurella for another - involved in all three goals, one assist.",
+      "best_seconds": "Corner delivery + Merino header, 2 s. Low priority: not core to the case.",
+      "lyric_fit": "'Just run at your pace' (routine brilliance).",
+      "case_value": "Minor international contribution in the 2025-26 window before injury struck.",
+      "footage": [
+        {
+          "title": "ESPN: Bulgaria 0-3 Spain (Sep 4, 2025)",
+          "url": "https://www.espn.com/soccer/report/_/gameId/724973",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "beIN: Bulgaria 0-3 Spain - Yamal shines in routine qualifying victory",
+          "url": "https://www.beinsports.com/en-us/soccer/uefa-world-cup-qualifiers/articles/bulgaria-0-3-spain-yamal-shines-in-routine-world-cup-qualifying-victory-2025-09-04",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        }
+      ]
+    },
+    {
+      "id": "n07",
+      "date": "2025-09-22",
+      "type": "ceremony",
+      "emotion": "trophy",
+      "what_we_see": "Theatre du Chatelet, Paris: 18-year-old Yamal walking on stage to take the Kopa Trophy for the second year running (first player ever to do so) while Dembele takes the big prize. Joking to the hosts: 'I don't know if I'm ready for the big trophy... maybe we'll see each other later.' Thanks France Football, Barcelona, his national team, his family.",
+      "best_seconds": "2-3 s of him lifting the Kopa and flashing the grin on 'Maybe we'll see each other later' (official Ballon d'Or speech clip).",
+      "lyric_fit": "'And I know you feel it' - the ambition behind the humility; also the callback: the edit ends 26 October.",
+      "case_value": "Runner-up at 18, 2x Kopa. Direct set-up line for 2026: 'maybe we'll see each other later'.",
+      "footage": [
+        {
+          "title": "LAMINE YAMAL gana el TROFEO KOPA 2025: DISCURSO COMPLETO",
+          "url": "https://www.youtube.com/watch?v=CgkyYpOCEZM",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "Ballon d'Or 2025 - Lamine Yamal (FC Barcelone) remporte le trophee Kopa du meilleur jeune",
+          "url": "https://www.youtube.com/watch?v=L7lsO0hXLqY",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "LAMINE YAMAL consigue el TROFEO KOPA: 'Espero conseguir muchos mas premios'",
+          "url": "https://www.youtube.com/watch?v=5_WqRrzwjW0",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "Ballon d'Or on X: Yamal's speech on stage after winning the 2025 Kopa Trophy",
+          "url": "https://x.com/ballondor/status/1970204854233538916",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "FC Barcelona: Lamine Yamal retains Kopa Trophy",
+          "url": "https://www.fcbarcelona.com/en/football/first-team/news/4367534/lamine-yamal-retains-kopa-trophy/featured",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "Yahoo Sports: Official - Yamal wins the 2025 Kopa Trophy",
+          "url": "https://sports.yahoo.com/article/official-lamine-yamal-wins-2025-192000563.html",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        }
+      ]
+    },
+    {
+      "id": "n08",
+      "date": "2025-09-22",
+      "type": "ceremony",
+      "emotion": "emotional",
+      "what_we_see": "Dembele (teary, mother on stage) acknowledging Yamal in his speech: 'He's extraordinary... he's going to be winning a lot of trophies like the Ballon d'Or. It was a great battle.' Cutaway reaction shots of Yamal applauding in the audience.",
+      "best_seconds": "1-2 s reaction shot of Yamal clapping while Dembele names him (find in ceremony broadcast).",
+      "lyric_fit": "'They're running at the stars in the sky, they can catch them' - the champion himself says he will.",
+      "case_value": "Credibility: the actual winner predicts Yamal's turn.",
+      "footage": [
+        {
+          "title": "Yahoo Sports: What Dembele said about Yamal at the Ballon d'Or gala",
+          "url": "https://ca.sports.yahoo.com/news/ousmane-demb-l-said-lamine-151000073.html",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "ESPN: PSG's Dembele wins Ballon d'Or ahead of Yamal",
+          "url": "https://www.espn.com/soccer/story/_/id/46344733/psg-ousmane-dembele-wins-ballon-dor-ahead-lamine-yamal",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "UEFA: Ousmane Dembele wins 2025 men's Ballon d'Or",
+          "url": "https://www.uefa.com/uefachampionsleague/news/029d-1ec96c30aa3f-f6868c869cbd-1000--ousmane-dembele-wins-2025-men-s-ballon-d-or/",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        }
+      ]
+    },
+    {
+      "id": "n09",
+      "date": "2025-10-03 to 2025-11-18",
+      "type": "interview",
+      "emotion": "pressure",
+      "what_we_see": "Yamal out of Spain's October and November qualifiers with pubalgia (groin); doctor quoted saying he's playing at '50%'; Barca coach Flick publicly accuses Spain of not protecting him. No specific footage verified - suggest benched/stands shots, training-ground images of him alone, headline graphics.",
+      "best_seconds": "No clip; use as 1 s text card: '50%'.",
+      "lyric_fit": "'You worry too much' - the body and the pressure on an 18-year-old.",
+      "case_value": "Context: he won the Spanish league and a World Cup after months of managing a chronic injury.",
+      "footage": [
+        {
+          "title": "Al Jazeera (3 Oct 2025): Injured Yamal out of Spain's WC qualifiers",
+          "url": "https://www.aljazeera.com/sports/2025/10/3/injured-yamal-out-of-spains-world-cup-2026-qualifiers-could-miss-clasico",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "beIN: 'Only at 50%' - the truth behind Yamal's dip in form (28 Oct 2025)",
+          "url": "https://www.beinsports.com/en-us/soccer/la-liga/articles/only-at-50-the-truth-behind-lamine-yamal-s-dip-in-form-2025-10-28",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "SI: Why is Yamal not playing for Spain (October 2025)",
+          "url": "https://www.si.com/soccer/why-is-lamine-yamal-not-playing-for-spain-october-2025",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        }
+      ]
+    },
+    {
+      "id": "n10",
+      "date": "2026-02-28",
+      "type": "match",
+      "emotion": "hype",
+      "what_we_see": "First professional hat-trick, Barcelona 4-1 Villarreal - youngest player of the 21st century to score a La Liga hat-trick (YAHOO/StatMuse snippet - single-source; club scout owns this).",
+      "best_seconds": "Third goal + celebration, 2 s.",
+      "lyric_fit": "'Just run at your pace'.",
+      "case_value": "Headline stat for LaLiga case; confirm with the club-season scout.",
+      "footage": [
+        {
+          "title": "Yahoo Sports: Yamal's 2025-26 record for FC Barcelona",
+          "url": "https://sports.yahoo.com/articles/lamine-yamals-2025-26-record-193800490.html",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "Barcelona 4-1 Villarreal (28 Feb 2026) highlights - LaLiga / FC Barcelona official YouTube (not located)",
+          "url": null,
+          "verified": false,
+          "status": "suggested_channel_search_not_found"
+        }
+      ]
+    },
+    {
+      "id": "n11",
+      "date": "2026-03-31",
+      "type": "match",
+      "emotion": "defiance",
+      "what_we_see": "Spain 0-0 Egypt friendly, RCDE Stadium, Cornella: sections of the crowd chant anti-Muslim slogans at the opponent; Yamal (Muslim) posts on Instagram that using religion as a taunt makes you 'ignorant and racist'; Spanish FA condemns, FIFA opens a case, police investigate. SENSITIVE: recommend text-only (his own Instagram words) - do not reuse the chant audio.",
+      "best_seconds": "No video recommended; 1.5 s text card of his statement.",
+      "lyric_fit": "'You try to fight the whole crowd' - literal.",
+      "case_value": "Character: stands up for others at 18; but treat carefully - not a trophy claim.",
+      "footage": [
+        {
+          "title": "Al Jazeera: Yamal slams anti-Muslim fan chants (Spain-Egypt, 2 Apr 2026)",
+          "url": "https://www.aljazeera.com/sports/2026/4/2/yamal-slams-anti-muslim-fan-chants-as-spains-world-cup-final-hopes-tainted",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "Al Jazeera: Spain FA condemns Islamophobic chants in Egypt game (1 Apr 2026)",
+          "url": "https://www.aljazeera.com/sports/2026/4/1/spains-fa-condemns-islamophobic-chants-during-game-with-egypt",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        }
+      ]
+    },
+    {
+      "id": "n12",
+      "date": "~2026-04-04 (date inferred from Al Jazeera 5 Apr piece; unverified)",
+      "type": "match",
+      "emotion": "defiance",
+      "what_we_see": "Sevilla 1-3 Barcelona at the Sanchez Pizjuan: Yamal jeered by the home crowd every touch; at 38' he gestures 'more... more' to the stands, angering Sevilla's Kochorashvili who shoves him; referee warns. Flick later downplays Yamal's anger.",
+      "best_seconds": "2 s of the 'more... more' gesture to the stands (verify the exact gesture).",
+      "lyric_fit": "'You try to fight the whole crowd'.",
+      "case_value": "Pressure/hostile-crowd narrative; also a risk (critics call it disrespectful).",
+      "footage": [
+        {
+          "title": "Goal: 'More... more' - Yamal fires up the Sevilla stands",
+          "url": "https://www.goal.com/en/news/more-more-yamal-fires-up-the-sevilla-stands/blt47233a8ef8b121ae",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "Yahoo Sports: Barcelona star sparks anger with response to boos from Sevilla fans",
+          "url": "https://sports.yahoo.com/articles/barcelona-star-sparks-anger-response-203000417.html",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "Al Jazeera (5 Apr 2026): Yamal's anger after Barcelona's La Liga win downplayed by Flick",
+          "url": "https://www.aljazeera.com/sports/2026/4/5/lamine-yamals-anger-after-barcelonas-la-liga-win-downplayed-by-flick",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        }
+      ]
+    },
+    {
+      "id": "n13",
+      "date": "2026-04-14 / 04-15",
+      "type": "match",
+      "emotion": "pressure",
+      "what_we_see": "Atletico 1-2 Barcelona (second leg, Barca out 3-2 on aggregate): Yamal scores in the 4th minute after a Lenglet error, then fades; afterwards posts 'Giving up is not an option' / 'We are Barca, and we will be back where we belong.'",
+      "best_seconds": "1-2 s of the 4th-minute goal; end card of the Instagram text.",
+      "lyric_fit": "'Don't think about them' - he answers elimination with a promise.",
+      "case_value": "Honest low point that makes the later triumph land.",
+      "footage": [
+        {
+          "title": "Al Jazeera (15 Apr 2026): Yamal vows to win Champions League after Atletico defeat",
+          "url": "https://www.aljazeera.com/sports/2026/4/15/barcelonas-lamine-yamal-vows-to-win-champions-league-after-atletico-defeat",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "Barcelona v Atletico Champions League QF highlights - UEFA / Movistar+ official (not located)",
+          "url": null,
+          "verified": false,
+          "status": "suggested_channel_search_not_found"
+        }
+      ]
+    },
+    {
+      "id": "n14",
+      "date": "2026-04-22",
+      "type": "interview",
+      "emotion": "emotional",
+      "what_we_see": "v Celta Vigo: after scoring a 40' penalty he goes down clutching his left hamstring and leaves the pitch; Barca confirm the season is over, 'conservative treatment' (no surgery). Later quote (ESPN / RFEF interview): 'I was afraid that it was something serious... I was praying inside for it not to be serious... because I knew the World Cup was very close.'",
+      "best_seconds": "1-2 s of him sitting down on the turf, hand to the back of his leg; then quote card.",
+      "lyric_fit": "'You worry too much' / 'Settle down, my child' - the fear, quoted in his own words.",
+      "case_value": "The comeback story: from torn hamstring to world champion in 12 weeks.",
+      "footage": [
+        {
+          "title": "ESPN: Hamstring injury left Yamal fearful of missing World Cup",
+          "url": "https://www.espn.com/soccer/story/_/id/48930567/lamine-yamal-spain-fifa-world-cup-barcelona",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "CBS Sports: Yamal to miss rest of season, expected back for World Cup",
+          "url": "https://www.cbssports.com/soccer/news/lamine-yamal-injury-world-cup-barcelona-out-for-season-expected-to-return/",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "FC Barcelona: Lamine Yamal injury update",
+          "url": "https://www.fcbarcelona.com/en/news/4491939/lamine-yamal-injury-update",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        }
+      ]
+    },
+    {
+      "id": "n15",
+      "date": "2026-05-10",
+      "type": "match",
+      "emotion": "celebration",
+      "what_we_see": "Barcelona 2-0 Real Madrid at Camp Nou (Rashford, Ferran Torres): La Liga title no.29 clinched with Yamal absent (injured). Yahoo reports him at the celebrations taking aim at Real Madrid. Visuals not verified.",
+      "best_seconds": "No verified clip; check the celebrations footage for Yamal in civvies/with crutches.",
+      "lyric_fit": "'And I know you feel it' - the champion on the sideline.",
+      "case_value": "La Liga champion + Player of the Season despite missing the last 4 games.",
+      "footage": [
+        {
+          "title": "Al Jazeera: Barcelona beat Real Madrid 2-0 to retain La Liga (10 May 2026)",
+          "url": "https://www.aljazeera.com/sports/2026/5/10/barcelona-beat-real-madrid-2-0-in-el-clasico-to-retain-la-liga-title",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "Yahoo Sports: Yamal takes aim at Real Madrid during Barcelona title celebrations",
+          "url": "https://sports.yahoo.com/articles/watch-lamine-yamal-takes-aim-203500840.html",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "FC Barcelona: Yamal, 2025/26 LaLiga Player of the Season",
+          "url": "https://www.fcbarcelona.com/en/football/first-team/news/4514485/lamine-yamal-202526-laliga-player-of-the-season",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        }
+      ]
+    },
+    {
+      "id": "n16",
+      "date": "2026-06 (approx.) interview, about 2025",
+      "type": "interview",
+      "emotion": "pressure",
+      "what_we_see": "Interview talking-head: 'Honestly, if I'm being sincere, I thought I was going to win it that day because of some things that happened'; adds he wasn't ready, he was 'still a kid', and that it was 'good' Dembele won. Pair with the Kopa-stage image.",
+      "best_seconds": "Quote card + 2 s of him on the Chatelet stage.",
+      "lyric_fit": "'You worry too much' -> 'Just run at your pace' (patience).",
+      "case_value": "Shows hunger; sets the 2026 stakes.",
+      "footage": [
+        {
+          "title": "Goal: 'I thought I was going to win' - why the defeat was 'good' for Yamal",
+          "url": "https://www.goal.com/en-us/lists/ballon-dor-ousmane-dembele-lamine-yamal-barcelona-spain-2026-golden-ball/blt446890fc768dbe7a",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "Vanguard: Ballon d'Or - I thought I would win it (June 2026)",
+          "url": "https://www.vanguardngr.com/2026/06/ballon-dor-i-thought-i-would-win-it-yamal/",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "Sporting Tribune: 2025 Ballon d'Or - 'I thought I was going to win' - Yamal",
+          "url": "https://sportingtribune.com/2025-ballon-dor-i-thought-i-was-going-to-win-yamal/",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        }
+      ]
+    },
+    {
+      "id": "n17",
+      "date": "2026-06-15",
+      "type": "match",
+      "emotion": "pressure",
+      "what_we_see": "Spain 0-0 Cape Verde, Atlanta: Yamal appears from the bench for 25 minutes - his first appearance in almost two months - after Spain/Barca manage his hamstring. Quote: 'I'm fine, I'm feeling good, but it's too soon... I can play for as many minutes as the manager wants.'",
+      "best_seconds": "1-2 s of him stripping the bib / stepping onto the pitch.",
+      "lyric_fit": "'Just run at your pace' - literally an enforced pace: minutes rising each group game.",
+      "case_value": "Resilience: the world champion started the tournament on the bench.",
+      "footage": [
+        {
+          "title": "The Tribune: Yamal says he is fit but Spain managing his injury carefully",
+          "url": "https://www.tribuneindia.com/news/sports/fifa-world-cup-2026-lamine-yamal-says-he-is-fit-but-spain-managing-his-injury-carefully/",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "ESPN: Spain coach expects Yamal to be fit for World Cup opener",
+          "url": "https://www.espn.com/soccer/story/_/id/48957472/spain-lamine-yamal-injury-2026-world-cup-cape-verde-de-la-fuente",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "Yahoo Sports: Spain wins Group H thanks to Muslera blunder",
+          "url": "https://sports.yahoo.com/soccer/breaking-news/article/2026-world-cup-spain-wins-group-h-thanks-to-fernando-musleras-blunder-as-cape-verde-takes-second-over-uruguay-020219723.html",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "FIFA World Cup official YouTube: Spain v Cabo Verde highlights (not located)",
+          "url": null,
+          "verified": false,
+          "status": "suggested_channel_search_not_found"
+        }
+      ]
+    },
+    {
+      "id": "n18",
+      "date": "2026-06-21",
+      "type": "match",
+      "emotion": "celebration",
+      "what_we_see": "Spain 4-0 Saudi Arabia, Atlanta: first World Cup start; ~10th minute he slides in at the far post to touch home a low cross for his first WC goal - 8th-youngest scorer in WC history; commentators: 'Yamal is BACK'.",
+      "best_seconds": "The 1 s far-post slide-in and the 2 s celebration (check for the 304 gesture).",
+      "lyric_fit": "'Just run at your pace' -> release after the worry.",
+      "case_value": "Only WC goal; also the 'Yamal is back' moment.",
+      "footage": [
+        {
+          "title": "Spain's Lamine Yamal Scores His First Career FIFA World Cup(TM) Goal vs Saudi Arabia (title format suggests FIFA)",
+          "url": "https://www.youtube.com/watch?v=WceMtkdOBEE",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "Lamine Yamal's First-Ever FIFA World Cup Goal vs Saudi Arabia (Short)",
+          "url": "https://www.youtube.com/shorts/g3S909CDy_Y",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "'Lamine Yamal is BACK!' Spain's superstar scores in 4-0 win over Saudi Arabia",
+          "url": "https://www.youtube.com/watch?v=694Cuf7fBWg",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "GOL DE LAMINE YAMAL! Espana 1-0 Arabia Saudita",
+          "url": "https://www.youtube.com/watch?v=zXr17vLuqHM",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "Spain vs Saudi Arabia 4-0",
+          "url": "https://www.youtube.com/watch?v=l9NkHzlz0Jw",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "CBS Atlanta: Yamal scores 10 minutes into his first World Cup start",
+          "url": "https://www.cbsnews.com/atlanta/news/spain-star-lamine-yamal-scores-after-10-minutes-of-his-first-start-at-the-world-cup/",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "FC Barcelona: Lamine Yamal opens his goalscoring account in the World Cup",
+          "url": "https://www.fcbarcelona.com/en/news/4523396/lamine-yamal-opens-his-goalscoring-account-in-the-world-cup",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "Deccan Chronicle: Yamal becomes 8th youngest World Cup scorer",
+          "url": "https://www.deccanchronicle.com/fifa-world-cup-2026/lamine-yamal-becomes-eighth-youngest-world-cup-scorer-as-spain-beat-saudi-arabia-4-0-1965319",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        }
+      ]
+    },
+    {
+      "id": "n19",
+      "date": "2026-07-02",
+      "type": "match",
+      "emotion": "hype",
+      "what_we_see": "Spain 3-0 Austria, SoFi Stadium: Yamal at full sharpness - dribbles, runs inside from the right, an 'instinctive quickfire snap shot' cleared off the line by David Alaba; Player of the Match; post-match 'World Cup starts now'; 'Little by little, I'm feeling like myself again, making the runs I need to, dribbling.' With Pau Cubarsi, first teenage pair to start a WC game for one nation since Pele-Altafini 1958.",
+      "best_seconds": "2 s of the shot cleared off the line by Alaba; 1 s of Yamal smiling at the full-time whistle.",
+      "lyric_fit": "'Just run at your pace / Don't think about them' - the quote is nearly the lyric.",
+      "case_value": "Player of the Match v Austria; teenager-pair record.",
+      "footage": [
+        {
+          "title": "TNT Sports: Spain v Austria - Yamal sizzles, Oyarzabal double",
+          "url": "https://www.tntsports.co.uk/football/world-cup/2026/live-spain-austria_mtc1579499/live-commentary.shtml",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "The Daily Star: 'I was just missing goal or assist' - MOTM Yamal after Austria win",
+          "url": "https://www.thedailystar.net/sports/sports-special/fifa-world-cup-2026/news/i-was-just-missing-goal-or-assist-motm-yamal-after-spains-win-over-austria-4214721",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "ESPN: Yamal declares 'World Cup starts now' after Austria win",
+          "url": "https://www.espn.com/soccer/story/_/id/49252369/after-spain-beat-austria-yamal-world-cup-starts-now",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "FIFA: Spain 3-0 Austria match report",
+          "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/spain-austria-match-report-highlights",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "ESPN: Spain 3-0 Austria (Jul 2, 2026)",
+          "url": "https://www.espn.com/soccer/match/_/gameId/760497/austria-spain",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "Barca Buzz on X: Yamal + Cubarsi first teenage pair to start a WC match since Pele/Altafini (via FIFA)",
+          "url": "https://x.com/Barca_Buzz/status/2072973622365532422",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        }
+      ]
+    },
+    {
+      "id": "n20",
+      "date": "2026-07-06",
+      "type": "match",
+      "emotion": "pressure",
+      "what_we_see": "Spain 1-0 Portugal, Dallas: Cristiano Ronaldo's likely last World Cup game; Yamal marked tightly by makeshift left-back Nelson Semedo; Merino (sub) scores at 91'. Ronaldo walking off as Spain advance.",
+      "best_seconds": "1.5 s Ronaldo at full time, cross-fade to Yamal looking forward.",
+      "lyric_fit": "'They're running at the stars in the sky' - the old star leaves, the young one stays.",
+      "case_value": "Beat Ronaldo's Portugal; Yamal quiet - narrative only, not a stat.",
+      "footage": [
+        {
+          "title": "ESPN: Portugal 0-1 Spain (Jul 6, 2026)",
+          "url": "https://www.espn.com/soccer/match/_/gameId/760506/spain-portugal",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "CBS Sports: Spain eliminate Portugal on late goal",
+          "url": "https://www.cbssports.com/soccer/news/portugal-spain-live-updates-world-cup-2026-score-result/live/",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        }
+      ]
+    },
+    {
+      "id": "n21",
+      "date": "2026-07-10",
+      "type": "match",
+      "emotion": "hype",
+      "what_we_see": "Spain 2-1 Belgium, Inglewood: Yamal cuts inside from the right and flashes a left-foot shot narrowly wide; Merino (sub) wins it at 88'; first World Cup semi-final for Spain since 2010. Yamal + Cubarsi both starting teens.",
+      "best_seconds": "1.5 s Yamal's cut-inside and shot (YouTube 'Lamine Yamal Nearly Scores').",
+      "lyric_fit": "'Just run at your pace'.",
+      "case_value": "Spain to the last four; Yamal teenage pair.",
+      "footage": [
+        {
+          "title": "Lamine Yamal Nearly Scores (vs Belgium)",
+          "url": "https://www.youtube.com/watch?v=5OyaQOGUtiI",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "ESPN: Spain 2-1 Belgium (Jul 10, 2026)",
+          "url": "https://www.espn.com/soccer/match/_/gameId/760511/belgium-spain",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "FIFA: Spain edge Belgium in quarter-finals",
+          "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/spain-belgium-match-report-highlights",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "ESPN: WC 2026 stats - Merino makes history; Yamal-Cubarsi first since Pele-Altafini",
+          "url": "https://www.espn.com/soccer/story/_/id/49329568/fifa-world-cup-2026-stats-mikel-merino-makes-history-lamine-yamal-pau-cubarsi-first-pele-altafini-spain-belgium",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        }
+      ]
+    },
+    {
+      "id": "n22",
+      "date": "2026-07-14",
+      "type": "match",
+      "emotion": "defiance",
+      "what_we_see": "Spain 2-0 France: Yamal sprints at Lucas Digne, drawing the foul for the 22nd-minute penalty (Oyarzabal scores); Porro makes it 2-0 on 58'; at 61' Yamal's left-footed finish is ruled offside; afterwards he limps - a 'dead leg'. Mbappe's France out.",
+      "best_seconds": "2 s of the run at Digne and contact; 1 s Mbappe walking off.",
+      "lyric_fit": "'They're running at the stars in the sky, they can catch them' - he beats the Mbappe / Kane generation's flagship team in the semi.",
+      "case_value": "Beat Mbappe (Golden Boot winner) head-to-head on the way to the final.",
+      "footage": [
+        {
+          "title": "NBC News live blog: Spain defeats France 2-0 to advance to final",
+          "url": "https://www.nbcnews.com/sports/soccer/live-blog/spain-france-world-cup-2026-july-14-live-updates-rcna587324",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "ABC News: Spain advances to World Cup final with 2-0 win over France",
+          "url": "https://abcnews.com/Sports/wireStory/kylian-mbapp-france-world-cup-semifinals-spain-after-134756674",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "Yahoo Sports: Yamal didn't score, but a sneaky play helped Spain beat France",
+          "url": "https://sports.yahoo.com/articles/lamine-yamal-didnt-score-sneaky-010534760.html",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "Forbes: Yamal limping after semis, skips drills",
+          "url": "https://www.forbes.com/sites/brucelee/2026/07/16/spains-lamine-yamal-seen-limping-after-world-cup-semis-skips-drills/",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        }
+      ]
+    },
+    {
+      "id": "n23",
+      "date": "2026-07-19 (pre-final)",
+      "type": "interview",
+      "emotion": "innocence",
+      "what_we_see": "Messi, asked before the final about the viral photo: 'I took a photo with him as a baby, and here we both are, facing off in a World Cup... Lamine is a huge talent, someone I've followed a lot because he plays for a club I love.' UNICEF confirms the photo is real; Yamal's father says he asked for the photo. Broadcast montage: baby-bath photo vs the two lining up in the tunnel.",
+      "best_seconds": "1-2 s of the tunnel / line-up with both players (final broadcast), laid under the baby photo.",
+      "lyric_fit": "'Settle down, babe' -> 'And I know you feel it' - the full-circle moment.",
+      "case_value": "Gives the edit its emotional arc.",
+      "footage": [
+        {
+          "title": "CNN video: Messi reacts to viral photo with Yamal as a baby (19 Jul 2026)",
+          "url": "https://www.cnn.com/2026/07/19/world/video/22819429-messi-on-lamine-vrtc",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "Bleacher Report: Messi reacts to viral photo with baby Yamal ahead of final",
+          "url": "https://bleacherreport.com/articles/25455946-lionel-messi-reacts-viral-photo-him-lamine-yamal-baby-ahead-fifa-world-cup-final",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "UNICEF on X: 'Yes, those photos you've seen are real...'",
+          "url": "https://x.com/UNICEF/status/2077817597051982222",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "ABC News: How Messi and Yamal's viral baby photo came full circle at the World Cup",
+          "url": "https://abcnews.com/GMA/Culture/lionel-messi-lamine-yamals-viral-baby-photo/story?id=134805177",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "X (fan account) quoting father Mounir ahead of final - UNVERIFIED",
+          "url": "https://x.com/UTD_Seth001/status/2078543869205975525",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        }
+      ]
+    },
+    {
+      "id": "n24",
+      "date": "2026-07-19",
+      "type": "match",
+      "emotion": "trophy",
+      "what_we_see": "MetLife, 19 Jul: Spain 1-0 Argentina aet. Yamal runs the right wing for 120 minutes, drawing two defenders to free Porro whose cross finds Ferran Torres for the 106' winner; Argentina down to 10 (Enzo Fernandez second yellow). Yamal: most shots, most dribbles, most tackles won in the final (NBC Sports). Ferran Torres' goal celebration.",
+      "best_seconds": "1.5 s of Yamal's run that drags two defenders, then the 106' goal; 1 s of the final whistle (verify what he does at full time).",
+      "lyric_fit": "'Just run at your pace' - 120 minutes at his own pace.",
+      "case_value": "World champion at 19 - the pillar of the case.",
+      "footage": [
+        {
+          "title": "Spain v Argentina: FIFA World Cup 2026 Highlights Final (title format suggests the official FIFA channel)",
+          "url": "https://www.youtube.com/watch?v=RNLHetAesTs",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "Spain vs Argentina 1-0 Highlights",
+          "url": "https://www.youtube.com/watch?v=VjauYCu97AI",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "HIGHLIGHTS - Spain v Argentina",
+          "url": "https://www.youtube.com/watch?v=a3YeBJazWPE",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "Ferran Torres Goal (final)",
+          "url": "https://www.youtube.com/watch?v=e6a6lppWZkQ",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "WATCH LIVE: Spain Beat Argentina to Win FIFA World Cup 2026",
+          "url": "https://www.youtube.com/watch?v=pcK_HmpFVfk",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "NBC Sports: Lamine Yamal shines in World Cup final as Messi passes the baton",
+          "url": "https://www.nbcsports.com/soccer/news/lamine-yamal-shines-in-world-cup-final-as-lionel-messi-passes-the-baton",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "NBC News live blog: Spain outlasts Argentina 1-0 to win second title",
+          "url": "https://www.nbcnews.com/sports/soccer/live-blog/fifa-world-cup-final-2026-argentina-spain-messi-yamal-live-updates-rcna587754",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "Fox Sports: Spain wins 2026 FIFA World Cup over Messi, Argentina",
+          "url": "https://www.foxsports.com/stories/soccer/world-cup-spain-wins-argentina-lamine-yamal-lionel-messi",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "ESPN: World Cup 2026 final stats - Yamal first-ever teenager; Messi records; Mbappe history",
+          "url": "https://www.espn.com/soccer/story/_/id/49404955/fifa-world-cup-2026-stats-final-lamine-yamal-first-ever-teenager-lionel-messi-sets-new-wc-records-kylian-mbappe-makes-history",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        }
+      ]
+    },
+    {
+      "id": "n25",
+      "date": "2026-07-19",
+      "type": "match",
+      "emotion": "emotional",
+      "what_we_see": "After the final whistle Yamal walks over to Messi and the two embrace; Messi, visibly emotional, congratulates him. Yamal later: 'I said thank you for everything you gave football. I don't do things to look nice for the photo; that came from inside.'",
+      "best_seconds": "2-3 s on the embrace, Yamal's head on Messi's shoulder; hold on Messi's face.",
+      "lyric_fit": "'And I know you feel it' - the climax of the bridge.",
+      "case_value": "The passing-the-baton image that defines the World Cup; best emotional pay-off.",
+      "footage": [
+        {
+          "title": "Yahoo Sports: The moment Messi passed the football baton to Yamal",
+          "url": "https://sports.yahoo.com/articles/watch-moment-lionel-messi-passed-070000548.html",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "Yahoo Sports: Messi's reaction to Yamal approaching him after the final goes viral",
+          "url": "https://sports.yahoo.com/articles/lionel-messi-reaction-lamine-yamal-121712300.html",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "Al Jazeera: What did Yamal say to Messi? 'Thank you for everything'",
+          "url": "https://www.aljazeera.com/sports/2026/9/29/lamine-yamal-lionel-messi-spain-argentina-fifa-world-cup-2026-final",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "SI: 'Thank You' - Yamal details emotional embrace with Messi",
+          "url": "https://www.si.com/soccer/thank-you-lamine-yamal-emotional-embrace-lionel-messi-world-cup-final",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "beIN: Yamal reveals what he said to Messi after the final",
+          "url": "https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/lamine-yamal-breaks-his-silence-on-his-emotional-encounter-with-messi-after-the-2026-world-cup-final-2026-07-20",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "NBC Sports: Lamine Yamal shines in World Cup final as Messi passes the baton",
+          "url": "https://www.nbcsports.com/soccer/news/lamine-yamal-shines-in-world-cup-final-as-lionel-messi-passes-the-baton",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        }
+      ]
+    },
+    {
+      "id": "n26",
+      "date": "2026-07-19",
+      "type": "match",
+      "emotion": "trophy",
+      "what_we_see": "Infantino hands the trophy to captain Rodri who kisses it and raises it as teammates lift their arms together; Yamal and Nico Williams sit/lie down on the pitch taking it in after running the wings; Yamal posts a gallery: 'Almost completed the set.'",
+      "best_seconds": "2 s of the trophy lift with Yamal in frame; 2 s of Yamal and Nico Williams resting on the grass.",
+      "lyric_fit": "'They're running at the stars... they can catch them'.",
+      "case_value": "Trophy imagery; 'Almost completed the set' = the Ballon d'Or is the missing piece.",
+      "footage": [
+        {
+          "title": "Fox Sports: Rodri, Yamal and Spain celebrate World Cup final win",
+          "url": "https://www.foxsports.com/stories/soccer/spain-world-cup-2026-argentina-rodri-yamal-celebrations-postgame-trophy-ceremony",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "Yahoo Sports: 'Almost completed the set' - Yamal post",
+          "url": "https://sports.yahoo.com/articles/almost-completed-set-lamine-yamal-080301143.html",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "Al Jazeera: Top feel-good moments of the 2026 World Cup",
+          "url": "https://www.aljazeera.com/news/2026/7/20/top-feel-good-moments-to-remember-now-that-the-2026-world-cup-is-over",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "WATCH LIVE: Spain Beat Argentina to Win FIFA World Cup 2026",
+          "url": "https://www.youtube.com/watch?v=pcK_HmpFVfk",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        }
+      ]
+    },
+    {
+      "id": "n27",
+      "date": "2026-07-19",
+      "type": "match",
+      "emotion": "innocence",
+      "what_we_see": "Keyne, Yamal's 3-year-old brother, runs onto the pitch dribbling a ball around the goal, grabs a piece of net, then runs into Lamine's arms in a hug; photo of Lamine with his arm around his mother Sheila, who wears his No.19 jersey and the gold medal.",
+      "best_seconds": "2-3 s: Keyne running into Lamine's arms (the single best 'settle down, my child' beat).",
+      "lyric_fit": "'Settle down, my child' - Lamine holding a child in his arms; 'And I know you feel it'.",
+      "case_value": "Emotional close; no stat value.",
+      "footage": [
+        {
+          "title": "Yahoo Sports: Yamal's World Cup celebration with little brother Keyne",
+          "url": "https://sports.yahoo.com/articles/lamine-yamals-world-cup-celebration-020809402.html",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "Fox Sports: How Yamal's little brother Keyne celebrated Spain's World Cup win",
+          "url": "https://www.foxsports.com/stories/soccer/how-lamine-yamals-little-brother-keyne-celebrated-spains-world-cup-win",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "Hola!: Yamal celebrates with little brother Keyne (photos)",
+          "url": "https://www.hola.com/us/entertainment/20260720913698/lamine-yamal-brother-keyne-spain-world-cup-win-photos/",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "Yahoo Sports: Inside Yamal's emotional WC celebration with mom and little brother",
+          "url": "https://sports.yahoo.com/articles/inside-spanish-star-lamine-yamals-235432198.html",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        }
+      ]
+    },
+    {
+      "id": "n28",
+      "date": "2026-07-19",
+      "type": "match",
+      "emotion": "emotional",
+      "what_we_see": "Long embrace between Yamal and former Spain captain Alvaro Morata in the post-match celebrations.",
+      "best_seconds": "2 s of the embrace (secondary option).",
+      "lyric_fit": "'And I know you feel it'.",
+      "case_value": "Team-family texture.",
+      "footage": [
+        {
+          "title": "Yahoo Sports: Yamal shares emotional moment with Morata after World Cup win",
+          "url": "https://sports.yahoo.com/articles/watch-lamine-yamal-shares-emotional-171500073.html",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        }
+      ]
+    },
+    {
+      "id": "n29",
+      "date": "2026-07 (3 Jul and 19-20 Jul quotes)",
+      "type": "interview",
+      "emotion": "emotional",
+      "what_we_see": "Quotes about family: 'It makes me emotional to see my brother happy, my mother... living the life she always dreamed of.' 'My little brother means everything to me.' Context: mother Sheila Ebana from Equatorial Guinea; father Mounir Nasraoui from Morocco; parents separated when he was ~3; grandmother helped raise him in Rocafonda. Father stayed home from the final mourning Yamal's grandfather (Yahoo; a second report cites a different reason - treat as private, do NOT use on screen).",
+      "best_seconds": "Quote card only (1.5 s).",
+      "lyric_fit": "'Settle down, my child' - the family as the calm.",
+      "case_value": "Human story; use sparingly.",
+      "footage": [
+        {
+          "title": "Heavy: Yamal's emotional words about his family after World Cup victory",
+          "url": "https://heavy.com/sports/soccer/world-cup/lamine-yamal-parents-family-sacrifices/",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "CiberCuba: Yamal touches hearts with his family story (3 Jul 2026)",
+          "url": "https://en.cibercuba.com/noticias/2026-07-03-u1-e198484-s27065-nid334038-lamine-yamal-emociona-al-hablar-madre-me-tuvo-16",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "Yahoo Sports: Yamal's father stays home from World Cup final to mourn his grandfather",
+          "url": "https://sports.yahoo.com/articles/lamine-yamals-father-stays-home-201830223.html",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "Epilepsy Action: Yamal's dad misses World Cup final (conflicting reason - treat with caution)",
+          "url": "https://www.epilepsy.org.uk/news/yamal-dad-misses-world-cup-final-epilepsy",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        }
+      ]
+    },
+    {
+      "id": "n30",
+      "date": "2026-09-08",
+      "type": "interview",
+      "emotion": "defiance",
+      "what_we_see": "Barca press conference before Barcelona v Feyenoord (CL), the day the 30-man shortlist was revealed: 'It doesn't depend on me, it depends on you. I don't think I need to run a campaign... I am not going to beg for anything.'",
+      "best_seconds": "2 s of him shrugging at the podium / quote card on 'I am not going to beg for anything'.",
+      "lyric_fit": "'Don't think about them' / 'You try to fight the whole crowd'.",
+      "case_value": "His stance heading into the vote.",
+      "footage": [
+        {
+          "title": "(ENGLISH) Lamine Yamal FULL PRESS CONFERENCE ahead of FC Barcelona vs. Feyenoord (8 Sep 2026)",
+          "url": "https://www.youtube.com/watch?v=Tr5ZftI45G0",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "ESPN: Yamal says he won't 'beg' to win Ballon d'Or",
+          "url": "https://www.espn.com/soccer/story/_/id/49868658/barcelona-spain-lamine-yamal-not-beg-win-ballon-dor",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "Dawn: Barcelona star Yamal says will not beg for Ballon d'Or",
+          "url": "https://www.dawn.com/news/2028403",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "beIN: How did Yamal react to his 2026 Ballon d'Or nomination - real chances?",
+          "url": "https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/how-did-lamine-yamal-react-to-his-2026-ballon-d-or-nomination-and-what-are-his-real-chances-of-winning-2026-09-08",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        }
+      ]
+    },
+    {
+      "id": "n31",
+      "date": "2026-09-14",
+      "type": "interview",
+      "emotion": "defiance",
+      "what_we_see": "Movistar Plus interview: 'For me, Mbappe and me, we're the two best players in the world ... this year I would deserve it because of what I've won.' Drew criticism; Mbappe's response and media debate followed.",
+      "best_seconds": "Quote card / 2 s clip of the interview.",
+      "lyric_fit": "'You try to fight the whole crowd'.",
+      "case_value": "Confidence = part of his brand; also a risk.",
+      "footage": [
+        {
+          "title": "I Deserve The Ballon d'Or - Yamal Isn't Holding Back [ENGLISH]",
+          "url": "https://www.youtube.com/watch?v=X1q1Nae_5ZQ",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "Yahoo Sports: Yamal says he deserves to beat Mbappe to the Ballon d'Or",
+          "url": "https://sports.yahoo.com/articles/lamine-yamal-says-deserves-beat-071400763.html",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "Malay Mail (14 Sep 2026): 'This year I deserve Ballon d'Or' - Yamal",
+          "url": "https://www.malaymail.com/news/sports/2026/09/14/this-year-i-deserve-ballon-dor-barcas-yamal/235087",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        }
+      ]
+    },
+    {
+      "id": "n32",
+      "date": "2026-09-26 (AFTER the award window)",
+      "type": "match",
+      "emotion": "hype",
+      "what_we_see": "Wembley, Nations League: Yamal takes the ball off Guehi, carries into the box and finishes in off the post inside two minutes (youngest visiting scorer in a competitive match at Wembley - 19y 75d by our calculation; sources vary 68-75); Spain win 3-2 from 2-1 down (Baena, Oyarzabal winner; Kane misses a penalty). Instagram: 'Hate me or love me, I don't care.'",
+      "best_seconds": "2 s of the 2-minute goal; 1 s Kane's missed penalty. Use only as an epilogue - it is outside the Aug 2025-Jul 2026 window.",
+      "lyric_fit": "'You try to fight the whole crowd' -> defiant exit.",
+      "case_value": "Live momentum, not eligible for the award.",
+      "footage": [
+        {
+          "title": "England Football: Match centre England 2-3 Spain, 26 Sep 2026",
+          "url": "https://www.englandfootball.com/england/mens-senior-team/fixtures-results/2026-27/nations-league/england-spain-uefa-nations-league-saturday-26-september-2026-match-centre",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "ESPN: England 2-3 Spain (Sep 26, 2026) game analysis",
+          "url": "https://www.espn.com/soccer/report/_/gameId/401861066",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "Yahoo Sports: Yamal shows up England and Kane with standout show",
+          "url": "https://sports.yahoo.com/articles/lamine-yamal-shows-england-harry-210000454.html",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "Goal: Yamal scores a goal of historic proportions in England",
+          "url": "https://www.goal.com/en/news/england-have-not-experienced-anything-like-this-for-almost-70-years-lamine-yamal-shocks-wembley-and-thomas-tuchel/bltec74634f0f78ff8d",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "SI: Yamal sends defiant Ballon d'Or message after record-breaking Wembley night",
+          "url": "https://www.si.com/soccer/lamine-yamal-defiant-ballon-dor-message-record-breaking-wembley-night",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "Yahoo Sports: 'Hate me or love me, I don't care'",
+          "url": "https://sports.yahoo.com/articles/hate-love-don-t-care-062245582.html",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "Barca Blaugranes: 'Hate me or love me, I don't care' - Yamal after Spain beat England",
+          "url": "https://www.barcablaugranes.com/barcelona-internationals/133573/hate-me-or-love-me-i-dont-care-lamine-yamal-sends-message-after-spain-beat-england",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        }
+      ]
+    },
+    {
+      "id": "n33",
+      "date": "2026-09-08 to 2026-10-01",
+      "type": "archive",
+      "emotion": "pressure",
+      "what_we_see": "Graphics: 30-man Ballon d'Or shortlist (8 Sep); odds board (Kane 4/6-5/4, Yamal 2/1, Mbappe 14/1); rivals' numbers - Kane 73 goals, Mbappe 10 WC goals + 25 La Liga + 15 UCL, Rodri Golden Ball; ceremony card: 26 October, London Palladium.",
+      "best_seconds": "Text-only 1-2 s cards; use sparingly and not on the emotional section.",
+      "lyric_fit": "'They're running at the stars in the sky, they can catch them' - the rivals.",
+      "case_value": "Context for contrast.",
+      "footage": [
+        {
+          "title": "Oddschecker (29 Sep 2026): Ballon d'Or 2026 odds - Kane favourite ahead of Yamal",
+          "url": "https://www.oddschecker.com/insight/football/20260929-ballon-dor-2026-odds-harry-kane-favourite-ahead-of-lamine-yamal",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "ESPN: Ballon d'Or 2026 nominees - Kane, Mbappe lead 30-man shortlist",
+          "url": "https://www.espn.com/soccer/story/_/id/49866841/ballon-dor-2026-nominees-harry-kane-kylian-mbappe-lead-30-man-shortlist",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "CNN: Messi and World Cup winner Yamal on 2026 Ballon d'Or nominee list",
+          "url": "https://www.cnn.com/2026/09/08/sport/ballon-dor-longlist-announcement",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "Yahoo Sports: Ballon d'Or 2026 - the case for and against the 7 leading contenders",
+          "url": "https://sports.yahoo.com/articles/ballon-dor-2026-case-against-184057434.html",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        },
+        {
+          "title": "Forbes (28 Sep 2026): Who will win the 2026 Ballon d'Or?",
+          "url": "https://www.forbes.com/sites/samleveridge/2026/09/28/who-will-win-the-2026-ballon-dor/",
+          "verified": false,
+          "status": "listed_in_search_results_unopened"
+        }
+      ]
+    }
+  ]
+}
