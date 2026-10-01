@@ -104,7 +104,7 @@ Audio: song 13.03–47.31 s + song 81.59–98.73 s + song 128.72–150.84 s
 | s91 | 1:09.90 | 0.27 | climax | `c20` Albacete opener | 3.00 | 1.0 |  |  |  |
 | s92 | 1:10.17 | 0.27 | climax | `c12` 100th LaLiga game | 3.00 | 1.0 |  |  | shake |
 | s93 | 1:10.44 | 0.27 | climax | `k06` No-look pass | 3.00 | 1.0 |  |  | dip_white |
-| s94 | 1:10.70 | 2.83 | end | `b02` Ballon d'Or trophy | 3.00 | 1.0 | Hey, I feel it coming | 26.10 · LONDON | flash_in glow |
+| s94 | 1:10.70 | 2.83 | end | `b02` Ballon d'Or trophy | 3.00 | 1.0 | Hey, I feel it coming | 26.10 / LONDON | flash_in glow |
 
 Text overlays:
 
@@ -130,10 +130,10 @@ Audio: song 13.03–21.60 s + song 128.72–150.84 s
 | s02 | 0:01.07 | 1.07 | drop-out 1 | `n08` Yamal applauds Dembélé | 3.00 | 0.6 | Yeah, I feel it coming — I feel it |  |  |
 | s03 | 0:02.14 | 1.07 | drop-out 1 | `n07` Kopa Trophy on stage | 3.00 | 0.7 | Yeah, it's so damn close | so damn close |  |
 | s04 | 0:03.21 | 1.07 | drop-out 1 | `b01` The stare | 3.00 | 0.6 |  |  | dip_white |
-| s05 | 0:04.29 | 1.07 | verse1 | `c13` Back from the groin injury | 3.00 | 1.0 | Yeah, I feel it coming |  | flash_in shake |
+| s05 | 0:04.29 | 1.07 | verse1 | `c18` Stoppage-time stunner | 3.00 | 1.0 | Yeah, I feel it coming |  | flash_in shake |
 | s06 | 0:05.36 | 0.54 | verse1 | `c04` Atlético: 4th-minute goal | 3.00 | 1.0 |  |  |  |
 | s07 | 0:05.89 | 0.54 | verse1 | `c12` 100th LaLiga game | 3.50 | 1.0 |  |  |  |
-| s08 | 0:06.43 | 1.07 | verse1 | `c18` Stoppage-time stunner | 1.80 | 1.0 | Hey, right through my nose |  | flash_in shake |
+| s08 | 0:06.43 | 1.07 | verse1 | `c13` Back from the groin injury | 3.00 | 1.0 | Hey, right through my nose |  | flash_in shake |
 | s09 | 0:07.50 | 0.54 | verse1 | `c17` Answers the whistles | 4.80 | 1.0 | Hey, right through my nose |  |  |
 | s10 | 0:08.03 | 0.54 | verse1 | `k04` Cut inside on the left foot | 3.00 | 1.0 |  |  | dip_white |
 | s11 | 0:08.57 | 1.07 | break / build | `n24w` Final whistle | 3.00 | 0.5 | Hey, I feel it coming | WORLD CHAMPION / AT 19 |  |
@@ -146,7 +146,7 @@ Audio: song 13.03–21.60 s + song 128.72–150.84 s
 | s18 | 0:13.93 | 0.54 | climax | `c01` First hat-trick | 3.00 | 1.0 |  |  | shake |
 | s19 | 0:14.46 | 0.54 | climax | `c01` First hat-trick | 4.80 | 1.0 |  |  |  |
 | s20 | 0:15.00 | 1.07 | climax | `c06` Off the far post | 2.46 | 1.0 |  |  | flash_in |
-| s21 | 0:16.07 | 0.54 | climax | `c18` Stoppage-time stunner | 3.00 | 1.0 |  |  | shake |
+| s21 | 0:16.07 | 0.54 | climax | `c13` Back from the groin injury | 3.00 | 1.0 |  |  | shake |
 | s22 | 0:16.60 | 0.54 | climax | `c08` Deflected top corner | 3.00 | 1.0 |  |  | shake |
 | s23 | 0:17.14 | 1.07 | climax | `c03` 90+6' — last kick | 2.46 | 1.0 |  | 24 GOALS · 17 ASSISTS / BARÇA 2025-26 | flash_in |
 | s24 | 0:18.21 | 0.54 | climax | `c07` Brugge one-two | 3.00 | 1.0 |  |  | shake |
@@ -170,7 +170,7 @@ Audio: song 13.03–21.60 s + song 128.72–150.84 s
 | s42 | 0:27.05 | 0.27 | climax | `c20` Albacete opener | 3.00 | 1.0 |  |  |  |
 | s43 | 0:27.32 | 0.27 | climax | `c12` 100th LaLiga game | 3.00 | 1.0 |  |  | shake |
 | s44 | 0:27.58 | 0.27 | climax | `k06` No-look pass | 3.00 | 1.0 |  |  | dip_white |
-| s45 | 0:27.85 | 2.83 | end | `b02` Ballon d'Or trophy | 3.00 | 1.0 | Hey, I feel it coming | 26.10 · LONDON | flash_in glow |
+| s45 | 0:27.85 | 2.83 | end | `b02` Ballon d'Or trophy | 3.00 | 1.0 | Hey, I feel it coming | 26.10 / LONDON | flash_in glow |
 
 Text overlays:
 

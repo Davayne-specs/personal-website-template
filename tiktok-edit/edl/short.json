@@ -163,8 +163,8 @@
    "start": 4.285,
    "end": 5.3562,
    "section": "verse1",
-   "moment": "c13",
-   "clip": "clips/c13.mp4",
+   "moment": "c18",
+   "clip": "clips/c18.mp4",
    "in": 3.0,
    "speed": 1.0,
    "focus_x": 0.5,
@@ -175,9 +175,9 @@
     "shake"
    ],
    "placeholder": {
-    "title": "BACK FROM THE GROIN INJURY",
-    "sub": "Barça 2-1 Real Sociedad · 28 Sep 2025",
-    "hint": "Malay Mail / AFP: Yamal returns from injury to inspire Barcelona's 2-1 comeback win over R",
+    "title": "STOPPAGE-TIME STUNNER",
+    "sub": "Mallorca 0-3 Barça · matchday 1",
+    "hint": "ESPN: Mallorca 0-3 Barcelona (Aug 16, 2025) report",
     "color": "#a50044"
    },
    "zoom": {
@@ -230,9 +230,9 @@
    "start": 6.4275,
    "end": 7.4988,
    "section": "verse1",
-   "moment": "c18",
-   "clip": "clips/c18.mp4",
-   "in": 1.8,
+   "moment": "c13",
+   "clip": "clips/c13.mp4",
+   "in": 3.0,
    "speed": 1.0,
    "focus_x": 0.5,
    "focus_y": 0.5,
@@ -242,9 +242,9 @@
     "shake"
    ],
    "placeholder": {
-    "title": "STOPPAGE-TIME STUNNER",
-    "sub": "Mallorca 0-3 Barça · matchday 1",
-    "hint": "ESPN: Mallorca 0-3 Barcelona (Aug 16, 2025) report",
+    "title": "BACK FROM THE GROIN INJURY",
+    "sub": "Barça 2-1 Real Sociedad · 28 Sep 2025",
+    "hint": "Malay Mail / AFP: Yamal returns from injury to inspire Barcelona's 2-1 comeback win over R",
     "color": "#a50044"
    }
   },
@@ -524,8 +524,8 @@
    "start": 16.0688,
    "end": 16.6044,
    "section": "climax",
-   "moment": "c18",
-   "clip": "clips/c18.mp4",
+   "moment": "c13",
+   "clip": "clips/c13.mp4",
    "in": 3.0,
    "speed": 1.0,
    "focus_x": 0.5,
@@ -535,9 +535,9 @@
     "shake"
    ],
    "placeholder": {
-    "title": "STOPPAGE-TIME STUNNER",
-    "sub": "Mallorca 0-3 Barça · matchday 1",
-    "hint": "ESPN: Mallorca 0-3 Barcelona (Aug 16, 2025) report",
+    "title": "BACK FROM THE GROIN INJURY",
+    "sub": "Barça 2-1 Real Sociedad · 28 Sep 2025",
+    "hint": "Malay Mail / AFP: Yamal returns from injury to inspire Barcelona's 2-1 comeback win over R",
     "color": "#a50044"
    }
   },
@@ -1078,7 +1078,7 @@
    },
    "grade": "gold",
    "text": {
-    "content": "26.10 · LONDON",
+    "content": "26.10\nLONDON",
     "style": "title",
     "pos": "upper",
     "in": 0.4

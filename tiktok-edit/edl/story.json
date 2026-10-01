@@ -2200,7 +2200,7 @@
    },
    "grade": "gold",
    "text": {
-    "content": "26.10 · LONDON",
+    "content": "26.10\nLONDON",
     "style": "title",
     "pos": "upper",
     "in": 0.4

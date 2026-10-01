@@ -182,7 +182,7 @@ CLIMAX = [
 # the last "Hey, I feel it coming" — back to the trophy (matches the first frame, so it loops)
 ENDING = [
     R("69.1", "b02", grade="gold", zoom={"from": 1.22, "to": 1.0}, fx=["flash_in", "glow"],
-      text={"content": "26.10 · LONDON", "style": "title", "pos": "upper", "in": 0.4}),
+      text={"content": "26.10\nLONDON", "style": "title", "pos": "upper", "in": 0.4}),
 ]
 ENDING_OVERLAYS = [
     {"start": "@148.23", "end": "@150.84", "content": "BALLON D'OR 2026", "style": "kicker", "pos": "lower"},
@@ -196,15 +196,17 @@ STORY_OVERLAYS = [
 
 # 30-second cut: drop-out → two bars of goals → the case → climax
 SHORT_BUILD = [
-    R("8.1", "c13", fx=HIT, zoom=PUNCH),
+    R("8.1", "c18", fx=HIT, zoom=PUNCH),      # the kick returns on a goal
     R("8.3", "c04"),
     R("8.4", "c12", hit="net"),
-    R("9.1", "c18", fx=HIT, hit="build"),
+    R("9.1", "c13", fx=HIT),
     R("9.3", "c17", hit="cele"),
     R("9.4", "k04", fx=["dip_white"]),
 ]
+# c18 opened the short; give its climax beat to the Real Sociedad assist instead
+SHORT_CLIMAX = [dict(r, m="c13") if r["at"] == "63.3" else r for r in CLIMAX]
 
-SHORT = HOOK + SHORT_BUILD + BREAK + CLIMAX + ENDING
+SHORT = HOOK + SHORT_BUILD + BREAK + SHORT_CLIMAX + ENDING
 SHORT_OVERLAYS = [
     {"start": "6.1", "end": "8.1", "content": "BALLON D'OR 2026", "style": "kicker", "pos": "lower"},
 ] + ENDING_OVERLAYS
