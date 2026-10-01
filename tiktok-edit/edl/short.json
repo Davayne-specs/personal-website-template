@@ -1,0 +1,1104 @@
+{
+ "meta": {
+  "title": "Lamine Yamal — I Feel It Coming (short cut)",
+  "song": "song/edit_short.wav",
+  "song_start": 0.0,
+  "song_end": 30.687,
+  "fade_out": 0.0,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "default_grade": "teal_orange",
+  "safe_zone": {
+   "top": 130,
+   "bottom": 484,
+   "left": 60,
+   "right": 140
+  },
+  "audio_plan": {
+   "source": "song/song.mp3",
+   "stems": {
+    "vocals": "song/stems/vocals.wav",
+    "instrumental": "song/stems/instrumental.wav"
+   },
+   "segments": [
+    {
+     "label": "drop-out 'so damn close' → 'right through my nose'",
+     "from": 13.0275,
+     "to": 21.5975,
+     "mute_vocals": [
+      [
+       21.25,
+       21.7
+      ]
+     ]
+    },
+    {
+     "label": "build → climax → end",
+     "from": 128.723,
+     "to": 150.84
+    }
+   ],
+   "gain_db": 1.0
+  }
+ },
+ "shots": [
+  {
+   "id": "s01",
+   "start": 0.0,
+   "end": 1.0712,
+   "section": "drop-out 1",
+   "moment": "b02",
+   "clip": "clips/b02.mp4",
+   "in": 3.0,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "flash_in"
+   ],
+   "placeholder": {
+    "title": "BALLON D'OR TROPHY",
+    "sub": "Golden ball close-up · 2025 gala, Paris",
+    "hint": "Ballon d'Or 2025 ceremony trophy close-up",
+    "color": "#b8860b"
+   },
+   "zoom": {
+    "from": 1.0,
+    "to": 1.22
+   },
+   "grade": "gold",
+   "text": {
+    "content": "2ND IN 2025.",
+    "style": "title",
+    "pos": "upper",
+    "in": 0.0
+   }
+  },
+  {
+   "id": "s02",
+   "start": 1.0712,
+   "end": 2.1425,
+   "section": "drop-out 1",
+   "moment": "n08",
+   "clip": "clips/n08.mp4",
+   "in": 3.0,
+   "speed": 0.6,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [],
+   "placeholder": {
+    "title": "YAMAL APPLAUDS DEMBÉLÉ",
+    "sub": "Ballon d'Or 2025 · runner-up at 18",
+    "hint": "Ballon d'Or 2025 Dembélé wins Yamal reaction",
+    "color": "#3a3a48"
+   },
+   "zoom": {
+    "from": 1.02,
+    "to": 1.12
+   },
+   "grade": "bw"
+  },
+  {
+   "id": "s03",
+   "start": 2.1425,
+   "end": 3.2137,
+   "section": "drop-out 1",
+   "moment": "n07",
+   "clip": "clips/n07.mp4",
+   "in": 3.0,
+   "speed": 0.7,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [],
+   "placeholder": {
+    "title": "KOPA TROPHY ON STAGE",
+    "sub": "22 Sep 2025 · 'maybe we'll see each other later'",
+    "hint": "LAMINE YAMAL gana el TROFEO KOPA 2025: DISCURSO COMPLETO",
+    "color": "#b8860b"
+   },
+   "zoom": {
+    "from": 1.02,
+    "to": 1.12
+   },
+   "grade": "gold",
+   "text": {
+    "content": "so damn close",
+    "style": "lyric",
+    "pos": "center",
+    "in": 0.49
+   }
+  },
+  {
+   "id": "s04",
+   "start": 3.2137,
+   "end": 4.285,
+   "section": "drop-out 1",
+   "moment": "b01",
+   "clip": "clips/b01.mp4",
+   "in": 3.0,
+   "speed": 0.6,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "dip_white"
+   ],
+   "placeholder": {
+    "title": "THE STARE",
+    "sub": "Tunnel / line-up close-up · 2025-26",
+    "hint": "Lamine Yamal tunnel close-up scenepack 4K",
+    "color": "#1d2b53"
+   },
+   "zoom": {
+    "from": 1.0,
+    "to": 1.25
+   }
+  },
+  {
+   "id": "s05",
+   "start": 4.285,
+   "end": 5.3562,
+   "section": "verse1",
+   "moment": "c13",
+   "clip": "clips/c13.mp4",
+   "in": 3.0,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "flash_in",
+    "shake"
+   ],
+   "placeholder": {
+    "title": "BACK FROM THE GROIN INJURY",
+    "sub": "Barça 2-1 Real Sociedad · 28 Sep 2025",
+    "hint": "Malay Mail / AFP: Yamal returns from injury to inspire Barcelona's 2-1 comeback win over R",
+    "color": "#a50044"
+   },
+   "zoom": {
+    "from": 1.0,
+    "to": 1.14
+   }
+  },
+  {
+   "id": "s06",
+   "start": 5.3562,
+   "end": 5.8919,
+   "section": "verse1",
+   "moment": "c04",
+   "clip": "clips/c04.mp4",
+   "in": 3.0,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [],
+   "placeholder": {
+    "title": "ATLÉTICO: 4TH-MINUTE GOAL",
+    "sub": "UCL QF · 14 Apr 2026 (out 2-3 agg.)",
+    "hint": "HIGHLIGHTS (Atletico-Barcelona QF2, uploader unknown)",
+    "color": "#004d98"
+   }
+  },
+  {
+   "id": "s07",
+   "start": 5.8919,
+   "end": 6.4275,
+   "section": "verse1",
+   "moment": "c12",
+   "clip": "clips/c12.mp4",
+   "in": 3.5,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [],
+   "placeholder": {
+    "title": "100TH LALIGA GAME",
+    "sub": "Barça 4-1 Espanyol · 11 Apr 2026",
+    "hint": "ESPN: Barcelona 4-1 Espanyol match report",
+    "color": "#a50044"
+   }
+  },
+  {
+   "id": "s08",
+   "start": 6.4275,
+   "end": 7.4988,
+   "section": "verse1",
+   "moment": "c18",
+   "clip": "clips/c18.mp4",
+   "in": 1.8,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "flash_in",
+    "shake"
+   ],
+   "placeholder": {
+    "title": "STOPPAGE-TIME STUNNER",
+    "sub": "Mallorca 0-3 Barça · matchday 1",
+    "hint": "ESPN: Mallorca 0-3 Barcelona (Aug 16, 2025) report",
+    "color": "#a50044"
+   }
+  },
+  {
+   "id": "s09",
+   "start": 7.4988,
+   "end": 8.0344,
+   "section": "verse1",
+   "moment": "c17",
+   "clip": "clips/c17.mp4",
+   "in": 4.8,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [],
+   "placeholder": {
+    "title": "ANSWERS THE WHISTLES",
+    "sub": "Villarreal 0-2 Barça · 21 Dec 2025",
+    "hint": "AMAZING LAMINE YAMAL GOAL - Barcelona vs. Villarreal (likely a broadcaster upload)",
+    "color": "#a50044"
+   }
+  },
+  {
+   "id": "s10",
+   "start": 8.0344,
+   "end": 8.57,
+   "section": "verse1",
+   "moment": "k04",
+   "clip": "clips/k04.mp4",
+   "in": 3.0,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "dip_white"
+   ],
+   "placeholder": {
+    "title": "CUT INSIDE ON THE LEFT FOOT",
+    "sub": "drop of the shoulder · 2025-26",
+    "hint": "Lamine Yamal cut inside on the left foot 2025-26 scenepack 4K",
+    "color": "#a50044"
+   }
+  },
+  {
+   "id": "s11",
+   "start": 8.57,
+   "end": 9.6413,
+   "section": "break / build",
+   "moment": "n24w",
+   "clip": "clips/n24w.mp4",
+   "in": 3.0,
+   "speed": 0.5,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [],
+   "placeholder": {
+    "title": "FINAL WHISTLE",
+    "sub": "World champions · 19 Jul 2026",
+    "hint": "Spain v Argentina: FIFA World Cup 2026 Highlights Final (title format suggests the officia",
+    "color": "#c60b1e"
+   },
+   "grade": "gold",
+   "text": {
+    "content": "WORLD CHAMPION\nAT 19",
+    "style": "stat",
+    "pos": "upper",
+    "in": 0.0
+   }
+  },
+  {
+   "id": "s12",
+   "start": 9.6413,
+   "end": 10.7125,
+   "section": "break / build",
+   "moment": "n26",
+   "clip": "clips/n26.mp4",
+   "in": 4.8,
+   "speed": 0.6,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [],
+   "placeholder": {
+    "title": "HANDS ON THE WORLD CUP",
+    "sub": "Spain world champions · MetLife",
+    "hint": "Fox Sports: Rodri, Yamal and Spain celebrate World Cup final win",
+    "color": "#b8860b"
+   },
+   "grade": "gold"
+  },
+  {
+   "id": "s13",
+   "start": 10.7125,
+   "end": 11.7838,
+   "section": "break / build",
+   "moment": "c14",
+   "clip": "clips/c14.mp4",
+   "in": 3.0,
+   "speed": 0.6,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [],
+   "placeholder": {
+    "title": "LALIGA CHAMPIONS",
+    "sub": "Title no. 29 · Camp Nou, 10 May 2026",
+    "hint": "FC Barcelona: Barca Campeon de La Liga 2025-2026",
+    "color": "#b8860b"
+   },
+   "grade": "gold",
+   "text": {
+    "content": "LALIGA CHAMPION\nPLAYER OF THE SEASON",
+    "style": "stat",
+    "pos": "upper",
+    "in": 0.0
+   }
+  },
+  {
+   "id": "s14",
+   "start": 11.7838,
+   "end": 12.3194,
+   "section": "break / build",
+   "moment": "k07",
+   "clip": "clips/k07.mp4",
+   "in": 3.0,
+   "speed": 0.8,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [],
+   "placeholder": {
+    "title": "SPRINT PAST TWO",
+    "sub": "full speed, ball glued · 2025-26",
+    "hint": "Lamine Yamal sprint past two 2025-26 scenepack 4K",
+    "color": "#a50044"
+   }
+  },
+  {
+   "id": "s15",
+   "start": 12.3194,
+   "end": 12.5872,
+   "section": "break / build",
+   "moment": "k01",
+   "clip": "clips/k01.mp4",
+   "in": 1.8,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [],
+   "placeholder": {
+    "title": "STEPOVER BURST",
+    "sub": "beats his man down the right · 2025-26",
+    "hint": "Lamine Yamal stepover burst 2025-26 scenepack 4K",
+    "color": "#a50044"
+   }
+  },
+  {
+   "id": "s16",
+   "start": 12.5872,
+   "end": 12.855,
+   "section": "break / build",
+   "moment": "k02",
+   "clip": "clips/k02.mp4",
+   "in": 3.0,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "dip_white"
+   ],
+   "placeholder": {
+    "title": "OUTSIDE-OF-THE-BOOT PASS",
+    "sub": "the trivela · 2025-26",
+    "hint": "Lamine Yamal outside-of-the-boot pass 2025-26 scenepack 4K",
+    "color": "#a50044"
+   }
+  },
+  {
+   "id": "s17",
+   "start": 12.855,
+   "end": 13.9263,
+   "section": "climax",
+   "moment": "c02",
+   "clip": "clips/c02.mp4",
+   "in": 2.732,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "flash_in",
+    "shake"
+   ],
+   "placeholder": {
+    "title": "SCISSOR-KICK IN THE HAIL",
+    "sub": "Barça 3-0 Oviedo · 25 Jan 2026",
+    "hint": "Lamine Yamal's STUNNING volley secures victory for Barcelona vs Real Oviedo",
+    "color": "#a50044"
+   },
+   "ramp": {
+    "from": 1.0,
+    "to": 0.3,
+    "at": 0.2
+   }
+  },
+  {
+   "id": "s18",
+   "start": 13.9263,
+   "end": 14.4619,
+   "section": "climax",
+   "moment": "c01",
+   "clip": "clips/c01.mp4",
+   "in": 3.0,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "shake"
+   ],
+   "placeholder": {
+    "title": "FIRST HAT-TRICK",
+    "sub": "Barça 4-1 Villarreal · 28 Feb 2026",
+    "hint": "¡El PRIMER HAT-TRICK de Lamine Yamal! - Resumen de goles del FC Barcelona 4-1 Villarreal C",
+    "color": "#a50044"
+   }
+  },
+  {
+   "id": "s19",
+   "start": 14.4619,
+   "end": 14.9975,
+   "section": "climax",
+   "moment": "c01",
+   "clip": "clips/c01.mp4",
+   "in": 4.8,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [],
+   "placeholder": {
+    "title": "FIRST HAT-TRICK",
+    "sub": "Barça 4-1 Villarreal · 28 Feb 2026",
+    "hint": "¡El PRIMER HAT-TRICK de Lamine Yamal! - Resumen de goles del FC Barcelona 4-1 Villarreal C",
+    "color": "#a50044"
+   }
+  },
+  {
+   "id": "s20",
+   "start": 14.9975,
+   "end": 16.0688,
+   "section": "climax",
+   "moment": "c06",
+   "clip": "clips/c06.mp4",
+   "in": 2.464,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "flash_in"
+   ],
+   "placeholder": {
+    "title": "OFF THE FAR POST",
+    "sub": "Athletic 0-1 Barça · 7 Mar 2026",
+    "hint": "Irresistible Yamal goal sends Barca FOUR CLEAR!",
+    "color": "#a50044"
+   }
+  },
+  {
+   "id": "s21",
+   "start": 16.0688,
+   "end": 16.6044,
+   "section": "climax",
+   "moment": "c18",
+   "clip": "clips/c18.mp4",
+   "in": 3.0,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "shake"
+   ],
+   "placeholder": {
+    "title": "STOPPAGE-TIME STUNNER",
+    "sub": "Mallorca 0-3 Barça · matchday 1",
+    "hint": "ESPN: Mallorca 0-3 Barcelona (Aug 16, 2025) report",
+    "color": "#a50044"
+   }
+  },
+  {
+   "id": "s22",
+   "start": 16.6044,
+   "end": 17.14,
+   "section": "climax",
+   "moment": "c08",
+   "clip": "clips/c08.mp4",
+   "in": 3.0,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "shake"
+   ],
+   "placeholder": {
+    "title": "DEFLECTED TOP CORNER",
+    "sub": "Barça 4-1 Copenhagen · UCL",
+    "hint": "Yamal & Rashford On Target",
+    "color": "#004d98"
+   }
+  },
+  {
+   "id": "s23",
+   "start": 17.14,
+   "end": 18.2113,
+   "section": "climax",
+   "moment": "c03",
+   "clip": "clips/c03.mp4",
+   "in": 2.464,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "flash_in"
+   ],
+   "placeholder": {
+    "title": "90+6' — LAST KICK",
+    "sub": "Newcastle 1-1 Barça · UCL R16",
+    "hint": "Yamal's Last-Gasp Penalty Saves Barca",
+    "color": "#004d98"
+   },
+   "text": {
+    "content": "24 GOALS · 17 ASSISTS\nBARÇA 2025-26",
+    "style": "stat",
+    "pos": "upper",
+    "in": 0.0
+   }
+  },
+  {
+   "id": "s24",
+   "start": 18.2113,
+   "end": 18.7469,
+   "section": "climax",
+   "moment": "c07",
+   "clip": "clips/c07.mp4",
+   "in": 3.0,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "shake"
+   ],
+   "placeholder": {
+    "title": "BRUGGE ONE-TWO",
+    "sub": "Club Brugge 3-3 Barça · UCL",
+    "hint": "YAMAL! Club Brugge 3-3 Barcelona HIGHLIGHTS & All Goals",
+    "color": "#004d98"
+   }
+  },
+  {
+   "id": "s25",
+   "start": 18.7469,
+   "end": 19.2825,
+   "section": "climax",
+   "moment": "c15",
+   "clip": "clips/c15.mp4",
+   "in": 3.0,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "shake"
+   ],
+   "placeholder": {
+    "title": "EDGE-OF-BOX CURLER",
+    "sub": "Barça 3-0 Mallorca · 7 Feb 2026",
+    "hint": "TSN / AP: Lamine Yamal atones for bad miss with classy goal as La Liga leader Barcelona be",
+    "color": "#a50044"
+   }
+  },
+  {
+   "id": "s26",
+   "start": 19.2825,
+   "end": 20.3538,
+   "section": "climax",
+   "moment": "n18",
+   "clip": "clips/n18.mp4",
+   "in": 2.732,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "flash_in",
+    "shake"
+   ],
+   "placeholder": {
+    "title": "FIRST WORLD CUP GOAL",
+    "sub": "Spain 4-0 Saudi Arabia · 21 Jun 2026",
+    "hint": "Spain's Lamine Yamal Scores His First Career FIFA World Cup(TM) Goal vs Saudi Arabia (titl",
+    "color": "#c60b1e"
+   }
+  },
+  {
+   "id": "s27",
+   "start": 20.3538,
+   "end": 20.8894,
+   "section": "climax",
+   "moment": "n22",
+   "clip": "clips/n22.mp4",
+   "in": 3.0,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "shake"
+   ],
+   "placeholder": {
+    "title": "RUN AT DIGNE → PENALTY",
+    "sub": "Spain 2-0 France · semi-final",
+    "hint": "NBC News live blog: Spain defeats France 2-0 to advance to final",
+    "color": "#c60b1e"
+   }
+  },
+  {
+   "id": "s28",
+   "start": 20.8894,
+   "end": 21.4251,
+   "section": "climax",
+   "moment": "n19",
+   "clip": "clips/n19.mp4",
+   "in": 3.0,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "shake"
+   ],
+   "placeholder": {
+    "title": "AUSTRIA: HIMSELF AGAIN",
+    "sub": "Spain 3-0 Austria · 2 Jul 2026",
+    "hint": "TNT Sports: Spain v Austria - Yamal sizzles, Oyarzabal double",
+    "color": "#c60b1e"
+   }
+  },
+  {
+   "id": "s29",
+   "start": 21.4251,
+   "end": 21.9607,
+   "section": "climax",
+   "moment": "n05",
+   "clip": "clips/n05.mp4",
+   "in": 3.0,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "flash_in"
+   ],
+   "placeholder": {
+    "title": "EURO 2024 AT 17",
+    "sub": "Berlin · Spain 2-1 England",
+    "hint": "FC Barcelona: Yamal, Ferran, Fermin and Pedri - Euro 2024 winners",
+    "color": "#c60b1e"
+   },
+   "grade": "gold",
+   "text": {
+    "content": "FIRST TEENAGER EVER\nEUROS + WORLD CUP",
+    "style": "stat",
+    "pos": "upper",
+    "in": 0.0
+   }
+  },
+  {
+   "id": "s30",
+   "start": 21.9607,
+   "end": 22.4963,
+   "section": "climax",
+   "moment": "n26",
+   "clip": "clips/n26.mp4",
+   "in": 3.0,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [],
+   "placeholder": {
+    "title": "HANDS ON THE WORLD CUP",
+    "sub": "Spain world champions · MetLife",
+    "hint": "Fox Sports: Rodri, Yamal and Spain celebrate World Cup final win",
+    "color": "#b8860b"
+   },
+   "grade": "gold"
+  },
+  {
+   "id": "s31",
+   "start": 22.4963,
+   "end": 23.0319,
+   "section": "climax",
+   "moment": "n24",
+   "clip": "clips/n24.mp4",
+   "in": 3.0,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "shake"
+   ],
+   "placeholder": {
+    "title": "THE FINAL: THE RUN",
+    "sub": "Spain 1-0 Argentina (aet) · 19 Jul 2026",
+    "hint": "Spain v Argentina: FIFA World Cup 2026 Highlights Final (title format suggests the officia",
+    "color": "#c60b1e"
+   }
+  },
+  {
+   "id": "s32",
+   "start": 23.0319,
+   "end": 23.5676,
+   "section": "climax",
+   "moment": "n24w",
+   "clip": "clips/n24w.mp4",
+   "in": 3.0,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [],
+   "placeholder": {
+    "title": "FINAL WHISTLE",
+    "sub": "World champions · 19 Jul 2026",
+    "hint": "Spain v Argentina: FIFA World Cup 2026 Highlights Final (title format suggests the officia",
+    "color": "#c60b1e"
+   },
+   "grade": "gold"
+  },
+  {
+   "id": "s33",
+   "start": 23.5676,
+   "end": 24.1032,
+   "section": "climax",
+   "moment": "n26",
+   "clip": "clips/n26.mp4",
+   "in": 4.8,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "flash_in"
+   ],
+   "placeholder": {
+    "title": "HANDS ON THE WORLD CUP",
+    "sub": "Spain world champions · MetLife",
+    "hint": "Fox Sports: Rodri, Yamal and Spain celebrate World Cup final win",
+    "color": "#b8860b"
+   },
+   "grade": "gold"
+  },
+  {
+   "id": "s34",
+   "start": 24.1032,
+   "end": 24.6388,
+   "section": "climax",
+   "moment": "c09",
+   "clip": "clips/c09.mp4",
+   "in": 3.0,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [],
+   "placeholder": {
+    "title": "SUPERCOPA: CLÁSICO FINAL",
+    "sub": "Barça 3-2 Real Madrid · Jeddah",
+    "hint": "FC Barcelona: FC Barcelona 3-2 Real Madrid: Supermen!",
+    "color": "#b8860b"
+   },
+   "grade": "gold"
+  },
+  {
+   "id": "s35",
+   "start": 24.6388,
+   "end": 25.1745,
+   "section": "climax",
+   "moment": "c14",
+   "clip": "clips/c14.mp4",
+   "in": 3.0,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [],
+   "placeholder": {
+    "title": "LALIGA CHAMPIONS",
+    "sub": "Title no. 29 · Camp Nou, 10 May 2026",
+    "hint": "FC Barcelona: Barca Campeon de La Liga 2025-2026",
+    "color": "#b8860b"
+   },
+   "grade": "gold"
+  },
+  {
+   "id": "s36",
+   "start": 25.1745,
+   "end": 25.7101,
+   "section": "climax",
+   "moment": "n03",
+   "clip": "clips/n03.mp4",
+   "in": 3.0,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [],
+   "placeholder": {
+    "title": "304",
+    "sub": "Rocafonda, Mataró · the postcode celebration",
+    "hint": "Athlon Sports: Yamal's '304' celebration - meaning and origin",
+    "color": "#a50044"
+   }
+  },
+  {
+   "id": "s37",
+   "start": 25.7101,
+   "end": 25.9779,
+   "section": "climax",
+   "moment": "k03",
+   "clip": "clips/k03.mp4",
+   "in": 3.0,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "shake"
+   ],
+   "placeholder": {
+    "title": "NUTMEG",
+    "sub": "through the legs · 2025-26",
+    "hint": "Lamine Yamal nutmeg 2025-26 scenepack 4K",
+    "color": "#a50044"
+   }
+  },
+  {
+   "id": "s38",
+   "start": 25.9779,
+   "end": 26.2457,
+   "section": "climax",
+   "moment": "k05",
+   "clip": "clips/k05.mp4",
+   "in": 3.0,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [],
+   "placeholder": {
+    "title": "ELÁSTICO / ROULETTE",
+    "sub": "flair under pressure · 2025-26",
+    "hint": "Lamine Yamal elástico / roulette 2025-26 scenepack 4K",
+    "color": "#a50044"
+   }
+  },
+  {
+   "id": "s39",
+   "start": 26.2457,
+   "end": 26.5135,
+   "section": "climax",
+   "moment": "c10",
+   "clip": "clips/c10.mp4",
+   "in": 3.0,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "shake"
+   ],
+   "placeholder": {
+    "title": "ROOF OF THE NET",
+    "sub": "Barça 3-1 Alavés · 29 Nov 2025",
+    "hint": "Goal: Barcelona player ratings vs Alaves - Yamal recovers from Stamford Bridge shocker",
+    "color": "#a50044"
+   }
+  },
+  {
+   "id": "s40",
+   "start": 26.5135,
+   "end": 26.7813,
+   "section": "climax",
+   "moment": "c17",
+   "clip": "clips/c17.mp4",
+   "in": 3.0,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [],
+   "placeholder": {
+    "title": "ANSWERS THE WHISTLES",
+    "sub": "Villarreal 0-2 Barça · 21 Dec 2025",
+    "hint": "AMAZING LAMINE YAMAL GOAL - Barcelona vs. Villarreal (likely a broadcaster upload)",
+    "color": "#a50044"
+   }
+  },
+  {
+   "id": "s41",
+   "start": 26.7813,
+   "end": 27.0492,
+   "section": "climax",
+   "moment": "c16",
+   "clip": "clips/c16.mp4",
+   "in": 3.0,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "shake"
+   ],
+   "placeholder": {
+    "title": "ROUND THE KEEPER",
+    "sub": "Barça 3-1 Elche · 2 Nov 2025",
+    "hint": "Outlook India: FC Barcelona vs Elche - Lamine Yamal scores as Barca bounce back from Clasi",
+    "color": "#a50044"
+   }
+  },
+  {
+   "id": "s42",
+   "start": 27.0492,
+   "end": 27.317,
+   "section": "climax",
+   "moment": "c20",
+   "clip": "clips/c20.mp4",
+   "in": 3.0,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [],
+   "placeholder": {
+    "title": "ALBACETE OPENER",
+    "sub": "Copa del Rey QF · 3 Feb 2026",
+    "hint": "Barca Reach Copa del Rey Semi-Final",
+    "color": "#a50044"
+   }
+  },
+  {
+   "id": "s43",
+   "start": 27.317,
+   "end": 27.5848,
+   "section": "climax",
+   "moment": "c12",
+   "clip": "clips/c12.mp4",
+   "in": 3.0,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "shake"
+   ],
+   "placeholder": {
+    "title": "100TH LALIGA GAME",
+    "sub": "Barça 4-1 Espanyol · 11 Apr 2026",
+    "hint": "ESPN: Barcelona 4-1 Espanyol match report",
+    "color": "#a50044"
+   }
+  },
+  {
+   "id": "s44",
+   "start": 27.5848,
+   "end": 27.8526,
+   "section": "climax",
+   "moment": "k06",
+   "clip": "clips/k06.mp4",
+   "in": 3.0,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "dip_white"
+   ],
+   "placeholder": {
+    "title": "NO-LOOK PASS",
+    "sub": "head up, eyes elsewhere · 2025-26",
+    "hint": "Lamine Yamal no-look pass 2025-26 scenepack 4K",
+    "color": "#a50044"
+   }
+  },
+  {
+   "id": "s45",
+   "start": 27.8526,
+   "end": 30.687,
+   "section": "end",
+   "moment": "b02",
+   "clip": "clips/b02.mp4",
+   "in": 3.0,
+   "speed": 1.0,
+   "focus_x": 0.5,
+   "focus_y": 0.5,
+   "fit": "crop",
+   "fx": [
+    "flash_in",
+    "glow"
+   ],
+   "placeholder": {
+    "title": "BALLON D'OR TROPHY",
+    "sub": "Golden ball close-up · 2025 gala, Paris",
+    "hint": "Ballon d'Or 2025 ceremony trophy close-up",
+    "color": "#b8860b"
+   },
+   "zoom": {
+    "from": 1.22,
+    "to": 1.0
+   },
+   "grade": "gold",
+   "text": {
+    "content": "26.10 · LONDON",
+    "style": "title",
+    "pos": "upper",
+    "in": 0.4
+   }
+  }
+ ],
+ "overlays": [
+  {
+   "start": 0.0,
+   "end": 4.285,
+   "content": "BALLON D'OR 2026",
+   "style": "kicker",
+   "pos": "lower"
+  },
+  {
+   "start": 28.077,
+   "end": 30.687,
+   "content": "BALLON D'OR 2026",
+   "style": "kicker",
+   "pos": "lower"
+  }
+ ]
+}

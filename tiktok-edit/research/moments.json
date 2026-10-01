@@ -1,0 +1,1135 @@
+{
+ "note": "Clip catalogue for the edit. Save each clip as clips/<id>.mp4 (n01 as clips/n01.jpg). Trim every video to about 8 s so that its key action (the 'trim' field) happens exactly 3.0 s in — or set `hit` to the second where it happens. One clip can then feed several shots: the lead-up, the strike, the celebration. Sources were found by web search; treat them as leads, and check the uploader is official.",
+ "moments": {
+  "b02": {
+   "title": "Ballon d'Or trophy",
+   "sub": "Golden ball close-up · 2025 gala, Paris",
+   "trim": "Slow push on the golden ball on its plinth (any gala broadcast). Key frame = cleanest close-up.",
+   "kind": "video",
+   "hit": 3.0,
+   "focus_x": 0.5,
+   "color": "#b8860b",
+   "research": null,
+   "search": "Ballon d'Or 2025 ceremony trophy close-up",
+   "sources": [],
+   "hint": "Ballon d'Or 2025 ceremony trophy close-up"
+  },
+  "n08": {
+   "title": "Yamal applauds Dembélé",
+   "sub": "Ballon d'Or 2025 · runner-up at 18",
+   "trim": "Reaction shot: Yamal clapping while Dembélé is named / speaks. Key frame = Yamal's face.",
+   "kind": "video",
+   "hit": 3.0,
+   "focus_x": 0.5,
+   "color": "#3a3a48",
+   "research": "n08",
+   "search": "Ballon d'Or 2025 Dembélé wins Yamal reaction",
+   "sources": [
+    {
+     "title": "Yahoo Sports: What Dembele said about Yamal at the Ballon d'Or gala",
+     "url": "https://ca.sports.yahoo.com/news/ousmane-demb-l-said-lamine-151000073.html",
+     "verified": false
+    },
+    {
+     "title": "ESPN: PSG's Dembele wins Ballon d'Or ahead of Yamal",
+     "url": "https://www.espn.com/soccer/story/_/id/46344733/psg-ousmane-dembele-wins-ballon-dor-ahead-lamine-yamal",
+     "verified": false
+    },
+    {
+     "title": "UEFA: Ousmane Dembele wins 2025 men's Ballon d'Or",
+     "url": "https://www.uefa.com/uefachampionsleague/news/029d-1ec96c30aa3f-f6868c869cbd-1000--ousmane-dembele-wins-2025-men-s-ballon-d-or/",
+     "verified": false
+    }
+   ],
+   "hint": "Ballon d'Or 2025 Dembélé wins Yamal reaction"
+  },
+  "n07": {
+   "title": "Kopa Trophy on stage",
+   "sub": "22 Sep 2025 · 'maybe we'll see each other later'",
+   "trim": "Yamal lifting the Kopa / grinning at the mic. Key frame = the grin.",
+   "kind": "video",
+   "hit": 3.0,
+   "focus_x": 0.5,
+   "color": "#b8860b",
+   "research": "n07",
+   "search": "",
+   "sources": [
+    {
+     "title": "LAMINE YAMAL gana el TROFEO KOPA 2025: DISCURSO COMPLETO",
+     "url": "https://www.youtube.com/watch?v=CgkyYpOCEZM",
+     "verified": false
+    },
+    {
+     "title": "Ballon d'Or 2025 - Lamine Yamal (FC Barcelone) remporte le trophee Kopa du meilleur jeune",
+     "url": "https://www.youtube.com/watch?v=L7lsO0hXLqY",
+     "verified": false
+    },
+    {
+     "title": "LAMINE YAMAL consigue el TROFEO KOPA: 'Espero conseguir muchos mas premios'",
+     "url": "https://www.youtube.com/watch?v=5_WqRrzwjW0",
+     "verified": false
+    }
+   ],
+   "hint": "LAMINE YAMAL gana el TROFEO KOPA 2025: DISCURSO COMPLETO"
+  },
+  "b01": {
+   "title": "The stare",
+   "sub": "Tunnel / line-up close-up · 2025-26",
+   "trim": "Tight close-up of Yamal's face in the tunnel or line-up, eyes forward. Key frame = eyes to camera.",
+   "kind": "video",
+   "hit": 3.0,
+   "focus_x": 0.5,
+   "color": "#1d2b53",
+   "research": null,
+   "search": "Lamine Yamal tunnel close-up scenepack 4K",
+   "sources": [],
+   "hint": "Lamine Yamal tunnel close-up scenepack 4K"
+  },
+  "n01": {
+   "title": "Messi bathes baby Lamine",
+   "sub": "2007 photo · Camp Nou",
+   "trim": "STILL PHOTO (save as clips/n01.jpg). The renderer pushes in slowly.",
+   "kind": "image",
+   "hit": 0.0,
+   "focus_x": 0.5,
+   "color": "#b8860b",
+   "research": "n01",
+   "search": "",
+   "sources": [
+    {
+     "title": "Snopes: Photo shows Messi bathing baby Yamal (2007) - verified",
+     "url": "https://www.snopes.com/fact-check/lmessi-yamal-baby-photo/",
+     "verified": false
+    },
+    {
+     "title": "UNICEF on X: 'Yes, those photos you've seen are real...'",
+     "url": "https://x.com/UNICEF/status/2077817597051982222",
+     "verified": false
+    },
+    {
+     "title": "CBS News: Photos of Messi with baby Yamal resurface (photographer Joan Monfort)",
+     "url": "https://www.cbsnews.com/news/lionel-messi-lamine-yamal-baby-barcelona-photos-joan-monfort/",
+     "verified": false
+    }
+   ],
+   "hint": "Snopes: Photo shows Messi bathing baby Yamal (2007) - verified"
+  },
+  "n27": {
+   "title": "Keyne runs into his arms",
+   "sub": "World Cup final · 19 Jul 2026",
+   "trim": "His 3-year-old brother running across the pitch into Lamine's arms. Key frame = the catch/hug.",
+   "kind": "video",
+   "hit": 3.0,
+   "focus_x": 0.5,
+   "color": "#c60b1e",
+   "research": "n27",
+   "search": "",
+   "sources": [
+    {
+     "title": "Yahoo Sports: Yamal's World Cup celebration with little brother Keyne",
+     "url": "https://sports.yahoo.com/articles/lamine-yamals-world-cup-celebration-020809402.html",
+     "verified": false
+    },
+    {
+     "title": "Fox Sports: How Yamal's little brother Keyne celebrated Spain's World Cup win",
+     "url": "https://www.foxsports.com/stories/soccer/how-lamine-yamals-little-brother-keyne-celebrated-spains-world-cup-win",
+     "verified": false
+    },
+    {
+     "title": "Hola!: Yamal celebrates with little brother Keyne (photos)",
+     "url": "https://www.hola.com/us/entertainment/20260720913698/lamine-yamal-brother-keyne-spain-world-cup-win-photos/",
+     "verified": false
+    }
+   ],
+   "hint": "Yahoo Sports: Yamal's World Cup celebration with little brother Keyne"
+  },
+  "c05": {
+   "title": "Celta: penalty, then the hamstring",
+   "sub": "22 Apr 2026 · season over",
+   "trim": "Penalty strike → he sinks to the turf holding his left hamstring. Key frame = sitting on the grass, hand on leg.",
+   "kind": "video",
+   "hit": 3.0,
+   "focus_x": 0.5,
+   "color": "#3a3a48",
+   "research": "c05",
+   "search": "",
+   "sources": [
+    {
+     "title": "World Soccer Talk: Video - Lamine Yamal forced off due to injury right after scoring penalty vs Celta Vigo (embedded video, not an official channel)",
+     "url": "https://worldsoccertalk.com/news/video-lamine-yamal-forced-off-due-to-injury-right-after-scoring-penalty-in-barcelona-vs-celta-vigo-game/",
+     "verified": false
+    },
+    {
+     "title": "FC Barcelona report: FC Barcelona 1-0 Celta de Vigo: One step closer",
+     "url": "https://www.fcbarcelona.com/en/news/4491553/fc-barcelona-1-0-celta-de-vigo-one-step-closer",
+     "verified": false
+    },
+    {
+     "title": "FC Barcelona: Lamine Yamal injury update",
+     "url": "https://www.fcbarcelona.com/en/news/4491939/lamine-yamal-injury-update",
+     "verified": false
+    }
+   ],
+   "hint": "World Soccer Talk: Video - Lamine Yamal forced off due to injury right after scoring penal"
+  },
+  "n17": {
+   "title": "Back from the bench",
+   "sub": "Spain 0-0 Cape Verde · 15 Jun 2026",
+   "trim": "Stepping onto the pitch after two months out. Key frame = first stride onto the grass.",
+   "kind": "video",
+   "hit": 3.0,
+   "focus_x": 0.5,
+   "color": "#c60b1e",
+   "research": "n17",
+   "search": "",
+   "sources": [
+    {
+     "title": "The Tribune: Yamal says he is fit but Spain managing his injury carefully",
+     "url": "https://www.tribuneindia.com/news/sports/fifa-world-cup-2026-lamine-yamal-says-he-is-fit-but-spain-managing-his-injury-carefully/",
+     "verified": false
+    },
+    {
+     "title": "ESPN: Spain coach expects Yamal to be fit for World Cup opener",
+     "url": "https://www.espn.com/soccer/story/_/id/48957472/spain-lamine-yamal-injury-2026-world-cup-cape-verde-de-la-fuente",
+     "verified": false
+    },
+    {
+     "title": "Yahoo Sports: Spain wins Group H thanks to Muslera blunder",
+     "url": "https://sports.yahoo.com/soccer/breaking-news/article/2026-world-cup-spain-wins-group-h-thanks-to-fernando-musleras-blunder-as-cape-verde-takes-second-over-uruguay-020219723.html",
+     "verified": false
+    }
+   ],
+   "hint": "The Tribune: Yamal says he is fit but Spain managing his injury carefully"
+  },
+  "n12": {
+   "title": "'More… more'",
+   "sub": "Sevilla 1-3 Barça · Pizjuán boos",
+   "trim": "His 'more… more' gesture to the whistling stands. Key frame = arms raised to the crowd.",
+   "kind": "video",
+   "hit": 3.0,
+   "focus_x": 0.5,
+   "color": "#a50044",
+   "research": "n12",
+   "search": "",
+   "sources": [
+    {
+     "title": "Goal: 'More... more' - Yamal fires up the Sevilla stands",
+     "url": "https://www.goal.com/en/news/more-more-yamal-fires-up-the-sevilla-stands/blt47233a8ef8b121ae",
+     "verified": false
+    },
+    {
+     "title": "Yahoo Sports: Barcelona star sparks anger with response to boos from Sevilla fans",
+     "url": "https://sports.yahoo.com/articles/barcelona-star-sparks-anger-response-203000417.html",
+     "verified": false
+    },
+    {
+     "title": "Al Jazeera (5 Apr 2026): Yamal's anger after Barcelona's La Liga win downplayed by Flick",
+     "url": "https://www.aljazeera.com/sports/2026/4/5/lamine-yamals-anger-after-barcelonas-la-liga-win-downplayed-by-flick",
+     "verified": false
+    }
+   ],
+   "hint": "Goal: 'More... more' - Yamal fires up the Sevilla stands"
+  },
+  "b03": {
+   "title": "Whistled",
+   "sub": "Bernabéu, 26 Oct 2025 / La Cerámica, 21 Dec 2025",
+   "trim": "Hostile stands whistling while he's on the ball (or him walking past them). Key frame = crowd + Yamal in one frame.",
+   "kind": "video",
+   "hit": 3.0,
+   "focus_x": 0.5,
+   "color": "#1d2b53",
+   "research": null,
+   "search": "Lamine Yamal whistled Bernabeu clasico October 2025",
+   "sources": [],
+   "hint": "Lamine Yamal whistled Bernabeu clasico October 2025"
+  },
+  "n24": {
+   "title": "The final: the run",
+   "sub": "Spain 1-0 Argentina (aet) · 19 Jul 2026",
+   "trim": "His run on the right dragging two defenders (frees Porro for the 106' winner). Key frame = he beats the first man.",
+   "kind": "video",
+   "hit": 3.0,
+   "focus_x": 0.5,
+   "color": "#c60b1e",
+   "research": "n24",
+   "search": "",
+   "sources": [
+    {
+     "title": "Spain v Argentina: FIFA World Cup 2026 Highlights Final (title format suggests the official FIFA channel)",
+     "url": "https://www.youtube.com/watch?v=RNLHetAesTs",
+     "verified": false
+    },
+    {
+     "title": "Spain vs Argentina 1-0 Highlights",
+     "url": "https://www.youtube.com/watch?v=VjauYCu97AI",
+     "verified": false
+    },
+    {
+     "title": "HIGHLIGHTS - Spain v Argentina",
+     "url": "https://www.youtube.com/watch?v=a3YeBJazWPE",
+     "verified": false
+    }
+   ],
+   "hint": "Spain v Argentina: FIFA World Cup 2026 Highlights Final (title format suggests the officia"
+  },
+  "n30": {
+   "title": "'I won't beg for anything'",
+   "sub": "Press conference · 8 Sep 2026",
+   "trim": "Him at the podium, shrug or half-smile. Key frame = the shrug.",
+   "kind": "video",
+   "hit": 3.0,
+   "focus_x": 0.5,
+   "color": "#004d98",
+   "research": "n30",
+   "search": "",
+   "sources": [
+    {
+     "title": "(ENGLISH) Lamine Yamal FULL PRESS CONFERENCE ahead of FC Barcelona vs. Feyenoord (8 Sep 2026)",
+     "url": "https://www.youtube.com/watch?v=Tr5ZftI45G0",
+     "verified": false
+    },
+    {
+     "title": "ESPN: Yamal says he won't 'beg' to win Ballon d'Or",
+     "url": "https://www.espn.com/soccer/story/_/id/49868658/barcelona-spain-lamine-yamal-not-beg-win-ballon-dor",
+     "verified": false
+    },
+    {
+     "title": "Dawn: Barcelona star Yamal says will not beg for Ballon d'Or",
+     "url": "https://www.dawn.com/news/2028403",
+     "verified": false
+    }
+   ],
+   "hint": "(ENGLISH) Lamine Yamal FULL PRESS CONFERENCE ahead of FC Barcelona vs. Feyenoord (8 Sep 20"
+  },
+  "n19": {
+   "title": "Austria: himself again",
+   "sub": "Spain 3-0 Austria · 2 Jul 2026",
+   "trim": "Dribble inside from the right / smile at full time. Key frame = the cut inside.",
+   "kind": "video",
+   "hit": 3.0,
+   "focus_x": 0.5,
+   "color": "#c60b1e",
+   "research": "n19",
+   "search": "",
+   "sources": [
+    {
+     "title": "TNT Sports: Spain v Austria - Yamal sizzles, Oyarzabal double",
+     "url": "https://www.tntsports.co.uk/football/world-cup/2026/live-spain-austria_mtc1579499/live-commentary.shtml",
+     "verified": false
+    },
+    {
+     "title": "The Daily Star: 'I was just missing goal or assist' - MOTM Yamal after Austria win",
+     "url": "https://www.thedailystar.net/sports/sports-special/fifa-world-cup-2026/news/i-was-just-missing-goal-or-assist-motm-yamal-after-spains-win-over-austria-4214721",
+     "verified": false
+    },
+    {
+     "title": "ESPN: Yamal declares 'World Cup starts now' after Austria win",
+     "url": "https://www.espn.com/soccer/story/_/id/49252369/after-spain-beat-austria-yamal-world-cup-starts-now",
+     "verified": false
+    }
+   ],
+   "hint": "TNT Sports: Spain v Austria - Yamal sizzles, Oyarzabal double"
+  },
+  "n25": {
+   "title": "Messi embrace",
+   "sub": "World Cup final · full time",
+   "trim": "Yamal walks to Messi; they embrace, his head on Messi's shoulder. Key frame = the embrace.",
+   "kind": "video",
+   "hit": 3.0,
+   "focus_x": 0.5,
+   "color": "#b8860b",
+   "research": "n25",
+   "search": "",
+   "sources": [
+    {
+     "title": "Yahoo Sports: The moment Messi passed the football baton to Yamal",
+     "url": "https://sports.yahoo.com/articles/watch-moment-lionel-messi-passed-070000548.html",
+     "verified": false
+    },
+    {
+     "title": "Yahoo Sports: Messi's reaction to Yamal approaching him after the final goes viral",
+     "url": "https://sports.yahoo.com/articles/lionel-messi-reaction-lamine-yamal-121712300.html",
+     "verified": false
+    },
+    {
+     "title": "Al Jazeera: What did Yamal say to Messi? 'Thank you for everything'",
+     "url": "https://www.aljazeera.com/sports/2026/9/29/lamine-yamal-lionel-messi-spain-argentina-fifa-world-cup-2026-final",
+     "verified": false
+    }
+   ],
+   "hint": "Yahoo Sports: The moment Messi passed the football baton to Yamal"
+  },
+  "n26": {
+   "title": "Hands on the World Cup",
+   "sub": "Spain world champions · MetLife",
+   "trim": "Trophy lift with Yamal in frame, confetti falling. Key frame = trophy at its highest point.",
+   "kind": "video",
+   "hit": 3.0,
+   "focus_x": 0.5,
+   "color": "#b8860b",
+   "research": "n26",
+   "search": "",
+   "sources": [
+    {
+     "title": "Fox Sports: Rodri, Yamal and Spain celebrate World Cup final win",
+     "url": "https://www.foxsports.com/stories/soccer/spain-world-cup-2026-argentina-rodri-yamal-celebrations-postgame-trophy-ceremony",
+     "verified": false
+    },
+    {
+     "title": "Yahoo Sports: 'Almost completed the set' - Yamal post",
+     "url": "https://sports.yahoo.com/articles/almost-completed-set-lamine-yamal-080301143.html",
+     "verified": false
+    },
+    {
+     "title": "Al Jazeera: Top feel-good moments of the 2026 World Cup",
+     "url": "https://www.aljazeera.com/news/2026/7/20/top-feel-good-moments-to-remember-now-that-the-2026-world-cup-is-over",
+     "verified": false
+    }
+   ],
+   "hint": "Fox Sports: Rodri, Yamal and Spain celebrate World Cup final win"
+  },
+  "n18": {
+   "title": "First World Cup goal",
+   "sub": "Spain 4-0 Saudi Arabia · 21 Jun 2026",
+   "trim": "Far-post slide-in finish. Key frame = boot meets ball.",
+   "kind": "video",
+   "hit": 3.0,
+   "focus_x": 0.5,
+   "color": "#c60b1e",
+   "research": "n18",
+   "search": "",
+   "sources": [
+    {
+     "title": "Spain's Lamine Yamal Scores His First Career FIFA World Cup(TM) Goal vs Saudi Arabia (title format suggests FIFA)",
+     "url": "https://www.youtube.com/watch?v=WceMtkdOBEE",
+     "verified": false
+    },
+    {
+     "title": "Lamine Yamal's First-Ever FIFA World Cup Goal vs Saudi Arabia (Short)",
+     "url": "https://www.youtube.com/shorts/g3S909CDy_Y",
+     "verified": false
+    },
+    {
+     "title": "'Lamine Yamal is BACK!' Spain's superstar scores in 4-0 win over Saudi Arabia",
+     "url": "https://www.youtube.com/watch?v=694Cuf7fBWg",
+     "verified": false
+    }
+   ],
+   "hint": "Spain's Lamine Yamal Scores His First Career FIFA World Cup(TM) Goal vs Saudi Arabia (titl"
+  },
+  "n22": {
+   "title": "Run at Digne → penalty",
+   "sub": "Spain 2-0 France · semi-final",
+   "trim": "Sprint at Digne, contact, penalty given. Key frame = the contact.",
+   "kind": "video",
+   "hit": 3.0,
+   "focus_x": 0.5,
+   "color": "#c60b1e",
+   "research": "n22",
+   "search": "",
+   "sources": [
+    {
+     "title": "NBC News live blog: Spain defeats France 2-0 to advance to final",
+     "url": "https://www.nbcnews.com/sports/soccer/live-blog/spain-france-world-cup-2026-july-14-live-updates-rcna587324",
+     "verified": false
+    },
+    {
+     "title": "ABC News: Spain advances to World Cup final with 2-0 win over France",
+     "url": "https://abcnews.com/Sports/wireStory/kylian-mbapp-france-world-cup-semifinals-spain-after-134756674",
+     "verified": false
+    },
+    {
+     "title": "Yahoo Sports: Yamal didn't score, but a sneaky play helped Spain beat France",
+     "url": "https://sports.yahoo.com/articles/lamine-yamal-didnt-score-sneaky-010534760.html",
+     "verified": false
+    }
+   ],
+   "hint": "NBC News live blog: Spain defeats France 2-0 to advance to final"
+  },
+  "n05": {
+   "title": "Euro 2024 at 17",
+   "sub": "Berlin · Spain 2-1 England",
+   "trim": "Euro trophy lift with Yamal in frame. Key frame = trophy up.",
+   "kind": "video",
+   "hit": 3.0,
+   "focus_x": 0.5,
+   "color": "#c60b1e",
+   "research": "n05",
+   "search": "",
+   "sources": [
+    {
+     "title": "FC Barcelona: Yamal, Ferran, Fermin and Pedri - Euro 2024 winners",
+     "url": "https://www.fcbarcelona.com/en/football/first-team/news/4058379/lamine-yamal-ferran-fermin-and-pedri-euro-2024-winners",
+     "verified": false
+    },
+    {
+     "title": "ESPN (2024): Spain's Yamal, 16, youngest Euro scorer",
+     "url": "https://africa.espn.com/football/story/_/id/40527430/spain-lamine-yamal-16-youngest-euro-scorer",
+     "verified": false
+    },
+    {
+     "title": "UEFA official YouTube: Euro 2024 final highlights Spain v England (not located via search)",
+     "url": null,
+     "verified": false
+    }
+   ],
+   "hint": "FC Barcelona: Yamal, Ferran, Fermin and Pedri - Euro 2024 winners"
+  },
+  "n03": {
+   "title": "304",
+   "sub": "Rocafonda, Mataró · the postcode celebration",
+   "trim": "The 3-0-4 hand sign after a goal. Key frame = hands fully formed.",
+   "kind": "video",
+   "hit": 3.0,
+   "focus_x": 0.5,
+   "color": "#a50044",
+   "research": "n03",
+   "search": "",
+   "sources": [
+    {
+     "title": "Athlon Sports: Yamal's '304' celebration - meaning and origin",
+     "url": "https://athlonsports.com/soccer/lamine-yamals-304-celebration-meaning-origin",
+     "verified": false
+    },
+    {
+     "title": "AP via US News: Yamal has electrified Euro 2024 - in hometown, family and friends not surprised",
+     "url": "https://www.usnews.com/news/sports/articles/2024-07-13/spain-phenom-lamine-yamal-has-electrified-euro-2024-in-hometown-family-and-friends-not-surprised",
+     "verified": false
+    },
+    {
+     "title": "FIFA: Lamine Yamal's first step in football",
+     "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/lamine-yamal-spain-first-steps",
+     "verified": false
+    }
+   ],
+   "hint": "Athlon Sports: Yamal's '304' celebration - meaning and origin"
+  },
+  "c18": {
+   "title": "Stoppage-time stunner",
+   "sub": "Mallorca 0-3 Barça · matchday 1",
+   "trim": "Curler into the top corner. Key frame = ball leaves his boot.",
+   "kind": "video",
+   "hit": 3.0,
+   "focus_x": 0.5,
+   "color": "#a50044",
+   "research": "c18",
+   "search": "",
+   "sources": [
+    {
+     "title": "ESPN: Mallorca 0-3 Barcelona (Aug 16, 2025) report",
+     "url": "https://www.espn.com/soccer/report/_/gameId/748153",
+     "verified": false
+    },
+    {
+     "title": "FC Barcelona match page: Mallorca - FC Barcelona",
+     "url": "https://www.fcbarcelona.com/en/matches/127268/mallorca-fc-barcelona-la-liga-2025-2026",
+     "verified": false
+    }
+   ],
+   "hint": "ESPN: Mallorca 0-3 Barcelona (Aug 16, 2025) report"
+  },
+  "c13": {
+   "title": "Back from the groin injury",
+   "sub": "Barça 2-1 Real Sociedad · 28 Sep 2025",
+   "trim": "Comes on, assists Lewandowski. Key frame = the pass.",
+   "kind": "video",
+   "hit": 3.0,
+   "focus_x": 0.5,
+   "color": "#a50044",
+   "research": "c13",
+   "search": "",
+   "sources": [
+    {
+     "title": "Malay Mail / AFP: Yamal returns from injury to inspire Barcelona's 2-1 comeback win over Real Sociedad",
+     "url": "https://www.malaymail.com/news/sports/2025/09/29/yamal-returns-from-injury-to-inspire-barcelonas-2-1-comeback-win-over-real-sociedad/192747",
+     "verified": false
+    },
+    {
+     "title": "Outlook India: FC Barcelona vs Real Sociedad - Lamine Yamal shines on return in comeback win",
+     "url": "https://www.outlookindia.com/sports/football/fc-barcelona-vs-real-sociedad-match-report-la-liga-2025-26-matchday-7-updates-lamine-yamal-goal-highlights",
+     "verified": false
+    },
+    {
+     "title": "Yahoo: Why Yamal's goal was ruled out for Barca vs Real Sociedad",
+     "url": "https://sports.yahoo.com/articles/why-yamal-goal-ruled-barca-211121959.html",
+     "verified": false
+    }
+   ],
+   "hint": "Malay Mail / AFP: Yamal returns from injury to inspire Barcelona's 2-1 comeback win over R"
+  },
+  "c07": {
+   "title": "Brugge one-two",
+   "sub": "Club Brugge 3-3 Barça · UCL",
+   "trim": "Past two, one-two with Fermín, bottom corner. Key frame = the finish.",
+   "kind": "video",
+   "hit": 3.0,
+   "focus_x": 0.5,
+   "color": "#004d98",
+   "research": "c07",
+   "search": "",
+   "sources": [
+    {
+     "title": "YAMAL! Club Brugge 3-3 Barcelona HIGHLIGHTS & All Goals",
+     "url": "https://www.youtube.com/watch?v=V4pYqrhP7mI",
+     "verified": false
+    },
+    {
+     "title": "Gripping Clash In Belgium!",
+     "url": "https://www.youtube.com/watch?v=lOlQAz0ZVuE",
+     "verified": false
+    },
+    {
+     "title": "Lamine Yamal scored a fantastic goal as Barcelona came from behind three times to draw at Club Brugge",
+     "url": "https://www.youtube.com/watch?v=lFNk7DO7cbY",
+     "verified": false
+    }
+   ],
+   "hint": "YAMAL! Club Brugge 3-3 Barcelona HIGHLIGHTS & All Goals"
+  },
+  "c10": {
+   "title": "Roof of the net",
+   "sub": "Barça 3-1 Alavés · 29 Nov 2025",
+   "trim": "Finish into the roof of the net. Key frame = contact.",
+   "kind": "video",
+   "hit": 3.0,
+   "focus_x": 0.5,
+   "color": "#a50044",
+   "research": "c10",
+   "search": "",
+   "sources": [
+    {
+     "title": "Goal: Barcelona player ratings vs Alaves - Yamal recovers from Stamford Bridge shocker",
+     "url": "https://www.goal.com/en/lists/barcelona-player-ratings-lamine-yamal-recovers-chelsea-shocker-creative-masterclass-sends-hansi-flick-men-top/blta4fc128f8b88e76b",
+     "verified": false
+    },
+    {
+     "title": "ESPN: Barcelona 3-1 Alaves match report",
+     "url": "https://www.espn.com/soccer/report/_/gameId/748282",
+     "verified": false
+    },
+    {
+     "title": "VAVEL: Highlights and goals of FC Barcelona 3-1 Alaves",
+     "url": "https://www.vavel.com/en-us/soccer/2025/11/29/1243019-fc-barcelona-vs-alaves-live-score-laliga.html",
+     "verified": false
+    }
+   ],
+   "hint": "Goal: Barcelona player ratings vs Alaves - Yamal recovers from Stamford Bridge shocker"
+  },
+  "c15": {
+   "title": "Edge-of-box curler",
+   "sub": "Barça 3-0 Mallorca · 7 Feb 2026",
+   "trim": "Trademark curler from outside the box. Key frame = contact.",
+   "kind": "video",
+   "hit": 3.0,
+   "focus_x": 0.5,
+   "color": "#a50044",
+   "research": "c15",
+   "search": "",
+   "sources": [
+    {
+     "title": "TSN / AP: Lamine Yamal atones for bad miss with classy goal as La Liga leader Barcelona beats Mallorca 3-0",
+     "url": "https://www.tsn.ca/soccer/la-liga/article/yamal-atones-for-bad-miss-with-classy-goal-as-la-liga-leader-barcelona-beats-mallorca/",
+     "verified": false
+    },
+    {
+     "title": "Goal: Why Lamine Yamal asked to be substituted in Barcelona win... 15th goal of the season",
+     "url": "https://www.goal.com/en-us/lists/why-lamine-yamal-asked-substituted-barcelona-win-teenage-wonderkid-15th-goal-season/blt647408b73b39aec7",
+     "verified": false
+    }
+   ],
+   "hint": "TSN / AP: Lamine Yamal atones for bad miss with classy goal as La Liga leader Barcelona be"
+  },
+  "c16": {
+   "title": "Round the keeper",
+   "sub": "Barça 3-1 Elche · 2 Nov 2025",
+   "trim": "Rounds the keeper, empty net. Key frame = the dribble past the keeper.",
+   "kind": "video",
+   "hit": 3.0,
+   "focus_x": 0.5,
+   "color": "#a50044",
+   "research": "c16",
+   "search": "",
+   "sources": [
+    {
+     "title": "Outlook India: FC Barcelona vs Elche - Lamine Yamal scores as Barca bounce back from Clasico defeat (photos)",
+     "url": "https://www.outlookindia.com/sports/football/fc-barcelona-vs-elce-spanish-la-liga-2025-26-marcus-rashford-lamine-yamal-in-pics",
+     "verified": false
+    },
+    {
+     "title": "ESPN: Barcelona 3-1 Elche (listed 3 Nov in AU edition)",
+     "url": "https://www.espn.com.au/football/match/_/gameId/748247/elche-barcelona",
+     "verified": false
+    }
+   ],
+   "hint": "Outlook India: FC Barcelona vs Elche - Lamine Yamal scores as Barca bounce back from Clasi"
+  },
+  "c20": {
+   "title": "Albacete opener",
+   "sub": "Copa del Rey QF · 3 Feb 2026",
+   "trim": "Left-footed finish into the far corner. Key frame = contact.",
+   "kind": "video",
+   "hit": 3.0,
+   "focus_x": 0.5,
+   "color": "#a50044",
+   "research": "c20",
+   "search": "",
+   "sources": [
+    {
+     "title": "Barca Reach Copa del Rey Semi-Final",
+     "url": "https://www.youtube.com/watch?v=LaG-UobG5X4",
+     "verified": false
+    },
+    {
+     "title": "Yamal trifft: Albacete - FC Barcelona",
+     "url": "https://www.youtube.com/watch?v=7Vj50U1Nc1M",
+     "verified": false
+    },
+    {
+     "title": "Yahoo: WATCH - Sweet Lamine Yamal finish puts Barcelona on their way to Copa del Rey semi-finals",
+     "url": "https://sports.yahoo.com/articles/watch-sweet-lamine-yamal-finish-214000052.html",
+     "verified": false
+    }
+   ],
+   "hint": "Barca Reach Copa del Rey Semi-Final"
+  },
+  "c12": {
+   "title": "100th LaLiga game",
+   "sub": "Barça 4-1 Espanyol · 11 Apr 2026",
+   "trim": "Assist pass for Ferran (or the late goal). Key frame = the pass.",
+   "kind": "video",
+   "hit": 3.0,
+   "focus_x": 0.5,
+   "color": "#a50044",
+   "research": "c12",
+   "search": "",
+   "sources": [
+    {
+     "title": "ESPN: Barcelona 4-1 Espanyol match report",
+     "url": "https://www.espn.com/soccer/report/_/gameId/748449",
+     "verified": false
+    },
+    {
+     "title": "Sofascore: Barcelona 4-1 Espanyol - Yamal's Sofascore Rating 10",
+     "url": "https://www.sofascore.com/news/barcelona-4-1-espanyol-yamals-sofascore-rating-10",
+     "verified": false
+    },
+    {
+     "title": "France 24 / AFP: Yamal shines as Barca thrash Espanyol to extend Liga lead",
+     "url": "https://www.france24.com/en/live-news/20260411-yamal-shines-as-barca-thrash-espanyol-to-extend-liga-lead",
+     "verified": false
+    }
+   ],
+   "hint": "ESPN: Barcelona 4-1 Espanyol match report"
+  },
+  "c17": {
+   "title": "Answers the whistles",
+   "sub": "Villarreal 0-2 Barça · 21 Dec 2025",
+   "trim": "Slams it home from ten yards. Key frame = contact.",
+   "kind": "video",
+   "hit": 3.0,
+   "focus_x": 0.5,
+   "color": "#a50044",
+   "research": "c17",
+   "search": "",
+   "sources": [
+    {
+     "title": "AMAZING LAMINE YAMAL GOAL - Barcelona vs. Villarreal (likely a broadcaster upload)",
+     "url": "https://www.youtube.com/watch?v=8lkrBWPX3aw",
+     "verified": false
+    },
+    {
+     "title": "beIN: Lamine Yamal responds to whistles in La Ceramica",
+     "url": "https://www.beinsports.com/en-us/soccer/la-liga/articles/lamine-yamal-responds-to-whistles-in-la-cer%C3%A1mica-2025-12-22",
+     "verified": false
+    },
+    {
+     "title": "FC Barcelona: Villarreal 0-2 FC Barcelona: Winning end to 2025",
+     "url": "https://www.fcbarcelona.com/en/football/first-team/news/4423235/villarreal-0-2-fc-barcelona-winning-end-to-2025",
+     "verified": false
+    }
+   ],
+   "hint": "AMAZING LAMINE YAMAL GOAL - Barcelona vs. Villarreal (likely a broadcaster upload)"
+  },
+  "c08": {
+   "title": "Deflected top corner",
+   "sub": "Barça 4-1 Copenhagen · UCL",
+   "trim": "Curler from the right of the box into the top corner. Key frame = contact.",
+   "kind": "video",
+   "hit": 3.0,
+   "focus_x": 0.5,
+   "color": "#004d98",
+   "research": "c08",
+   "search": "",
+   "sources": [
+    {
+     "title": "Yamal & Rashford On Target",
+     "url": "https://www.youtube.com/watch?v=XHqCSlrrumw",
+     "verified": false
+    },
+    {
+     "title": "BARCELONA GOLEO 4-1 al Copenhagen y se metio en el TOP 8. GOL de Lamine Yamal",
+     "url": "https://www.youtube.com/watch?v=jY3hsi034oA",
+     "verified": false
+    },
+    {
+     "title": "Barcelona vs FC Copenhagen (4-1)",
+     "url": "https://www.youtube.com/watch?v=8jzZYLSewzo",
+     "verified": false
+    }
+   ],
+   "hint": "Yamal & Rashford On Target"
+  },
+  "c01": {
+   "title": "First hat-trick",
+   "sub": "Barça 4-1 Villarreal · 28 Feb 2026",
+   "trim": "Goal 2: cut inside, beat the defender, curl to the far top corner. Key frame = contact.",
+   "kind": "video",
+   "hit": 3.0,
+   "focus_x": 0.5,
+   "color": "#a50044",
+   "research": "c01",
+   "search": "",
+   "sources": [
+    {
+     "title": "¡El PRIMER HAT-TRICK de Lamine Yamal! - Resumen de goles del FC Barcelona 4-1 Villarreal CF",
+     "url": "https://www.youtube.com/watch?v=7gnJg4yQvnI",
+     "verified": false
+    },
+    {
+     "title": "Lamine Yamal's first ever Hat-trick! Barcelona defeat Villarreal 4-1",
+     "url": "https://www.youtube.com/watch?v=Mu8MtqArp64",
+     "verified": false
+    },
+    {
+     "title": "FC Barcelona 4-1 Villarreal",
+     "url": "https://www.youtube.com/watch?v=0TWd4aEqol4",
+     "verified": false
+    }
+   ],
+   "hint": "¡El PRIMER HAT-TRICK de Lamine Yamal! - Resumen de goles del FC Barcelona 4-1 Villarreal C"
+  },
+  "c02": {
+   "title": "Scissor-kick in the hail",
+   "sub": "Barça 3-0 Oviedo · 25 Jan 2026",
+   "trim": "Mid-air sideways volley in rain and hail. Key frame = contact (he's airborne).",
+   "kind": "video",
+   "hit": 3.0,
+   "focus_x": 0.5,
+   "color": "#a50044",
+   "research": "c02",
+   "search": "",
+   "sources": [
+    {
+     "title": "Lamine Yamal's STUNNING volley secures victory for Barcelona vs Real Oviedo",
+     "url": "https://www.youtube.com/watch?v=W-vbLsedPcU",
+     "verified": false
+    },
+    {
+     "title": "LAMINE YAMAL BICYCLE KICK! Barca 3-0 Real Oviedo",
+     "url": "https://www.youtube.com/watch?v=YusHEtKO2qw",
+     "verified": false
+    },
+    {
+     "title": "Lamine Yamal's stunning GOLAZO vs Oviedo!",
+     "url": "https://www.youtube.com/watch?v=gs1SSLc5vlA",
+     "verified": false
+    }
+   ],
+   "hint": "Lamine Yamal's STUNNING volley secures victory for Barcelona vs Real Oviedo"
+  },
+  "c03": {
+   "title": "90+6' — last kick",
+   "sub": "Newcastle 1-1 Barça · UCL R16",
+   "trim": "Stoppage-time penalty, final action of the match. Key frame = ball hits the net.",
+   "kind": "video",
+   "hit": 3.0,
+   "focus_x": 0.5,
+   "color": "#004d98",
+   "research": "c03",
+   "search": "",
+   "sources": [
+    {
+     "title": "Yamal's Last-Gasp Penalty Saves Barca",
+     "url": "https://www.youtube.com/watch?v=O3AM50N-0Ik",
+     "verified": false
+    },
+    {
+     "title": "NEWCASTLE 1 vs 1 FC BARCELONA",
+     "url": "https://www.youtube.com/watch?v=r9jndOJUGdM",
+     "verified": false
+    },
+    {
+     "title": "LAMINE rescata el EMPATE de PENALTI en el DESCUENTO",
+     "url": "https://www.youtube.com/watch?v=qmOKeiFlY2Y",
+     "verified": false
+    }
+   ],
+   "hint": "Yamal's Last-Gasp Penalty Saves Barca"
+  },
+  "c06": {
+   "title": "Off the far post",
+   "sub": "Athletic 0-1 Barça · 7 Mar 2026",
+   "trim": "Left-foot curler kisses the far post and goes in. Key frame = ball hits the post.",
+   "kind": "video",
+   "hit": 3.0,
+   "focus_x": 0.5,
+   "color": "#a50044",
+   "research": "c06",
+   "search": "",
+   "sources": [
+    {
+     "title": "Irresistible Yamal goal sends Barca FOUR CLEAR!",
+     "url": "https://www.youtube.com/watch?v=GkHpo31Q1YI",
+     "verified": false
+    },
+    {
+     "title": "ATHLETIC CLUB 0 - 1 FC BARCELONA",
+     "url": "https://www.youtube.com/watch?v=nWmCmNw7d4M",
+     "verified": false
+    },
+    {
+     "title": "ATHLETIC CLUB 0 vs 1 FC BARCELONA",
+     "url": "https://www.youtube.com/watch?v=dvL62X-8IEs",
+     "verified": false
+    }
+   ],
+   "hint": "Irresistible Yamal goal sends Barca FOUR CLEAR!"
+  },
+  "c04": {
+   "title": "Atlético: 4th-minute goal",
+   "sub": "UCL QF · 14 Apr 2026 (out 2-3 agg.)",
+   "trim": "Opener inside four minutes. Key frame = contact.",
+   "kind": "video",
+   "hit": 3.0,
+   "focus_x": 0.5,
+   "color": "#004d98",
+   "research": "c04",
+   "search": "",
+   "sources": [
+    {
+     "title": "HIGHLIGHTS (Atletico-Barcelona QF2, uploader unknown)",
+     "url": "https://www.youtube.com/watch?v=PKVrhezZMf4",
+     "verified": false
+    },
+    {
+     "title": "Atletico Madrid vs. Barcelona: Extended Highlights",
+     "url": "https://www.youtube.com/watch?v=TOz8FV6gYJ0",
+     "verified": false
+    },
+    {
+     "title": "ATLETICO DE MADRID 1X2 BARCELONA",
+     "url": "https://www.youtube.com/watch?v=BtaNqysDGxg",
+     "verified": false
+    }
+   ],
+   "hint": "HIGHLIGHTS (Atletico-Barcelona QF2, uploader unknown)"
+  },
+  "c09": {
+   "title": "Supercopa: Clásico final",
+   "sub": "Barça 3-2 Real Madrid · Jeddah",
+   "trim": "Trophy lift with Yamal in frame. Key frame = trophy up.",
+   "kind": "video",
+   "hit": 3.0,
+   "focus_x": 0.5,
+   "color": "#b8860b",
+   "research": "c09",
+   "search": "",
+   "sources": [
+    {
+     "title": "FC Barcelona: FC Barcelona 3-2 Real Madrid: Supermen!",
+     "url": "https://www.fcbarcelona.com/en/news/4432608/fc-barcelona-3-2-real-madrid-supermen",
+     "verified": false
+    },
+    {
+     "title": "FC Barcelona match page: FC Barcelona - Real Madrid (Spanish Super Cup 2025-26)",
+     "url": "https://www.fcbarcelona.com/en/matches/127261/fc-barcelona-real-madrid-spanish-super-cup-2025-2026",
+     "verified": false
+    },
+    {
+     "title": "NBC Sports: Barcelona 3-2 Real Madrid - video highlights, recap",
+     "url": "https://www.nbcsports.com/soccer/news/barcelona-vs-real-madrid-video-highlights-recap-score-super-cup-final",
+     "verified": false
+    }
+   ],
+   "hint": "FC Barcelona: FC Barcelona 3-2 Real Madrid: Supermen!"
+  },
+  "c14": {
+   "title": "LaLiga champions",
+   "sub": "Title no. 29 · Camp Nou, 10 May 2026",
+   "trim": "Title celebration (Yamal in frame, injured) or the Player of the Season award. Key frame = trophy/award.",
+   "kind": "video",
+   "hit": 3.0,
+   "focus_x": 0.5,
+   "color": "#b8860b",
+   "research": "c14",
+   "search": "",
+   "sources": [
+    {
+     "title": "FC Barcelona: Barca Campeon de La Liga 2025-2026",
+     "url": "https://www.fcbarcelona.com/en/laliga-champions-2025-2026",
+     "verified": false
+    },
+    {
+     "title": "ESPN: Barcelona 2-0 Real Madrid (May 10, 2026) match report",
+     "url": "https://www.espn.com/soccer/report/_/gameId/748484",
+     "verified": false
+    },
+    {
+     "title": "Bolavip: Why is Lamine Yamal not playing today for Barcelona vs Real Madrid (Matchday 35)",
+     "url": "https://bolavip.com/en/soccer/why-is-lamine-yamal-not-playing-today-for-barcelona-vs-real-madrid-in-spanish-clasico-of-2025-26-laliga-matchday-35",
+     "verified": false
+    }
+   ],
+   "hint": "FC Barcelona: Barca Campeon de La Liga 2025-2026"
+  },
+  "k01": {
+   "title": "Stepover burst",
+   "sub": "beats his man down the right · 2025-26",
+   "trim": "Any 2025-26 clip of this move (scenepacks are ideal). Key frame = the moment the defender is beaten.",
+   "kind": "video",
+   "hit": 3.0,
+   "focus_x": 0.5,
+   "color": "#a50044",
+   "research": null,
+   "search": "Lamine Yamal stepover burst 2025-26 scenepack 4K",
+   "sources": [],
+   "hint": "Lamine Yamal stepover burst 2025-26 scenepack 4K"
+  },
+  "k02": {
+   "title": "Outside-of-the-boot pass",
+   "sub": "the trivela · 2025-26",
+   "trim": "Any 2025-26 clip of this move (scenepacks are ideal). Key frame = the moment the defender is beaten.",
+   "kind": "video",
+   "hit": 3.0,
+   "focus_x": 0.5,
+   "color": "#a50044",
+   "research": null,
+   "search": "Lamine Yamal outside-of-the-boot pass 2025-26 scenepack 4K",
+   "sources": [],
+   "hint": "Lamine Yamal outside-of-the-boot pass 2025-26 scenepack 4K"
+  },
+  "k03": {
+   "title": "Nutmeg",
+   "sub": "through the legs · 2025-26",
+   "trim": "Any 2025-26 clip of this move (scenepacks are ideal). Key frame = the moment the defender is beaten.",
+   "kind": "video",
+   "hit": 3.0,
+   "focus_x": 0.5,
+   "color": "#a50044",
+   "research": null,
+   "search": "Lamine Yamal nutmeg 2025-26 scenepack 4K",
+   "sources": [],
+   "hint": "Lamine Yamal nutmeg 2025-26 scenepack 4K"
+  },
+  "k04": {
+   "title": "Cut inside on the left foot",
+   "sub": "drop of the shoulder · 2025-26",
+   "trim": "Any 2025-26 clip of this move (scenepacks are ideal). Key frame = the moment the defender is beaten.",
+   "kind": "video",
+   "hit": 3.0,
+   "focus_x": 0.5,
+   "color": "#a50044",
+   "research": null,
+   "search": "Lamine Yamal cut inside on the left foot 2025-26 scenepack 4K",
+   "sources": [],
+   "hint": "Lamine Yamal cut inside on the left foot 2025-26 scenepack 4K"
+  },
+  "k05": {
+   "title": "Elástico / roulette",
+   "sub": "flair under pressure · 2025-26",
+   "trim": "Any 2025-26 clip of this move (scenepacks are ideal). Key frame = the moment the defender is beaten.",
+   "kind": "video",
+   "hit": 3.0,
+   "focus_x": 0.5,
+   "color": "#a50044",
+   "research": null,
+   "search": "Lamine Yamal elástico / roulette 2025-26 scenepack 4K",
+   "sources": [],
+   "hint": "Lamine Yamal elástico / roulette 2025-26 scenepack 4K"
+  },
+  "k06": {
+   "title": "No-look pass",
+   "sub": "head up, eyes elsewhere · 2025-26",
+   "trim": "Any 2025-26 clip of this move (scenepacks are ideal). Key frame = the moment the defender is beaten.",
+   "kind": "video",
+   "hit": 3.0,
+   "focus_x": 0.5,
+   "color": "#a50044",
+   "research": null,
+   "search": "Lamine Yamal no-look pass 2025-26 scenepack 4K",
+   "sources": [],
+   "hint": "Lamine Yamal no-look pass 2025-26 scenepack 4K"
+  },
+  "k07": {
+   "title": "Sprint past two",
+   "sub": "full speed, ball glued · 2025-26",
+   "trim": "Any 2025-26 clip of this move (scenepacks are ideal). Key frame = the moment the defender is beaten.",
+   "kind": "video",
+   "hit": 3.0,
+   "focus_x": 0.5,
+   "color": "#a50044",
+   "research": null,
+   "search": "Lamine Yamal sprint past two 2025-26 scenepack 4K",
+   "sources": [],
+   "hint": "Lamine Yamal sprint past two 2025-26 scenepack 4K"
+  },
+  "n24w": {
+   "title": "Final whistle",
+   "sub": "World champions · 19 Jul 2026",
+   "trim": "The final whistle: Yamal's reaction (knees, arms up, team pile). Key frame = the whistle/arms up.",
+   "kind": "video",
+   "hit": 3.0,
+   "focus_x": 0.5,
+   "color": "#c60b1e",
+   "research": "n24",
+   "search": "",
+   "sources": [
+    {
+     "title": "Spain v Argentina: FIFA World Cup 2026 Highlights Final (title format suggests the official FIFA channel)",
+     "url": "https://www.youtube.com/watch?v=RNLHetAesTs",
+     "verified": false
+    },
+    {
+     "title": "Spain vs Argentina 1-0 Highlights",
+     "url": "https://www.youtube.com/watch?v=VjauYCu97AI",
+     "verified": false
+    },
+    {
+     "title": "HIGHLIGHTS - Spain v Argentina",
+     "url": "https://www.youtube.com/watch?v=a3YeBJazWPE",
+     "verified": false
+    }
+   ],
+   "hint": "Spain v Argentina: FIFA World Cup 2026 Highlights Final (title format suggests the officia"
+  },
+  "c04d": {
+   "title": "Out.",
+   "sub": "Atlético knock Barça out of the UCL · 14 Apr 2026",
+   "trim": "Full time: Yamal dejected (hands on head / staring at the grass). Key frame = his face.",
+   "kind": "video",
+   "hit": 3.0,
+   "focus_x": 0.5,
+   "color": "#3a3a48",
+   "research": "c04",
+   "search": "",
+   "sources": [
+    {
+     "title": "HIGHLIGHTS (Atletico-Barcelona QF2, uploader unknown)",
+     "url": "https://www.youtube.com/watch?v=PKVrhezZMf4",
+     "verified": false
+    },
+    {
+     "title": "Atletico Madrid vs. Barcelona: Extended Highlights",
+     "url": "https://www.youtube.com/watch?v=TOz8FV6gYJ0",
+     "verified": false
+    },
+    {
+     "title": "ATLETICO DE MADRID 1X2 BARCELONA",
+     "url": "https://www.youtube.com/watch?v=BtaNqysDGxg",
+     "verified": false
+    }
+   ],
+   "hint": "HIGHLIGHTS (Atletico-Barcelona QF2, uploader unknown)"
+  }
+ }
+}
