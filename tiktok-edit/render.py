@@ -114,6 +114,17 @@ DEFAULT_ACCENT = (165, 0, 68)        # Barça garnet
 INK_RED = (209, 16, 26)              # punk red: flash_red, ransom boxes, stamp ink
 GOLD_STOPS = [(0.0, (255, 236, 160)), (0.45, (248, 196, 46)), (1.0, (196, 128, 8))]
 
+BUNDLED_FONTS = ROOT / "fonts" / "bundled"   # copies of the fonts below, for macOS / Windows
+
+
+def _font_path(path: str) -> str:
+    """the system font if installed, else the copy shipped in fonts/bundled/ (same look everywhere)"""
+    if Path(path).is_file():
+        return path
+    bundled = BUNDLED_FONTS / Path(path).name
+    return str(bundled) if bundled.is_file() else path
+
+
 SYSTEM_HEAVY = ["/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
                 "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf",
                 "/usr/share/fonts/truetype/freefont/FreeSansBold.ttf"]
@@ -139,6 +150,11 @@ RANSOM_FONTS = [(_SF + "dejavu/DejaVuSans-Bold.ttf", 3), (_SF + "dejavu/DejaVuSe
                 (_SF + "freefont/FreeSerifBoldItalic.ttf", 1),
                 (_SF + "liberation/LiberationSerif-BoldItalic.ttf", 1),
                 ("/usr/share/fonts/opentype/tlwg/Loma-Bold.otf", 1)]
+# where the system fonts above aren't installed (macOS, Windows), use the copies in fonts/bundled/
+SYSTEM_HEAVY, SYSTEM_BODY, SYSTEM_REGULAR, SYSTEM_TYPEWRITER, SYSTEM_OSD = (
+    [_font_path(p_) for p_ in fonts_]
+    for fonts_ in (SYSTEM_HEAVY, SYSTEM_BODY, SYSTEM_REGULAR, SYSTEM_TYPEWRITER, SYSTEM_OSD))
+RANSOM_FONTS = [(_font_path(p_), w_) for p_, w_ in RANSOM_FONTS]
 
 
 class EDLError(Exception):
@@ -1496,7 +1512,7 @@ def vgradient(mask, stops):
     cols = np.array([s[1] for s in stops], dtype=np.float32)
     rgb = np.stack([np.interp(ys, pos, cols[:, c]) for c in range(3)], axis=1)
     arr = np.broadcast_to(rgb[:, None, :], (h, w, 3)).astype(np.uint8)
-    img = Image.fromarray(np.ascontiguousarray(arr), "RGB").convert("RGBA")
+    img = Image.fromarray(np.ascontiguousarray(arr)).convert("RGBA")
     img.putalpha(mask)
     return img
 
@@ -1662,7 +1678,7 @@ def ransom_tile(ch: str, size: float, rng, fonts, k: float) -> Image.Image:
         base = np.array(paper, np.float32)[None, None, :] + grain
         if paper_name == "news":           # faint printed lines of the page it was cut from
             base -= (((np.arange(th) // max(2, int(3 * k))) % 4 == 0) * 10.0)[:, None, None]
-        tile = Image.fromarray(np.clip(base, 0, 255).astype(np.uint8), "RGB").convert("RGBA")
+        tile = Image.fromarray(np.clip(base, 0, 255).astype(np.uint8)).convert("RGBA")
         tile.putalpha(pm)
         img.alpha_composite(tile)
         d.text((px - x0, py - y0), ch, font=fnt, fill=ink + (255,), anchor="ls")
@@ -1762,7 +1778,7 @@ def stamp_block(content: str, S: Settings, ink, maxw: float, maxh: float) -> Ima
         ImageFilter.GaussianBlur(max(0.6, 1.2 * k))), np.float32) / 255.0
     a = a * cover * np.clip(1 - 2.2 * holes, 0, 1) * 0.94
     img = Image.new("RGBA", (w_, h_), tuple(ink) + (255,))
-    img.putalpha(Image.fromarray((a * 255).astype(np.uint8), "L"))
+    img.putalpha(Image.fromarray((a * 255).astype(np.uint8)))
     img = img.rotate(6, resample=Image.BICUBIC, expand=True)    # PIL: positive = counter-clockwise
     bb = img.getbbox()
     return img.crop(bb) if bb else img
@@ -1868,7 +1884,7 @@ def glitchtext_frames(item: TextItem, S: Settings, fps: float):
             rgba[y0:y0 + hh] = band
         a = np.maximum(rgba[..., 3:4] / 255.0, 1e-6)
         out = np.concatenate([np.clip(rgba[..., :3] / a, 0, 255), rgba[..., 3:4]], axis=2)
-        img = Image.fromarray(out.astype(np.uint8), "RGBA")
+        img = Image.fromarray(out.astype(np.uint8))
         return with_shadow(img, k, soft=(12, 6, 0.55), tight=(2.5, 2, 0.4))[0]
 
     cache, frames = {}, {}
@@ -1929,7 +1945,7 @@ def placeholder_assets(shot: Shot, S: Settings, edl: EDL, outdir: Path, missing:
     img = img * (1 - 0.38 * np.clip(rv - 0.45, 0, 1)[..., None] / 0.55)
     seed = int(hashlib.md5(shot.id.encode()).hexdigest()[:8], 16)
     img = img + np.random.default_rng(seed).normal(0, 2.0, (H, W, 1)).astype(np.float32)
-    card = Image.fromarray(np.clip(img, 0, 255).astype(np.uint8), "RGB").convert("RGBA")
+    card = Image.fromarray(np.clip(img, 0, 255).astype(np.uint8)).convert("RGBA")
     del yy, xx, xn, yn, t, img, r, glow, stripes, rv
 
     # big faint shot id at the bottom (inside the TikTok UI band, away from captions)
@@ -2359,7 +2375,7 @@ def xerox_dust(seed: int, W: int, H: int, k: float) -> Image.Image:
     rgb = np.where(white[..., None] > a[..., None], 238.0, 18.0) * np.ones((1, 1, 3), np.float32)
     alpha = np.maximum(a, white * 0.85)
     out = np.concatenate([rgb, alpha[..., None] * 255], axis=2)
-    return Image.fromarray(np.clip(out, 0, 255).astype(np.uint8), "RGBA")
+    return Image.fromarray(np.clip(out, 0, 255).astype(np.uint8))
 
 
 def scanlines(W: int, H: int, strength: float = 0.16) -> Image.Image:
@@ -2368,7 +2384,7 @@ def scanlines(W: int, H: int, strength: float = 0.16) -> Image.Image:
     a = strength * (0.5 - 0.5 * np.cos(2 * np.pi * ph))
     arr = np.zeros((H, W, 4), np.uint8)
     arr[..., 3] = (a * 255).astype(np.uint8)[:, None]
-    return Image.fromarray(arr, "RGBA")
+    return Image.fromarray(arr)
 
 
 def osd_text(d: ImageDraw.ImageDraw, xy, text, fnt, anchor="la", fill=(255, 255, 255, 255)):

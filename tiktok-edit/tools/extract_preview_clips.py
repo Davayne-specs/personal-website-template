@@ -25,6 +25,13 @@ def main():
     if len(sys.argv) != 2:
         sys.exit(__doc__)
     src = sys.argv[1]
+    if not os.path.exists(src):
+        sys.exit(f"{src} doesn't exist")
+    size = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries",
+                           "stream=width,height:format=duration", "-of", "default=nw=1:nk=1", src],
+                          capture_output=True, text=True).stdout.split()
+    if size[:2] != ["640", "360"] or abs(float(size[2]) - 54.17) > 1.0:
+        sys.exit(f"{src} isn't the scenepack preview (expected 640x360, ~54 s; got {' / '.join(size)})")
     out_dir = os.path.join(ROOT, "clips", "v2")
     os.makedirs(out_dir, exist_ok=True)
     for i, (first, n) in enumerate(SHOTS, 1):
