@@ -17,6 +17,7 @@ from concurrent.futures import ThreadPoolExecutor
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 FFMPEG, FFPROBE = "ffmpeg", "ffprobe"
+THREADS = max(1, (os.cpu_count() or 2) - 2)   # leave the computer some room
 VIDEO_EXT = {".mp4", ".mov", ".mkv", ".webm", ".m4v", ".avi"}
 
 DEFAULTS = {
@@ -240,7 +241,8 @@ def cut_filter(spec, n, rate, W, H, rng, i):
     w = lk["warm"]
     if w: f.append(f"colorbalance=rm={w}:gm={w * 0.4:.3f}:bm={-w}:rh={w}:bh={-w * 0.8:.3f}")
     if lk["glow"]:
-        f.append(f"split[a][b];[b]gblur=sigma={max(8, 20 * sc):.0f}[g];[a][g]blend=all_mode=screen:all_opacity={lk['glow']}")
+        f.append(f"split[a][b];[b]scale=iw/4:ih/4,gblur=sigma={5 * sc:.1f},scale={W}:{H}[g];"
+                 f"[a][g]blend=all_mode=screen:all_opacity={lk['glow']}")
     if lk["grain"]: f.append(f"noise=alls={lk['grain']}:allf=t")
     if lk["vignette"]: f.append("vignette=PI/4")
     f.append(f"tpad=stop_mode=clone:stop_duration={d + 2:.3f}")
@@ -250,7 +252,7 @@ def render_cut(job):
     src, ss, n, vf, preset, crf, dest = job
     if os.path.exists(dest): return
     tmp = dest + ".part.mp4"
-    run([FFMPEG, "-y", "-v", "error", "-ss", str(ss), "-i", src, "-frames:v", str(n), "-an", "-vf", vf,
+    run([FFMPEG, "-nostdin", "-threads", str(THREADS), "-y", "-v", "error", "-ss", str(ss), "-i", src, "-frames:v", str(n), "-an", "-vf", vf,
          "-c:v", "libx264", "-preset", preset, "-crf", str(crf), "-pix_fmt", "yuv420p", tmp])
     os.replace(tmp, dest)
 
@@ -304,7 +306,10 @@ def build(spec, args):
     todo = sum(not os.path.exists(w[-1]) for w in work)
     print(f"{len(cuts)} cuts ({todo} to render, {len(cuts) - todo} cached) · "
           f"{spec['bpm']} BPM · {t1 - t0:.1f}s · seed {seed}")
-    with ThreadPoolExecutor(max_workers=os.cpu_count() or 2) as ex:
+    try: os.nice(10)                      # lower priority so the Mac stays responsive
+    except (OSError, AttributeError): pass
+    workers = args.workers or (1 if args.fourk else 2)
+    with ThreadPoolExecutor(max_workers=workers) as ex:
         list(ex.map(render_cut, work))
 
     lst = os.path.join(cache, "concat.txt")
@@ -323,7 +328,7 @@ def build(spec, args):
     vf = "ass=filename=captions.ass" + (":fontsdir=fonts" if os.path.isdir(fonts) else "")
     if os.path.isdir(fonts):
         shutil.copytree(fonts, os.path.join(cache, "fonts"), dirs_exist_ok=True)
-    run([FFMPEG, "-y", "-v", "error", "-f", "concat", "-safe", "0", "-i", "concat.txt",
+    run([FFMPEG, "-nostdin", "-threads", str(THREADS), "-y", "-v", "error", "-f", "concat", "-safe", "0", "-i", "concat.txt",
          "-ss", f"{t0}", "-t", f"{dur:.3f}", "-i", audio, "-map", "0:v", "-map", "1:a",
          "-vf", vf, "-af", ",".join(af) or "anull", "-c:v", "libx264", "-preset", "veryfast" if preview else "medium",
          "-crf", "28" if preview else ("16" if args.fourk else "18"), "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "192k",
@@ -411,6 +416,7 @@ def main():
     r.add_argument("--seed", type=int, help="reroll clip choices")
     r.add_argument("--look", choices=sorted(PRESETS), help="bright (blissful) or gritty; overrides project.json look")
     r.add_argument("--4k", dest="fourk", action="store_true", help="2160x3840 final (slow, ~4x the time)")
+    r.add_argument("--workers", type=int, help="parallel renders (default 2, or 1 for 4K); lower = gentler on your Mac")
     r.add_argument("--out")
     t = sub.add_parser("tap", help="time the lyrics by tapping Enter while the song plays")
     t.add_argument("project"); t.add_argument("--from-line", type=int, default=1, help="redo from this line number")
