@@ -206,7 +206,15 @@ def render_cut(job):
     os.replace(tmp, dest)
 
 # ---------------------------------------------------------------- build
+def check_ffmpeg():
+    out = subprocess.run(["ffmpeg", "-hide_banner", "-filters"], capture_output=True, text=True).stdout
+    if not re.search(r"\bass\b\s+V->V", out):
+        sys.exit("Your ffmpeg has no caption (libass) support.\n"
+                 "Fix on Mac:  brew uninstall ffmpeg ; brew install ffmpeg\n"
+                 "then open a NEW terminal window and run this again.")
+
 def build(spec, args):
+    check_ffmpeg()
     W, H = spec["size"]; scale = 1.0
     preview = args.preview
     if preview: W, H, scale = W // 2, H // 2, 0.5
