@@ -14,6 +14,7 @@ import subprocess, sys
 from concurrent.futures import ThreadPoolExecutor
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+FFMPEG, FFPROBE = "ffmpeg", "ffprobe"
 VIDEO_EXT = {".mp4", ".mov", ".mkv", ".webm", ".m4v", ".avi"}
 
 DEFAULTS = {
@@ -44,7 +45,7 @@ def run(cmd, **kw):
     return r
 
 def probe_dur(path):
-    r = run(["ffprobe", "-v", "error", "-show_entries", "format=duration",
+    r = run([FFPROBE, "-v", "error", "-show_entries", "format=duration",
              "-of", "default=nw=1:nk=1", path])
     return float(r.stdout.strip())
 
@@ -62,7 +63,7 @@ def rel(spec, p):
 def detect_beats(audio, lo=70, hi=160):
     """Energy-flux onset curve -> (bpm, first-beat offset). Pure stdlib."""
     sr, hop = 11025, 256
-    raw = subprocess.run(["ffmpeg", "-v", "error", "-i", audio, "-ac", "1", "-ar", str(sr),
+    raw = subprocess.run([FFMPEG, "-v", "error", "-i", audio, "-ac", "1", "-ar", str(sr),
                           "-f", "s16le", "-"], capture_output=True).stdout
     pcm = array.array("h"); pcm.frombytes(raw[: len(raw) // 2 * 2])
     env = [math.log1p(sum(abs(x) for x in pcm[i:i + hop]) / hop) for i in range(0, len(pcm) - hop, hop)]
@@ -161,7 +162,7 @@ def scene_starts(path, cache_dir):
     key = hashlib.md5(f"{path}{os.path.getmtime(path)}".encode()).hexdigest()
     cf = os.path.join(cache_dir, f"scenes_{key}.json")
     if os.path.exists(cf): return json.load(open(cf))
-    r = subprocess.run(["ffmpeg", "-hide_banner", "-i", path, "-an", "-vf", "select='gt(scene,0.35)',showinfo",
+    r = subprocess.run([FFMPEG, "-hide_banner", "-i", path, "-an", "-vf", "select='gt(scene,0.35)',showinfo",
                         "-f", "null", "-"], capture_output=True, text=True)
     pts = [0.0] + [float(x) for x in re.findall(r"pts_time:([\d.]+)", r.stderr)]
     json.dump(pts, open(cf, "w")); return pts
@@ -201,17 +202,32 @@ def render_cut(job):
     src, ss, d, vf, W, H, preset, crf, dest = job
     if os.path.exists(dest): return
     tmp = dest + ".part.mp4"
-    run(["ffmpeg", "-y", "-v", "error", "-ss", str(ss), "-i", src, "-t", f"{d:.3f}", "-an", "-vf", vf,
+    run([FFMPEG, "-y", "-v", "error", "-ss", str(ss), "-i", src, "-t", f"{d:.3f}", "-an", "-vf", vf,
          "-c:v", "libx264", "-preset", preset, "-crf", str(crf), "-pix_fmt", "yuv420p", tmp])
     os.replace(tmp, dest)
 
 # ---------------------------------------------------------------- build
+def has_ass(exe):
+    try:
+        out = subprocess.run([exe, "-hide_banner", "-filters"], capture_output=True, text=True).stdout
+    except OSError:
+        return False
+    return bool(re.search(r"\bass\b\s+V->V", out))
+
 def check_ffmpeg():
-    out = subprocess.run(["ffmpeg", "-hide_banner", "-filters"], capture_output=True, text=True).stdout
-    if not re.search(r"\bass\b\s+V->V", out):
-        sys.exit("Your ffmpeg has no caption (libass) support.\n"
-                 "Fix on Mac:  brew uninstall ffmpeg ; brew install ffmpeg\n"
-                 "then open a NEW terminal window and run this again.")
+    """Pick an ffmpeg that can draw captions (libass); Homebrew's plain one often can't."""
+    global FFMPEG, FFPROBE
+    cands = [os.environ.get("FFMPEG"), "ffmpeg", "/opt/homebrew/opt/ffmpeg-full/bin/ffmpeg",
+             "/usr/local/opt/ffmpeg-full/bin/ffmpeg"]
+    for exe in filter(None, cands):
+        if has_ass(exe):
+            FFMPEG = exe
+            probe = os.path.join(os.path.dirname(exe), "ffprobe")
+            FFPROBE = probe if os.path.exists(probe) else "ffprobe"
+            return
+    sys.exit("Your ffmpeg can't draw captions (no libass).\n"
+             "Fix on Mac:  brew install ffmpeg-full\n"
+             "then run this again (no new terminal needed).")
 
 def build(spec, args):
     check_ffmpeg()
@@ -257,7 +273,7 @@ def build(spec, args):
     vf = "ass=filename=captions.ass" + (":fontsdir=fonts" if os.path.isdir(fonts) else "")
     if os.path.isdir(fonts):
         shutil.copytree(fonts, os.path.join(cache, "fonts"), dirs_exist_ok=True)
-    run(["ffmpeg", "-y", "-v", "error", "-f", "concat", "-safe", "0", "-i", "concat.txt",
+    run([FFMPEG, "-y", "-v", "error", "-f", "concat", "-safe", "0", "-i", "concat.txt",
          "-ss", f"{t0}", "-t", f"{dur:.3f}", "-i", audio, "-map", "0:v", "-map", "1:a",
          "-vf", vf, "-af", ",".join(af) or "anull", "-c:v", "libx264", "-preset", "veryfast" if preview else "medium",
          "-crf", "28" if preview else "18", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "192k",
