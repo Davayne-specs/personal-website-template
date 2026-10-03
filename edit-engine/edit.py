@@ -5,7 +5,7 @@
     edit.py beats PROJECT [--write]    detect BPM + first-beat offset from the audio
     edit.py tap   PROJECT [--from-line N]   play the song, press Enter as each lyric starts -> exact timing
     edit.py shift PROJECT -0.2         nudge every lyric time earlier/later
-    edit.py build PROJECT [--preview] [--range A-B] [--seed N] [--out FILE]
+    edit.py build PROJECT [--preview] [--look bright|gritty] [--4k] [--range A-B] [--seed N] [--out FILE]
 
 Everything is driven by project.json + lyrics.txt, so changing the look,
 pacing or captions never needs a rewrite. Needs only ffmpeg/ffprobe + Python 3.
@@ -29,12 +29,20 @@ DEFAULTS = {
     "pace": [{"from": 0, "beats": 2}],
     "look": {"contrast": 1.18, "saturation": 0.72, "grain": 16, "vignette": True,
              "shake": 10, "flash": 0.3, "zoom": 0.12,
-             "bw": 0.10, "slowmo": 0.06},   # bw/slowmo = chance a cut is B&W / half-speed
+             "bw": 0.10, "slowmo": 0.06,    # bw/slowmo = chance a cut is B&W / half-speed
+             "brightness": 0.0, "gamma": 1.0, "warm": 0.0, "glow": 0.0, "sharpen": 0.0},
     "caption": {"font": "Liberation Sans", "es_size": 112, "en_size": 64,
                 "es_color": "#FFFFFF", "en_color": "#F2C94C", "outline": 6,
                 "margin_v": 420, "upper": True, "pop": True,
                 "lead": 0.08, "max_line": 6},
     "loudnorm": True, "fade_out": 1.0,
+}
+
+PRESETS = {
+    "gritty": {},
+    "bright": {"contrast": 1.06, "saturation": 1.35, "grain": 3, "vignette": False, "shake": 8,
+               "flash": 0.35, "zoom": 0.10, "bw": 0.0, "slowmo": 0.08,
+               "brightness": 0.07, "gamma": 1.12, "warm": 0.05, "glow": 0.22, "sharpen": 0.6},
 }
 
 def merge(base, over):
@@ -216,18 +224,23 @@ def assign_sources(spec, cuts, files, cache_dir, rng):
     return out
 
 def cut_filter(spec, n, rate, W, H, rng, i):
-    lk = spec["look"]; fps = spec["fps"]; d = n / fps
-    z = 1.06 + rng.uniform(0, lk["zoom"]) + 2 * lk["shake"] / W
+    lk = spec["look"]; fps = spec["fps"]; d = n / fps; sc = W / 1080
+    amp = lk["shake"] * sc
+    z = 1.06 + rng.uniform(0, lk["zoom"]) + 2 * amp / W
     sw, sh = int(W * z) // 2 * 2, int(H * z) // 2 * 2
-    amp = lk["shake"]
-    x = f"(in_w-out_w)/2+{amp}*sin(t*{rng.uniform(20, 45):.1f})" if amp else "(in_w-out_w)/2"
-    y = f"(in_h-out_h)/2+{amp}*cos(t*{rng.uniform(20, 45):.1f})" if amp else "(in_h-out_h)/2"
+    x = f"(in_w-out_w)/2+{amp:.1f}*sin(t*{rng.uniform(20, 45):.1f})" if amp else "(in_w-out_w)/2"
+    y = f"(in_h-out_h)/2+{amp:.1f}*cos(t*{rng.uniform(20, 45):.1f})" if amp else "(in_h-out_h)/2"
     bw = rng.random() < lk["bw"]
-    bright = f"{lk['flash']}*max(0,1-t/0.09)" if lk["flash"] and i % 2 == 0 else "0"
+    flash = f"{lk['flash']}*max(0,1-t/0.09)" if lk["flash"] and i % 2 == 0 else "0"
     f = [f"setpts=PTS/{rate}" if rate != 1 else "null", f"fps={fps}",
-         f"scale={sw}:{sh}:force_original_aspect_ratio=increase", f"crop={W}:{H}:'{x}':'{y}'", "setsar=1",
-         f"eq=contrast={lk['contrast'] + (0.25 if bw else 0)}:saturation={0 if bw else lk['saturation']}"
-         f":brightness='{bright}':eval=frame"]
+         f"scale={sw}:{sh}:force_original_aspect_ratio=increase:flags=lanczos", f"crop={W}:{H}:'{x}':'{y}'", "setsar=1"]
+    if lk["sharpen"]: f.append(f"unsharp=5:5:{lk['sharpen']}:5:5:0")
+    f.append(f"eq=contrast={lk['contrast'] + (0.25 if bw else 0)}:saturation={0 if bw else lk['saturation']}"
+             f":gamma={lk['gamma']}:brightness='{lk['brightness']}+{flash}':eval=frame")
+    w = lk["warm"]
+    if w: f.append(f"colorbalance=rm={w}:gm={w * 0.4:.3f}:bm={-w}:rh={w}:bh={-w * 0.8:.3f}")
+    if lk["glow"]:
+        f.append(f"split[a][b];[b]gblur=sigma={max(8, 20 * sc):.0f}[g];[a][g]blend=all_mode=screen:all_opacity={lk['glow']}")
     if lk["grain"]: f.append(f"noise=alls={lk['grain']}:allf=t")
     if lk["vignette"]: f.append("vignette=PI/4")
     f.append(f"tpad=stop_mode=clone:stop_duration={d + 2:.3f}")
@@ -265,9 +278,12 @@ def check_ffmpeg():
 
 def build(spec, args):
     check_ffmpeg()
-    W, H = spec["size"]; scale = 1.0
+    W, H = spec["size"]
     preview = args.preview
-    if preview: W, H, scale = W // 2, H // 2, 0.5
+    if args.look: spec["look"] = merge(DEFAULTS["look"], PRESETS[args.look])
+    if args.fourk: W, H = 2160, 3840
+    if preview: W, H = W // 2, H // 2
+    scale = W / 1080
     cache = os.path.join(spec["_dir"], ".cache"); os.makedirs(cache, exist_ok=True)
     audio = rel(spec, spec["audio"])
     total = probe_dur(audio); spec["_total"] = total
@@ -310,7 +326,7 @@ def build(spec, args):
     run([FFMPEG, "-y", "-v", "error", "-f", "concat", "-safe", "0", "-i", "concat.txt",
          "-ss", f"{t0}", "-t", f"{dur:.3f}", "-i", audio, "-map", "0:v", "-map", "1:a",
          "-vf", vf, "-af", ",".join(af) or "anull", "-c:v", "libx264", "-preset", "veryfast" if preview else "medium",
-         "-crf", "28" if preview else "18", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "192k",
+         "-crf", "28" if preview else ("16" if args.fourk else "18"), "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "192k",
          "-shortest", "-movflags", "+faststart", os.path.abspath(out)], cwd=cache)
     print("wrote", out)
 
@@ -393,6 +409,8 @@ def main():
     r.add_argument("--preview", action="store_true", help="half-res fast render")
     r.add_argument("--range", help="only this audio window, e.g. 20-45 or 0:20-0:45")
     r.add_argument("--seed", type=int, help="reroll clip choices")
+    r.add_argument("--look", choices=sorted(PRESETS), help="bright (blissful) or gritty; overrides project.json look")
+    r.add_argument("--4k", dest="fourk", action="store_true", help="2160x3840 final (slow, ~4x the time)")
     r.add_argument("--out")
     t = sub.add_parser("tap", help="time the lyrics by tapping Enter while the song plays")
     t.add_argument("project"); t.add_argument("--from-line", type=int, default=1, help="redo from this line number")
