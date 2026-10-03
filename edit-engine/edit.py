@@ -246,7 +246,7 @@ def build(spec, args):
     af = [f"afade=t=out:st={max(0, dur - spec['fade_out']):.2f}:d={spec['fade_out']}"] if spec["fade_out"] else []
     if spec["loudnorm"]: af.insert(0, "loudnorm=I=-14:TP=-1.5")
     fonts = os.path.join(spec["_dir"], "fonts")
-    vf = f"ass=captions.ass" + (":fontsdir=fonts" if os.path.isdir(fonts) else "")
+    vf = "ass=filename=captions.ass" + (":fontsdir=fonts" if os.path.isdir(fonts) else "")
     if os.path.isdir(fonts):
         shutil.copytree(fonts, os.path.join(cache, "fonts"), dirs_exist_ok=True)
     run(["ffmpeg", "-y", "-v", "error", "-f", "concat", "-safe", "0", "-i", "concat.txt",
