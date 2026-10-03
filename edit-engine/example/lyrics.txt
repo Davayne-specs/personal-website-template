@@ -1,0 +1,5 @@
+# time  Spanish | English      (time = seconds or m:ss.s, optional end: 0:04-0:07)
+# lines with no time start right after the previous one (line_beats long)
+0:02   Nací en la calle, sin nada que perder | I was born in the street, nothing to lose
+0:06   Cada cicatriz tiene su historia | Every scar has its story
+0:10.5 Y aún así sigo en pie | And still I'm standing
