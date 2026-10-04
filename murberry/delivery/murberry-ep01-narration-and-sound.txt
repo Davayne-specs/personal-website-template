@@ -1,0 +1,277 @@
+MURBERRY  -  EPISODE 1: THE PUSH-UP
+Narration script, voice direction and sound mix cue sheet
+Runtime 2:30.0  |  30 fps  |  9:16 master  |  357 words
+Timecodes are MM:SS.s from the first frame of the picture (00:00.0).
+
+=====================================================================
+PART 1  -  FOR THE VOICE ACTOR
+=====================================================================
+
+WHO MURBERRY IS
+Murberry is the show and the voice. He is never seen. Think of a
+nature-documentary narrator who has seen a thousand bodies and is not
+surprised by yours. He explains, he never cheers.
+
+HOW HE SOUNDS
+- Unhurried, warm, low, certain. About 130-140 words a minute.
+- Close to the mic, as if talking to one person in bed at 11pm.
+  Not a "voice-over announcer" read. No sell, no hype.
+- Respectful about the body. Never pitying, never jokey.
+- Let the full stops land. One idea per sentence, a breath between.
+- No upward inflection at the ends of lines. Statements, not questions.
+- Do NOT add words, "let's go", laughs or exclamation energy.
+
+TECHNICAL
+- WAV, 48 kHz, 24-bit, mono. Dry: no music, no reverb, no compression
+  or EQ baked in. Quiet room, pop filter.
+- Record each numbered line as its own take, 2 good takes per line,
+  with 2 seconds of silence before and after. Name files by line
+  number, e.g. EP01_L07_take1.wav.
+- Also record 10 seconds of room tone.
+- Each line has a WINDOW (start to end). The read should fit inside it.
+  Finishing a little early is fine; running long is not. If a line
+  will not fit naturally, read it naturally anyway and flag it - the
+  edit can breathe.
+
+PRONUNCIATION
+- pectoralis major ......... PECK-tor-AL-iss  MAY-jer
+- anterior deltoid ......... an-TEER-ee-er  DEL-toyd
+- triceps .................. TRY-seps
+- serratus anterior ........ seh-RAY-tus  an-TEER-ee-er
+- actin .................... ACK-tin
+- myosin ................... MY-oh-sin
+- ATP ...................... A. T. P.  (spell it out)
+- insulin .................. IN-suh-lin
+- sixty-six ................ say it in full, not "six-six"
+- fibre .................... FY-ber
+
+THE LINES
+(Window = where the line plays on screen. Length = window in seconds.)
+
+--- BEAT 1  THE FOLD  (00:00 - 00:08) ---
+On screen: black, an ochre sheet unfolds, the name glints, the figure draws itself.
+Direction: the hook. Quiet and certain. A small smile in the voice on "remarkable".
+
+L01  00:02.0 - 00:04.4  (2.4 s)
+     Your body is a remarkable machine.
+L02  00:04.4 - 00:06.9  (2.5 s)
+     Almost no one has ever explained it to you.
+L03  00:06.9 - 00:08.4  (1.5 s)
+     Let's begin.
+     -> Gentle, inviting. Not "let's GO".
+
+--- BEAT 2  THE MOVEMENT  (00:08 - 00:35) ---
+On screen: floor push-up, then the wall push-up, cue by cue, then two slow reps.
+Direction: practical, kind. Like a good physio. "Heavy" is a fact, not a judgement.
+
+L04  00:08.5 - 00:12.8  (4.3 s)
+     On the floor, a push-up asks your arms to press about two thirds of your weight.
+L05  00:12.8 - 00:16.4  (3.6 s)
+     For a heavy body, that is a heavy lift.
+     -> Plain and warm. No sympathy voice.
+L06  00:16.9 - 00:19.4  (2.5 s)
+     So we begin at the wall.
+L07  00:19.4 - 00:22.0  (2.6 s)
+     Stand an arm's length away.
+L08  00:22.0 - 00:24.8  (2.8 s)
+     Hands flat, just below your shoulders.
+L09  00:24.8 - 00:27.6  (2.8 s)
+     Keep one straight line from head to heel.
+L10a 00:27.6 - 00:29.3  (1.7 s)
+     Breathe in as you lean toward the wall.
+L10b 00:29.3 - 00:31.2  (1.9 s)
+     Breathe out as you press away.
+     -> These two ride the figure's first rep: lean-in, then press-out.
+        Slow down to match the movement. An audible, relaxed breath
+        between them is welcome.
+
+--- BEAT 3  THE MACHINE  (00:35 - 01:05) ---
+On screen: the skin folds back; four muscles light up green as they are named, then turn red.
+Direction: a touch of wonder. Name each muscle clearly, then a beat of air.
+
+L11  00:35.8 - 00:38.0  (2.2 s)
+     Watch what wakes up.
+L12  00:38.0 - 00:41.0  (3.0 s)
+     The pectoralis major, across your chest.
+L13  00:41.0 - 00:44.2  (3.2 s)
+     The front of the shoulder, the anterior deltoid.
+L14  00:44.2 - 00:47.2  (3.0 s)
+     The triceps, along the back of the arm.
+L15  00:47.2 - 00:51.8  (4.6 s)
+     And the serratus anterior, holding each shoulder blade flat against your ribs.
+L16  00:52.2 - 00:55.6  (3.4 s)
+     As you press, they take the load.
+     -> The muscles turn red on "take the load" (about 00:54.0).
+        Land "load" there.
+L17  00:55.6 - 00:58.4  (2.8 s)
+     Your core holds the line,
+L18  00:58.4 - 01:03.4  (5.0 s)
+     so the effort travels from your hands to your feet, as one.
+     -> L17 and L18 are one sentence. Keep the thread, small comma pause.
+
+--- BEAT 4  THE CHEMISTRY  (01:05 - 01:35) ---
+On screen: the page tears; muscle fibre, filaments pulling; sugar passing into a cell.
+Direction: closer and quieter, a little more intimate. Science as a secret.
+
+L19  01:05.9 - 01:07.9  (2.0 s)
+     Now closer.
+L20  01:07.9 - 01:11.3  (3.4 s)
+     Inside each fibre, two proteins, actin and myosin,
+L21  01:11.3 - 01:14.3  (3.0 s)
+     grip and pull, again and again.
+     -> L20 and L21 are one sentence. Unhurried rhythm on "again and again".
+L22  01:14.3 - 01:17.5  (3.2 s)
+     Every pull spends a molecule called ATP.
+L23  01:17.5 - 01:20.9  (3.4 s)
+     To make more, the muscle needs fuel.
+L24  01:22.6 - 01:25.4  (2.8 s)
+     And here is something quiet and important.
+     -> Lean in. Softer. This is the turn of the episode.
+L25  01:25.4 - 01:29.0  (3.6 s)
+     Working muscle can draw sugar out of your blood on its own,
+L26  01:29.0 - 01:31.2  (2.2 s)
+     without waiting for insulin.
+L27  01:31.2 - 01:34.6  (3.4 s)
+     Every set clears a little sugar from your blood.
+
+--- BEAT 5  THE MIND  (01:35 - 01:55) ---
+On screen: the figure small at the wall at night; a line of days, one missed, carrying on.
+Direction: the heart of the show. Slowest, warmest read. Speak to someone who has quit before.
+
+L28  01:36.0 - 01:38.6  (2.6 s)
+     The hardest part is not the muscle.
+L29  01:38.6 - 01:40.6  (2.0 s)
+     It is tomorrow.
+     -> Let it sit. Leave air after it.
+L30  01:40.6 - 01:45.2  (4.6 s)
+     In one study, new daily habits took a median of sixty-six days to feel automatic.
+L31  01:45.2 - 01:47.2  (2.0 s)
+     Some took far longer.
+L32  01:47.2 - 01:50.6  (3.4 s)
+     But missing a single day changed almost nothing.
+L33  01:50.6 - 01:54.2  (3.6 s)
+     So if you miss one, simply come back.
+     -> Reassuring, no pressure. "Simply" is the key word.
+
+--- BEAT 6  THE PLAN  (01:55 - 02:20) ---
+On screen: the plan card, the progression wall > counter > floor, the effort bar, a crossed-out soda.
+Direction: clear and practical. Numbers spoken plainly. Honest, not salesy.
+
+L34  01:55.8 - 01:57.6  (1.8 s)
+     Here is this week.
+L35  01:57.6 - 02:00.6  (3.0 s)
+     Two or three sets of five to ten wall push-ups.
+L36  02:00.6 - 02:02.6  (2.0 s)
+     Rest a minute between sets.
+L37  02:02.6 - 02:05.2  (2.6 s)
+     Three days, with a day off between.
+L38  02:05.2 - 02:08.6  (3.4 s)
+     When fifteen feel easy, move your hands down to a counter.
+L39  02:08.6 - 02:12.0  (3.4 s)
+     At your size, one set spends roughly five to ten calories.
+L40  02:12.0 - 02:14.2  (2.2 s)
+     That is small, and that is honest.
+     -> A small, kind smile. Not apologetic.
+L41  02:14.2 - 02:16.2  (2.0 s)
+     The push-up builds the machine.
+L42  02:16.2 - 02:19.8  (3.6 s)
+     What you eat and drink, especially sugar, decides the weight.
+     -> Firm and gentle. Not a lecture.
+
+--- BEAT 7  SIGN-OFF  (02:20 - 02:30) ---
+On screen: the muscles fade from red to gold; the ochre sheet folds closed; the name glints.
+Direction: winding down. The sign-off is the show's signature - read it the same way every episode.
+
+L43  02:21.0 - 02:23.2  (2.2 s)
+     Your muscles are gold now.
+L44  02:23.2 - 02:25.4  (2.2 s)
+     Recovering. Rebuilding.
+     -> Two separate thoughts. Full stop between.
+L45  02:25.6 - 02:29.2  (3.6 s)
+     Small movements. Real changes. Until tomorrow.
+     -> THE SIGN-OFF. Three beats, a full stop after each. Slow, low,
+        warm, final. Please record 4 takes of this line, and a couple
+        of alternates a shade softer.
+
+ON-SCREEN TEXT NOT TO BE READ
+Labels, source lines and the safety note in Beat 6 ("Check with your
+doctor before starting. Stop if you feel chest pain, dizziness or
+joint pain.") stay on screen only. Do not read them.
+
+
+=====================================================================
+PART 2  -  FOR THE SOUND DESIGN / MIX CREW
+=====================================================================
+
+WHAT YOU ARE MIXING
+- Narration (Part 1) on top. Nothing competes with the voice.
+- A temp sound bed already exists (synthesized in code, in the
+  episode's current master). Use it as a guide for timing and feel,
+  or replace any layer with your own recorded foley. Recorded paper
+  will very likely sound better than the temp folds.
+- Captions stay burned into the picture, so the voice must stay in
+  sync with the timecodes in Part 1 (within about +/- 0.2 s).
+
+SOUND IDENTITY (from the brand sheet)
+- Scene fold: a deep paper fold, slowed down and pitched down so it has
+  weight - almost like a breath. Real paper, recorded close, then
+  slowed 2x and pitched down, with a short soft room.
+- Bed: a soft, warm drone or pad, barely there. The temp bed is a D sus2
+  chord that warms toward D major in Beat 5 and resolves at the end.
+- Load: a subtle low hum that rises as the muscles turn red and fades as
+  they rest. Make sure it has upper harmonics (110-220 Hz); phones do
+  not play 55 Hz.
+- No music with a beat, no whooshes, no risers, no stingers, no "UI" clicks.
+
+LEVELS / DELIVERY
+- Loudness target: -14 LUFS integrated (social), true peak -1 dBTP.
+- Dialogue around -16 to -18 LUFS short-term; pad 18-22 dB under the voice.
+- Duck the pad and hum about 4-6 dB under narration, slow attack/release
+  (300 ms / 800 ms) so the ducking is never heard.
+- Folds can sit up to the voice level in the gaps, and 6-8 dB under it
+  when a line is playing.
+- Deliver: full mix WAV 48 kHz 24-bit stereo, plus stems
+  (DIALOGUE / FOLEY / BED / HUM), all starting at 00:00.0, 2:30.0 long.
+
+CUE SHEET
+TC          CUE                           NOTES
+00:00.0     Silence, black
+00:00.25    DEEP FOLD (unfold)            Sheet unfolds toward camera. Biggest fold of the episode; "a breath".
+00:00.4     PAD fades in                  Over about 3 s, then barely there.
+00:01.55    SOFT FOLD                     Top corner curls back. Small, lighter, slightly right.
+00:02.0     (VO L01 starts)
+00:07.5     DEEP FOLD                     Page peels to the floor push-up.
+00:09.95    PAPER SLIDE                   Soft, as the pencil arrow lands.
+00:16.6     DEEP FOLD                     Floor to wall.
+00:27.4     BREATH IN  (to 00:29.3)       Faint, under VO L10a. Optional if the actor breathes on mic.
+00:29.3     BREATH OUT (to 00:31.2)
+00:31.2     BREATH IN  (to 00:32.9)       Second rep, no VO - keep these.
+00:32.9     BREATH OUT (to 00:34.6)
+00:33.9     (camera pushes into the shoulder)
+00:34.7     DEEP FOLD                     Skin folds back to the muscle layer.
+00:54.0     HUM rises (to 00:55.6)        Muscles turn red on "take the load". Hum holds from here.
+00:56.35    PAPER SLIDE                   Inset card slides in.
+01:05.0     TEAR + DEEPER FOLD            Clay sheet tears back to burnt orange. Slow, fibrous, low.
+01:06.2     PAPER SLIDE                   Muscle fibre slides in.
+01:08.4     PAPER SLIDE (light)           Sarcomere plate opens from the fibre.
+01:11.975   TICK                          One soft wooden tick per myosin pull,
+01:13.475   TICK                            six in all, 1.5 s apart.
+01:14.975   TICK                            Quiet - texture, not rhythm.
+01:16.475   TICK
+01:17.975   TICK
+01:19.475   TICK
+01:21.5     PAPER SLIDE                   The cell plate slides in from the right.
+01:34.3     DEEP FOLD                     A sheet lays back down over the cell (zoom back out).
+01:35.0     HUM fades out (to 01:38.6)
+01:35.0     PAD warms                     Brings in the major third. Warmest point of the episode.
+01:54.5     DEEP FOLD                     Night room to plan.
+01:55.6     PAPER SLIDE                   Plan card slides in.
+02:19.7     DEEP FOLD                     Plan peels back to the muscles (red).
+02:21.0     (muscles fade red to gold)    No hum - it is gone.
+02:24.3     LAST DEEP FOLD                The ochre sheet folds closed from the top. "One last deep fold."
+02:25.5     PAD resolves                  Suspended note drops out; D major alone.
+02:29.35    Picture fades to black (to 02:30.0)
+02:29.7     PAD stops                     Clean ending, silence on the last frames.
+
+QUESTIONS
+Send them to Marlow (EP) with the line or cue number and timecode.
