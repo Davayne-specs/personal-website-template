@@ -1,6 +1,6 @@
 MURBERRY  -  EPISODE 1: THE PUSH-UP
 Narration script, voice direction and sound mix cue sheet
-Runtime 2:30.0  |  30 fps  |  9:16 master  |  357 words
+Runtime 2:30.0  |  30 fps  |  9:16 master  |  333 words
 Timecodes are MM:SS.s from the first frame of the picture (00:00.0).
 
 =====================================================================
