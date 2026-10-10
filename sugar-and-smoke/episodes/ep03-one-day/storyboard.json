@@ -1,0 +1,1087 @@
+[
+ {
+  "n": 0,
+  "tag": "One Day",
+  "state": "Absence",
+  "move": "Print roll",
+  "scene": "Title over an empty road at night; Stein stands alone, head down, humming.",
+  "t": {
+   "bg": "road",
+   "time": "night",
+   "who": "stein",
+   "pose": "hum",
+   "face": "closed",
+   "action": "sway",
+   "scale": 0.62
+  }
+ },
+ {
+  "n": 1,
+  "tag": "Hum",
+  "state": "Absence",
+  "move": "Stamp cut",
+  "scene": "Stein hums under a streetlight; little notes drift up.",
+  "t": {
+   "bg": "street",
+   "time": "night",
+   "who": "stein",
+   "pose": "hum",
+   "face": "closed",
+   "action": "sway",
+   "feature": [
+    "notes"
+   ]
+  }
+ },
+ {
+  "n": 2,
+  "tag": "What I want",
+  "state": "Memory",
+  "move": "Stamp cut",
+  "scene": "He looks up at the first glow on the horizon.",
+  "t": {
+   "bg": "road",
+   "time": "dusk",
+   "who": "stein",
+   "pose": "lookUp",
+   "face": "hope",
+   "feature": [
+    "sun"
+   ],
+   "sun": [
+    0.02,
+    0.1
+   ],
+   "zoom": "mid"
+  }
+ },
+ {
+  "n": 3,
+  "tag": "Closer",
+  "state": "Memory",
+  "move": "Stamp cut",
+  "scene": "Close on his face, the glow in his eyes.",
+  "t": {
+   "bg": "road",
+   "time": "dusk",
+   "who": "stein",
+   "pose": "lookUp",
+   "face": "hope",
+   "feature": [
+    "sun"
+   ],
+   "sun": [
+    0.1,
+    0.16
+   ],
+   "zoom": "close"
+  }
+ },
+ {
+  "n": 4,
+  "tag": "You know",
+  "state": "Present",
+  "move": "Registration snap",
+  "scene": "He turns to us, hand on chest: you know.",
+  "t": {
+   "bg": "road",
+   "time": "dusk",
+   "who": "stein",
+   "pose": "chestHand",
+   "face": "steel",
+   "feature": [
+    "sun"
+   ],
+   "sun": 0.16,
+   "note": "you know.",
+   "noteAt": 0,
+   "noteXY": [
+    780,
+    520
+   ]
+  }
+ },
+ {
+  "n": 5,
+  "tag": "One day",
+  "state": "Release",
+  "move": "Print roll",
+  "scene": "A wall calendar; one day is circled in hotpink with a heart.",
+  "t": {
+   "bg": "plain",
+   "time": "day",
+   "wash": [
+    "gold",
+    "pink"
+   ],
+   "who": "none",
+   "feature": [
+    "calendar"
+   ],
+   "calendarDay": 23
+  }
+ },
+ {
+  "n": 6,
+  "tag": "It's coming",
+  "state": "Release",
+  "move": "Stamp cut",
+  "scene": "He walks the road toward a rising sun.",
+  "t": {
+   "bg": "road",
+   "time": "dawn",
+   "who": "stein",
+   "action": "walk",
+   "face": "hope",
+   "feature": [
+    "sun"
+   ],
+   "sun": [
+    0.1,
+    0.3
+   ]
+  }
+ },
+ {
+  "n": 7,
+  "tag": "Still coming",
+  "state": "Release",
+  "move": "Stamp cut",
+  "scene": "Closer; the sun climbs.",
+  "t": {
+   "bg": "road",
+   "time": "dawn",
+   "who": "stein",
+   "action": "walk",
+   "face": "hope",
+   "feature": [
+    "sun"
+   ],
+   "sun": [
+    0.3,
+    0.5
+   ],
+   "zoom": "mid"
+  }
+ },
+ {
+  "n": 8,
+  "tag": "Celebrate",
+  "state": "Release",
+  "move": "Registration snap",
+  "scene": "Arms up, confetti; CELEBRATE stamp.",
+  "t": {
+   "bg": "plain",
+   "time": "day",
+   "wash": [
+    "pink",
+    "gold"
+   ],
+   "who": "stein",
+   "pose": "armsUp",
+   "face": "joy",
+   "feature": [
+    "confetti"
+   ]
+  }
+ },
+ {
+  "n": 9,
+  "tag": "Let's celebrate",
+  "state": "Release",
+  "move": "Stamp cut",
+  "scene": "Stein and Ashaka in a field, both arms up, confetti and hearts; CELEBRATE stamp.",
+  "t": {
+   "bg": "field",
+   "time": "day",
+   "who": "both",
+   "pose": "armsUp",
+   "kidPose": "armsUp",
+   "face": "joy",
+   "kidFace": "joy",
+   "feature": [
+    "confetti",
+    "hearts"
+   ]
+  }
+ },
+ {
+  "n": 10,
+  "tag": "Ashaka",
+  "state": "Precious",
+  "move": "Smoke wipe",
+  "scene": "Night, his room: he holds a polaroid of Ashaka; ASHAKA stamp.",
+  "t": {
+   "bg": "room",
+   "time": "night",
+   "who": "stein",
+   "pose": "hold",
+   "face": "sad",
+   "hold": "polaroid",
+   "feature": [
+    "lamp"
+   ],
+   "zoom": "wide"
+  }
+ },
+ {
+  "n": 11,
+  "tag": "Daughter",
+  "state": "Precious",
+  "move": "Stamp cut",
+  "scene": "Her room by day: Ashaka holds a polaroid of Dad; hearts.",
+  "t": {
+   "bg": "room",
+   "time": "day",
+   "who": "kid",
+   "kidPose": "hold",
+   "kidFace": "sad",
+   "kidHold": "polaroid",
+   "feature": [
+    "hearts"
+   ],
+   "note": "miss you too",
+   "noteAt": 2,
+   "noteXY": [
+    300,
+    520
+   ],
+   "kidScale": 1.1
+  }
+ },
+ {
+  "n": 12,
+  "tag": "Had to run",
+  "state": "Pressure",
+  "move": "Registration snap",
+  "scene": "He runs down the street with a bag.",
+  "t": {
+   "bg": "street",
+   "time": "dusk",
+   "who": "stein",
+   "action": "run",
+   "face": "tired",
+   "hold": "bag"
+  }
+ },
+ {
+  "n": 13,
+  "tag": "My issues",
+  "state": "Pressure",
+  "move": "Stamp cut",
+  "scene": "He carries a wobbling stack of boxes: rent, bills, regret.",
+  "t": {
+   "bg": "street",
+   "time": "dusk",
+   "who": "stein",
+   "pose": "carry",
+   "face": "tired",
+   "hold": "boxes",
+   "boxes": [
+    "rent",
+    "bills",
+    "regret"
+   ],
+   "action": "sway"
+  }
+ },
+ {
+  "n": 14,
+  "tag": "My shoes",
+  "state": "Pressure",
+  "move": "Stamp cut",
+  "scene": "He holds his sneakers up by the laces.",
+  "t": {
+   "bg": "road",
+   "time": "dusk",
+   "who": "stein",
+   "pose": "hold",
+   "face": "tired",
+   "hold": "shoes"
+  }
+ },
+ {
+  "n": 15,
+  "tag": "Torn out",
+  "state": "Pressure",
+  "move": "Registration snap",
+  "scene": "Close on one sneaker, the sole flapping loose.",
+  "t": {
+   "bg": "plain",
+   "time": "day",
+   "wash": [
+    "slate"
+   ],
+   "who": "none",
+   "feature": [
+    "shoe"
+   ],
+   "note": "torn out.",
+   "noteAt": 4,
+   "noteXY": [
+    760,
+    520
+   ],
+   "noteColor": "#C92F42"
+  }
+ },
+ {
+  "n": 16,
+  "tag": "Nobody",
+  "state": "Absence",
+  "move": "Smoke wipe",
+  "scene": "A row of empty chairs; he sits alone on the last one.",
+  "t": {
+   "bg": "room",
+   "time": "night",
+   "who": "stein",
+   "x": 860,
+   "pose": "sit",
+   "face": "sad",
+   "feature": [
+    "chairs"
+   ],
+   "note": "nobody.",
+   "noteAt": 0,
+   "noteXY": [
+    400,
+    520
+   ]
+  }
+ },
+ {
+  "n": 17,
+  "tag": "Turned out",
+  "state": "Release",
+  "move": "Registration snap",
+  "scene": "A spotlight finds him standing tall.",
+  "t": {
+   "bg": "plain",
+   "time": "day",
+   "wash": [
+    "gold",
+    "amber"
+   ],
+   "who": "stein",
+   "pose": "stand",
+   "face": "steel",
+   "feature": [
+    "spotlight"
+   ],
+   "note": "turned out.",
+   "noteAt": 3,
+   "noteXY": [
+    300,
+    520
+   ]
+  }
+ },
+ {
+  "n": 18,
+  "tag": "My dreams",
+  "state": "Memory",
+  "move": "Stamp cut",
+  "scene": "He walks under a sky full of stars, lit from above.",
+  "t": {
+   "bg": "sky",
+   "time": "night",
+   "who": "stein",
+   "action": "walk",
+   "face": "hope",
+   "feature": [
+    "stars",
+    "light"
+   ]
+  }
+ },
+ {
+  "n": 19,
+  "tag": "Hustle",
+  "state": "Pressure",
+  "move": "Stamp cut",
+  "scene": "He runs the street by day, bag in hand.",
+  "t": {
+   "bg": "street",
+   "time": "day",
+   "who": "stein",
+   "action": "run",
+   "face": "steel",
+   "hold": "bag",
+   "note": "hustle.",
+   "noteAt": 2,
+   "noteXY": [
+    780,
+    520
+   ]
+  }
+ },
+ {
+  "n": 20,
+  "tag": "The water",
+  "state": "Present",
+  "move": "Smoke wipe",
+  "scene": "He stands at the shore, waves rolling in.",
+  "t": {
+   "bg": "shore",
+   "time": "day",
+   "who": "stein",
+   "pose": "stand",
+   "face": "calm",
+   "action": "sway"
+  }
+ },
+ {
+  "n": 21,
+  "tag": "Drink",
+  "state": "Present",
+  "move": "Stamp cut",
+  "scene": "He drinks from a bottle, eyes closed.",
+  "t": {
+   "bg": "shore",
+   "time": "day",
+   "who": "stein",
+   "pose": "drink",
+   "face": "closed",
+   "hold": "bottle",
+   "note": "ahh.",
+   "noteAt": 5,
+   "noteXY": [
+    780,
+    520
+   ]
+  }
+ },
+ {
+  "n": 22,
+  "tag": "The pain",
+  "state": "Pressure",
+  "move": "Registration snap",
+  "scene": "Rain; hand on his chest.",
+  "t": {
+   "bg": "plain",
+   "time": "dusk",
+   "wash": [
+    "slate"
+   ],
+   "who": "stein",
+   "pose": "chestHand",
+   "face": "sad",
+   "feature": [
+    "rain"
+   ],
+   "note": "trust me.",
+   "noteAt": 0,
+   "noteXY": [
+    300,
+    520
+   ]
+  }
+ },
+ {
+  "n": 23,
+  "tag": "Soldier",
+  "state": "Pressure",
+  "move": "Stamp cut",
+  "scene": "He salutes in a spotlight; SOLDIER stamp.",
+  "t": {
+   "bg": "plain",
+   "time": "day",
+   "wash": [
+    "gold"
+   ],
+   "who": "stein",
+   "pose": "salute",
+   "face": "steel",
+   "feature": [
+    "spotlight"
+   ]
+  }
+ },
+ {
+  "n": 24,
+  "tag": "Beholds us",
+  "state": "Precious",
+  "move": "Smoke wipe",
+  "scene": "Dusk: a hotpink thread with hearts on it runs from his hand to hers.",
+  "t": {
+   "bg": "sky",
+   "time": "dusk",
+   "who": "both",
+   "x": 250,
+   "kidX": 830,
+   "pose": "point",
+   "kidPose": "point",
+   "face": "calm",
+   "kidFace": "calm",
+   "feature": [
+    "thread",
+    "stars"
+   ]
+  }
+ },
+ {
+  "n": 25,
+  "tag": "Still holds",
+  "state": "Precious",
+  "move": "Stamp cut",
+  "scene": "The same thread, closer, hearts rising.",
+  "t": {
+   "bg": "sky",
+   "time": "dusk",
+   "who": "both",
+   "x": 250,
+   "kidX": 830,
+   "pose": "point",
+   "kidPose": "point",
+   "face": "grin",
+   "kidFace": "joy",
+   "feature": [
+    "thread",
+    "stars",
+    "hearts"
+   ],
+   "zoom": "mid"
+  }
+ },
+ {
+  "n": 26,
+  "tag": "On my way",
+  "state": "Release",
+  "move": "Registration snap",
+  "scene": "Dawn road, a signpost reading HOME; he walks with his bag.",
+  "t": {
+   "bg": "road",
+   "time": "dawn",
+   "who": "stein",
+   "x": 380,
+   "action": "walk",
+   "face": "hope",
+   "hold": "bag",
+   "feature": [
+    "sun",
+    "sign"
+   ],
+   "sign": "HOME",
+   "sun": 0.25
+  }
+ },
+ {
+  "n": 27,
+  "tag": "I said",
+  "state": "Release",
+  "move": "Stamp cut",
+  "scene": "He runs now; the sun climbs.",
+  "t": {
+   "bg": "road",
+   "time": "dawn",
+   "who": "stein",
+   "action": "run",
+   "face": "joy",
+   "hold": "bag",
+   "feature": [
+    "sun"
+   ],
+   "sun": [
+    0.3,
+    0.4
+   ]
+  }
+ },
+ {
+  "n": 28,
+  "tag": "My way now",
+  "state": "Release",
+  "move": "Stamp cut",
+  "scene": "Close on his face, running.",
+  "t": {
+   "bg": "road",
+   "time": "dawn",
+   "who": "stein",
+   "action": "run",
+   "face": "steel",
+   "feature": [
+    "sun"
+   ],
+   "sun": 0.45,
+   "zoom": "close"
+  }
+ },
+ {
+  "n": 29,
+  "tag": "Calendar",
+  "state": "Release",
+  "move": "Print roll",
+  "scene": "The calendar again, pages flipping toward the circled day.",
+  "t": {
+   "bg": "plain",
+   "time": "day",
+   "wash": [
+    "gold",
+    "pink"
+   ],
+   "who": "none",
+   "feature": [
+    "calendar"
+   ],
+   "calendarDay": 23
+  }
+ },
+ {
+  "n": 30,
+  "tag": "Big one day",
+  "state": "Release",
+  "move": "Stamp cut",
+  "scene": "Arms up at dawn; ONE DAY in foil.",
+  "t": {
+   "bg": "sky",
+   "time": "dawn",
+   "who": "stein",
+   "pose": "armsUp",
+   "face": "shout",
+   "feature": [
+    "sun"
+   ],
+   "sun": [
+    0.4,
+    0.6
+   ],
+   "big": "one day",
+   "bigAt": 4,
+   "bigY": 400
+  }
+ },
+ {
+  "n": 31,
+  "tag": "Waiting",
+  "state": "Precious",
+  "move": "Stamp cut",
+  "scene": "Ashaka waves at the end of the road; he walks to her.",
+  "t": {
+   "bg": "road",
+   "time": "day",
+   "who": "both",
+   "kidX": 880,
+   "action": "walk",
+   "travel": [
+    200,
+    440
+   ],
+   "kidPose": "wave",
+   "face": "joy",
+   "kidFace": "joy",
+   "feature": [
+    "sun"
+   ],
+   "sun": 0.7
+  }
+ },
+ {
+  "n": 32,
+  "tag": "Louder",
+  "state": "Release",
+  "move": "Registration snap",
+  "scene": "Arms up by day; ONE DAY in foil, confetti.",
+  "t": {
+   "bg": "sky",
+   "time": "day",
+   "who": "stein",
+   "pose": "armsUp",
+   "face": "shout",
+   "feature": [
+    "sun",
+    "confetti"
+   ],
+   "sun": 0.75,
+   "big": "one day",
+   "bigAt": 4,
+   "bigY": 400
+  }
+ },
+ {
+  "n": 33,
+  "tag": "That day",
+  "state": "Release",
+  "move": "Stamp cut",
+  "scene": "He points at the circled day.",
+  "t": {
+   "bg": "plain",
+   "time": "day",
+   "wash": [
+    "gold"
+   ],
+   "who": "stein",
+   "x": 280,
+   "pose": "point",
+   "face": "grin",
+   "feature": [
+    "calendar"
+   ],
+   "calendarDay": 23,
+   "calendarAt": [
+    760,
+    800,
+    0.62
+   ]
+  }
+ },
+ {
+  "n": 34,
+  "tag": "She knows",
+  "state": "Precious",
+  "move": "Stamp cut",
+  "scene": "Both of them point at the circled day.",
+  "t": {
+   "bg": "plain",
+   "time": "day",
+   "wash": [
+    "pink"
+   ],
+   "who": "both",
+   "x": 230,
+   "kidX": 600,
+   "pose": "point",
+   "kidPose": "point",
+   "face": "grin",
+   "kidFace": "joy",
+   "feature": [
+    "calendar"
+   ],
+   "calendarDay": 23,
+   "calendarAt": [
+    820,
+    820,
+    0.56
+   ]
+  }
+ },
+ {
+  "n": 35,
+  "tag": "Never too far",
+  "state": "Precious",
+  "move": "Smoke wipe",
+  "scene": "A paper map: a dotted route draws from him to her.",
+  "t": {
+   "bg": "plain",
+   "time": "day",
+   "wash": [
+    "aqua",
+    "pink"
+   ],
+   "who": "none",
+   "feature": [
+    "map"
+   ],
+   "note": "never too far.",
+   "noteAt": 0,
+   "noteXY": [
+    540,
+    440
+   ],
+   "noteSize": 60
+  }
+ },
+ {
+  "n": 36,
+  "tag": "With you",
+  "state": "Precious",
+  "move": "Stamp cut",
+  "scene": "Together in the field; hearts; 'one day' pops on every ad-lib.",
+  "t": {
+   "bg": "field",
+   "time": "day",
+   "who": "both",
+   "x": 400,
+   "kidX": 680,
+   "pose": "hug",
+   "kidPose": "armsUp",
+   "face": "joy",
+   "kidFace": "joy",
+   "feature": [
+    "hearts",
+    "sun"
+   ],
+   "sun": 0.8,
+   "echo": "one day"
+  }
+ },
+ {
+  "n": 37,
+  "tag": "Go away",
+  "state": "Absence",
+  "move": "Smoke wipe",
+  "scene": "Night street: he walks off right; Ashaka, small, stays left.",
+  "t": {
+   "bg": "street",
+   "time": "night",
+   "who": "both",
+   "kidX": 140,
+   "kidScale": 0.6,
+   "action": "walk",
+   "travel": [
+    420,
+    1000
+   ],
+   "face": "sad",
+   "kidFace": "sad"
+  }
+ },
+ {
+  "n": 38,
+  "tag": "Wrong, right",
+  "state": "Memory",
+  "move": "Stamp cut",
+  "scene": "The page splits: night on the left, day on the right, him in the middle.",
+  "t": {
+   "bg": "plain",
+   "time": "day",
+   "who": "stein",
+   "pose": "stand",
+   "face": "doubt",
+   "feature": [
+    "split"
+   ]
+  }
+ },
+ {
+  "n": 39,
+  "tag": "Find my light",
+  "state": "Memory",
+  "move": "Registration snap",
+  "scene": "He sits up in bed at night; the lamp switches on at 'light'.",
+  "t": {
+   "bg": "room",
+   "time": "night",
+   "who": "stein",
+   "pose": "sit",
+   "face": "tired",
+   "feature": [
+    "bed",
+    "lamp"
+   ],
+   "lampAt": 6
+  }
+ },
+ {
+  "n": 40,
+  "tag": "Silly crimes",
+  "state": "Absence",
+  "move": "Stamp cut",
+  "scene": "He walks away from smoke drifting up behind him.",
+  "t": {
+   "bg": "street",
+   "time": "night",
+   "who": "stein",
+   "action": "walk",
+   "face": "steel",
+   "feature": [
+    "smoke"
+   ]
+  }
+ },
+ {
+  "n": 41,
+  "tag": "Pray",
+  "state": "Memory",
+  "move": "Smoke wipe",
+  "scene": "He kneels, hands together, lit from above.",
+  "t": {
+   "bg": "plain",
+   "time": "dusk",
+   "wash": [
+    "slate"
+   ],
+   "who": "stein",
+   "pose": "pray",
+   "face": "closed",
+   "feature": [
+    "light"
+   ]
+  }
+ },
+ {
+  "n": 42,
+  "tag": "Nobody came",
+  "state": "Absence",
+  "move": "Stamp cut",
+  "scene": "He sits on the kerb alone under the streetlight.",
+  "t": {
+   "bg": "street",
+   "time": "night",
+   "who": "stein",
+   "pose": "sit",
+   "face": "sad",
+   "note": "nobody.",
+   "noteAt": 1,
+   "noteXY": [
+    300,
+    520
+   ]
+  }
+ },
+ {
+  "n": 43,
+  "tag": "Got it going?",
+  "state": "Absence",
+  "move": "Stamp cut",
+  "scene": "He shrugs; a question mark in a thought bubble.",
+  "t": {
+   "bg": "plain",
+   "time": "dusk",
+   "wash": [
+    "slate",
+    "pink"
+   ],
+   "who": "stein",
+   "pose": "shrug",
+   "face": "doubt",
+   "feature": [
+    "bubbleQ"
+   ]
+  }
+ },
+ {
+  "n": 44,
+  "tag": "Going?",
+  "state": "Absence",
+  "move": "Stamp cut",
+  "scene": "Closer on the doubt.",
+  "t": {
+   "bg": "plain",
+   "time": "dusk",
+   "wash": [
+    "slate",
+    "pink"
+   ],
+   "who": "stein",
+   "pose": "shrug",
+   "face": "doubt",
+   "feature": [
+    "bubbleQ"
+   ],
+   "zoom": "close"
+  }
+ },
+ {
+  "n": 45,
+  "tag": "Sunrise",
+  "state": "Release",
+  "move": "Print roll",
+  "scene": "The sun climbs with every 'one day'; arms up.",
+  "t": {
+   "bg": "sky",
+   "time": "dawn",
+   "who": "stein",
+   "pose": "armsUp",
+   "face": "shout",
+   "feature": [
+    "sun"
+   ],
+   "sun": [
+    0.15,
+    0.6
+   ],
+   "echo": "one day"
+  }
+ },
+ {
+  "n": 46,
+  "tag": "It's coming",
+  "state": "Release",
+  "move": "Stamp cut",
+  "scene": "They run toward each other down the road.",
+  "t": {
+   "bg": "road",
+   "time": "day",
+   "who": "both",
+   "action": "run",
+   "travel": [
+    120,
+    430
+   ],
+   "kidTravel": [
+    960,
+    650
+   ],
+   "face": "joy",
+   "kidFace": "joy",
+   "feature": [
+    "sun"
+   ],
+   "sun": 0.7,
+   "echo": "it's coming"
+  }
+ },
+ {
+  "n": 47,
+  "tag": "One day!",
+  "state": "Release",
+  "move": "Registration snap",
+  "scene": "Arms up, confetti, 'one day' popping.",
+  "t": {
+   "bg": "sky",
+   "time": "day",
+   "who": "stein",
+   "pose": "armsUp",
+   "face": "shout",
+   "feature": [
+    "sun",
+    "confetti"
+   ],
+   "sun": 0.8,
+   "echo": "one day"
+  }
+ },
+ {
+  "n": 48,
+  "tag": "Together",
+  "state": "Release",
+  "move": "Stamp cut",
+  "scene": "Together in the field under a high sun; hearts.",
+  "t": {
+   "bg": "field",
+   "time": "day",
+   "who": "both",
+   "x": 430,
+   "kidX": 650,
+   "pose": "hug",
+   "kidPose": "armsUp",
+   "face": "joy",
+   "kidFace": "joy",
+   "feature": [
+    "sun",
+    "hearts"
+   ],
+   "sun": 0.85
+  }
+ },
+ {
+  "n": -1,
+  "tag": "One day",
+  "state": "Release",
+  "move": "Smoke wipe",
+  "scene": "Epilogue over the instrumental: they walk off down the road into the sun; the end card; the page folds shut.",
+  "t": {
+   "bg": "road",
+   "time": "day",
+   "who": "both",
+   "action": "walk",
+   "travel": [
+    380,
+    1300
+   ],
+   "kidTravel": [
+    640,
+    1480
+   ],
+   "face": "joy",
+   "kidFace": "joy",
+   "feature": [
+    "sun"
+   ],
+   "sun": [
+    0.85,
+    0.95
+   ]
+  }
+ }
+]

@@ -1,0 +1,1622 @@
+[
+ {
+  "i": 0,
+  "section": "Intro",
+  "text": "Na na na na na na na",
+  "start": 4.6,
+  "end": 8.2,
+  "words": [
+   {
+    "w": "Na",
+    "t": 4.77
+   },
+   {
+    "w": "na",
+    "t": 5.1
+   },
+   {
+    "w": "na",
+    "t": 5.45
+   },
+   {
+    "w": "na",
+    "t": 5.8
+   },
+   {
+    "w": "na",
+    "t": 6.15
+   },
+   {
+    "w": "na",
+    "t": 6.5
+   },
+   {
+    "w": "na",
+    "t": 6.9
+   }
+  ]
+ },
+ {
+  "i": 1,
+  "section": "Intro",
+  "text": "I see what I want",
+  "start": 9.27,
+  "end": 10.91,
+  "words": [
+   {
+    "w": "I",
+    "t": 9.27
+   },
+   {
+    "w": "see",
+    "t": 9.59
+   },
+   {
+    "w": "what",
+    "t": 9.91
+   },
+   {
+    "w": "I",
+    "t": 10.15
+   },
+   {
+    "w": "want",
+    "t": 10.31
+   }
+  ]
+ },
+ {
+  "i": 2,
+  "section": "Intro",
+  "text": "I see what I want",
+  "start": 11.85,
+  "end": 13.57,
+  "words": [
+   {
+    "w": "I",
+    "t": 12.65
+   },
+   {
+    "w": "see",
+    "t": 12.73
+   },
+   {
+    "w": "what",
+    "t": 12.81
+   },
+   {
+    "w": "I",
+    "t": 12.89
+   },
+   {
+    "w": "want",
+    "t": 12.97
+   }
+  ]
+ },
+ {
+  "i": 3,
+  "section": "Intro",
+  "text": "You know what I want",
+  "start": 14.47,
+  "end": 16.19,
+  "words": [
+   {
+    "w": "You",
+    "t": 14.47
+   },
+   {
+    "w": "know",
+    "t": 14.71
+   },
+   {
+    "w": "what",
+    "t": 15.03
+   },
+   {
+    "w": "I",
+    "t": 15.35
+   },
+   {
+    "w": "want",
+    "t": 15.59
+   }
+  ]
+ },
+ {
+  "i": 4,
+  "section": "Verse 1",
+  "text": "I know one day it's coming",
+  "start": 20.17,
+  "end": 23.97,
+  "words": [
+   {
+    "w": "I",
+    "t": 20.17
+   },
+   {
+    "w": "know",
+    "t": 20.49
+   },
+   {
+    "w": "one",
+    "t": 20.81
+   },
+   {
+    "w": "day",
+    "t": 21.21
+   },
+   {
+    "w": "it's",
+    "t": 22.81
+   },
+   {
+    "w": "coming",
+    "t": 23.37
+   }
+  ]
+ },
+ {
+  "i": 5,
+  "section": "Verse 1",
+  "text": "I know one day it's coming",
+  "start": 25.41,
+  "end": 29.13,
+  "words": [
+   {
+    "w": "I",
+    "t": 25.41
+   },
+   {
+    "w": "know",
+    "t": 25.57
+   },
+   {
+    "w": "one",
+    "t": 25.89
+   },
+   {
+    "w": "day",
+    "t": 26.37
+   },
+   {
+    "w": "it's",
+    "t": 27.97
+   },
+   {
+    "w": "coming",
+    "t": 28.53
+   }
+  ]
+ },
+ {
+  "i": 6,
+  "section": "Verse 1",
+  "text": "I know one day it's coming",
+  "start": 30.05,
+  "end": 34.25,
+  "words": [
+   {
+    "w": "I",
+    "t": 30.05
+   },
+   {
+    "w": "know",
+    "t": 30.21
+   },
+   {
+    "w": "one",
+    "t": 30.85
+   },
+   {
+    "w": "day",
+    "t": 31.33
+   },
+   {
+    "w": "it's",
+    "t": 32.93
+   },
+   {
+    "w": "coming",
+    "t": 33.65
+   }
+  ]
+ },
+ {
+  "i": 7,
+  "section": "Verse 1",
+  "text": "And I will celebrate",
+  "start": 35.49,
+  "end": 36.65,
+  "words": [
+   {
+    "w": "And",
+    "t": 35.49
+   },
+   {
+    "w": "I",
+    "t": 35.65
+   },
+   {
+    "w": "will",
+    "t": 35.81
+   },
+   {
+    "w": "celebrate",
+    "t": 36.05
+   }
+  ]
+ },
+ {
+  "i": 8,
+  "section": "Verse 1",
+  "text": "Come on, let's celebrate",
+  "start": 37.49,
+  "end": 39.05,
+  "words": [
+   {
+    "w": "Come",
+    "t": 37.49
+   },
+   {
+    "w": "on,",
+    "t": 37.81
+   },
+   {
+    "w": "let's",
+    "t": 38.13
+   },
+   {
+    "w": "celebrate",
+    "t": 38.45
+   }
+  ]
+ },
+ {
+  "i": 9,
+  "section": "Verse 1",
+  "text": "Hey, Ashaka, I miss you",
+  "start": 40.75,
+  "end": 43.59,
+  "words": [
+   {
+    "w": "Hey,",
+    "t": 40.75
+   },
+   {
+    "w": "Ashaka,",
+    "t": 41.47
+   },
+   {
+    "w": "I",
+    "t": 42.43
+   },
+   {
+    "w": "miss",
+    "t": 42.59
+   },
+   {
+    "w": "you",
+    "t": 42.99
+   }
+  ]
+ },
+ {
+  "i": 10,
+  "section": "Verse 1",
+  "text": "Daughter, I miss you too",
+  "start": 44.35,
+  "end": 46.47,
+  "words": [
+   {
+    "w": "Daughter,",
+    "t": 44.35
+   },
+   {
+    "w": "I",
+    "t": 44.91
+   },
+   {
+    "w": "miss",
+    "t": 45.15
+   },
+   {
+    "w": "you",
+    "t": 45.63
+   },
+   {
+    "w": "too",
+    "t": 45.87
+   }
+  ]
+ },
+ {
+  "i": 11,
+  "section": "Verse 1",
+  "text": "But I had to run now",
+  "start": 46.75,
+  "end": 48.63,
+  "words": [
+   {
+    "w": "But",
+    "t": 46.75
+   },
+   {
+    "w": "I",
+    "t": 46.91
+   },
+   {
+    "w": "had",
+    "t": 47.07
+   },
+   {
+    "w": "to",
+    "t": 47.31
+   },
+   {
+    "w": "run",
+    "t": 47.79
+   },
+   {
+    "w": "now",
+    "t": 48.03
+   }
+  ]
+ },
+ {
+  "i": 12,
+  "section": "Verse 1",
+  "text": "'Cause I had to hold my issues",
+  "start": 48.99,
+  "end": 51.51,
+  "words": [
+   {
+    "w": "'Cause",
+    "t": 48.99
+   },
+   {
+    "w": "I",
+    "t": 49.39
+   },
+   {
+    "w": "had",
+    "t": 49.63
+   },
+   {
+    "w": "to",
+    "t": 49.87
+   },
+   {
+    "w": "hold",
+    "t": 50.11
+   },
+   {
+    "w": "my",
+    "t": 50.51
+   },
+   {
+    "w": "issues",
+    "t": 50.76
+   }
+  ]
+ },
+ {
+  "i": 13,
+  "section": "Verse 1",
+  "text": "Had to hold my shoes",
+  "start": 52.11,
+  "end": 54.07,
+  "words": [
+   {
+    "w": "Had",
+    "t": 52.11
+   },
+   {
+    "w": "to",
+    "t": 52.43
+   },
+   {
+    "w": "hold",
+    "t": 52.67
+   },
+   {
+    "w": "my",
+    "t": 53.15
+   },
+   {
+    "w": "shoes",
+    "t": 53.47
+   }
+  ]
+ },
+ {
+  "i": 14,
+  "section": "Verse 1",
+  "text": "When the soles were torn out",
+  "start": 54.51,
+  "end": 56.87,
+  "words": [
+   {
+    "w": "When",
+    "t": 54.51
+   },
+   {
+    "w": "the",
+    "t": 54.75
+   },
+   {
+    "w": "soles",
+    "t": 54.91
+   },
+   {
+    "w": "were",
+    "t": 55.47
+   },
+   {
+    "w": "torn",
+    "t": 55.63
+   },
+   {
+    "w": "out",
+    "t": 56.27
+   }
+  ]
+ },
+ {
+  "i": 15,
+  "section": "Verse 1",
+  "text": "Nobody showed up",
+  "start": 57.35,
+  "end": 59.39,
+  "words": [
+   {
+    "w": "Nobody",
+    "t": 57.35
+   },
+   {
+    "w": "showed",
+    "t": 58.15
+   },
+   {
+    "w": "up",
+    "t": 58.79
+   }
+  ]
+ },
+ {
+  "i": 16,
+  "section": "Verse 1",
+  "text": "But now I'm turned out",
+  "start": 59.77,
+  "end": 62.13,
+  "words": [
+   {
+    "w": "But",
+    "t": 59.77
+   },
+   {
+    "w": "now",
+    "t": 60.17
+   },
+   {
+    "w": "I'm",
+    "t": 60.41
+   },
+   {
+    "w": "turned",
+    "t": 60.89
+   },
+   {
+    "w": "out",
+    "t": 61.53
+   }
+  ]
+ },
+ {
+  "i": 17,
+  "section": "Verse 1",
+  "text": "And I go on my dreams now",
+  "start": 62.17,
+  "end": 64.45,
+  "words": [
+   {
+    "w": "And",
+    "t": 62.17
+   },
+   {
+    "w": "I",
+    "t": 62.41
+   },
+   {
+    "w": "go",
+    "t": 62.57
+   },
+   {
+    "w": "on",
+    "t": 62.97
+   },
+   {
+    "w": "my",
+    "t": 63.21
+   },
+   {
+    "w": "dreams",
+    "t": 63.45
+   },
+   {
+    "w": "now",
+    "t": 63.85
+   }
+  ]
+ },
+ {
+  "i": 18,
+  "section": "Verse 1",
+  "text": "And I hustle when I can",
+  "start": 64.73,
+  "end": 67.09,
+  "words": [
+   {
+    "w": "And",
+    "t": 64.73
+   },
+   {
+    "w": "I",
+    "t": 64.97
+   },
+   {
+    "w": "hustle",
+    "t": 65.13
+   },
+   {
+    "w": "when",
+    "t": 66.01
+   },
+   {
+    "w": "I",
+    "t": 66.25
+   },
+   {
+    "w": "can",
+    "t": 66.49
+   }
+  ]
+ },
+ {
+  "i": 19,
+  "section": "Verse 1",
+  "text": "I live by all the water",
+  "start": 67.45,
+  "end": 69.25,
+  "words": [
+   {
+    "w": "I",
+    "t": 67.45
+   },
+   {
+    "w": "live",
+    "t": 67.77
+   },
+   {
+    "w": "by",
+    "t": 68.09
+   },
+   {
+    "w": "all",
+    "t": 68.25
+   },
+   {
+    "w": "the",
+    "t": 68.41
+   },
+   {
+    "w": "water",
+    "t": 68.65
+   }
+  ]
+ },
+ {
+  "i": 20,
+  "section": "Verse 1",
+  "text": "I can drink when I want to",
+  "start": 70.01,
+  "end": 72.05,
+  "words": [
+   {
+    "w": "I",
+    "t": 70.01
+   },
+   {
+    "w": "can",
+    "t": 70.17
+   },
+   {
+    "w": "drink",
+    "t": 70.33
+   },
+   {
+    "w": "when",
+    "t": 70.73
+   },
+   {
+    "w": "I",
+    "t": 70.97
+   },
+   {
+    "w": "want",
+    "t": 71.21
+   },
+   {
+    "w": "to",
+    "t": 71.45
+   }
+  ]
+ },
+ {
+  "i": 21,
+  "section": "Verse 1",
+  "text": "Trust me, the pain is holding",
+  "start": 72.33,
+  "end": 74.29,
+  "words": [
+   {
+    "w": "Trust",
+    "t": 72.33
+   },
+   {
+    "w": "me,",
+    "t": 72.65
+   },
+   {
+    "w": "the",
+    "t": 72.89
+   },
+   {
+    "w": "pain",
+    "t": 73.05
+   },
+   {
+    "w": "is",
+    "t": 73.45
+   },
+   {
+    "w": "holding",
+    "t": 73.69
+   }
+  ]
+ },
+ {
+  "i": 22,
+  "section": "Verse 1",
+  "text": "Trust me, I know I'm a soldier",
+  "start": 74.85,
+  "end": 76.89,
+  "words": [
+   {
+    "w": "Trust",
+    "t": 74.85
+   },
+   {
+    "w": "me,",
+    "t": 75.25
+   },
+   {
+    "w": "I",
+    "t": 75.57
+   },
+   {
+    "w": "know",
+    "t": 75.73
+   },
+   {
+    "w": "I'm",
+    "t": 75.89
+   },
+   {
+    "w": "a",
+    "t": 76.13
+   },
+   {
+    "w": "soldier",
+    "t": 76.29
+   }
+  ]
+ },
+ {
+  "i": 23,
+  "section": "Verse 1",
+  "text": "But know this, it's beholds us",
+  "start": 77.49,
+  "end": 79.49,
+  "words": [
+   {
+    "w": "But",
+    "t": 77.49
+   },
+   {
+    "w": "know",
+    "t": 77.65
+   },
+   {
+    "w": "this,",
+    "t": 77.97
+   },
+   {
+    "w": "it's",
+    "t": 78.29
+   },
+   {
+    "w": "beholds",
+    "t": 78.61
+   },
+   {
+    "w": "us",
+    "t": 79.17
+   }
+  ]
+ },
+ {
+  "i": 24,
+  "section": "Verse 1",
+  "text": "It's beholds us",
+  "start": 79.49,
+  "end": 81.05,
+  "words": [
+   {
+    "w": "It's",
+    "t": 79.49
+   },
+   {
+    "w": "beholds",
+    "t": 79.73
+   },
+   {
+    "w": "us",
+    "t": 80.45
+   }
+  ]
+ },
+ {
+  "i": 25,
+  "section": "Verse 1",
+  "text": "Hey, I'm on my way now",
+  "start": 81.73,
+  "end": 84.33,
+  "words": [
+   {
+    "w": "Hey,",
+    "t": 81.73
+   },
+   {
+    "w": "I'm",
+    "t": 83.01
+   },
+   {
+    "w": "on",
+    "t": 83.19
+   },
+   {
+    "w": "my",
+    "t": 83.37
+   },
+   {
+    "w": "way",
+    "t": 83.55
+   },
+   {
+    "w": "now",
+    "t": 83.73
+   }
+  ]
+ },
+ {
+  "i": 26,
+  "section": "Verse 1",
+  "text": "I said I'm on my way now",
+  "start": 85.33,
+  "end": 86.89,
+  "words": [
+   {
+    "w": "I",
+    "t": 85.33
+   },
+   {
+    "w": "said",
+    "t": 85.49
+   },
+   {
+    "w": "I'm",
+    "t": 85.73
+   },
+   {
+    "w": "on",
+    "t": 85.87
+   },
+   {
+    "w": "my",
+    "t": 86.01
+   },
+   {
+    "w": "way",
+    "t": 86.15
+   },
+   {
+    "w": "now",
+    "t": 86.29
+   }
+  ]
+ },
+ {
+  "i": 27,
+  "section": "Verse 1",
+  "text": "I'm on my way now",
+  "start": 88.13,
+  "end": 89.45,
+  "words": [
+   {
+    "w": "I'm",
+    "t": 88.13
+   },
+   {
+    "w": "on",
+    "t": 88.31
+   },
+   {
+    "w": "my",
+    "t": 88.49
+   },
+   {
+    "w": "way",
+    "t": 88.67
+   },
+   {
+    "w": "now",
+    "t": 88.85
+   }
+  ]
+ },
+ {
+  "i": 28,
+  "section": "Chorus",
+  "text": "'Cause I know one day it's coming",
+  "start": 91.45,
+  "end": 95.57,
+  "words": [
+   {
+    "w": "'Cause",
+    "t": 91.45
+   },
+   {
+    "w": "I",
+    "t": 91.85
+   },
+   {
+    "w": "know",
+    "t": 92.01
+   },
+   {
+    "w": "one",
+    "t": 92.33
+   },
+   {
+    "w": "day",
+    "t": 92.73
+   },
+   {
+    "w": "it's",
+    "t": 94.33
+   },
+   {
+    "w": "coming",
+    "t": 94.97
+   }
+  ]
+ },
+ {
+  "i": 29,
+  "section": "Chorus",
+  "text": "I said I know one day it's coming",
+  "start": 96.49,
+  "end": 100.77,
+  "words": [
+   {
+    "w": "I",
+    "t": 96.49
+   },
+   {
+    "w": "said",
+    "t": 96.65
+   },
+   {
+    "w": "I",
+    "t": 96.97
+   },
+   {
+    "w": "know",
+    "t": 97.13
+   },
+   {
+    "w": "one",
+    "t": 97.45
+   },
+   {
+    "w": "day",
+    "t": 97.69
+   },
+   {
+    "w": "it's",
+    "t": 99.53
+   },
+   {
+    "w": "coming",
+    "t": 100.17
+   }
+  ]
+ },
+ {
+  "i": 30,
+  "section": "Chorus",
+  "text": "One day it's coming",
+  "start": 102.65,
+  "end": 105.89,
+  "words": [
+   {
+    "w": "One",
+    "t": 102.65
+   },
+   {
+    "w": "day",
+    "t": 103.13
+   },
+   {
+    "w": "it's",
+    "t": 104.57
+   },
+   {
+    "w": "coming",
+    "t": 105.29
+   }
+  ]
+ },
+ {
+  "i": 31,
+  "section": "Chorus",
+  "text": "I said I know one day it's coming",
+  "start": 106.73,
+  "end": 111.01,
+  "words": [
+   {
+    "w": "I",
+    "t": 106.73
+   },
+   {
+    "w": "said",
+    "t": 106.89
+   },
+   {
+    "w": "I",
+    "t": 107.13
+   },
+   {
+    "w": "know",
+    "t": 107.29
+   },
+   {
+    "w": "one",
+    "t": 107.77
+   },
+   {
+    "w": "day",
+    "t": 108.17
+   },
+   {
+    "w": "it's",
+    "t": 109.69
+   },
+   {
+    "w": "coming",
+    "t": 110.41
+   }
+  ]
+ },
+ {
+  "i": 32,
+  "section": "Chorus",
+  "text": "I know one day",
+  "start": 112.25,
+  "end": 113.89,
+  "words": [
+   {
+    "w": "I",
+    "t": 112.25
+   },
+   {
+    "w": "know",
+    "t": 112.57
+   },
+   {
+    "w": "one",
+    "t": 112.89
+   },
+   {
+    "w": "day",
+    "t": 113.29
+   }
+  ]
+ },
+ {
+  "i": 33,
+  "section": "Chorus",
+  "text": "I said I know one day",
+  "start": 114.25,
+  "end": 116.37,
+  "words": [
+   {
+    "w": "I",
+    "t": 114.25
+   },
+   {
+    "w": "said",
+    "t": 114.41
+   },
+   {
+    "w": "I",
+    "t": 114.81
+   },
+   {
+    "w": "know",
+    "t": 114.97
+   },
+   {
+    "w": "one",
+    "t": 115.29
+   },
+   {
+    "w": "day",
+    "t": 115.77
+   }
+  ]
+ },
+ {
+  "i": 34,
+  "section": "Chorus",
+  "text": "Never too far, but one day",
+  "start": 116.6,
+  "end": 120.6,
+  "words": [
+   {
+    "w": "Never",
+    "t": 116.73
+   },
+   {
+    "w": "too",
+    "t": 117.21
+   },
+   {
+    "w": "far,",
+    "t": 117.69
+   },
+   {
+    "w": "but",
+    "t": 119.41
+   },
+   {
+    "w": "one",
+    "t": 119.81
+   },
+   {
+    "w": "day",
+    "t": 120.29
+   }
+  ]
+ },
+ {
+  "i": 35,
+  "section": "Chorus",
+  "text": "I'm with you one day",
+  "start": 121.7,
+  "end": 123.3,
+  "words": [
+   {
+    "w": "I'm",
+    "t": 121.81
+   },
+   {
+    "w": "with",
+    "t": 122.1
+   },
+   {
+    "w": "you",
+    "t": 122.4
+   },
+   {
+    "w": "one",
+    "t": 122.75
+   },
+   {
+    "w": "day",
+    "t": 123.09
+   }
+  ]
+ },
+ {
+  "i": 36,
+  "section": "Bridge",
+  "text": "Had to go away, had to live this life",
+  "start": 133.37,
+  "end": 135.93,
+  "words": [
+   {
+    "w": "Had",
+    "t": 133.37
+   },
+   {
+    "w": "to",
+    "t": 133.53
+   },
+   {
+    "w": "go",
+    "t": 133.77
+   },
+   {
+    "w": "away,",
+    "t": 133.93
+   },
+   {
+    "w": "had",
+    "t": 134.65
+   },
+   {
+    "w": "to",
+    "t": 134.81
+   },
+   {
+    "w": "live",
+    "t": 134.97
+   },
+   {
+    "w": "this",
+    "t": 135.21
+   },
+   {
+    "w": "life",
+    "t": 135.37
+   }
+  ]
+ },
+ {
+  "i": 37,
+  "section": "Bridge",
+  "text": "Had to do what's wrong to see what's right",
+  "start": 135.93,
+  "end": 138.49,
+  "words": [
+   {
+    "w": "Had",
+    "t": 135.93
+   },
+   {
+    "w": "to",
+    "t": 136.09
+   },
+   {
+    "w": "do",
+    "t": 136.25
+   },
+   {
+    "w": "what's",
+    "t": 136.41
+   },
+   {
+    "w": "wrong",
+    "t": 136.65
+   },
+   {
+    "w": "to",
+    "t": 137.21
+   },
+   {
+    "w": "see",
+    "t": 137.37
+   },
+   {
+    "w": "what's",
+    "t": 137.61
+   },
+   {
+    "w": "right",
+    "t": 137.93
+   }
+  ]
+ },
+ {
+  "i": 38,
+  "section": "Bridge",
+  "text": "Wake in the night, find my light",
+  "start": 138.49,
+  "end": 141.01,
+  "words": [
+   {
+    "w": "Wake",
+    "t": 138.49
+   },
+   {
+    "w": "in",
+    "t": 138.81
+   },
+   {
+    "w": "the",
+    "t": 138.97
+   },
+   {
+    "w": "night,",
+    "t": 139.13
+   },
+   {
+    "w": "find",
+    "t": 139.77
+   },
+   {
+    "w": "my",
+    "t": 140.17
+   },
+   {
+    "w": "light",
+    "t": 140.41
+   }
+  ]
+ },
+ {
+  "i": 39,
+  "section": "Bridge",
+  "text": "Just to get away from these silly crimes",
+  "start": 141.05,
+  "end": 143.53,
+  "words": [
+   {
+    "w": "Just",
+    "t": 141.05
+   },
+   {
+    "w": "to",
+    "t": 141.29
+   },
+   {
+    "w": "get",
+    "t": 141.45
+   },
+   {
+    "w": "away",
+    "t": 141.69
+   },
+   {
+    "w": "from",
+    "t": 142.17
+   },
+   {
+    "w": "these",
+    "t": 142.41
+   },
+   {
+    "w": "silly",
+    "t": 142.65
+   },
+   {
+    "w": "crimes",
+    "t": 142.97
+   }
+  ]
+ },
+ {
+  "i": 40,
+  "section": "Bridge",
+  "text": "I used to hustle hard, used to pray for more",
+  "start": 143.53,
+  "end": 146.09,
+  "words": [
+   {
+    "w": "I",
+    "t": 143.53
+   },
+   {
+    "w": "used",
+    "t": 143.69
+   },
+   {
+    "w": "to",
+    "t": 143.77
+   },
+   {
+    "w": "hustle",
+    "t": 143.93
+   },
+   {
+    "w": "hard,",
+    "t": 144.33
+   },
+   {
+    "w": "used",
+    "t": 144.89
+   },
+   {
+    "w": "to",
+    "t": 145.05
+   },
+   {
+    "w": "pray",
+    "t": 145.21
+   },
+   {
+    "w": "for",
+    "t": 145.45
+   },
+   {
+    "w": "more",
+    "t": 145.61
+   }
+  ]
+ },
+ {
+  "i": 41,
+  "section": "Bridge",
+  "text": "But nobody came, nobody fell",
+  "start": 146.09,
+  "end": 148.61,
+  "words": [
+   {
+    "w": "But",
+    "t": 146.09
+   },
+   {
+    "w": "nobody",
+    "t": 146.33
+   },
+   {
+    "w": "came,",
+    "t": 146.81
+   },
+   {
+    "w": "nobody",
+    "t": 147.53
+   },
+   {
+    "w": "fell",
+    "t": 148.01
+   }
+  ]
+ },
+ {
+  "i": 42,
+  "section": "Bridge",
+  "text": "And I just want to know if I got it going",
+  "start": 148.65,
+  "end": 151.37,
+  "words": [
+   {
+    "w": "And",
+    "t": 148.65
+   },
+   {
+    "w": "I",
+    "t": 148.81
+   },
+   {
+    "w": "just",
+    "t": 148.97
+   },
+   {
+    "w": "want",
+    "t": 149.13
+   },
+   {
+    "w": "to",
+    "t": 149.33
+   },
+   {
+    "w": "know",
+    "t": 149.53
+   },
+   {
+    "w": "if",
+    "t": 149.93
+   },
+   {
+    "w": "I",
+    "t": 150.17
+   },
+   {
+    "w": "got",
+    "t": 150.41
+   },
+   {
+    "w": "it",
+    "t": 150.57
+   },
+   {
+    "w": "going",
+    "t": 150.81
+   }
+  ]
+ },
+ {
+  "i": 43,
+  "section": "Bridge",
+  "text": "If I got it going",
+  "start": 151.37,
+  "end": 152.65,
+  "words": [
+   {
+    "w": "If",
+    "t": 151.37
+   },
+   {
+    "w": "I",
+    "t": 151.53
+   },
+   {
+    "w": "got",
+    "t": 151.69
+   },
+   {
+    "w": "it",
+    "t": 151.85
+   },
+   {
+    "w": "going",
+    "t": 152.09
+   }
+  ]
+ },
+ {
+  "i": 44,
+  "section": "Outro",
+  "text": "'Cause I know one day, one day, one day",
+  "start": 152.65,
+  "end": 156.37,
+  "words": [
+   {
+    "w": "'Cause",
+    "t": 152.65
+   },
+   {
+    "w": "I",
+    "t": 153.05
+   },
+   {
+    "w": "know",
+    "t": 153.21
+   },
+   {
+    "w": "one",
+    "t": 153.61
+   },
+   {
+    "w": "day,",
+    "t": 154.01
+   },
+   {
+    "w": "one",
+    "t": 154.49
+   },
+   {
+    "w": "day,",
+    "t": 154.89
+   },
+   {
+    "w": "one",
+    "t": 155.53
+   },
+   {
+    "w": "day",
+    "t": 155.77
+   }
+  ]
+ },
+ {
+  "i": 45,
+  "section": "Outro",
+  "text": "It's coming, it's coming, it's coming",
+  "start": 158.55,
+  "end": 161.99,
+  "words": [
+   {
+    "w": "It's",
+    "t": 158.55
+   },
+   {
+    "w": "coming,",
+    "t": 158.83
+   },
+   {
+    "w": "it's",
+    "t": 159.47
+   },
+   {
+    "w": "coming,",
+    "t": 160.11
+   },
+   {
+    "w": "it's",
+    "t": 160.75
+   },
+   {
+    "w": "coming",
+    "t": 161.39
+   }
+  ]
+ },
+ {
+  "i": 46,
+  "section": "Outro",
+  "text": "I said I know one day, one day, one day",
+  "start": 163.07,
+  "end": 166.87,
+  "words": [
+   {
+    "w": "I",
+    "t": 163.07
+   },
+   {
+    "w": "said",
+    "t": 163.23
+   },
+   {
+    "w": "I",
+    "t": 163.47
+   },
+   {
+    "w": "know",
+    "t": 163.63
+   },
+   {
+    "w": "one",
+    "t": 163.95
+   },
+   {
+    "w": "day,",
+    "t": 164.35
+   },
+   {
+    "w": "one",
+    "t": 164.83
+   },
+   {
+    "w": "day,",
+    "t": 165.23
+   },
+   {
+    "w": "one",
+    "t": 165.79
+   },
+   {
+    "w": "day",
+    "t": 166.27
+   }
+  ]
+ },
+ {
+  "i": 47,
+  "section": "Outro",
+  "text": "It's coming, it's coming",
+  "start": 168.83,
+  "end": 170.97,
+  "words": [
+   {
+    "w": "It's",
+    "t": 168.83
+   },
+   {
+    "w": "coming,",
+    "t": 169.11
+   },
+   {
+    "w": "it's",
+    "t": 169.79
+   },
+   {
+    "w": "coming",
+    "t": 170.47
+   }
+  ]
+ }
+]

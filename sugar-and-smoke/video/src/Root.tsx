@@ -5,13 +5,14 @@ import {loadBrandFonts} from './brand/fonts';
 import {EpisodeView} from './Episode';
 import {EP01} from './episodes/ep01-give-me-life';
 import {EP02} from './episodes/ep02-with-you';
+import {EP03} from './episodes/ep03-one-day';
 import {EpisodeDef, timelineOf} from './lib/episode';
 import {CAST_H, CAST_W, CastSheet} from './sheets/CastSheet';
 import {WallView} from './WallCut';
 
 loadBrandFonts();
 
-const EPISODES: EpisodeDef[] = [EP01, EP02];
+const EPISODES: EpisodeDef[] = [EP01, EP02, EP03];
 
 // Composition components take only serialisable props, so each episode gets its own pair.
 const vertical = (ep: EpisodeDef): React.FC<{audio?: boolean}> => ({audio = true}) => <EpisodeView ep={ep} audio={audio} />;
