@@ -37,12 +37,13 @@ export type Place = {
   flip?: boolean; // face the other way
   rotate?: number;
   squash?: number; // vertical squash (1 = none); keeps feet planted
+  narrow?: number; // horizontal scale for a three-quarter view (1 = straight on)
 };
 
 export function renderRig<P>(parts: Part<P>[], pose: Pose, place: Place, params: P, key = 'rig') {
   const s = place.scale ?? 1;
   const sq = place.squash ?? 1;
-  const root: M = mul(mul(mul(T(place.x, place.y), S((place.flip ? -1 : 1) * s * (2 - sq), s * sq)), R(place.rotate ?? 0)), [1, 0, 0, 1, 0, 0]);
+  const root: M = mul(mul(mul(T(place.x, place.y), S((place.flip ? -1 : 1) * s * (2 - sq) * (place.narrow ?? 1), s * sq)), R(place.rotate ?? 0)), [1, 0, 0, 1, 0, 0]);
   const world = new Map<string, M>();
   const byId = new Map(parts.map((p) => [p.id, p]));
   const solve = (id: string): M => {
@@ -81,7 +82,7 @@ export function worldPoint<P>(parts: Part<P>[], pose: Pose, place: Place, id: st
     chain.unshift(cur);
     cur = cur.parent ? byId.get(cur.parent) : undefined;
   }
-  let m: M = mul(mul(T(place.x, place.y), S((place.flip ? -1 : 1) * s * (2 - sq), s * sq)), R(place.rotate ?? 0));
+  let m: M = mul(mul(T(place.x, place.y), S((place.flip ? -1 : 1) * s * (2 - sq) * (place.narrow ?? 1), s * sq)), R(place.rotate ?? 0));
   chain.forEach((p) => {
     m = mul(mul(m, T(p.at[0], p.at[1])), R(pose[p.id] ?? 0));
   });
@@ -121,7 +122,7 @@ export function reach<P>(
   const L2 = Math.hypot(en.at[0] + grip[0], en.at[1] + grip[1]) * s;
   const [ox, oy] = worldPoint(parts, pose, place, upper);
   // direction to the target, back in the rig's own (unflipped, unrotated) frame
-  const wx = (target[0] - ox) * (place.flip ? -1 : 1);
+  const wx = ((target[0] - ox) * (place.flip ? -1 : 1)) / (place.narrow ?? 1);
   const wy = target[1] - oy;
   const r = (-(place.rotate ?? 0) * Math.PI) / 180;
   const lx = wx * Math.cos(r) - wy * Math.sin(r);

@@ -109,6 +109,13 @@ export const buildTimeline = (d: EpisodeData) => {
     return k < 0 ? 0 : Math.exp(-(frame - BEAT_FRAMES[k]) / decay);
   };
   const beatIndex = (frame: number) => lastBeat(frame) + 1;
+  const BEAT_LEN = (60 / (AF.tempo || 120)) * FPS;
+  const beatPhase = (frame: number) => {
+    const k = lastBeat(frame);
+    if (k < 0) return (((frame - (BEAT_FRAMES[0] ?? 0)) / BEAT_LEN) % 1 + 1) % 1;
+    const next = BEAT_FRAMES[k + 1] ?? BEAT_FRAMES[k] + BEAT_LEN;
+    return Math.min(0.999, (frame - BEAT_FRAMES[k]) / Math.max(1, next - BEAT_FRAMES[k]));
+  };
 
   const vocalAt = (frame: number) => AF.vocal[Math.max(0, Math.min(AF.vocal.length - 1, Math.round(frame)))] ?? 0;
   const lowAt = (frame: number) => AF.low[Math.max(0, Math.min(AF.low.length - 1, Math.round(frame)))] ?? 0;
@@ -127,7 +134,7 @@ export const buildTimeline = (d: EpisodeData) => {
   );
   const HIT_END = HITS.map((h) => SLOTS[slotIndexAt(h.frame)].to);
 
-  return {LINES, STORY, AF, TOTAL_FRAMES, SLOTS, HITS, HIT_END, STAMPS: d.stamps, slotIndexAt, beatPulse, beatIndex, vocalAt, lowAt, mouthAt};
+  return {LINES, STORY, AF, TOTAL_FRAMES, SLOTS, HITS, HIT_END, STAMPS: d.stamps, slotIndexAt, beatPulse, beatIndex, beatPhase, vocalAt, lowAt, mouthAt};
 };
 
 export type Timeline = ReturnType<typeof buildTimeline>;

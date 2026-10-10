@@ -32,6 +32,7 @@ export const SceneView: React.FC<{slot: Slot; frame: number; clip?: number}> = (
     w: (i: number) => (words.length ? Math.round(words[Math.max(0, Math.min(words.length - 1, i))].t * FPS) - slot.from : 0),
     beat: tl.beatPulse(frame),
     beatN: tl.beatIndex(frame),
+    beatPhase: tl.beatPhase(frame),
     mouth: tl.mouthAt(frame),
   };
   const base = REGISTRATION[slot.state];

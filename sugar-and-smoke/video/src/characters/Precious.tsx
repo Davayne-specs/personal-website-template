@@ -16,6 +16,7 @@ export type PreciousStyle = {
   glow?: number; // gold rays behind her, 0..1
   winter?: boolean; // earmuffs and scarf (No. 2)
   aged?: boolean; // grey curls (the far future)
+  profile?: boolean; // three-quarter view: both feet point the way she faces
 };
 
 type Params = {face: Face; style: PreciousStyle; holdL?: React.ReactNode; holdR?: React.ReactNode};
@@ -50,13 +51,16 @@ const leg = (side: 'L' | 'R'): Part<Params>[] => {
       parent: `shin${side}`,
       at: [0, 158],
       z: 3,
-      draw: () => (
-        <>
-          <Shape d={side === 'L' ? FOOT : mirror(FOOT)} fill={SKIN} />
-          <Line d={side === 'L' ? 'M-36,12C-20,4 0,4 14,12M-8,-4L-12,24' : 'M36,12C20,4 0,4 -14,12M8,-4L12,24'} size={6} color={C.gold} />
-          <Shape d={side === 'L' ? 'M-58,32L20,32L20,40L-58,40Z' : 'M58,32L-20,32L-20,40L58,40Z'} fill={C.gold} line={2.5} />
-        </>
-      ),
+      draw: ({style}) => {
+        const left = side === 'L' && !style.profile;
+        return (
+          <>
+            <Shape d={left ? FOOT : mirror(FOOT)} fill={SKIN} />
+            <Line d={left ? 'M-36,12C-20,4 0,4 14,12M-8,-4L-12,24' : 'M36,12C20,4 0,4 -14,12M8,-4L12,24'} size={6} color={C.gold} />
+            <Shape d={left ? 'M-58,32L20,32L20,40L-58,40Z' : 'M58,32L-20,32L-20,40L58,40Z'} fill={C.gold} line={2.5} />
+          </>
+        );
+      },
     },
   ];
 };

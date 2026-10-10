@@ -3,198 +3,22 @@
 // storyboard.json carries one recipe per line and this file turns them into scenes.
 import React from 'react';
 import {C, FONT, isDark} from '../brand/tokens';
-import {Face} from '../characters/face';
-import {Kid, KID_PARTS, KID_POSES, kidWalk} from '../characters/Kid';
-import {Stein, STEIN_PARTS, STEIN_POSES} from '../characters/Stein';
 import {clamp, ease, lerp, prog} from '../lib/ease';
-import {WashKind} from '../lib/episode';
 import {Camera} from '../lib/frame';
 import {Flat, Line, Shape, Txt} from '../lib/print';
 import {rng} from '../lib/random';
-import {addPose, bob, chainAngle, Place, Pose, walkCycle, worldPoint} from '../lib/rig';
 import {SceneDef, SceneProps} from '../lib/scene';
 import {useTimeline} from '../lib/timeline';
-import {Bubble, circle, Clip, Confetti, ellipse, FloatHearts, heart, Note, Polaroid, Pop, rect, smooth, SmokePuff, Sparkle, Stars, Wash} from '../props/common';
+import {Bubble, circle, Clip, Confetti, ellipse, FloatHearts, heart, Note, Pop, rect, smooth, SmokePuff, Sparkle, Stars, Wash} from '../props/common';
+import {ContactShadows, placeSubjects, Recipe, Subject, Subjects} from './actors';
+import {ClownNose, Clock, Door, Fireworks, Jeep, MoneyRain, Ringing, Speakers, Table, Troops} from './party';
 import {Backdrop, BgName, FLOOR, groundFor, HORIZON, isNight, TimeOfDay} from './backdrops';
 
-export type Recipe = {
-  bg?: BgName;
-  time?: TimeOfDay;
-  wash?: WashKind | WashKind[];
-  who?: 'stein' | 'kid' | 'both' | 'none';
-  x?: number; // Stein's x (feet on FLOOR)
-  kidX?: number;
-  scale?: number;
-  kidScale?: number;
-  flip?: boolean;
-  pose?: string; // a name from POSES
-  kidPose?: string; // a name from KID_POSES
-  face?: string; // a name from FACES
-  kidFace?: string;
-  action?: 'idle' | 'walk' | 'run' | 'sway' | 'nod';
-  travel?: [number, number]; // Stein walks from x0 to x1 over the scene
-  kidTravel?: [number, number];
-  hold?: string; // a name from HOLDS, in Stein's right hand
-  kidHold?: string;
-  feature?: string[]; // names from FEATURES
-  sun?: number | [number, number]; // how high the sun sits, 0 = horizon .. 1 = overhead (a pair rises over the scene)
-  calendarDay?: number;
-  calendarAt?: [number, number, number]; // x, y, scale
-  lampAt?: number; // the word on which the lamp switches on (absent = already on)
-  boxes?: string[]; // labels on the carried boxes
-  sign?: string;
-  note?: string;
-  noteAt?: number; // word index
-  noteXY?: [number, number];
-  noteSize?: number;
-  noteColor?: string;
-  big?: string; // big foil word
-  bigAt?: number;
-  bigY?: number;
-  echo?: string; // pops on every sung onset (ad-lib runs)
-  zoom?: 'wide' | 'mid' | 'close';
-};
-
 export type Meta = {artist: string; title: string; number: number};
-
-const POSES: Record<string, Pose> = {
-  stand: STEIN_POSES.stand,
-  hum: {...STEIN_POSES.stand, head: 10},
-  lookUp: {...STEIN_POSES.stand, head: -8},
-  chestHand: STEIN_POSES.chestHand,
-  armsUp: STEIN_POSES.armsUp,
-  point: STEIN_POSES.pointR,
-  shrug: STEIN_POSES.shrug,
-  sit: {thighL: 80, shinL: -80, thighR: -80, shinR: 80, uarmL: 24, farmL: -40, uarmR: -24, farmR: 40},
-  kneel: STEIN_POSES.kneel,
-  pray: {...STEIN_POSES.kneel, uarmL: -24, farmL: -100, uarmR: 24, farmR: 100, head: 12},
-  salute: {uarmL: 8, farmL: -6, uarmR: -110, farmR: -135, head: -2},
-  wave: {uarmL: 8, farmL: -6, uarmR: -150, farmR: -30},
-  carry: {uarmL: -30, farmL: -100, uarmR: 30, farmR: 100},
-  hold: {uarmR: -50, farmR: -70, uarmL: 10, farmL: -8},
-  drink: {uarmR: -30, farmR: -140, uarmL: 10, farmL: -8, head: -6},
-  hug: {uarmL: 40, farmL: -70, uarmR: -40, farmR: 70},
-};
-
-const FACES: Record<string, Face> = {
-  calm: {smile: 0.3},
-  sad: {smile: -0.5, brow: 0.2, browTilt: 0.9, look: [0, 0.4]},
-  hope: {smile: 0.5, eyes: 'wide', look: [0, -0.7], brow: 0.5},
-  joy: {smile: 1, eyes: 'happy'},
-  tired: {smile: -0.2, brow: -0.2, browTilt: 0.5, look: [0, 0.5]},
-  steel: {smile: 0, brow: -0.4, browTilt: -0.6},
-  closed: {smile: 0.3, eyes: 'closed'},
-  doubt: {smile: -0.2, browTilt: 0.7, look: [0.6, -0.3]},
-  shout: {smile: 0.6, mouth: 0.8, brow: 0.6},
-  grin: {smile: 0.9, blush: 0.3},
-};
-
-const blink = (f: number, every = 90, off = 0) => ((f + off) % every < 4 ? 1 : 0);
-
-// What a hand carries, drawn in hand-local coordinates (the wrist at the origin, fingers down).
-const HOLDS: Record<string, (holder: 'stein' | 'kid') => React.ReactNode> = {
-  polaroid: (holder) => (
-    <g transform="translate(0,30) scale(0.7)">
-      <Polaroid w={360} h={420} photo={C.release} caption={<Txt x={0} y={178} size={44} font={FONT.hand} color={C.ink}>{holder === 'stein' ? 'Ashaka' : 'Dad'}</Txt>}>
-        {holder === 'stein' ? <Kid place={{x: 0, y: 112, scale: 0.62}} face={{smile: 1, eyes: 'happy'}} /> : <Stein place={{x: 0, y: 30, scale: 0.3}} face={{smile: 0.8}} style={{chain: false}} />}
-      </Polaroid>
-    </g>
-  ),
-  bottle: () => (
-    <g transform="translate(0,34)">
-      <Shape d={rect(-26, -80, 52, 150, 16)} fill={C.ice} opacity={0.95} line={4} />
-      <Shape d={rect(-16, -100, 32, 26, 6)} fill={C.teal} line={3.5} />
-      <Line d="M-12,-50L-12,30" size={4} color={C.white} />
-    </g>
-  ),
-  shoes: () => (
-    <g transform="translate(0,46)">
-      <Line d="M0,0L-34,70M0,0L34,70" size={3.5} color={C.hotpink} />
-      {[-34, 34].map((x, i) => (
-        <g key={i} transform={`translate(${x},70) scale(${i ? -0.9 : 0.9})`}>
-          <Shape d="M-44,10C-44,-20 -16,-40 10,-30L48,0L48,12L-44,12Z" fill={C.white} line={4} />
-          <Shape d={rect(-46, 10, 96, 12, 4)} fill={C.candy} line={3} />
-        </g>
-      ))}
-    </g>
-  ),
-  bag: () => (
-    <g transform="translate(0,44)">
-      <Shape d="M-16,0C-16,-20 16,-20 16,0" fill="none" line={5} />
-      <Shape d={rect(-80, 0, 160, 96, 30)} fill={C.teal} shade={rect(20, 0, 60, 96)} shadeInk="ht-ink-2" line={5} />
-      <Line d="M-50,20L-50,76M50,20L50,76" size={3.5} color={C.aqua} />
-    </g>
-  ),
-  glow: () => (
-    <g transform="translate(0,40)">
-      <Flat d={circle(0, 0, 110)} fill="url(#glow-amber)" opacity={0.85} />
-      <Shape d={heart(0, 4, 30)} fill={C.amber} line={4} />
-    </g>
-  ),
-  boxes: () => null, // drawn in world space by the `boxes` feature
-};
-
-type Subject = {
-  x: number;
-  y: number;
-  scale: number;
-  pose: Pose;
-  place: Place;
-  head: [number, number];
-  handR: [number, number];
-  kid?: {x: number; y: number; scale: number; pose: Pose; place: Place; hand: [number, number]};
-};
-
-const placeSubjects = (r: Recipe, p: SceneProps): Subject => {
-  const both = r.who === 'both';
-  const scale = r.scale ?? 0.8;
-  const moving = r.action === 'walk' || r.action === 'run';
-  const cycle: Pose = r.action === 'walk' ? walkCycle(p.f, 34, 1) : r.action === 'run' ? {...walkCycle(p.f, 16, 1.5), torso: 10} : {};
-  const sway: Pose = r.action === 'sway' ? {torso: 3 * Math.sin(p.f / 12), head: -4 * Math.sin(p.f / 12)} : r.action === 'nod' ? {head: 6 * Math.sin(p.f / 5)} : {};
-  const t = clamp(p.f / Math.max(1, p.dur - 4));
-  const x = r.travel ? lerp(r.travel[0], r.travel[1], t) : r.x ?? (both ? 360 : 540);
-  const poseName = r.pose ?? 'stand';
-  const pose = addPose(POSES[poseName] ?? POSES.stand, cycle, sway);
-  const drop = poseName === 'sit' ? 281 : poseName === 'kneel' || poseName === 'pray' ? 410 : 402;
-  const y = FLOOR - drop * scale + (r.action === 'walk' ? bob(p.f, 34, 6) : r.action === 'run' ? bob(p.f, 16, 12) : 0);
-  const place: Place = {x, y, scale, flip: r.flip};
-  const head = worldPoint(STEIN_PARTS, pose, place, 'head', [0, -150]);
-  const handR = worldPoint(STEIN_PARTS, pose, place, 'handR', [0, 40]);
-  let kid: Subject['kid'];
-  if (both || r.who === 'kid') {
-    const ks = r.kidScale ?? 0.78;
-    const kx = r.kidTravel ? lerp(r.kidTravel[0], r.kidTravel[1], t) : r.kidX ?? (both ? 740 : 540);
-    const kMoving = !!r.kidTravel && moving;
-    const kpose = addPose(KID_POSES[r.kidPose ?? 'stand'] ?? {}, kMoving ? kidWalk(p.f, r.action === 'run' ? 14 : 22) : r.kidPose === 'wave' ? {armR: 18 * Math.sin(p.f / 4)} : {});
-    const kplace: Place = {x: kx, y: FLOOR + (kMoving ? bob(p.f, r.action === 'run' ? 14 : 22, 5) : 0), scale: ks};
-    kid = {x: kx, y: kplace.y, scale: ks, pose: kpose, place: kplace, hand: worldPoint(KID_PARTS, kpose, kplace, 'armR', [0, 96])};
-  }
-  return {x, y, scale, pose, place, head, handR, kid};
-};
-
-const faceFor = (name: string | undefined, p: SceneProps, sings: boolean, extra: Face = {}): Face => {
-  const base = FACES[name ?? 'calm'] ?? FACES.calm;
-  return {...base, ...extra, mouth: sings ? Math.max(base.mouth ?? 0, p.mouth * 0.7) : base.mouth ?? 0, blink: base.eyes ? 0 : blink(p.abs, 90, name === 'sad' ? 30 : 0)};
-};
-
-const Subjects: React.FC<{r: Recipe; p: SceneProps; s: Subject}> = ({r, p, s}) => {
-  if (r.who === 'none') return null;
-  const both = r.who === 'both';
-  const toward = both ? (s.kid!.x > s.x ? 1 : -1) : 0;
-  const steinFace = faceFor(r.face, p, true, both ? {look: [0.6 * toward, 0.2], turn: 0.3 * toward} : {});
-  const kidFace = faceFor(r.kidFace, p, false, both ? {look: [-0.6 * toward, -0.3], turn: -0.3 * toward} : {});
-  const hold = r.hold && HOLDS[r.hold] ? <g transform={`rotate(${-chainAngle(STEIN_PARTS, s.pose, 'handR')})`}>{HOLDS[r.hold]('stein')}</g> : undefined;
-  const kidHold = s.kid && r.kidHold && HOLDS[r.kidHold] ? <g transform={`rotate(${-chainAngle(KID_PARTS, s.kid.pose, 'armR')})`}>{HOLDS[r.kidHold]('kid')}</g> : undefined;
-  return (
-    <>
-      {r.who !== 'kid' && <Stein place={s.place} pose={s.pose} face={steinFace} style={{chain: false}} holdR={hold} />}
-      {s.kid && <Kid place={s.kid.place} pose={s.kid.pose} face={kidFace} holdR={kidHold} />}
-    </>
-  );
-};
+export type {Recipe} from './actors';
 
 // ---------------------------------------------------------------- features (world coordinates)
-type FeatureProps = {r: Recipe; p: SceneProps; s: Subject; time: TimeOfDay};
+export type FeatureProps = {r: Recipe; p: SceneProps; s: Subject; time: TimeOfDay};
 type Feature = {layer: 'back' | 'front'; draw: React.FC<FeatureProps>};
 
 const Sun: React.FC<FeatureProps> = ({r, p}) => {
@@ -493,6 +317,16 @@ const FEATURES: Record<string, Feature> = {
   notes: {layer: 'front', draw: HumNotes},
   boxes: {layer: 'front', draw: Boxes},
   confetti: {layer: 'front', draw: ({p, s}) => <Confetti t={p.f} x={s.head[0]} y={s.head[1] - 200} n={30} seed={8} spread={1.1} floor={FLOOR + 20} />},
+  phone: {layer: 'front', draw: Ringing},
+  clock: {layer: 'back', draw: Clock},
+  money: {layer: 'front', draw: MoneyRain},
+  troops: {layer: 'back', draw: Troops},
+  speakers: {layer: 'back', draw: Speakers},
+  table: {layer: 'front', draw: Table},
+  jeep: {layer: 'front', draw: Jeep},
+  fireworks: {layer: 'back', draw: Fireworks},
+  door: {layer: 'back', draw: Door},
+  clown: {layer: 'front', draw: ClownNose},
   hearts: {layer: 'front', draw: ({p, s}) => <FloatHearts f={p.f} x={s.kid ? (s.x + s.kid.x) / 2 : s.head[0]} y={s.head[1] - 120} n={7} seed={5} spread={260} color={C.hotpink} />},
 };
 
@@ -592,15 +426,19 @@ const body = (r: Recipe, p: SceneProps, time: TimeOfDay) => {
   const feats = (r.feature ?? []).map((n) => FEATURES[n]).filter(Boolean);
   if (r.hold === 'boxes') feats.push(FEATURES.boxes);
   if ((r.feature ?? []).includes('bed')) feats.push(FEATURES.bedFront);
-  const seated = r.pose === 'sit' && r.who !== 'none' && !(r.feature ?? []).some((n) => n === 'chairs' || n === 'bed');
-  const moving = r.action === 'walk' || r.action === 'run';
-  const scroll = moving && !r.travel ? p.f * (r.action === 'run' ? 14 : 7) : 0;
+  const has = (n: string) => (r.feature ?? []).includes(n);
+  const seated = r.pose === 'sit' && r.who !== 'none' && !['chairs', 'bed', 'table', 'jeep'].some(has);
+  const moving = r.action === 'walk' || r.action === 'run' || r.action === 'strut';
+  // walking in place: the street slides past at exactly the speed of the feet
+  const stepSpeed = (r.action === 'run' ? 960 / 18 : 600 / 34) * (r.scale ?? 0.8) * 0.82;
+  const scroll = r.scroll !== undefined ? p.f * r.scroll : moving && !r.travel && r.bg === 'street' ? p.f * stepSpeed : 0;
   return (
     <>
-      <Backdrop bg={r.bg ?? 'plain'} time={time} f={p.f} scroll={scroll} />
+      <Backdrop bg={r.bg ?? 'plain'} time={time} f={p.f} scroll={scroll} beat={p.beat} />
       {feats.filter((f) => f.layer === 'back').map((f, i) => <f.draw key={`b${i}`} r={r} p={p} s={s} time={time} />)}
       {seated && <Seat r={r} p={p} s={s} time={time} />}
-      <Subjects r={r} p={p} s={s} />
+      {!seated && !has('jeep') && <ContactShadows s={s} />}
+      <Subjects p={p} s={s} />
       {feats.filter((f) => f.layer === 'front').map((f, i) => <f.draw key={`f${i}`} r={r} p={p} s={s} time={time} />)}
       <BigWord r={r} p={p} s={s} time={time} />
       {r.echo && <Echo p={p} word={r.echo} />}

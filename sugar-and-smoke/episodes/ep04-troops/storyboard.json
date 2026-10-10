@@ -1,0 +1,2203 @@
+[
+ {
+  "n": 0,
+  "tag": "Troops",
+  "state": "Pressure",
+  "move": "Print roll",
+  "scene": "Title over the yard at night: the general salutes, his troops behind, the sound system thumping.",
+  "t": {
+   "bg": "yard",
+   "time": "night",
+   "who": "stein",
+   "pose": "salute",
+   "face": "steel",
+   "feature": [
+    "troops",
+    "speakers"
+   ],
+   "style": {
+    "cap": true
+   }
+  }
+ },
+ {
+  "n": 1,
+  "tag": "Try again",
+  "state": "Present",
+  "move": "Stamp cut",
+  "scene": "He shrugs, grins: one more take.",
+  "t": {
+   "bg": "yard",
+   "time": "night",
+   "who": "stein",
+   "pose": "shrug",
+   "face": "sly",
+   "feature": [
+    "speakers"
+   ],
+   "style": {
+    "cap": true
+   }
+  }
+ },
+ {
+  "n": 2,
+  "tag": "Listen",
+  "state": "Pressure",
+  "move": "Stamp cut",
+  "scene": "He points at us.",
+  "t": {
+   "bg": "yard",
+   "time": "night",
+   "who": "stein",
+   "pose": "point",
+   "face": "steel",
+   "zoom": "mid",
+   "style": {
+    "cap": true
+   }
+  }
+ },
+ {
+  "n": 3,
+  "tag": "Better listen",
+  "state": "Pressure",
+  "move": "Stamp cut",
+  "scene": "Closer, hand cupped to his ear.",
+  "t": {
+   "bg": "yard",
+   "time": "night",
+   "who": "stein",
+   "pose": "phone",
+   "face": "steel",
+   "zoom": "close",
+   "style": {
+    "cap": true
+   }
+  }
+ },
+ {
+  "n": 4,
+  "tag": "Listen up",
+  "state": "Pressure",
+  "move": "Registration snap",
+  "scene": "Square on, arms crossed.",
+  "t": {
+   "bg": "yard",
+   "time": "night",
+   "who": "stein",
+   "pose": "crossed",
+   "face": "steel",
+   "zoom": "mid",
+   "style": {
+    "cap": true
+   }
+  }
+ },
+ {
+  "n": 5,
+  "tag": "Trust no one",
+  "state": "Precious",
+  "move": "Smoke wipe",
+  "scene": "Night street: he stands guard in front of her, arms crossed.",
+  "t": {
+   "who": "pair",
+   "x": 420,
+   "style": {
+    "cap": true
+   },
+   "bg": "street",
+   "time": "night",
+   "pose": "crossed",
+   "face": "steel",
+   "her": {
+    "x": 760,
+    "pose": "hips",
+    "face": "blush",
+    "scale": 0.74
+   },
+   "feature": [
+    "troops"
+   ]
+  }
+ },
+ {
+  "n": 6,
+  "tag": "At all",
+  "state": "Precious",
+  "move": "Stamp cut",
+  "scene": "Closer: him on guard, her amused.",
+  "t": {
+   "who": "pair",
+   "x": 420,
+   "style": {
+    "cap": true
+   },
+   "bg": "street",
+   "time": "night",
+   "pose": "crossed",
+   "face": "steel",
+   "her": {
+    "x": 760,
+    "pose": "hips",
+    "face": "sly",
+    "scale": 0.74
+   },
+   "zoom": "mid"
+  }
+ },
+ {
+  "n": 7,
+  "tag": "Real general",
+  "state": "Pressure",
+  "move": "Registration snap",
+  "scene": "Spotlight: the general flexes, troops saluting behind; GENERAL stamp.",
+  "t": {
+   "bg": "yard",
+   "time": "night",
+   "who": "stein",
+   "pose": "flex",
+   "face": "steel",
+   "feature": [
+    "spotlight",
+    "troops"
+   ],
+   "style": {
+    "cap": true
+   }
+  }
+ },
+ {
+  "n": 8,
+  "tag": "One call",
+  "state": "Pressure",
+  "move": "Stamp cut",
+  "scene": "He makes the call, phone to his ear; the troops move.",
+  "t": {
+   "bg": "yard",
+   "time": "night",
+   "who": "stein",
+   "pose": "phone",
+   "hold": "phone",
+   "face": "steel",
+   "feature": [
+    "troops"
+   ],
+   "style": {
+    "cap": true
+   }
+  }
+ },
+ {
+  "n": 9,
+  "tag": "On God",
+  "state": "Pressure",
+  "move": "Stamp cut",
+  "scene": "Hand on his heart, close.",
+  "t": {
+   "bg": "yard",
+   "time": "night",
+   "who": "stein",
+   "pose": "chestHand",
+   "face": "steel",
+   "zoom": "close",
+   "style": {
+    "cap": true
+   }
+  }
+ },
+ {
+  "n": 10,
+  "tag": "Wait for me",
+  "state": "Precious",
+  "move": "Smoke wipe",
+  "scene": "Dusk street: she waits, arms crossed, the clock ticking.",
+  "t": {
+   "bg": "street",
+   "time": "dusk",
+   "who": "precious",
+   "x": 480,
+   "pose": "crossed",
+   "face": "attitude",
+   "feature": [
+    "clock"
+   ]
+  }
+ },
+ {
+  "n": 11,
+  "tag": "Wait for me",
+  "state": "Precious",
+  "move": "Stamp cut",
+  "scene": "He arrives with a rose; she softens.",
+  "t": {
+   "who": "pair",
+   "x": 360,
+   "style": {
+    "cap": true
+   },
+   "bg": "street",
+   "time": "dusk",
+   "pose": "offer",
+   "hold": "rose",
+   "face": "grin",
+   "her": {
+    "x": 740,
+    "pose": "hips",
+    "face": "blush"
+   }
+  }
+ },
+ {
+  "n": 12,
+  "tag": "Ayy",
+  "state": "Release",
+  "move": "Stamp cut",
+  "scene": "He bounces on the beat.",
+  "t": {
+   "bg": "yard",
+   "time": "night",
+   "who": "stein",
+   "action": "dance",
+   "dance": "bounce",
+   "face": "joy",
+   "feature": [
+    "speakers"
+   ],
+   "style": {
+    "cap": true
+   }
+  }
+ },
+ {
+  "n": 13,
+  "tag": "The money",
+  "state": "Present",
+  "move": "Registration snap",
+  "scene": "He fans out the money; it rains.",
+  "t": {
+   "bg": "yard",
+   "time": "night",
+   "who": "stein",
+   "pose": "offer",
+   "hold": "money",
+   "face": "grin",
+   "feature": [
+    "money"
+   ],
+   "style": {
+    "cap": true
+   }
+  }
+ },
+ {
+  "n": 14,
+  "tag": "Ayy",
+  "state": "Release",
+  "move": "Stamp cut",
+  "scene": "Both bounce.",
+  "t": {
+   "who": "pair",
+   "x": 360,
+   "style": {
+    "cap": true
+   },
+   "bg": "yard",
+   "time": "night",
+   "action": "dance",
+   "dance": "bounce",
+   "face": "joy",
+   "her": {
+    "face": "joy",
+    "dance": "bounce"
+   },
+   "feature": [
+    "speakers"
+   ]
+  }
+ },
+ {
+  "n": 15,
+  "tag": "Cater me",
+  "state": "Precious",
+  "move": "Stamp cut",
+  "scene": "At a dinner table she waits; he arrives with a plate.",
+  "t": {
+   "who": "pair",
+   "x": 210,
+   "style": {
+    "cap": true
+   },
+   "bg": "room",
+   "time": "night",
+   "pose": "offer",
+   "hold": "plate",
+   "face": "grin",
+   "her": {
+    "x": 640,
+    "pose": "sit",
+    "face": "blush",
+    "scale": 0.74
+   },
+   "feature": [
+    "table"
+   ]
+  }
+ },
+ {
+  "n": 16,
+  "tag": "Ayy!",
+  "state": "Release",
+  "move": "Stamp cut",
+  "scene": "They whine together.",
+  "t": {
+   "who": "pair",
+   "x": 360,
+   "style": {
+    "cap": true
+   },
+   "bg": "yard",
+   "time": "night",
+   "action": "dance",
+   "dance": "whine",
+   "face": "joy",
+   "her": {
+    "face": "sly"
+   },
+   "feature": [
+    "speakers"
+   ]
+  }
+ },
+ {
+  "n": 17,
+  "tag": "Do not disturb",
+  "state": "Precious",
+  "move": "Registration snap",
+  "scene": "A closed door, a heart on the handle, light and hearts slipping out under it.",
+  "t": {
+   "bg": "room",
+   "time": "night",
+   "who": "none",
+   "feature": [
+    "door"
+   ]
+  }
+ },
+ {
+  "n": 18,
+  "tag": "Fireworks",
+  "state": "Release",
+  "move": "Stamp cut",
+  "scene": "Fireworks over the yard; the two of them whine close.",
+  "t": {
+   "who": "pair",
+   "x": 420,
+   "style": {
+    "cap": true
+   },
+   "bg": "yard",
+   "time": "night",
+   "action": "dance",
+   "dance": "whine",
+   "face": "smitten",
+   "her": {
+    "x": 680,
+    "face": "smitten"
+   },
+   "feature": [
+    "fireworks"
+   ]
+  }
+ },
+ {
+  "n": 19,
+  "tag": "No clown",
+  "state": "Pressure",
+  "move": "Registration snap",
+  "scene": "Palm out: he flings a clown nose and wig into the sky.",
+  "t": {
+   "bg": "yard",
+   "time": "night",
+   "who": "stein",
+   "pose": "stop",
+   "face": "steel",
+   "feature": [
+    "clown"
+   ],
+   "note": "no clown.",
+   "noteAt": 4,
+   "noteXY": [
+    300,
+    520
+   ],
+   "style": {
+    "cap": true
+   }
+  }
+ },
+ {
+  "n": 20,
+  "tag": "So",
+  "state": "Present",
+  "move": "Stamp cut",
+  "scene": "A shrug.",
+  "t": {
+   "bg": "yard",
+   "time": "night",
+   "who": "stein",
+   "pose": "shrug",
+   "face": "sly",
+   "zoom": "mid",
+   "style": {
+    "cap": true
+   }
+  }
+ },
+ {
+  "n": 21,
+  "tag": "Right now",
+  "state": "Pressure",
+  "move": "Stamp cut",
+  "scene": "He taps the clock: right now.",
+  "t": {
+   "bg": "yard",
+   "time": "night",
+   "who": "stein",
+   "x": 380,
+   "pose": "point",
+   "face": "steel",
+   "feature": [
+    "clock"
+   ],
+   "style": {
+    "cap": true
+   }
+  }
+ },
+ {
+  "n": 22,
+  "tag": "East side",
+  "state": "Precious",
+  "move": "Print roll",
+  "scene": "She struts down the east-side street toward the rising sun; EAST SIDE stamp.",
+  "t": {
+   "bg": "street",
+   "time": "dawn",
+   "who": "precious",
+   "action": "strut",
+   "travel": [
+    180,
+    860
+   ],
+   "feature": [
+    "sun",
+    "sign"
+   ],
+   "sun": 0.25,
+   "sign": "EAST SIDE",
+   "face": "cool"
+  }
+ },
+ {
+  "n": 23,
+  "tag": "Real fine",
+  "state": "Precious",
+  "move": "Stamp cut",
+  "scene": "Close on her: shades, hand on hip.",
+  "t": {
+   "bg": "street",
+   "time": "dawn",
+   "who": "precious",
+   "pose": "hips",
+   "face": "cool",
+   "zoom": "mid",
+   "note": "real fine.",
+   "noteAt": 0,
+   "noteXY": [
+    300,
+    520
+   ]
+  }
+ },
+ {
+  "n": 24,
+  "tag": "The call",
+  "state": "Present",
+  "move": "Stamp cut",
+  "scene": "He calls her; the phone rings.",
+  "t": {
+   "bg": "yard",
+   "time": "night",
+   "who": "stein",
+   "x": 330,
+   "pose": "phone",
+   "hold": "phone",
+   "face": "grin",
+   "feature": [
+    "phone"
+   ],
+   "style": {
+    "cap": true
+   }
+  }
+ },
+ {
+  "n": 25,
+  "tag": "She comes",
+  "state": "Precious",
+  "move": "Stamp cut",
+  "scene": "She walks over to him when he calls.",
+  "t": {
+   "who": "pair",
+   "x": 260,
+   "style": {
+    "cap": true
+   },
+   "bg": "yard",
+   "time": "night",
+   "pose": "beckon",
+   "face": "grin",
+   "her": {
+    "travel": [
+     1000,
+     680
+    ],
+    "action": "strut",
+    "face": "blush"
+   }
+  }
+ },
+ {
+  "n": 26,
+  "tag": "Hey, hey",
+  "state": "Release",
+  "move": "Registration snap",
+  "scene": "They bounce together on the beat.",
+  "t": {
+   "who": "pair",
+   "x": 360,
+   "style": {
+    "cap": true
+   },
+   "bg": "yard",
+   "time": "night",
+   "action": "dance",
+   "dance": "bounce",
+   "face": "joy",
+   "her": {
+    "face": "joy"
+   },
+   "feature": [
+    "speakers"
+   ]
+  }
+ },
+ {
+  "n": 27,
+  "tag": "East side",
+  "state": "Precious",
+  "move": "Stamp cut",
+  "scene": "She struts down the east-side street toward the rising sun; EAST SIDE stamp.",
+  "t": {
+   "bg": "street",
+   "time": "day",
+   "who": "precious",
+   "action": "strut",
+   "travel": [
+    180,
+    860
+   ],
+   "feature": [
+    "sun",
+    "sign"
+   ],
+   "sun": 0.6,
+   "sign": "EAST SIDE",
+   "face": "cool"
+  }
+ },
+ {
+  "n": 28,
+  "tag": "Real fine",
+  "state": "Precious",
+  "move": "Stamp cut",
+  "scene": "Close on her: shades, hand on hip.",
+  "t": {
+   "bg": "street",
+   "time": "day",
+   "who": "precious",
+   "pose": "hips",
+   "face": "sly",
+   "zoom": "mid",
+   "note": "real fine.",
+   "noteAt": 0,
+   "noteXY": [
+    300,
+    520
+   ]
+  }
+ },
+ {
+  "n": 29,
+  "tag": "The call",
+  "state": "Present",
+  "move": "Stamp cut",
+  "scene": "He calls her; the phone rings.",
+  "t": {
+   "bg": "yard",
+   "time": "night",
+   "who": "stein",
+   "x": 330,
+   "pose": "phone",
+   "hold": "phone",
+   "face": "grin",
+   "feature": [
+    "phone"
+   ],
+   "style": {
+    "cap": true
+   }
+  }
+ },
+ {
+  "n": 30,
+  "tag": "She comes",
+  "state": "Precious",
+  "move": "Stamp cut",
+  "scene": "She walks over to him when he calls.",
+  "t": {
+   "who": "pair",
+   "x": 260,
+   "style": {
+    "cap": true
+   },
+   "bg": "yard",
+   "time": "night",
+   "pose": "beckon",
+   "face": "grin",
+   "her": {
+    "travel": [
+     1000,
+     680
+    ],
+    "action": "strut",
+    "face": "blush"
+   }
+  }
+ },
+ {
+  "n": 31,
+  "tag": "Hey, hey",
+  "state": "Release",
+  "move": "Registration snap",
+  "scene": "They bounce together on the beat.",
+  "t": {
+   "who": "pair",
+   "x": 360,
+   "style": {
+    "cap": true
+   },
+   "bg": "yard",
+   "time": "night",
+   "action": "dance",
+   "dance": "twoStep",
+   "face": "joy",
+   "her": {
+    "face": "joy"
+   },
+   "feature": [
+    "speakers"
+   ]
+  }
+ },
+ {
+  "n": 32,
+  "tag": "East side",
+  "state": "Precious",
+  "move": "Stamp cut",
+  "scene": "She struts down the east-side street toward the rising sun; EAST SIDE stamp.",
+  "t": {
+   "bg": "street",
+   "time": "dawn",
+   "who": "precious",
+   "action": "strut",
+   "travel": [
+    180,
+    860
+   ],
+   "feature": [
+    "sun",
+    "sign"
+   ],
+   "sun": 0.25,
+   "sign": "EAST SIDE",
+   "face": "cool"
+  }
+ },
+ {
+  "n": 33,
+  "tag": "She's fine",
+  "state": "Precious",
+  "move": "Stamp cut",
+  "scene": "Close on her: shades, hand on hip.",
+  "t": {
+   "bg": "street",
+   "time": "dawn",
+   "who": "precious",
+   "pose": "hips",
+   "face": "cool",
+   "zoom": "mid",
+   "note": "she's fine.",
+   "noteAt": 0,
+   "noteXY": [
+    300,
+    520
+   ]
+  }
+ },
+ {
+  "n": 34,
+  "tag": "The call",
+  "state": "Present",
+  "move": "Stamp cut",
+  "scene": "He calls her; the phone rings.",
+  "t": {
+   "bg": "yard",
+   "time": "night",
+   "who": "stein",
+   "x": 330,
+   "pose": "phone",
+   "hold": "phone",
+   "face": "grin",
+   "feature": [
+    "phone"
+   ],
+   "style": {
+    "cap": true
+   }
+  }
+ },
+ {
+  "n": 35,
+  "tag": "She comes",
+  "state": "Precious",
+  "move": "Stamp cut",
+  "scene": "She walks over to him when he calls.",
+  "t": {
+   "who": "pair",
+   "x": 260,
+   "style": {
+    "cap": true
+   },
+   "bg": "yard",
+   "time": "night",
+   "pose": "beckon",
+   "face": "grin",
+   "her": {
+    "travel": [
+     1000,
+     680
+    ],
+    "action": "strut",
+    "face": "blush"
+   }
+  }
+ },
+ {
+  "n": 36,
+  "tag": "Listen",
+  "state": "Pressure",
+  "move": "Smoke wipe",
+  "scene": "He points: listen.",
+  "t": {
+   "bg": "yard",
+   "time": "dusk",
+   "who": "stein",
+   "pose": "point",
+   "face": "steel",
+   "zoom": "close",
+   "style": {
+    "cap": true
+   }
+  }
+ },
+ {
+  "n": 37,
+  "tag": "Never waited",
+  "state": "Present",
+  "move": "Stamp cut",
+  "scene": "Arms crossed by the clock: he doesn't wait.",
+  "t": {
+   "bg": "yard",
+   "time": "dusk",
+   "who": "stein",
+   "x": 380,
+   "pose": "crossed",
+   "face": "sly",
+   "feature": [
+    "clock"
+   ],
+   "style": {
+    "cap": true
+   }
+  }
+ },
+ {
+  "n": 38,
+  "tag": "First date",
+  "state": "Precious",
+  "move": "Smoke wipe",
+  "scene": "First date: candlelit table, a rose between them.",
+  "t": {
+   "who": "pair",
+   "x": 250,
+   "style": {
+    "cap": true
+   },
+   "bg": "room",
+   "time": "night",
+   "pose": "offer",
+   "hold": "rose",
+   "face": "grin",
+   "her": {
+    "x": 640,
+    "pose": "sit",
+    "face": "blush",
+    "scale": 0.74
+   },
+   "feature": [
+    "table"
+   ]
+  }
+ },
+ {
+  "n": 39,
+  "tag": "Cater it",
+  "state": "Precious",
+  "move": "Stamp cut",
+  "scene": "He serves her dinner.",
+  "t": {
+   "who": "pair",
+   "x": 210,
+   "style": {
+    "cap": true
+   },
+   "bg": "room",
+   "time": "night",
+   "pose": "offer",
+   "hold": "plate",
+   "face": "joy",
+   "her": {
+    "x": 640,
+    "pose": "sit",
+    "face": "smitten",
+    "scale": 0.74
+   },
+   "feature": [
+    "table"
+   ]
+  }
+ },
+ {
+  "n": 40,
+  "tag": "Ooh",
+  "state": "Precious",
+  "move": "Stamp cut",
+  "scene": "Her: heart eyes.",
+  "t": {
+   "bg": "room",
+   "time": "night",
+   "who": "precious",
+   "pose": "hips",
+   "face": "smitten",
+   "zoom": "close"
+  }
+ },
+ {
+  "n": 41,
+  "tag": "Stay",
+  "state": "Precious",
+  "move": "Registration snap",
+  "scene": "A hug; hearts.",
+  "t": {
+   "who": "pair",
+   "x": 420,
+   "style": {
+    "cap": true
+   },
+   "bg": "room",
+   "time": "night",
+   "pose": "hug",
+   "face": "closed",
+   "her": {
+    "x": 640,
+    "pose": "hug",
+    "face": "closed"
+   },
+   "feature": [
+    "hearts"
+   ]
+  }
+ },
+ {
+  "n": 42,
+  "tag": "Ooh",
+  "state": "Release",
+  "move": "Stamp cut",
+  "scene": "They bounce.",
+  "t": {
+   "who": "pair",
+   "x": 360,
+   "style": {
+    "cap": true
+   },
+   "bg": "yard",
+   "time": "night",
+   "action": "dance",
+   "dance": "bounce",
+   "face": "joy",
+   "her": {
+    "face": "joy"
+   },
+   "feature": [
+    "speakers"
+   ]
+  }
+ },
+ {
+  "n": 43,
+  "tag": "One two",
+  "state": "Release",
+  "move": "Stamp cut",
+  "scene": "The one-two step, side to side.",
+  "t": {
+   "who": "pair",
+   "x": 360,
+   "style": {
+    "cap": true
+   },
+   "bg": "yard",
+   "time": "night",
+   "action": "dance",
+   "dance": "twoStep",
+   "face": "joy",
+   "her": {
+    "face": "grin"
+   },
+   "feature": [
+    "speakers"
+   ]
+  }
+ },
+ {
+  "n": 44,
+  "tag": "Ooh",
+  "state": "Release",
+  "move": "Stamp cut",
+  "scene": "Closer on the step.",
+  "t": {
+   "who": "pair",
+   "x": 360,
+   "style": {
+    "cap": true
+   },
+   "bg": "yard",
+   "time": "night",
+   "action": "dance",
+   "dance": "twoStep",
+   "face": "grin",
+   "her": {
+    "face": "joy"
+   },
+   "zoom": "mid"
+  }
+ },
+ {
+  "n": 45,
+  "tag": "Sky",
+  "state": "Release",
+  "move": "Registration snap",
+  "scene": "Fireworks; they whine close.",
+  "t": {
+   "who": "pair",
+   "x": 420,
+   "style": {
+    "cap": true
+   },
+   "bg": "yard",
+   "time": "night",
+   "action": "dance",
+   "dance": "whine",
+   "face": "smitten",
+   "her": {
+    "x": 680,
+    "face": "smitten"
+   },
+   "feature": [
+    "fireworks"
+   ]
+  }
+ },
+ {
+  "n": 46,
+  "tag": "Ooh",
+  "state": "Release",
+  "move": "Stamp cut",
+  "scene": "More fireworks.",
+  "t": {
+   "bg": "yard",
+   "time": "night",
+   "who": "precious",
+   "action": "dance",
+   "dance": "whine",
+   "face": "smitten",
+   "feature": [
+    "fireworks"
+   ]
+  }
+ },
+ {
+  "n": 47,
+  "tag": "Money",
+  "state": "Present",
+  "move": "Stamp cut",
+  "scene": "He hands her the money; it rains.",
+  "t": {
+   "who": "pair",
+   "x": 360,
+   "style": {
+    "cap": true
+   },
+   "bg": "yard",
+   "time": "night",
+   "pose": "offer",
+   "hold": "money",
+   "face": "grin",
+   "her": {
+    "pose": "hips",
+    "face": "sly"
+   },
+   "feature": [
+    "money"
+   ]
+  }
+ },
+ {
+  "n": 48,
+  "tag": "Hey",
+  "state": "Release",
+  "move": "Stamp cut",
+  "scene": "He waves on the beat.",
+  "t": {
+   "bg": "yard",
+   "time": "night",
+   "who": "stein",
+   "action": "dance",
+   "dance": "wave",
+   "face": "joy",
+   "style": {
+    "cap": true
+   }
+  }
+ },
+ {
+  "n": 49,
+  "tag": "Love you",
+  "state": "Precious",
+  "move": "Smoke wipe",
+  "scene": "Hand on heart, hearts rising between them.",
+  "t": {
+   "who": "pair",
+   "x": 360,
+   "style": {
+    "cap": true
+   },
+   "bg": "yard",
+   "time": "dusk",
+   "pose": "chestHand",
+   "face": "smitten",
+   "her": {
+    "pose": "hips",
+    "face": "blush"
+   },
+   "feature": [
+    "hearts"
+   ]
+  }
+ },
+ {
+  "n": 50,
+  "tag": "Whine",
+  "state": "Release",
+  "move": "Registration snap",
+  "scene": "She whines, arms up, the speakers pumping; WHINE stamp.",
+  "t": {
+   "bg": "yard",
+   "time": "night",
+   "who": "precious",
+   "action": "dance",
+   "dance": "whine",
+   "arms": "up",
+   "face": "sly",
+   "feature": [
+    "speakers"
+   ]
+  }
+ },
+ {
+  "n": 51,
+  "tag": "This side",
+  "state": "Precious",
+  "move": "Stamp cut",
+  "scene": "He beckons; she comes round to his side.",
+  "t": {
+   "who": "pair",
+   "x": 250,
+   "style": {
+    "cap": true
+   },
+   "bg": "yard",
+   "time": "night",
+   "pose": "beckon",
+   "face": "grin",
+   "her": {
+    "travel": [
+     980,
+     640
+    ],
+    "action": "strut",
+    "face": "sly"
+   }
+  }
+ },
+ {
+  "n": 52,
+  "tag": "Round",
+  "state": "Precious",
+  "move": "Stamp cut",
+  "scene": "She circles round the other way.",
+  "t": {
+   "who": "pair",
+   "x": 820,
+   "style": {
+    "cap": true
+   },
+   "bg": "yard",
+   "time": "night",
+   "pose": "beckon",
+   "flip": true,
+   "face": "grin",
+   "her": {
+    "travel": [
+     120,
+     480
+    ],
+    "action": "strut",
+    "face": "sly"
+   }
+  }
+ },
+ {
+  "n": 53,
+  "tag": "Hey, hey",
+  "state": "Release",
+  "move": "Stamp cut",
+  "scene": "They bounce.",
+  "t": {
+   "who": "pair",
+   "x": 360,
+   "style": {
+    "cap": true
+   },
+   "bg": "yard",
+   "time": "night",
+   "action": "dance",
+   "dance": "bounce",
+   "face": "joy",
+   "her": {
+    "face": "joy"
+   },
+   "feature": [
+    "speakers"
+   ]
+  }
+ },
+ {
+  "n": 54,
+  "tag": "Whine",
+  "state": "Release",
+  "move": "Registration snap",
+  "scene": "Both whine; WHINE stamp.",
+  "t": {
+   "who": "pair",
+   "x": 360,
+   "style": {
+    "cap": true
+   },
+   "bg": "yard",
+   "time": "night",
+   "action": "dance",
+   "dance": "whine",
+   "face": "sly",
+   "her": {
+    "face": "sly",
+    "arms": "up"
+   },
+   "feature": [
+    "speakers",
+    "troops"
+   ]
+  }
+ },
+ {
+  "n": 55,
+  "tag": "This side",
+  "state": "Precious",
+  "move": "Stamp cut",
+  "scene": "She comes round again.",
+  "t": {
+   "who": "pair",
+   "x": 250,
+   "style": {
+    "cap": true
+   },
+   "bg": "yard",
+   "time": "night",
+   "pose": "beckon",
+   "face": "grin",
+   "her": {
+    "travel": [
+     980,
+     640
+    ],
+    "action": "strut",
+    "face": "blush"
+   }
+  }
+ },
+ {
+  "n": 56,
+  "tag": "Round",
+  "state": "Release",
+  "move": "Stamp cut",
+  "scene": "The one-two.",
+  "t": {
+   "who": "pair",
+   "x": 360,
+   "style": {
+    "cap": true
+   },
+   "bg": "yard",
+   "time": "night",
+   "action": "dance",
+   "dance": "twoStep",
+   "face": "joy",
+   "her": {
+    "face": "joy"
+   },
+   "feature": [
+    "speakers"
+   ]
+  }
+ },
+ {
+  "n": 57,
+  "tag": "East side",
+  "state": "Precious",
+  "move": "Print roll",
+  "scene": "She struts down the east-side street toward the rising sun; EAST SIDE stamp.",
+  "t": {
+   "bg": "street",
+   "time": "day",
+   "who": "precious",
+   "action": "strut",
+   "travel": [
+    180,
+    860
+   ],
+   "feature": [
+    "sun",
+    "sign"
+   ],
+   "sun": 0.6,
+   "sign": "EAST SIDE",
+   "face": "cool"
+  }
+ },
+ {
+  "n": 58,
+  "tag": "Real fine",
+  "state": "Precious",
+  "move": "Stamp cut",
+  "scene": "Close on her: shades, hand on hip.",
+  "t": {
+   "bg": "street",
+   "time": "day",
+   "who": "precious",
+   "pose": "hips",
+   "face": "cool",
+   "zoom": "mid",
+   "note": "real fine.",
+   "noteAt": 0,
+   "noteXY": [
+    300,
+    520
+   ]
+  }
+ },
+ {
+  "n": 59,
+  "tag": "The call",
+  "state": "Present",
+  "move": "Stamp cut",
+  "scene": "He calls her; the phone rings.",
+  "t": {
+   "bg": "yard",
+   "time": "night",
+   "who": "stein",
+   "x": 330,
+   "pose": "phone",
+   "hold": "phone",
+   "face": "grin",
+   "feature": [
+    "phone"
+   ],
+   "style": {
+    "cap": true
+   }
+  }
+ },
+ {
+  "n": 60,
+  "tag": "She comes",
+  "state": "Precious",
+  "move": "Stamp cut",
+  "scene": "She walks over to him when he calls.",
+  "t": {
+   "who": "pair",
+   "x": 260,
+   "style": {
+    "cap": true
+   },
+   "bg": "yard",
+   "time": "night",
+   "pose": "beckon",
+   "face": "grin",
+   "her": {
+    "travel": [
+     1000,
+     680
+    ],
+    "action": "strut",
+    "face": "blush"
+   }
+  }
+ },
+ {
+  "n": 61,
+  "tag": "Hey, hey",
+  "state": "Release",
+  "move": "Registration snap",
+  "scene": "They bounce together on the beat.",
+  "t": {
+   "who": "pair",
+   "x": 360,
+   "style": {
+    "cap": true
+   },
+   "bg": "yard",
+   "time": "night",
+   "action": "dance",
+   "dance": "bounce",
+   "face": "joy",
+   "her": {
+    "face": "joy"
+   },
+   "feature": [
+    "speakers"
+   ]
+  }
+ },
+ {
+  "n": 62,
+  "tag": "East side",
+  "state": "Precious",
+  "move": "Stamp cut",
+  "scene": "She struts down the east-side street toward the rising sun; EAST SIDE stamp.",
+  "t": {
+   "bg": "street",
+   "time": "day",
+   "who": "precious",
+   "action": "strut",
+   "travel": [
+    180,
+    860
+   ],
+   "feature": [
+    "sun",
+    "sign"
+   ],
+   "sun": 0.6,
+   "sign": "EAST SIDE",
+   "face": "cool"
+  }
+ },
+ {
+  "n": 63,
+  "tag": "Real fine",
+  "state": "Precious",
+  "move": "Stamp cut",
+  "scene": "Close on her: shades, hand on hip.",
+  "t": {
+   "bg": "street",
+   "time": "day",
+   "who": "precious",
+   "pose": "hips",
+   "face": "sly",
+   "zoom": "mid",
+   "note": "real fine.",
+   "noteAt": 0,
+   "noteXY": [
+    300,
+    520
+   ]
+  }
+ },
+ {
+  "n": 64,
+  "tag": "The call",
+  "state": "Present",
+  "move": "Stamp cut",
+  "scene": "He calls her; the phone rings.",
+  "t": {
+   "bg": "yard",
+   "time": "night",
+   "who": "stein",
+   "x": 330,
+   "pose": "phone",
+   "hold": "phone",
+   "face": "grin",
+   "feature": [
+    "phone"
+   ],
+   "style": {
+    "cap": true
+   }
+  }
+ },
+ {
+  "n": 65,
+  "tag": "She comes",
+  "state": "Precious",
+  "move": "Stamp cut",
+  "scene": "She walks over to him when he calls.",
+  "t": {
+   "who": "pair",
+   "x": 260,
+   "style": {
+    "cap": true
+   },
+   "bg": "yard",
+   "time": "night",
+   "pose": "beckon",
+   "face": "grin",
+   "her": {
+    "travel": [
+     1000,
+     680
+    ],
+    "action": "strut",
+    "face": "blush"
+   }
+  }
+ },
+ {
+  "n": 66,
+  "tag": "Hey, hey",
+  "state": "Release",
+  "move": "Registration snap",
+  "scene": "They bounce together on the beat.",
+  "t": {
+   "who": "pair",
+   "x": 360,
+   "style": {
+    "cap": true
+   },
+   "bg": "yard",
+   "time": "night",
+   "action": "dance",
+   "dance": "twoStep",
+   "face": "joy",
+   "her": {
+    "face": "joy"
+   },
+   "feature": [
+    "speakers"
+   ]
+  }
+ },
+ {
+  "n": 67,
+  "tag": "Attitude",
+  "state": "Precious",
+  "move": "Smoke wipe",
+  "scene": "Her, arms crossed, an eyebrow up.",
+  "t": {
+   "bg": "street",
+   "time": "day",
+   "who": "precious",
+   "pose": "crossed",
+   "face": "attitude",
+   "zoom": "mid"
+  }
+ },
+ {
+  "n": 68,
+  "tag": "No pretty fool",
+  "state": "Pressure",
+  "move": "Stamp cut",
+  "scene": "Palm out: he flings the clown nose away.",
+  "t": {
+   "bg": "street",
+   "time": "day",
+   "who": "stein",
+   "pose": "stop",
+   "face": "steel",
+   "feature": [
+    "clown"
+   ],
+   "note": "no fools.",
+   "noteAt": 6,
+   "noteXY": [
+    300,
+    520
+   ],
+   "style": {
+    "cap": true
+   }
+  }
+ },
+ {
+  "n": 69,
+  "tag": "Understand",
+  "state": "Present",
+  "move": "Stamp cut",
+  "scene": "Hand on chest, nodding.",
+  "t": {
+   "bg": "street",
+   "time": "day",
+   "who": "stein",
+   "pose": "chestHand",
+   "action": "nod",
+   "face": "calm",
+   "style": {
+    "cap": true
+   }
+  }
+ },
+ {
+  "n": 70,
+  "tag": "The program",
+  "state": "Present",
+  "move": "Registration snap",
+  "scene": "He holds up the program.",
+  "t": {
+   "bg": "street",
+   "time": "day",
+   "who": "stein",
+   "pose": "offer",
+   "hold": "program",
+   "face": "grin",
+   "style": {
+    "cap": true
+   }
+  }
+ },
+ {
+  "n": 71,
+  "tag": "No test",
+  "state": "Pressure",
+  "move": "Registration snap",
+  "scene": "Spotlight: he flexes.",
+  "t": {
+   "bg": "plain",
+   "time": "day",
+   "wash": [
+    "gold",
+    "amber"
+   ],
+   "who": "stein",
+   "pose": "flex",
+   "face": "steel",
+   "feature": [
+    "spotlight"
+   ],
+   "style": {
+    "cap": true
+   }
+  }
+ },
+ {
+  "n": 72,
+  "tag": "Gal want me",
+  "state": "Precious",
+  "move": "Stamp cut",
+  "scene": "Her: heart eyes, hearts rising.",
+  "t": {
+   "bg": "street",
+   "time": "day",
+   "who": "precious",
+   "pose": "hips",
+   "face": "smitten",
+   "feature": [
+    "hearts"
+   ],
+   "zoom": "mid"
+  }
+ },
+ {
+  "n": 73,
+  "tag": "Feed",
+  "state": "Precious",
+  "move": "Stamp cut",
+  "scene": "Dinner again: he serves.",
+  "t": {
+   "who": "pair",
+   "x": 210,
+   "style": {
+    "cap": true
+   },
+   "bg": "room",
+   "time": "night",
+   "pose": "offer",
+   "hold": "plate",
+   "face": "joy",
+   "her": {
+    "x": 640,
+    "pose": "sit",
+    "face": "joy",
+    "scale": 0.74
+   },
+   "feature": [
+    "table"
+   ]
+  }
+ },
+ {
+  "n": 74,
+  "tag": "Loving",
+  "state": "Precious",
+  "move": "Stamp cut",
+  "scene": "Under the stars, a hug.",
+  "t": {
+   "who": "pair",
+   "x": 420,
+   "style": {
+    "cap": true
+   },
+   "bg": "sky",
+   "time": "night",
+   "pose": "hug",
+   "face": "closed",
+   "her": {
+    "x": 640,
+    "pose": "hug",
+    "face": "closed"
+   },
+   "feature": [
+    "stars",
+    "hearts"
+   ]
+  }
+ },
+ {
+  "n": 75,
+  "tag": "The jeep",
+  "state": "Release",
+  "move": "Smoke wipe",
+  "scene": "Night drive: the two of them in his jeep, the street sliding by.",
+  "t": {
+   "who": "pair",
+   "x": 400,
+   "style": {
+    "cap": true
+   },
+   "bg": "street",
+   "time": "night",
+   "pose": "sit",
+   "facing": "right",
+   "face": "joy",
+   "her": {
+    "x": 640,
+    "pose": "sit",
+    "facing": "right",
+    "face": "joy",
+    "scale": 0.74
+   },
+   "feature": [
+    "jeep"
+   ],
+   "scroll": 18
+  }
+ },
+ {
+  "n": 76,
+  "tag": "Yo",
+  "state": "Release",
+  "move": "Stamp cut",
+  "scene": "Still driving; he waves.",
+  "t": {
+   "who": "pair",
+   "x": 400,
+   "style": {
+    "cap": true
+   },
+   "bg": "street",
+   "time": "night",
+   "pose": "sit",
+   "facing": "right",
+   "face": "joy",
+   "her": {
+    "x": 640,
+    "pose": "sit",
+    "facing": "right",
+    "face": "grin",
+    "scale": 0.74
+   },
+   "feature": [
+    "jeep"
+   ],
+   "scroll": 18,
+   "zoom": "mid"
+  }
+ },
+ {
+  "n": 77,
+  "tag": "Whine",
+  "state": "Release",
+  "move": "Registration snap",
+  "scene": "Back at the yard: she whines, the troops behind; WHINE stamp.",
+  "t": {
+   "bg": "yard",
+   "time": "night",
+   "who": "precious",
+   "action": "dance",
+   "dance": "whine",
+   "arms": "up",
+   "face": "sly",
+   "feature": [
+    "speakers",
+    "troops"
+   ]
+  }
+ },
+ {
+  "n": 78,
+  "tag": "This side",
+  "state": "Precious",
+  "move": "Stamp cut",
+  "scene": "She comes round to his side.",
+  "t": {
+   "who": "pair",
+   "x": 250,
+   "style": {
+    "cap": true
+   },
+   "bg": "yard",
+   "time": "night",
+   "pose": "beckon",
+   "face": "grin",
+   "her": {
+    "travel": [
+     980,
+     640
+    ],
+    "action": "strut",
+    "face": "blush"
+   }
+  }
+ },
+ {
+  "n": 79,
+  "tag": "Round",
+  "state": "Release",
+  "move": "Stamp cut",
+  "scene": "The one-two.",
+  "t": {
+   "who": "pair",
+   "x": 360,
+   "style": {
+    "cap": true
+   },
+   "bg": "yard",
+   "time": "night",
+   "action": "dance",
+   "dance": "twoStep",
+   "face": "joy",
+   "her": {
+    "face": "joy"
+   },
+   "feature": [
+    "speakers"
+   ]
+  }
+ },
+ {
+  "n": 80,
+  "tag": "East side",
+  "state": "Precious",
+  "move": "Print roll",
+  "scene": "She struts down the east-side street toward the rising sun; EAST SIDE stamp.",
+  "t": {
+   "bg": "street",
+   "time": "dawn",
+   "who": "precious",
+   "action": "strut",
+   "travel": [
+    180,
+    860
+   ],
+   "feature": [
+    "sun",
+    "sign"
+   ],
+   "sun": 0.25,
+   "sign": "EAST SIDE",
+   "face": "cool"
+  }
+ },
+ {
+  "n": 81,
+  "tag": "Real fine",
+  "state": "Precious",
+  "move": "Stamp cut",
+  "scene": "Close on her: shades, hand on hip.",
+  "t": {
+   "bg": "street",
+   "time": "dawn",
+   "who": "precious",
+   "pose": "hips",
+   "face": "cool",
+   "zoom": "mid",
+   "note": "real fine.",
+   "noteAt": 0,
+   "noteXY": [
+    300,
+    520
+   ]
+  }
+ },
+ {
+  "n": 82,
+  "tag": "The call",
+  "state": "Present",
+  "move": "Stamp cut",
+  "scene": "He calls her; the phone rings.",
+  "t": {
+   "bg": "yard",
+   "time": "night",
+   "who": "stein",
+   "x": 330,
+   "pose": "phone",
+   "hold": "phone",
+   "face": "grin",
+   "feature": [
+    "phone"
+   ],
+   "style": {
+    "cap": true
+   }
+  }
+ },
+ {
+  "n": 83,
+  "tag": "She comes",
+  "state": "Precious",
+  "move": "Stamp cut",
+  "scene": "She walks over to him when he calls.",
+  "t": {
+   "who": "pair",
+   "x": 260,
+   "style": {
+    "cap": true
+   },
+   "bg": "yard",
+   "time": "night",
+   "pose": "beckon",
+   "face": "grin",
+   "her": {
+    "travel": [
+     1000,
+     680
+    ],
+    "action": "strut",
+    "face": "blush"
+   }
+  }
+ },
+ {
+  "n": 84,
+  "tag": "Hey, hey",
+  "state": "Release",
+  "move": "Registration snap",
+  "scene": "They bounce together on the beat.",
+  "t": {
+   "who": "pair",
+   "x": 360,
+   "style": {
+    "cap": true
+   },
+   "bg": "yard",
+   "time": "night",
+   "action": "dance",
+   "dance": "bounce",
+   "face": "joy",
+   "her": {
+    "face": "joy"
+   },
+   "feature": [
+    "speakers"
+   ]
+  }
+ },
+ {
+  "n": 85,
+  "tag": "East side",
+  "state": "Precious",
+  "move": "Stamp cut",
+  "scene": "She struts down the east-side street toward the rising sun; EAST SIDE stamp.",
+  "t": {
+   "bg": "street",
+   "time": "day",
+   "who": "precious",
+   "action": "strut",
+   "travel": [
+    180,
+    860
+   ],
+   "feature": [
+    "sun",
+    "sign"
+   ],
+   "sun": 0.6,
+   "sign": "EAST SIDE",
+   "face": "cool"
+  }
+ },
+ {
+  "n": 86,
+  "tag": "Real fine",
+  "state": "Precious",
+  "move": "Stamp cut",
+  "scene": "Close on her: shades, hand on hip.",
+  "t": {
+   "bg": "street",
+   "time": "day",
+   "who": "precious",
+   "pose": "hips",
+   "face": "sly",
+   "zoom": "mid",
+   "note": "real fine.",
+   "noteAt": 0,
+   "noteXY": [
+    300,
+    520
+   ]
+  }
+ },
+ {
+  "n": 87,
+  "tag": "The call",
+  "state": "Present",
+  "move": "Stamp cut",
+  "scene": "He calls her; the phone rings.",
+  "t": {
+   "bg": "yard",
+   "time": "night",
+   "who": "stein",
+   "x": 330,
+   "pose": "phone",
+   "hold": "phone",
+   "face": "grin",
+   "feature": [
+    "phone"
+   ],
+   "style": {
+    "cap": true
+   }
+  }
+ },
+ {
+  "n": 88,
+  "tag": "She comes",
+  "state": "Precious",
+  "move": "Stamp cut",
+  "scene": "She walks over to him when he calls.",
+  "t": {
+   "who": "pair",
+   "x": 260,
+   "style": {
+    "cap": true
+   },
+   "bg": "yard",
+   "time": "night",
+   "pose": "beckon",
+   "face": "grin",
+   "her": {
+    "travel": [
+     1000,
+     680
+    ],
+    "action": "strut",
+    "face": "blush"
+   }
+  }
+ },
+ {
+  "n": 89,
+  "tag": "Hey, hey",
+  "state": "Release",
+  "move": "Registration snap",
+  "scene": "They bounce together on the beat.",
+  "t": {
+   "who": "pair",
+   "x": 360,
+   "style": {
+    "cap": true
+   },
+   "bg": "yard",
+   "time": "night",
+   "action": "dance",
+   "dance": "twoStep",
+   "face": "joy",
+   "her": {
+    "face": "joy"
+   },
+   "feature": [
+    "speakers"
+   ]
+  }
+ },
+ {
+  "n": 90,
+  "tag": "East side",
+  "state": "Precious",
+  "move": "Stamp cut",
+  "scene": "She struts down the east-side street toward the rising sun; EAST SIDE stamp.",
+  "t": {
+   "bg": "street",
+   "time": "dawn",
+   "who": "precious",
+   "action": "strut",
+   "travel": [
+    180,
+    860
+   ],
+   "feature": [
+    "sun",
+    "sign"
+   ],
+   "sun": 0.25,
+   "sign": "EAST SIDE",
+   "face": "cool"
+  }
+ },
+ {
+  "n": 91,
+  "tag": "She's fine",
+  "state": "Precious",
+  "move": "Stamp cut",
+  "scene": "Close on her: shades, hand on hip.",
+  "t": {
+   "bg": "street",
+   "time": "dawn",
+   "who": "precious",
+   "pose": "hips",
+   "face": "cool",
+   "zoom": "mid",
+   "note": "she's fine.",
+   "noteAt": 0,
+   "noteXY": [
+    300,
+    520
+   ]
+  }
+ },
+ {
+  "n": 92,
+  "tag": "The call",
+  "state": "Present",
+  "move": "Stamp cut",
+  "scene": "He calls her; the phone rings.",
+  "t": {
+   "bg": "yard",
+   "time": "night",
+   "who": "stein",
+   "x": 330,
+   "pose": "phone",
+   "hold": "phone",
+   "face": "grin",
+   "feature": [
+    "phone"
+   ],
+   "style": {
+    "cap": true
+   }
+  }
+ },
+ {
+  "n": 93,
+  "tag": "She comes",
+  "state": "Precious",
+  "move": "Stamp cut",
+  "scene": "She walks over to him when he calls.",
+  "t": {
+   "who": "pair",
+   "x": 260,
+   "style": {
+    "cap": true
+   },
+   "bg": "yard",
+   "time": "night",
+   "pose": "beckon",
+   "face": "grin",
+   "her": {
+    "travel": [
+     1000,
+     680
+    ],
+    "action": "strut",
+    "face": "blush"
+   }
+  }
+ },
+ {
+  "n": -1,
+  "tag": "Fin",
+  "state": "Release",
+  "move": "Smoke wipe",
+  "scene": "Over the outro: fireworks, the troops, the two of them whining; the end card; the page folds shut.",
+  "t": {
+   "who": "pair",
+   "x": 420,
+   "style": {
+    "cap": true
+   },
+   "bg": "yard",
+   "time": "night",
+   "action": "dance",
+   "dance": "whine",
+   "face": "joy",
+   "her": {
+    "x": 680,
+    "face": "joy",
+    "arms": "up"
+   },
+   "feature": [
+    "fireworks",
+    "troops"
+   ]
+  }
+ }
+]

@@ -1,0 +1,2611 @@
+[
+ {
+  "i": 0,
+  "section": "Intro",
+  "text": "Okay lets try again",
+  "start": 3.81,
+  "end": 5.21,
+  "words": [
+   {
+    "w": "Okay",
+    "t": 3.81
+   },
+   {
+    "w": "lets",
+    "t": 4.13
+   },
+   {
+    "w": "try",
+    "t": 4.45
+   },
+   {
+    "w": "again",
+    "t": 4.61
+   }
+  ]
+ },
+ {
+  "i": 1,
+  "section": "Intro",
+  "text": "Listen man,",
+  "start": 5.31,
+  "end": 6.12,
+  "words": [
+   {
+    "w": "Listen",
+    "t": 5.31
+   },
+   {
+    "w": "man,",
+    "t": 5.56
+   }
+  ]
+ },
+ {
+  "i": 2,
+  "section": "Intro",
+  "text": "you better listen",
+  "start": 6.21,
+  "end": 7.43,
+  "words": [
+   {
+    "w": "you",
+    "t": 6.21
+   },
+   {
+    "w": "better",
+    "t": 6.46
+   },
+   {
+    "w": "listen",
+    "t": 6.71
+   }
+  ]
+ },
+ {
+  "i": 3,
+  "section": "Intro",
+  "text": "You better listen",
+  "start": 7.67,
+  "end": 8.75,
+  "words": [
+   {
+    "w": "You",
+    "t": 7.67
+   },
+   {
+    "w": "better",
+    "t": 7.83
+   },
+   {
+    "w": "listen",
+    "t": 8.15
+   }
+  ]
+ },
+ {
+  "i": 4,
+  "section": "Intro",
+  "text": "I don't trust no one with you",
+  "start": 11.61,
+  "end": 13.81,
+  "words": [
+   {
+    "w": "I",
+    "t": 11.61
+   },
+   {
+    "w": "don't",
+    "t": 11.77
+   },
+   {
+    "w": "trust",
+    "t": 12.09
+   },
+   {
+    "w": "no",
+    "t": 12.49
+   },
+   {
+    "w": "one",
+    "t": 12.73
+   },
+   {
+    "w": "with",
+    "t": 12.97
+   },
+   {
+    "w": "you",
+    "t": 13.21
+   }
+  ]
+ },
+ {
+  "i": 5,
+  "section": "Intro",
+  "text": "Don't trust no one at all",
+  "start": 14.25,
+  "end": 16.29,
+  "words": [
+   {
+    "w": "Don't",
+    "t": 14.25
+   },
+   {
+    "w": "trust",
+    "t": 14.65
+   },
+   {
+    "w": "no",
+    "t": 15.05
+   },
+   {
+    "w": "one",
+    "t": 15.29
+   },
+   {
+    "w": "at",
+    "t": 15.53
+   },
+   {
+    "w": "all",
+    "t": 15.69
+   }
+  ]
+ },
+ {
+  "i": 6,
+  "section": "Intro",
+  "text": "Man a general, real general",
+  "start": 16.87,
+  "end": 19.15,
+  "words": [
+   {
+    "w": "Man",
+    "t": 16.87
+   },
+   {
+    "w": "a",
+    "t": 17.71
+   },
+   {
+    "w": "general,",
+    "t": 18.55
+   },
+   {
+    "w": "real",
+    "t": 18.8
+   },
+   {
+    "w": "general",
+    "t": 19.05
+   }
+  ]
+ },
+ {
+  "i": 7,
+  "section": "Intro",
+  "text": "One call and you go",
+  "start": 19.35,
+  "end": 20.45,
+  "words": [
+   {
+    "w": "One",
+    "t": 19.35
+   },
+   {
+    "w": "call",
+    "t": 19.83
+   },
+   {
+    "w": "and",
+    "t": 20.04
+   },
+   {
+    "w": "you",
+    "t": 20.26
+   },
+   {
+    "w": "go",
+    "t": 20.47
+   }
+  ]
+ },
+ {
+  "i": 8,
+  "section": "Intro",
+  "text": "On God",
+  "start": 20.47,
+  "end": 21.35,
+  "words": [
+   {
+    "w": "On",
+    "t": 20.47
+   },
+   {
+    "w": "God",
+    "t": 20.72
+   }
+  ]
+ },
+ {
+  "i": 9,
+  "section": "Verse 1",
+  "text": "Wait for me",
+  "start": 22.25,
+  "end": 23.41,
+  "words": [
+   {
+    "w": "Wait",
+    "t": 22.25
+   },
+   {
+    "w": "for",
+    "t": 22.57
+   },
+   {
+    "w": "me",
+    "t": 22.81
+   }
+  ]
+ },
+ {
+  "i": 10,
+  "section": "Verse 1",
+  "text": "Pretty girl, just wait for me",
+  "start": 23.77,
+  "end": 25.97,
+  "words": [
+   {
+    "w": "Pretty",
+    "t": 23.77
+   },
+   {
+    "w": "girl,",
+    "t": 24.17
+   },
+   {
+    "w": "just",
+    "t": 24.49
+   },
+   {
+    "w": "wait",
+    "t": 24.81
+   },
+   {
+    "w": "for",
+    "t": 25.13
+   },
+   {
+    "w": "me",
+    "t": 25.37
+   }
+  ]
+ },
+ {
+  "i": 11,
+  "section": "Verse 1",
+  "text": "Ayy",
+  "start": 26.07,
+  "end": 26.21,
+  "words": [
+   {
+    "w": "Ayy",
+    "t": 26.07
+   }
+  ]
+ },
+ {
+  "i": 12,
+  "section": "Verse 1",
+  "text": "Get the money and stay for me",
+  "start": 26.33,
+  "end": 28.45,
+  "words": [
+   {
+    "w": "Get",
+    "t": 26.33
+   },
+   {
+    "w": "the",
+    "t": 26.57
+   },
+   {
+    "w": "money",
+    "t": 26.65
+   },
+   {
+    "w": "and",
+    "t": 27.05
+   },
+   {
+    "w": "stay",
+    "t": 27.21
+   },
+   {
+    "w": "for",
+    "t": 27.61
+   },
+   {
+    "w": "me",
+    "t": 27.85
+   }
+  ]
+ },
+ {
+  "i": 13,
+  "section": "Verse 1",
+  "text": "Ayy",
+  "start": 28.55,
+  "end": 28.69,
+  "words": [
+   {
+    "w": "Ayy",
+    "t": 28.55
+   }
+  ]
+ },
+ {
+  "i": 14,
+  "section": "Verse 1",
+  "text": "Say she want just cater me",
+  "start": 28.81,
+  "end": 31.01,
+  "words": [
+   {
+    "w": "Say",
+    "t": 28.81
+   },
+   {
+    "w": "she",
+    "t": 29.05
+   },
+   {
+    "w": "want",
+    "t": 29.21
+   },
+   {
+    "w": "just",
+    "t": 29.61
+   },
+   {
+    "w": "cater",
+    "t": 30.01
+   },
+   {
+    "w": "me",
+    "t": 30.41
+   }
+  ]
+ },
+ {
+  "i": 15,
+  "section": "Verse 1",
+  "text": "Ayy!",
+  "start": 31.11,
+  "end": 31.18,
+  "words": [
+   {
+    "w": "Ayy!",
+    "t": 31.11
+   }
+  ]
+ },
+ {
+  "i": 16,
+  "section": "Verse 1",
+  "text": "Give me pussy and mek me run you dung",
+  "start": 31.29,
+  "end": 33.29,
+  "words": [
+   {
+    "w": "Give",
+    "t": 31.29
+   },
+   {
+    "w": "me",
+    "t": 31.53
+   },
+   {
+    "w": "pussy",
+    "t": 31.74
+   },
+   {
+    "w": "and",
+    "t": 31.96
+   },
+   {
+    "w": "mek",
+    "t": 32.17
+   },
+   {
+    "w": "me",
+    "t": 32.29
+   },
+   {
+    "w": "run",
+    "t": 32.41
+   },
+   {
+    "w": "you",
+    "t": 32.65
+   },
+   {
+    "w": "dung",
+    "t": 32.9
+   }
+  ]
+ },
+ {
+  "i": 17,
+  "section": "Verse 1",
+  "text": "Love you know me want come fuck you now",
+  "start": 33.29,
+  "end": 35.77,
+  "words": [
+   {
+    "w": "Love",
+    "t": 33.29
+   },
+   {
+    "w": "you",
+    "t": 33.53
+   },
+   {
+    "w": "know",
+    "t": 33.77
+   },
+   {
+    "w": "me",
+    "t": 34.01
+   },
+   {
+    "w": "want",
+    "t": 34.3
+   },
+   {
+    "w": "come",
+    "t": 34.6
+   },
+   {
+    "w": "fuck",
+    "t": 34.89
+   },
+   {
+    "w": "you",
+    "t": 35.13
+   },
+   {
+    "w": "now",
+    "t": 35.37
+   }
+  ]
+ },
+ {
+  "i": 18,
+  "section": "Verse 1",
+  "text": "Real general, never want fi tun nuh clown",
+  "start": 35.77,
+  "end": 38.33,
+  "words": [
+   {
+    "w": "Real",
+    "t": 35.77
+   },
+   {
+    "w": "general,",
+    "t": 36.17
+   },
+   {
+    "w": "never",
+    "t": 36.42
+   },
+   {
+    "w": "want",
+    "t": 36.67
+   },
+   {
+    "w": "fi",
+    "t": 36.92
+   },
+   {
+    "w": "tun",
+    "t": 37.17
+   },
+   {
+    "w": "nuh",
+    "t": 37.42
+   },
+   {
+    "w": "clown",
+    "t": 37.67
+   }
+  ]
+ },
+ {
+  "i": 19,
+  "section": "Verse 1",
+  "text": "So",
+  "start": 38.33,
+  "end": 38.93,
+  "words": [
+   {
+    "w": "So",
+    "t": 38.33
+   }
+  ]
+ },
+ {
+  "i": 20,
+  "section": "Verse 1",
+  "text": "Don't waste my time right now",
+  "start": 38.93,
+  "end": 40.85,
+  "words": [
+   {
+    "w": "Don't",
+    "t": 38.93
+   },
+   {
+    "w": "waste",
+    "t": 39.25
+   },
+   {
+    "w": "my",
+    "t": 39.65
+   },
+   {
+    "w": "time",
+    "t": 39.89
+   },
+   {
+    "w": "right",
+    "t": 40.21
+   },
+   {
+    "w": "now",
+    "t": 40.37
+   }
+  ]
+ },
+ {
+  "i": 21,
+  "section": "Chorus",
+  "text": "Pretty girl from the east side",
+  "start": 40.85,
+  "end": 42.81,
+  "words": [
+   {
+    "w": "Pretty",
+    "t": 40.85
+   },
+   {
+    "w": "girl",
+    "t": 41.17
+   },
+   {
+    "w": "from",
+    "t": 41.49
+   },
+   {
+    "w": "the",
+    "t": 41.73
+   },
+   {
+    "w": "east",
+    "t": 41.89
+   },
+   {
+    "w": "side",
+    "t": 42.21
+   }
+  ]
+ },
+ {
+  "i": 22,
+  "section": "Chorus",
+  "text": "Real fine",
+  "start": 43.09,
+  "end": 44.09,
+  "words": [
+   {
+    "w": "Real",
+    "t": 43.09
+   },
+   {
+    "w": "fine",
+    "t": 43.49
+   }
+  ]
+ },
+ {
+  "i": 23,
+  "section": "Chorus",
+  "text": "Come now when I call you",
+  "start": 44.53,
+  "end": 46.53,
+  "words": [
+   {
+    "w": "Come",
+    "t": 44.53
+   },
+   {
+    "w": "now",
+    "t": 44.81
+   },
+   {
+    "w": "when",
+    "t": 45.09
+   },
+   {
+    "w": "I",
+    "t": 45.37
+   },
+   {
+    "w": "call",
+    "t": 45.65
+   },
+   {
+    "w": "you",
+    "t": 45.9
+   }
+  ]
+ },
+ {
+  "i": 24,
+  "section": "Chorus",
+  "text": "Come now when I call you",
+  "start": 47.21,
+  "end": 49.13,
+  "words": [
+   {
+    "w": "Come",
+    "t": 47.21
+   },
+   {
+    "w": "now",
+    "t": 47.49
+   },
+   {
+    "w": "when",
+    "t": 47.77
+   },
+   {
+    "w": "I",
+    "t": 48.05
+   },
+   {
+    "w": "call",
+    "t": 48.29
+   },
+   {
+    "w": "you",
+    "t": 48.53
+   }
+  ]
+ },
+ {
+  "i": 25,
+  "section": "Chorus",
+  "text": "Hey, hey",
+  "start": 49.23,
+  "end": 50.81,
+  "words": [
+   {
+    "w": "Hey,",
+    "t": 49.23
+   },
+   {
+    "w": "hey",
+    "t": 49.48
+   }
+  ]
+ },
+ {
+  "i": 26,
+  "section": "Chorus",
+  "text": "Pretty girl from the east side",
+  "start": 51.09,
+  "end": 52.89,
+  "words": [
+   {
+    "w": "Pretty",
+    "t": 51.09
+   },
+   {
+    "w": "girl",
+    "t": 51.37
+   },
+   {
+    "w": "from",
+    "t": 51.65
+   },
+   {
+    "w": "the",
+    "t": 51.81
+   },
+   {
+    "w": "east",
+    "t": 51.97
+   },
+   {
+    "w": "side",
+    "t": 52.29
+   }
+  ]
+ },
+ {
+  "i": 27,
+  "section": "Chorus",
+  "text": "Real fine",
+  "start": 53.25,
+  "end": 54.17,
+  "words": [
+   {
+    "w": "Real",
+    "t": 53.25
+   },
+   {
+    "w": "fine",
+    "t": 53.57
+   }
+  ]
+ },
+ {
+  "i": 28,
+  "section": "Chorus",
+  "text": "Come now when I call you",
+  "start": 54.81,
+  "end": 56.73,
+  "words": [
+   {
+    "w": "Come",
+    "t": 54.81
+   },
+   {
+    "w": "now",
+    "t": 55.09
+   },
+   {
+    "w": "when",
+    "t": 55.33
+   },
+   {
+    "w": "I",
+    "t": 55.57
+   },
+   {
+    "w": "call",
+    "t": 55.81
+   },
+   {
+    "w": "you",
+    "t": 56.13
+   }
+  ]
+ },
+ {
+  "i": 29,
+  "section": "Chorus",
+  "text": "Come now when I call you",
+  "start": 57.37,
+  "end": 59.25,
+  "words": [
+   {
+    "w": "Come",
+    "t": 57.37
+   },
+   {
+    "w": "now",
+    "t": 57.61
+   },
+   {
+    "w": "when",
+    "t": 57.85
+   },
+   {
+    "w": "I",
+    "t": 58.09
+   },
+   {
+    "w": "call",
+    "t": 58.41
+   },
+   {
+    "w": "you",
+    "t": 58.65
+   }
+  ]
+ },
+ {
+  "i": 30,
+  "section": "Chorus",
+  "text": "Hey, hey",
+  "start": 59.93,
+  "end": 60.97,
+  "words": [
+   {
+    "w": "Hey,",
+    "t": 59.93
+   },
+   {
+    "w": "hey",
+    "t": 60.57
+   }
+  ]
+ },
+ {
+  "i": 31,
+  "section": "Chorus",
+  "text": "Pretty girl from the east side",
+  "start": 61.09,
+  "end": 63.01,
+  "words": [
+   {
+    "w": "Pretty",
+    "t": 61.09
+   },
+   {
+    "w": "girl",
+    "t": 61.37
+   },
+   {
+    "w": "from",
+    "t": 61.69
+   },
+   {
+    "w": "the",
+    "t": 61.93
+   },
+   {
+    "w": "east",
+    "t": 62.17
+   },
+   {
+    "w": "side",
+    "t": 62.41
+   }
+  ]
+ },
+ {
+  "i": 32,
+  "section": "Chorus",
+  "text": "She's fine",
+  "start": 63.29,
+  "end": 64.45,
+  "words": [
+   {
+    "w": "She's",
+    "t": 63.29
+   },
+   {
+    "w": "fine",
+    "t": 63.85
+   }
+  ]
+ },
+ {
+  "i": 33,
+  "section": "Chorus",
+  "text": "Come now when I call you",
+  "start": 64.89,
+  "end": 66.49,
+  "words": [
+   {
+    "w": "Come",
+    "t": 64.89
+   },
+   {
+    "w": "now",
+    "t": 65.15
+   },
+   {
+    "w": "when",
+    "t": 65.41
+   },
+   {
+    "w": "I",
+    "t": 65.67
+   },
+   {
+    "w": "call",
+    "t": 65.93
+   },
+   {
+    "w": "you",
+    "t": 66.25
+   }
+  ]
+ },
+ {
+  "i": 34,
+  "section": "Chorus",
+  "text": "Come now when I call you",
+  "start": 67.45,
+  "end": 69.1,
+  "words": [
+   {
+    "w": "Come",
+    "t": 67.45
+   },
+   {
+    "w": "now",
+    "t": 67.73
+   },
+   {
+    "w": "when",
+    "t": 68.01
+   },
+   {
+    "w": "I",
+    "t": 68.29
+   },
+   {
+    "w": "call",
+    "t": 68.57
+   },
+   {
+    "w": "you",
+    "t": 68.85
+   }
+  ]
+ },
+ {
+  "i": 35,
+  "section": "Verse 2",
+  "text": "Listen",
+  "start": 70.3,
+  "end": 71.3,
+  "words": [
+   {
+    "w": "Listen",
+    "t": 70.35
+   }
+  ]
+ },
+ {
+  "i": 36,
+  "section": "Verse 2",
+  "text": "Me never yet wait pon it",
+  "start": 72.1,
+  "end": 73.7,
+  "words": [
+   {
+    "w": "Me",
+    "t": 72.1
+   },
+   {
+    "w": "never",
+    "t": 72.37
+   },
+   {
+    "w": "yet",
+    "t": 72.64
+   },
+   {
+    "w": "wait",
+    "t": 72.91
+   },
+   {
+    "w": "pon",
+    "t": 73.18
+   },
+   {
+    "w": "it",
+    "t": 73.45
+   }
+  ]
+ },
+ {
+  "i": 37,
+  "section": "Verse 2",
+  "text": "First date and me wait pon it",
+  "start": 74.35,
+  "end": 76.47,
+  "words": [
+   {
+    "w": "First",
+    "t": 74.35
+   },
+   {
+    "w": "date",
+    "t": 74.6
+   },
+   {
+    "w": "and",
+    "t": 74.86
+   },
+   {
+    "w": "me",
+    "t": 75.11
+   },
+   {
+    "w": "wait",
+    "t": 75.36
+   },
+   {
+    "w": "pon",
+    "t": 75.62
+   },
+   {
+    "w": "it",
+    "t": 75.87
+   }
+  ]
+ },
+ {
+  "i": 38,
+  "section": "Verse 2",
+  "text": "Give me pussy mek me cater it",
+  "start": 76.75,
+  "end": 78.73,
+  "words": [
+   {
+    "w": "Give",
+    "t": 76.75
+   },
+   {
+    "w": "me",
+    "t": 76.91
+   },
+   {
+    "w": "pussy",
+    "t": 77.16
+   },
+   {
+    "w": "mek",
+    "t": 77.41
+   },
+   {
+    "w": "me",
+    "t": 77.66
+   },
+   {
+    "w": "cater",
+    "t": 77.91
+   },
+   {
+    "w": "it",
+    "t": 78.16
+   }
+  ]
+ },
+ {
+  "i": 39,
+  "section": "Verse 2",
+  "text": "Ooh",
+  "start": 78.75,
+  "end": 79.31,
+  "words": [
+   {
+    "w": "Ooh",
+    "t": 78.75
+   }
+  ]
+ },
+ {
+  "i": 40,
+  "section": "Verse 2",
+  "text": "An she want come stay pon it",
+  "start": 79.31,
+  "end": 81.31,
+  "words": [
+   {
+    "w": "An",
+    "t": 79.31
+   },
+   {
+    "w": "she",
+    "t": 79.47
+   },
+   {
+    "w": "want",
+    "t": 79.71
+   },
+   {
+    "w": "come",
+    "t": 79.95
+   },
+   {
+    "w": "stay",
+    "t": 80.24
+   },
+   {
+    "w": "pon",
+    "t": 80.54
+   },
+   {
+    "w": "it",
+    "t": 80.83
+   }
+  ]
+ },
+ {
+  "i": 41,
+  "section": "Verse 2",
+  "text": "Ooh",
+  "start": 81.31,
+  "end": 81.73,
+  "words": [
+   {
+    "w": "Ooh",
+    "t": 81.31
+   }
+  ]
+ },
+ {
+  "i": 42,
+  "section": "Verse 2",
+  "text": "And me give her the one two",
+  "start": 81.75,
+  "end": 83.75,
+  "words": [
+   {
+    "w": "And",
+    "t": 81.75
+   },
+   {
+    "w": "me",
+    "t": 82.03
+   },
+   {
+    "w": "give",
+    "t": 82.27
+   },
+   {
+    "w": "her",
+    "t": 82.51
+   },
+   {
+    "w": "the",
+    "t": 82.67
+   },
+   {
+    "w": "one",
+    "t": 82.83
+   },
+   {
+    "w": "two",
+    "t": 83.08
+   }
+  ]
+ },
+ {
+  "i": 43,
+  "section": "Verse 2",
+  "text": "Ooh",
+  "start": 83.87,
+  "end": 84.21,
+  "words": [
+   {
+    "w": "Ooh",
+    "t": 83.87
+   }
+  ]
+ },
+ {
+  "i": 44,
+  "section": "Verse 2",
+  "text": "As she want come fuck too",
+  "start": 84.23,
+  "end": 86.23,
+  "words": [
+   {
+    "w": "As",
+    "t": 84.23
+   },
+   {
+    "w": "she",
+    "t": 84.51
+   },
+   {
+    "w": "want",
+    "t": 84.75
+   },
+   {
+    "w": "come",
+    "t": 85.07
+   },
+   {
+    "w": "fuck",
+    "t": 85.31
+   },
+   {
+    "w": "too",
+    "t": 85.63
+   }
+  ]
+ },
+ {
+  "i": 45,
+  "section": "Verse 2",
+  "text": "Ooh",
+  "start": 86.35,
+  "end": 86.91,
+  "words": [
+   {
+    "w": "Ooh",
+    "t": 86.35
+   }
+  ]
+ },
+ {
+  "i": 46,
+  "section": "Verse 2",
+  "text": "Give her money and buck too",
+  "start": 86.91,
+  "end": 88.79,
+  "words": [
+   {
+    "w": "Give",
+    "t": 86.91
+   },
+   {
+    "w": "her",
+    "t": 87.07
+   },
+   {
+    "w": "money",
+    "t": 87.23
+   },
+   {
+    "w": "and",
+    "t": 87.63
+   },
+   {
+    "w": "buck",
+    "t": 87.88
+   },
+   {
+    "w": "too",
+    "t": 88.13
+   }
+  ]
+ },
+ {
+  "i": 47,
+  "section": "Verse 2",
+  "text": "Hey",
+  "start": 88.83,
+  "end": 89.43,
+  "words": [
+   {
+    "w": "Hey",
+    "t": 88.83
+   }
+  ]
+ },
+ {
+  "i": 48,
+  "section": "Verse 2",
+  "text": "I feel like I love you",
+  "start": 89.55,
+  "end": 91.27,
+  "words": [
+   {
+    "w": "I",
+    "t": 89.55
+   },
+   {
+    "w": "feel",
+    "t": 89.71
+   },
+   {
+    "w": "like",
+    "t": 90.03
+   },
+   {
+    "w": "I",
+    "t": 90.27
+   },
+   {
+    "w": "love",
+    "t": 90.43
+   },
+   {
+    "w": "you",
+    "t": 90.67
+   }
+  ]
+ },
+ {
+  "i": 49,
+  "section": "Verse 2",
+  "text": "Just whine pon it, whine pon it",
+  "start": 91.31,
+  "end": 95.53,
+  "words": [
+   {
+    "w": "Just",
+    "t": 91.31
+   },
+   {
+    "w": "whine",
+    "t": 91.56
+   },
+   {
+    "w": "pon",
+    "t": 91.81
+   },
+   {
+    "w": "it,",
+    "t": 92.06
+   },
+   {
+    "w": "whine",
+    "t": 92.31
+   },
+   {
+    "w": "pon",
+    "t": 92.56
+   },
+   {
+    "w": "it",
+    "t": 92.81
+   }
+  ]
+ },
+ {
+  "i": 50,
+  "section": "Bridge",
+  "text": "Come around this side",
+  "start": 95.55,
+  "end": 97.11,
+  "words": [
+   {
+    "w": "Come",
+    "t": 95.55
+   },
+   {
+    "w": "around",
+    "t": 95.87
+   },
+   {
+    "w": "this",
+    "t": 96.19
+   },
+   {
+    "w": "side",
+    "t": 96.51
+   }
+  ]
+ },
+ {
+  "i": 51,
+  "section": "Bridge",
+  "text": "Round this side",
+  "start": 98.43,
+  "end": 99.67,
+  "words": [
+   {
+    "w": "Round",
+    "t": 98.43
+   },
+   {
+    "w": "this",
+    "t": 98.75
+   },
+   {
+    "w": "side",
+    "t": 99.07
+   }
+  ]
+ },
+ {
+  "i": 52,
+  "section": "Bridge",
+  "text": "Hey, hey",
+  "start": 99.8,
+  "end": 101.8,
+  "words": [
+   {
+    "w": "Hey,",
+    "t": 99.8
+   },
+   {
+    "w": "hey",
+    "t": 101.55
+   }
+  ]
+ },
+ {
+  "i": 53,
+  "section": "Bridge",
+  "text": "Come whine pon it, whine pon it",
+  "start": 102.1,
+  "end": 105.0,
+  "words": [
+   {
+    "w": "Come",
+    "t": 102.1
+   },
+   {
+    "w": "whine",
+    "t": 102.54
+   },
+   {
+    "w": "pon",
+    "t": 102.98
+   },
+   {
+    "w": "it,",
+    "t": 103.42
+   },
+   {
+    "w": "whine",
+    "t": 103.87
+   },
+   {
+    "w": "pon",
+    "t": 104.31
+   },
+   {
+    "w": "it",
+    "t": 104.75
+   }
+  ]
+ },
+ {
+  "i": 54,
+  "section": "Bridge",
+  "text": "Come around this side",
+  "start": 105.27,
+  "end": 107.7,
+  "words": [
+   {
+    "w": "Come",
+    "t": 105.27
+   },
+   {
+    "w": "around",
+    "t": 106.0
+   },
+   {
+    "w": "this",
+    "t": 106.72
+   },
+   {
+    "w": "side",
+    "t": 107.45
+   }
+  ]
+ },
+ {
+  "i": 55,
+  "section": "Bridge",
+  "text": "Round this side",
+  "start": 108.0,
+  "end": 109.97,
+  "words": [
+   {
+    "w": "Round",
+    "t": 108.0
+   },
+   {
+    "w": "this",
+    "t": 108.86
+   },
+   {
+    "w": "side",
+    "t": 109.72
+   }
+  ]
+ },
+ {
+  "i": 56,
+  "section": "Chorus",
+  "text": "Pretty girl from the east side",
+  "start": 111.47,
+  "end": 113.47,
+  "words": [
+   {
+    "w": "Pretty",
+    "t": 111.47
+   },
+   {
+    "w": "girl",
+    "t": 111.75
+   },
+   {
+    "w": "from",
+    "t": 112.03
+   },
+   {
+    "w": "the",
+    "t": 112.31
+   },
+   {
+    "w": "east",
+    "t": 112.59
+   },
+   {
+    "w": "side",
+    "t": 112.87
+   }
+  ]
+ },
+ {
+  "i": 57,
+  "section": "Chorus",
+  "text": "Real fine",
+  "start": 113.83,
+  "end": 114.91,
+  "words": [
+   {
+    "w": "Real",
+    "t": 113.83
+   },
+   {
+    "w": "fine",
+    "t": 114.31
+   }
+  ]
+ },
+ {
+  "i": 58,
+  "section": "Chorus",
+  "text": "Come now when I call you",
+  "start": 115.15,
+  "end": 116.9,
+  "words": [
+   {
+    "w": "Come",
+    "t": 115.15
+   },
+   {
+    "w": "now",
+    "t": 115.45
+   },
+   {
+    "w": "when",
+    "t": 115.75
+   },
+   {
+    "w": "I",
+    "t": 116.05
+   },
+   {
+    "w": "call",
+    "t": 116.35
+   },
+   {
+    "w": "you",
+    "t": 116.65
+   }
+  ]
+ },
+ {
+  "i": 59,
+  "section": "Chorus",
+  "text": "Come now when I call you",
+  "start": 117.93,
+  "end": 119.6,
+  "words": [
+   {
+    "w": "Come",
+    "t": 117.93
+   },
+   {
+    "w": "now",
+    "t": 118.21
+   },
+   {
+    "w": "when",
+    "t": 118.5
+   },
+   {
+    "w": "I",
+    "t": 118.78
+   },
+   {
+    "w": "call",
+    "t": 119.07
+   },
+   {
+    "w": "you",
+    "t": 119.35
+   }
+  ]
+ },
+ {
+  "i": 60,
+  "section": "Chorus",
+  "text": "Hey Hey",
+  "start": 119.7,
+  "end": 121.0,
+  "words": [
+   {
+    "w": "Hey",
+    "t": 119.7
+   },
+   {
+    "w": "Hey",
+    "t": 120.75
+   }
+  ]
+ },
+ {
+  "i": 61,
+  "section": "Chorus",
+  "text": "Pretty girl from the east side",
+  "start": 121.1,
+  "end": 123.0,
+  "words": [
+   {
+    "w": "Pretty",
+    "t": 121.1
+   },
+   {
+    "w": "girl",
+    "t": 121.43
+   },
+   {
+    "w": "from",
+    "t": 121.76
+   },
+   {
+    "w": "the",
+    "t": 122.09
+   },
+   {
+    "w": "east",
+    "t": 122.42
+   },
+   {
+    "w": "side",
+    "t": 122.75
+   }
+  ]
+ },
+ {
+  "i": 62,
+  "section": "Chorus",
+  "text": "Real fine",
+  "start": 123.03,
+  "end": 124.3,
+  "words": [
+   {
+    "w": "Real",
+    "t": 123.03
+   },
+   {
+    "w": "fine",
+    "t": 124.05
+   }
+  ]
+ },
+ {
+  "i": 63,
+  "section": "Chorus",
+  "text": "Come now when I call you",
+  "start": 124.4,
+  "end": 126.33,
+  "words": [
+   {
+    "w": "Come",
+    "t": 124.4
+   },
+   {
+    "w": "now",
+    "t": 124.74
+   },
+   {
+    "w": "when",
+    "t": 125.07
+   },
+   {
+    "w": "I",
+    "t": 125.41
+   },
+   {
+    "w": "call",
+    "t": 125.74
+   },
+   {
+    "w": "you",
+    "t": 126.08
+   }
+  ]
+ },
+ {
+  "i": 64,
+  "section": "Chorus",
+  "text": "Come now when I call you",
+  "start": 126.57,
+  "end": 129.0,
+  "words": [
+   {
+    "w": "Come",
+    "t": 126.57
+   },
+   {
+    "w": "now",
+    "t": 127.01
+   },
+   {
+    "w": "when",
+    "t": 127.44
+   },
+   {
+    "w": "I",
+    "t": 127.88
+   },
+   {
+    "w": "call",
+    "t": 128.31
+   },
+   {
+    "w": "you",
+    "t": 128.75
+   }
+  ]
+ },
+ {
+  "i": 65,
+  "section": "Chorus",
+  "text": "Hey Hey",
+  "start": 129.1,
+  "end": 131.57,
+  "words": [
+   {
+    "w": "Hey",
+    "t": 129.1
+   },
+   {
+    "w": "Hey",
+    "t": 131.32
+   }
+  ]
+ },
+ {
+  "i": 66,
+  "section": "Verse 3",
+  "text": "Bi gyal and she have a attitude",
+  "start": 132.55,
+  "end": 134.43,
+  "words": [
+   {
+    "w": "Bi",
+    "t": 132.55
+   },
+   {
+    "w": "gyal",
+    "t": 132.87
+   },
+   {
+    "w": "and",
+    "t": 133.19
+   },
+   {
+    "w": "she",
+    "t": 133.35
+   },
+   {
+    "w": "have",
+    "t": 133.51
+   },
+   {
+    "w": "a",
+    "t": 133.67
+   },
+   {
+    "w": "attitude",
+    "t": 133.83
+   }
+  ]
+ },
+ {
+  "i": 67,
+  "section": "Verse 3",
+  "text": "'Cause she want a man she nut want nuh pretty fool",
+  "start": 134.63,
+  "end": 137.19,
+  "words": [
+   {
+    "w": "'Cause",
+    "t": 134.63
+   },
+   {
+    "w": "she",
+    "t": 134.87
+   },
+   {
+    "w": "want",
+    "t": 135.03
+   },
+   {
+    "w": "a",
+    "t": 135.27
+   },
+   {
+    "w": "man",
+    "t": 135.35
+   },
+   {
+    "w": "she",
+    "t": 135.67
+   },
+   {
+    "w": "nut",
+    "t": 135.83
+   },
+   {
+    "w": "want",
+    "t": 135.99
+   },
+   {
+    "w": "nuh",
+    "t": 136.15
+   },
+   {
+    "w": "pretty",
+    "t": 136.31
+   },
+   {
+    "w": "fool",
+    "t": 136.63
+   }
+  ]
+ },
+ {
+  "i": 68,
+  "section": "Verse 3",
+  "text": "'Cause she want a man and me haffi understand",
+  "start": 137.19,
+  "end": 139.43,
+  "words": [
+   {
+    "w": "'Cause",
+    "t": 137.19
+   },
+   {
+    "w": "she",
+    "t": 137.43
+   },
+   {
+    "w": "want",
+    "t": 137.59
+   },
+   {
+    "w": "a",
+    "t": 137.83
+   },
+   {
+    "w": "man",
+    "t": 137.91
+   },
+   {
+    "w": "and",
+    "t": 138.15
+   },
+   {
+    "w": "me",
+    "t": 138.31
+   },
+   {
+    "w": "haffi",
+    "t": 138.67
+   },
+   {
+    "w": "understand",
+    "t": 139.03
+   }
+  ]
+ },
+ {
+  "i": 69,
+  "section": "Verse 3",
+  "text": "So me come with the program",
+  "start": 139.43,
+  "end": 141.07,
+  "words": [
+   {
+    "w": "So",
+    "t": 139.43
+   },
+   {
+    "w": "me",
+    "t": 139.67
+   },
+   {
+    "w": "come",
+    "t": 139.91
+   },
+   {
+    "w": "with",
+    "t": 140.15
+   },
+   {
+    "w": "the",
+    "t": 140.31
+   },
+   {
+    "w": "program",
+    "t": 140.47
+   }
+  ]
+ },
+ {
+  "i": 70,
+  "section": "Verse 3",
+  "text": "No man can test me",
+  "start": 141.11,
+  "end": 142.87,
+  "words": [
+   {
+    "w": "No",
+    "t": 141.11
+   },
+   {
+    "w": "man",
+    "t": 141.43
+   },
+   {
+    "w": "can",
+    "t": 141.75
+   },
+   {
+    "w": "test",
+    "t": 141.99
+   },
+   {
+    "w": "me",
+    "t": 142.39
+   }
+  ]
+ },
+ {
+  "i": 71,
+  "section": "Verse 3",
+  "text": "Gal want me",
+  "start": 142.87,
+  "end": 144.07,
+  "words": [
+   {
+    "w": "Gal",
+    "t": 142.87
+   },
+   {
+    "w": "want",
+    "t": 143.27
+   },
+   {
+    "w": "me",
+    "t": 143.59
+   }
+  ]
+ },
+ {
+  "i": 72,
+  "section": "Verse 3",
+  "text": "'Cause she want buddy and she want some feed",
+  "start": 144.07,
+  "end": 146.71,
+  "words": [
+   {
+    "w": "'Cause",
+    "t": 144.07
+   },
+   {
+    "w": "she",
+    "t": 144.39
+   },
+   {
+    "w": "want",
+    "t": 144.55
+   },
+   {
+    "w": "buddy",
+    "t": 144.91
+   },
+   {
+    "w": "and",
+    "t": 145.27
+   },
+   {
+    "w": "she",
+    "t": 145.35
+   },
+   {
+    "w": "want",
+    "t": 145.51
+   },
+   {
+    "w": "some",
+    "t": 145.83
+   },
+   {
+    "w": "feed",
+    "t": 146.15
+   }
+  ]
+ },
+ {
+  "i": 73,
+  "section": "Verse 3",
+  "text": "'Cause she want loving and she want come sleep",
+  "start": 146.71,
+  "end": 148.6,
+  "words": [
+   {
+    "w": "'Cause",
+    "t": 146.71
+   },
+   {
+    "w": "she",
+    "t": 146.92
+   },
+   {
+    "w": "want",
+    "t": 147.12
+   },
+   {
+    "w": "loving",
+    "t": 147.32
+   },
+   {
+    "w": "and",
+    "t": 147.53
+   },
+   {
+    "w": "she",
+    "t": 147.74
+   },
+   {
+    "w": "want",
+    "t": 147.94
+   },
+   {
+    "w": "come",
+    "t": 148.14
+   },
+   {
+    "w": "sleep",
+    "t": 148.35
+   }
+  ]
+ },
+ {
+  "i": 74,
+  "section": "Verse 3",
+  "text": "pan me jeep and me eat, an me",
+  "start": 148.8,
+  "end": 151.2,
+  "words": [
+   {
+    "w": "pan",
+    "t": 148.8
+   },
+   {
+    "w": "me",
+    "t": 149.11
+   },
+   {
+    "w": "jeep",
+    "t": 149.41
+   },
+   {
+    "w": "and",
+    "t": 149.72
+   },
+   {
+    "w": "me",
+    "t": 150.03
+   },
+   {
+    "w": "eat,",
+    "t": 150.34
+   },
+   {
+    "w": "an",
+    "t": 150.64
+   },
+   {
+    "w": "me",
+    "t": 150.95
+   }
+  ]
+ },
+ {
+  "i": 75,
+  "section": "Verse 3",
+  "text": "Yo, hey, hey",
+  "start": 151.3,
+  "end": 152.5,
+  "words": [
+   {
+    "w": "Yo,",
+    "t": 151.3
+   },
+   {
+    "w": "hey,",
+    "t": 151.78
+   },
+   {
+    "w": "hey",
+    "t": 152.25
+   }
+  ]
+ },
+ {
+  "i": 76,
+  "section": "Verse 3",
+  "text": "Pretty girl come whine pon it, whine pon it",
+  "start": 152.8,
+  "end": 155.8,
+  "words": [
+   {
+    "w": "Pretty",
+    "t": 152.8
+   },
+   {
+    "w": "girl",
+    "t": 153.14
+   },
+   {
+    "w": "come",
+    "t": 153.49
+   },
+   {
+    "w": "whine",
+    "t": 153.83
+   },
+   {
+    "w": "pon",
+    "t": 154.18
+   },
+   {
+    "w": "it,",
+    "t": 154.52
+   },
+   {
+    "w": "whine",
+    "t": 154.86
+   },
+   {
+    "w": "pon",
+    "t": 155.21
+   },
+   {
+    "w": "it",
+    "t": 155.55
+   }
+  ]
+ },
+ {
+  "i": 77,
+  "section": "Verse 3",
+  "text": "Come around on this side",
+  "start": 156.07,
+  "end": 158.37,
+  "words": [
+   {
+    "w": "Come",
+    "t": 156.07
+   },
+   {
+    "w": "around",
+    "t": 156.58
+   },
+   {
+    "w": "on",
+    "t": 157.09
+   },
+   {
+    "w": "this",
+    "t": 157.61
+   },
+   {
+    "w": "side",
+    "t": 158.12
+   }
+  ]
+ },
+ {
+  "i": 78,
+  "section": "Verse 3",
+  "text": "Round on this side",
+  "start": 158.63,
+  "end": 160.9,
+  "words": [
+   {
+    "w": "Round",
+    "t": 158.63
+   },
+   {
+    "w": "on",
+    "t": 159.3
+   },
+   {
+    "w": "this",
+    "t": 159.98
+   },
+   {
+    "w": "side",
+    "t": 160.65
+   }
+  ]
+ },
+ {
+  "i": 79,
+  "section": "Chorus",
+  "text": "Pretty girl from the east side",
+  "start": 162.63,
+  "end": 164.43,
+  "words": [
+   {
+    "w": "Pretty",
+    "t": 162.63
+   },
+   {
+    "w": "girl",
+    "t": 162.94
+   },
+   {
+    "w": "from",
+    "t": 163.25
+   },
+   {
+    "w": "the",
+    "t": 163.56
+   },
+   {
+    "w": "east",
+    "t": 163.87
+   },
+   {
+    "w": "side",
+    "t": 164.18
+   }
+  ]
+ },
+ {
+  "i": 80,
+  "section": "Chorus",
+  "text": "Real fine",
+  "start": 164.8,
+  "end": 165.7,
+  "words": [
+   {
+    "w": "Real",
+    "t": 164.8
+   },
+   {
+    "w": "fine",
+    "t": 165.45
+   }
+  ]
+ },
+ {
+  "i": 81,
+  "section": "Chorus",
+  "text": "Come now when I call you",
+  "start": 166.41,
+  "end": 168.25,
+  "words": [
+   {
+    "w": "Come",
+    "t": 166.41
+   },
+   {
+    "w": "now",
+    "t": 166.73
+   },
+   {
+    "w": "when",
+    "t": 167.05
+   },
+   {
+    "w": "I",
+    "t": 167.36
+   },
+   {
+    "w": "call",
+    "t": 167.68
+   },
+   {
+    "w": "you",
+    "t": 168.0
+   }
+  ]
+ },
+ {
+  "i": 82,
+  "section": "Chorus",
+  "text": "Come now when I call you",
+  "start": 168.89,
+  "end": 170.53,
+  "words": [
+   {
+    "w": "Come",
+    "t": 168.89
+   },
+   {
+    "w": "now",
+    "t": 169.21
+   },
+   {
+    "w": "when",
+    "t": 169.53
+   },
+   {
+    "w": "I",
+    "t": 169.77
+   },
+   {
+    "w": "call",
+    "t": 169.93
+   },
+   {
+    "w": "you",
+    "t": 170.18
+   }
+  ]
+ },
+ {
+  "i": 83,
+  "section": "Chorus",
+  "text": "Hey, hey",
+  "start": 170.63,
+  "end": 172.54,
+  "words": [
+   {
+    "w": "Hey,",
+    "t": 170.63
+   },
+   {
+    "w": "hey",
+    "t": 170.88
+   }
+  ]
+ },
+ {
+  "i": 84,
+  "section": "Chorus",
+  "text": "Pretty girl from the east side",
+  "start": 172.85,
+  "end": 174.77,
+  "words": [
+   {
+    "w": "Pretty",
+    "t": 172.85
+   },
+   {
+    "w": "girl",
+    "t": 173.13
+   },
+   {
+    "w": "from",
+    "t": 173.37
+   },
+   {
+    "w": "the",
+    "t": 173.69
+   },
+   {
+    "w": "east",
+    "t": 173.85
+   },
+   {
+    "w": "side",
+    "t": 174.17
+   }
+  ]
+ },
+ {
+  "i": 85,
+  "section": "Chorus",
+  "text": "Real fine",
+  "start": 175.25,
+  "end": 176.13,
+  "words": [
+   {
+    "w": "Real",
+    "t": 175.25
+   },
+   {
+    "w": "fine",
+    "t": 175.5
+   }
+  ]
+ },
+ {
+  "i": 86,
+  "section": "Chorus",
+  "text": "Come now when I call you",
+  "start": 176.57,
+  "end": 178.21,
+  "words": [
+   {
+    "w": "Come",
+    "t": 176.57
+   },
+   {
+    "w": "now",
+    "t": 176.93
+   },
+   {
+    "w": "when",
+    "t": 177.29
+   },
+   {
+    "w": "I",
+    "t": 177.45
+   },
+   {
+    "w": "call",
+    "t": 177.61
+   },
+   {
+    "w": "you",
+    "t": 177.86
+   }
+  ]
+ },
+ {
+  "i": 87,
+  "section": "Chorus",
+  "text": "Come now when I call you",
+  "start": 179.13,
+  "end": 180.77,
+  "words": [
+   {
+    "w": "Come",
+    "t": 179.13
+   },
+   {
+    "w": "now",
+    "t": 179.45
+   },
+   {
+    "w": "when",
+    "t": 179.77
+   },
+   {
+    "w": "I",
+    "t": 180.01
+   },
+   {
+    "w": "call",
+    "t": 180.17
+   },
+   {
+    "w": "you",
+    "t": 180.42
+   }
+  ]
+ },
+ {
+  "i": 88,
+  "section": "Chorus",
+  "text": "Hey, hey",
+  "start": 181.0,
+  "end": 182.6,
+  "words": [
+   {
+    "w": "Hey,",
+    "t": 181.0
+   },
+   {
+    "w": "hey",
+    "t": 182.35
+   }
+  ]
+ },
+ {
+  "i": 89,
+  "section": "Chorus",
+  "text": "Pretty girl from the east side",
+  "start": 183.01,
+  "end": 184.93,
+  "words": [
+   {
+    "w": "Pretty",
+    "t": 183.01
+   },
+   {
+    "w": "girl",
+    "t": 183.29
+   },
+   {
+    "w": "from",
+    "t": 183.69
+   },
+   {
+    "w": "the",
+    "t": 183.85
+   },
+   {
+    "w": "east",
+    "t": 184.01
+   },
+   {
+    "w": "side",
+    "t": 184.33
+   }
+  ]
+ },
+ {
+  "i": 90,
+  "section": "Chorus",
+  "text": "She's fine",
+  "start": 185.13,
+  "end": 186.21,
+  "words": [
+   {
+    "w": "She's",
+    "t": 185.13
+   },
+   {
+    "w": "fine",
+    "t": 185.61
+   }
+  ]
+ },
+ {
+  "i": 91,
+  "section": "Chorus",
+  "text": "Come now when I call you",
+  "start": 186.81,
+  "end": 188.37,
+  "words": [
+   {
+    "w": "Come",
+    "t": 186.81
+   },
+   {
+    "w": "now",
+    "t": 187.13
+   },
+   {
+    "w": "when",
+    "t": 187.45
+   },
+   {
+    "w": "I",
+    "t": 187.61
+   },
+   {
+    "w": "call",
+    "t": 187.85
+   },
+   {
+    "w": "you",
+    "t": 188.1
+   }
+  ]
+ },
+ {
+  "i": 92,
+  "section": "Chorus",
+  "text": "Come now when I call you",
+  "start": 189.43,
+  "end": 191.33,
+  "words": [
+   {
+    "w": "Come",
+    "t": 189.43
+   },
+   {
+    "w": "now",
+    "t": 189.76
+   },
+   {
+    "w": "when",
+    "t": 190.09
+   },
+   {
+    "w": "I",
+    "t": 190.42
+   },
+   {
+    "w": "call",
+    "t": 190.75
+   },
+   {
+    "w": "you",
+    "t": 191.08
+   }
+  ]
+ }
+]

@@ -9,7 +9,7 @@ import {Moon, Stars} from '../props/common';
 import {Streetlight} from '../props/winter';
 
 export type TimeOfDay = 'day' | 'dawn' | 'dusk' | 'night';
-export type BgName = 'plain' | 'sky' | 'road' | 'street' | 'room' | 'shore' | 'field';
+export type BgName = 'plain' | 'sky' | 'road' | 'street' | 'room' | 'shore' | 'field' | 'yard';
 export const FLOOR = 1320;
 export const HORIZON = 1150;
 
@@ -171,7 +171,42 @@ export const Field: React.FC<{time: TimeOfDay; f: number}> = ({time, f}) => {
   );
 };
 
-export const Backdrop: React.FC<{bg: BgName; time: TimeOfDay; f: number; scroll?: number}> = ({bg, time, f, scroll}) => {
+// A party yard: painted zinc fence, a string of bulbs, a concrete floor.
+export const Yard: React.FC<{time: TimeOfDay; f: number; beat?: number}> = ({time, f, beat = 0}) => {
+  const lit = isNight(time);
+  const panels = [C.teal, C.hotpink, C.gold, C.aqua, C.candy, C.teal, C.goldLo, C.hotpink];
+  const sag = (x: number) => 360 + 70 * Math.sin((x / 1080) * Math.PI);
+  return (
+    <>
+      <Sky time={time} f={f} />
+      {panels.map((c, i) => (
+        <g key={i}>
+          <Shape d={rect(-60 + i * 150, 560 - (i % 2) * 30, 150, FLOOR - 560 + (i % 2) * 30)} fill={c} opacity={lit ? 0.75 : 1} line={5} shadow={false} />
+          {[0, 1, 2, 3].map((k) => (
+            <Line key={k} d={`M${-30 + i * 150 + k * 34},${580 - (i % 2) * 30}L${-30 + i * 150 + k * 34},${FLOOR - 20}`} size={3} opacity={0.35} />
+          ))}
+        </g>
+      ))}
+      {lit && <Flat d={rect(-100, 540, 1280, FLOOR - 540)} fill={C.night} opacity={0.45} />}
+      <Line d={`M-40,${sag(-40)}Q540,${sag(540) + 70} 1120,${sag(1120)}`} size={4} color={lit ? C.cotton : C.ink} />
+      {Array.from({length: 11}, (_, i) => {
+        const x = 20 + i * 104;
+        const y = sag(x) + 34 - 0.00012 * (x - 540) * (x - 540);
+        const glow = lit ? 0.55 + 0.35 * Math.sin(f / 7 + i) + 0.3 * beat : 0;
+        const c = [C.amber, C.hotpink, C.aqua, C.goldHi][i % 4];
+        return (
+          <g key={i}>
+            {lit && <Flat d={circle(x, y + 20, 70)} fill="url(#glow-amber)" opacity={Math.min(1, glow)} />}
+            <Shape d={ellipse(x, y + 20, 13, 18)} fill={c} line={3} shadow={false} />
+          </g>
+        );
+      })}
+      <Shape d={rect(-100, FLOOR - 30, 1280, 830)} fill={lit ? '#3A3550' : '#D8D2C6'} shade={rect(-100, FLOOR + 120, 1280, 700)} shadeInk="ht-ink-1" line={5} shadow={false} />
+    </>
+  );
+};
+
+export const Backdrop: React.FC<{bg: BgName; time: TimeOfDay; f: number; scroll?: number; beat?: number}> = ({bg, time, f, scroll, beat}) => {
   switch (bg) {
     case 'sky':
       return (
@@ -190,6 +225,8 @@ export const Backdrop: React.FC<{bg: BgName; time: TimeOfDay; f: number; scroll?
       return <Shore time={time} f={f} />;
     case 'field':
       return <Field time={time} f={f} />;
+    case 'yard':
+      return <Yard time={time} f={f} beat={beat} />;
     default:
       return null;
   }

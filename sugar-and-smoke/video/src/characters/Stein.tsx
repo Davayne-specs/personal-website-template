@@ -19,6 +19,8 @@ export type SteinStyle = {
   winter?: boolean; // beanie and scarf (No. 2)
   pyjamas?: boolean;
   aged?: boolean; // grey hair (the far future)
+  profile?: boolean; // three-quarter view: both feet point the way he faces
+  cap?: boolean; // a general's peaked cap (No. 4)
 };
 
 type Params = {face: Face; style: SteinStyle; holdL?: React.ReactNode; holdR?: React.ReactNode; opacity: number};
@@ -88,15 +90,16 @@ const leg = (side: 'L' | 'R'): Part<Params>[] => {
       at: [0, 168],
       z: 4,
       draw: ({style}) => {
-        const shoe = side === 'L' ? SHOE : mirror(SHOE);
-        const sole = side === 'L' ? SOLE : mirror(SOLE);
+        const left = side === 'L' && !style.profile;
+        const shoe = left ? SHOE : mirror(SHOE);
+        const sole = left ? SOLE : mirror(SOLE);
         return (
           <>
             {cut(style, shoe, C.white)}
             {!style.ghost && (
               <>
                 <Shape d={sole} fill={C.candy} line={3.5} />
-                <Line d={side === 'L' ? 'M-30,6L-12,18M-42,14L-24,26' : 'M30,6L12,18M42,14L24,26'} size={4.5} color={C.hotpink} />
+                <Line d={left ? 'M-30,6L-12,18M-42,14L-24,26' : 'M30,6L12,18M42,14L24,26'} size={4.5} color={C.hotpink} />
               </>
             )}
           </>
@@ -239,6 +242,14 @@ export const STEIN_PARTS: Part<Params>[] = [
               <Shape d="M-62,4C-30,26 30,26 62,4L66,34C30,60 -30,60 -66,34Z" fill={C.candy} line={5} />
               <Shape d="M30,34L46,120L74,112L58,30Z" fill={C.candy} line={5} />
               <Line d="M38,60L62,56M44,86L66,82" size={4} color={C.hotpink} />
+            </>
+          )}
+          {style.cap && (
+            <>
+              <Shape d="M-98,-232C-104,-300 -44,-334 0,-334C44,-334 104,-300 98,-232Z" fill="#3E4A3C" shade="M30,-340L110,-340L110,-230L30,-230Z" shadeInk="ht-ink-2" line={6} />
+              <Shape d="M-96,-258L96,-258L98,-230L-98,-230Z" fill={C.gold} pattern="foil" sheen line={4} />
+              <Shape d="M-84,-232C-40,-210 70,-208 118,-228L100,-240L-90,-240Z" fill={C.ink} line={4} />
+              <Shape d="M0,-312L8,-292L28,-290L12,-278L18,-258L0,-270L-18,-258L-12,-278L-28,-290L-8,-292Z" fill={C.goldHi} line={3} />
             </>
           )}
           {style.bandage && (

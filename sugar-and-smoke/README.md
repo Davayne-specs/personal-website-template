@@ -9,6 +9,7 @@ The series bible (look, palette, states, cast, formula, rules) lives in the
 | 1 | "give me life" | 3:17 | 59 lyric lines → 59 scenes + a title card |
 | 2 | "With You" | 2:59 | 52 lyric lines → 52 scenes + a snowy-street intro and a 29 s epilogue |
 | 3 | "One Day" | 3:17 | 48 lyric lines → 48 scenes from the template kit, plus a title and a 26 s epilogue |
+| 4 | "Troops" | 3:31 | 93 lyric lines → 93 template scenes with the motion upgrade, plus a title and a 19 s outro |
 
 ## What's here
 
@@ -75,14 +76,25 @@ between its neighbours. Scenes land 0.15 s before each line's first word.
 
 ## Add an episode (the cheap way)
 
-No. 3 was made without writing a scene: every line is a recipe in its `storyboard.json`, and
-`video/src/templates/scene.tsx` turns recipes into scenes. A recipe picks a backdrop (`road`,
-`street`, `room`, `shore`, `field`, `sky`, `plain`), a time of day (`day`, `dawn`, `dusk`, `night`),
-who is in it (`stein`, `kid`, `both`, `none`), a pose, a face, an action (`walk`, `run`, `sway`),
-something held (`polaroid`, `bag`, `bottle`, `shoes`, `boxes`, `glow`), features (`sun`, `calendar`,
-`confetti`, `hearts`, `rain`, `thread`, `sign`, `map`, `split`, `bed`, `lamp`, `smoke`, `spotlight`,
-`light`, `bubbleQ`, `chairs`, `shoe`, `notes`, `stars`), a note or a big foil word, an `echo` word
-that pops on every sung onset, and a zoom. `n: 0` is the title card and `n: -1` the end card.
+Nos. 3 and 4 were made without writing a scene: every line is a recipe in its `storyboard.json`,
+and `video/src/templates/` turns recipes into scenes. A recipe sets:
+
+- **Where:** a backdrop (`road`, `street`, `room`, `shore`, `field`, `sky`, `yard`, `plain`), a time of day
+  (`day`, `dawn`, `dusk`, `night`), washes, and a zoom (`wide`, `mid`, `close`).
+- **Who:** `stein`, `precious`, `kid`, `pair` (Stein and Precious; her part goes under `her`), `both`
+  (Stein and the kid) or `none`, with x, scale, `style` (e.g. `{"cap": true}`) and `facing`.
+- **What they do:** a pose (`stand`, `point`, `crossed`, `hips`, `phone`, `beckon`, `flex`, `offer`,
+  `hug`, `sit`, `salute`, `armsUp`, …), a face (`joy`, `steel`, `cool`, `sly`, `smitten`, `attitude`, …),
+  an action and something held (`phone`, `rose`, `money`, `plate`, `program`, `bag`, `polaroid`, …).
+  Actions are `idle` (breathing), `walk`, `run`, `strut`, `approach`, `sway`, `nod`, or `dance` with
+  `dance` = `bounce`, `whine`, `twoStep`, `wave`, `lean`. With a `travel` [from, to], walkers turn
+  three-quarters and their steps match the ground covered; on a `street` they walk in place while the
+  street slides by at the speed of their feet.
+- **Features:** `sun`, `stars`, `calendar`, `confetti`, `hearts`, `rain`, `thread`, `sign`, `map`, `split`,
+  `bed`, `lamp`, `smoke`, `spotlight`, `light`, `bubbleQ`, `chairs`, `shoe`, `notes`, `phone`, `clock`,
+  `money`, `troops`, `speakers`, `table`, `jeep`, `fireworks`, `door`, `clown`.
+- **Words:** a hand-written `note` on a sung word, a big foil `big` word, or an `echo` word that pops on
+  every sung onset. `n: 0` is the title card and `n: -1` the end card.
 
 1. Make `episodes/epNN-name/` with `lyrics.json` and the recipe `storyboard.json`, then time the song.
 2. Copy `video/src/episodes/ep03-one-day/index.ts`, point it at the new folder, name the stamps.
