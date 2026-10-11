@@ -9,6 +9,7 @@ import {EP03} from './episodes/ep03-one-day';
 import {EP04} from './episodes/ep04-troops';
 import {EpisodeDef, timelineOf} from './lib/episode';
 import {CAST_H, CAST_W, CastSheet} from './sheets/CastSheet';
+import {CastSelfie} from './sheets/CastSelfie';
 import {WallView} from './WallCut';
 
 loadBrandFonts();
@@ -30,5 +31,6 @@ export const Root: React.FC = () => (
       </React.Fragment>
     ))}
     <Still id="CastSheet" component={CastSheet} width={CAST_W} height={CAST_H} />
+    <Still id="CastSelfie" component={CastSelfie} width={W} height={H} defaultProps={{pov: false}} />
   </>
 );
